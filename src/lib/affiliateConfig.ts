@@ -24,6 +24,9 @@ export function yahooSearchUrl(keyword: string): string {
   const target = encodeURIComponent(
     `https://shopping.yahoo.co.jp/search?p=${encodeURIComponent(keyword)}`
   );
+  return `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3768361&pid=890216131&vc_url=${target}`;
+}`
+  );
   return `https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3733641&pid=${affiliateConfig.yahooVcPid}&vc_url=${target}`;
 }
 
