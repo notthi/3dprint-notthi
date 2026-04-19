@@ -1,8 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-body { @apply text-gray-800 bg-white; }
-.prose h2 { @apply text-2xl font-bold mt-8 mb-4 text-gray-900 border-l-4 border-orange-500 pl-3; }
-.prose h3 { @apply text-xl font-bold mt-6 mb-3 text-gray-900; }
-.prose p { @apply mb-4 leading-relaxed; }
-.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply text-gray-800 bg-white;
+  }
+}
+
+@layer components {
+  .prose h2 {
+    @apply text-2xl font-bold mt-8 mb-4 text-gray-900 border-l-4 border-orange-500 pl-3;
+  }
+  .prose h3 {
+    @apply text-xl font-bold mt-6 mb-3 text-gray-900;
+  }
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
