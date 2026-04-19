@@ -11,6 +11,7 @@ export type Product = {
   description?: string;
   keyword?: string;
   image?: string;
+  links?: { amazon?: string; rakuten?: string; yahoo?: string; mercari?: string; };
 };
 
 export const products: Record<string, Product> = {
