@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import CategoryCard from "@/components/CategoryCard";
 
 export const metadata: Metadata = {
-  title: "3Dプリンターガイド | おすすめ機種・フィラメント・使い方を徹底解説",
+  title: "3Dプリントラボ | おすすめ機種・フィラメント・使い方を徹底解説",
   description:
     "3Dプリンターの選び方からフィラメントの比較、印刷テクニックまで初心者にわかりやすく解説。2024年最新のおすすめ機種ランキングも掲載。",
 };

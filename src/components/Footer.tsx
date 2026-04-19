@@ -54,7 +54,7 @@ export default function Footer() {
               3DP
             </div>
             <span style={{ fontWeight: "700", color: "#f1f5f9", fontSize: "1.1rem" }}>
-              3Dプリンターガイド
+              3Dプリントラボ
             </span>
           </div>
           <p style={{ color: "#64748b", fontSize: "0.875rem", lineHeight: "1.6", maxWidth: "480px" }}>
@@ -106,7 +106,7 @@ export default function Footer() {
             商品の価格・在庫状況は各販売サイトをご確認ください。
           </p>
           <p style={{ color: "#334155", fontSize: "0.75rem" }}>
-            © {new Date().getFullYear()} 3Dプリンターガイド. All rights reserved.
+            © {new Date().getFullYear()} 3Dプリントラボ. All rights reserved.
           </p>
         </div>
       </div>

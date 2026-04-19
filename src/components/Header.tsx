@@ -53,7 +53,7 @@ export default function Header() {
                 letterSpacing: "-0.3px",
               }}
             >
-              3Dプリンターガイド
+              3Dプリントラボ
             </span>
           </Link>
 
