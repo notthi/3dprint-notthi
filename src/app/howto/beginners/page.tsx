@@ -65,11 +65,7 @@ export default function HowtoBeginners() {
         </ul>
       </div>
 
-      <ProductCard
-        name="Bambu Lab A1 Mini（初心者最強）"
-        price="約45,000円"
-        keyword="Bambu Lab A1 Mini 3Dプリンター"
-      />
+      <ProductCard id="bambu-a1-mini" />
 
       <div className="prose mb-10">
         <h2>ステップ2：本体を組み立て・セットアップする</h2>
