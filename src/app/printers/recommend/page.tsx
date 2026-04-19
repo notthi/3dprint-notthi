@@ -11,6 +11,7 @@ const printers = [
   {
     rank: 1,
     name: "Bambu Lab A1 Mini",
+    image: "https://m.media-amazon.com/images/I/71X5s5izhsL._AC_SL1500_.jpg",
     asin: "B0CRYJBKQQ",
     description:
       "2026年最もおすすめの家庭用3Dプリンター。自動キャリブレーション・自動レベリング搭載で、箱から出してすぐ高品質な印刷が可能。静音設計で子供部屋や寝室にも設置しやすい。",

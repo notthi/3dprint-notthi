@@ -10,6 +10,7 @@ type RankingItemProps = {
   cons: string[];
   badge?: string;
   asin?: string;
+  image?: string;
 };
 
 const rankStyle: { [key: number]: string } = {
@@ -18,10 +19,8 @@ const rankStyle: { [key: number]: string } = {
   3: "bg-amber-600 text-white",
 };
 
-const RankingItem = ({ rank, name, description, price, amazonUrl, pros, cons, badge, asin }: RankingItemProps) => {
-  const imageUrl = asin
-    ? "https://images-fe.ssl-images-amazon.com/images/P/" + asin + ".01._SX160_.jpg"
-    : null;
+const RankingItem = ({ rank, name, description, price, amazonUrl, pros, cons, badge, asin, image }: RankingItemProps) => {
+  const imageUrl = image ?? null;
 
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white">
