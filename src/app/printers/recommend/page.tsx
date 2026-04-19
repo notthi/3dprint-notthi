@@ -11,6 +11,7 @@ const printers = [
   {
     rank: 1,
     name: "Bambu Lab A1 Mini",
+    asin: "B0CRYJBKQQ",
     description:
       "2026年最もおすすめの家庭用3Dプリンター。自動キャリブレーション・自動レベリング搭載で、箱から出してすぐ高品質な印刷が可能。静音設計で子供部屋や寝室にも設置しやすい。",
     price: "約45,000円",
@@ -22,6 +23,7 @@ const printers = [
   {
     rank: 2,
     name: "Bambu Lab A1",
+    asin: "B0D17V4SKM",
     description:
       "A1 Miniの上位版。ビルドサイズが256×256×256mmと広く、大きなパーツも一発印刷できる。AMS Liteを追加すれば多色印刷にも対応。家庭用としてコスパ最高クラス。",
     price: "約65,000円",
@@ -33,6 +35,7 @@ const printers = [
   {
     rank: 3,
     name: "Creality Ender-3 V3 SE",
+    asin: "B0CBWHJSQ9",
     description:
       "2万円台で買える入門機の定番。自動レベリング・CR Touch搭載で初心者でも扱いやすい。世界中に使用者がいるため、トラブル時の情報が豊富。コスパを最重視する方に。",
     price: "約25,000円",
@@ -44,6 +47,7 @@ const printers = [
   {
     rank: 4,
     name: "Bambu Lab P1S",
+    asin: "B0CHDM8VVZ",
     description:
       "全密閉チャンバー搭載のミドルレンジ機。ABSやナイロンなど高温フィラメントを安定して印刷できる。本格的な作品を作りたい中級者にも対応。",
     price: "約120,000円",

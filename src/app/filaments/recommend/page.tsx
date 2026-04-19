@@ -45,8 +45,8 @@ const rankings = [
 ];
 
 const allFilaments = [
-  { name: "Bambu Lab PLA Basic", price: "約2,800円", keyword: "Bambu Lab PLA Basic フィラメント" },
-  { name: "eSUN PLA+", price: "約2,200円", keyword: "eSUN PLA+ フィラメント 1kg" },
+  { name: "Bambu Lab PLA Basic", asin: "B0CGR29R63", price: "約2,800円", keyword: "Bambu Lab PLA Basic フィラメント" },
+  { name: "eSUN PLA+", asin: "B07RQKH35B", price: "約2,200円", keyword: "eSUN PLA+ フィラメント 1kg" },
   { name: "OVERTURE PLA", price: "約1,900円", keyword: "OVERTURE PLA フィラメント 1.75mm" },
   { name: "Polymaker PolyLite PLA", price: "約2,500円", keyword: "Polymaker PolyLite PLA フィラメント" },
   { name: "SUNLU PLA+", price: "約1,800円", keyword: "SUNLU PLA+ フィラメント 1kg" },
