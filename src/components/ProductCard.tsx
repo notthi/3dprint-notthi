@@ -5,6 +5,7 @@ import {
   yahooSearchUrl,
   mercariSearchUrl,
 } from "@/lib/affiliateConfig";
+import { products, type Product } from "@/data/products";
 
 type ShopLinks = {
   amazon?: string;
@@ -14,7 +15,10 @@ type ShopLinks = {
 };
 
 type ProductCardProps = {
-  name: string;
+  /** products.tsのキーを指定するだけでOK */
+  id?: string;
+  /** 直接指定する場合（idより優先度低） */
+  name?: string;
   price?: string;
   description?: string;
   asin?: string;
@@ -30,7 +34,10 @@ const shops = [
   { key: "mercari" as const, label: "メルカリ", bg: "bg-[#FF4B4B]", hover: "hover:bg-[#e04343]" },
 ];
 
-const ProductCard = ({ name, price, description, asin, keyword, image, links }: ProductCardProps) => {
+const ProductCard = (props: ProductCardProps) => {
+  const product: Product = props.id ? { ...products[props.id], ...props } : props as Product;
+  const { name = "", price, description, asin, keyword, image, links } = product;
+
   const searchWord = keyword ?? name;
   const resolvedLinks: ShopLinks = {
     amazon: links?.amazon ?? (asin ? amazonUrl(asin) : amazonSearchUrl(searchWord)),
@@ -48,19 +55,13 @@ const ProductCard = ({ name, price, description, asin, keyword, image, links }: 
       <div className="flex gap-4 items-start">
         {imageUrl && (
           <a href={resolvedLinks.amazon} target="_blank" rel="noopener noreferrer nofollow" className="flex-shrink-0">
-            <img
-              src={imageUrl}
-              alt={name}
-              width={80}
-              height={80}
-              className="w-20 h-20 object-contain rounded border border-gray-100"
-            />
+            <img src={imageUrl} alt={name} width={80} height={80} className="w-20 h-20 object-contain rounded border border-gray-100" />
           </a>
         )}
         <div className="flex-1 min-w-0">
           <p className="font-bold text-gray-900 text-sm leading-snug">{name}</p>
           {price && (
-            <p className="mt-1 text-sm text-gray-700">
+            <p className="mt-1 text-sm">
               <span className="text-orange-500 font-bold">{price}</span>
               <span className="text-xs text-gray-400 ml-1">（目安）</span>
             </p>
@@ -70,13 +71,8 @@ const ProductCard = ({ name, price, description, asin, keyword, image, links }: 
       </div>
       <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
         {shops.map((shop) => (
-          <a
-            key={shop.key}
-            href={resolvedLinks[shop.key]}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className={"flex items-center justify-center gap-1 " + shop.bg + " " + shop.hover + " text-white text-xs font-bold py-2 px-2 rounded-lg transition"}
-          >
+          <a key={shop.key} href={resolvedLinks[shop.key]} target="_blank" rel="noopener noreferrer nofollow"
+            className={"flex items-center justify-center " + shop.bg + " " + shop.hover + " text-white text-xs font-bold py-2 px-2 rounded-lg transition"}>
             {shop.label}
           </a>
         ))}
