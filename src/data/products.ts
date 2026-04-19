@@ -19,7 +19,8 @@ export const products: Record<string, Product> = {
     "asin": "B0CRYJBKQQ",
     "price": "約45,000円",
     "description": "初心者に最もおすすめ。自動キャリブレーション・静音設計。",
-    "keyword": "Bambu Lab A1 Mini 3Dプリンター"
+    "keyword": "Bambu Lab A1 Mini 3Dプリンター",
+    "image": "https://m.media-amazon.com/images/I/71X5s5izhsL._AC_SL1500_.jpg"
   },
   "bambu-a1": {
     "id": "bambu-a1",
@@ -27,7 +28,8 @@ export const products: Record<string, Product> = {
     "asin": "B0D17V4SKM",
     "price": "約65,000円",
     "description": "広いビルドサイズ（256mm角）。多色印刷対応。",
-    "keyword": "Bambu Lab A1 3Dプリンター"
+    "keyword": "Bambu Lab A1 3Dプリンター",
+    "image": ""
   },
   "bambu-p1s": {
     "id": "bambu-p1s",
@@ -35,7 +37,8 @@ export const products: Record<string, Product> = {
     "asin": "B0CHDM8VVZ",
     "price": "約120,000円",
     "description": "密閉チャンバー搭載。ABS・ナイロンも安定印刷。",
-    "keyword": "Bambu Lab P1S 3Dプリンター"
+    "keyword": "Bambu Lab P1S 3Dプリンター",
+    "image": ""
   },
   "ender3-v3-se": {
     "id": "ender3-v3-se",
@@ -43,7 +46,8 @@ export const products: Record<string, Product> = {
     "asin": "B0CBWHJSQ9",
     "price": "約25,000円",
     "description": "コスパ最強の入門機。自動レベリング搭載。",
-    "keyword": "Creality Ender-3 V3 SE 3Dプリンター"
+    "keyword": "Creality Ender-3 V3 SE 3Dプリンター",
+    "image": ""
   },
   "ankermake-m5c": {
     "id": "ankermake-m5c",
@@ -51,7 +55,8 @@ export const products: Record<string, Product> = {
     "asin": "",
     "price": "約50,000円",
     "description": "スマホアプリで簡単操作。Ankerの安心サポート。",
-    "keyword": "AnkerMake M5C 3Dプリンター"
+    "keyword": "AnkerMake M5C 3Dプリンター",
+    "image": ""
   },
   "creality-k1c": {
     "id": "creality-k1c",
@@ -59,7 +64,8 @@ export const products: Record<string, Product> = {
     "asin": "",
     "price": "約70,000円",
     "description": "最大600mm/s高速印刷。カーボンファイバー対応。",
-    "keyword": "Creality K1C 3Dプリンター"
+    "keyword": "Creality K1C 3Dプリンター",
+    "image": ""
   },
   "bambu-pla-basic": {
     "id": "bambu-pla-basic",
@@ -67,7 +73,8 @@ export const products: Record<string, Product> = {
     "asin": "B0CGR29R63",
     "price": "約2,800円（1kg）",
     "description": "Bambu Lab純正。AMS自動認識対応。品質安定。",
-    "keyword": "Bambu Lab PLA Basic フィラメント"
+    "keyword": "Bambu Lab PLA Basic フィラメント",
+    "image": ""
   },
   "esun-pla-plus": {
     "id": "esun-pla-plus",
@@ -75,7 +82,8 @@ export const products: Record<string, Product> = {
     "asin": "B07RQKH35B",
     "price": "約2,200円（1kg）",
     "description": "コスパ最強の定番フィラメント。通常PLAより丈夫。",
-    "keyword": "eSUN PLA+ フィラメント 1.75mm"
+    "keyword": "eSUN PLA+ フィラメント 1.75mm",
+    "image": ""
   },
   "overture-pla": {
     "id": "overture-pla",
@@ -83,7 +91,8 @@ export const products: Record<string, Product> = {
     "asin": "",
     "price": "約1,900円（1kg）",
     "description": "コスト重視の方に。詰まりにくく初心者向け。",
-    "keyword": "OVERTURE PLA フィラメント 1.75mm"
+    "keyword": "OVERTURE PLA フィラメント 1.75mm",
+    "image": ""
   },
   "polymaker-polylite-pla": {
     "id": "polymaker-polylite-pla",
@@ -91,7 +100,8 @@ export const products: Record<string, Product> = {
     "asin": "",
     "price": "約2,500円（1kg）",
     "description": "高品質・安定した印刷品質。",
-    "keyword": "Polymaker PolyLite PLA フィラメント"
+    "keyword": "Polymaker PolyLite PLA フィラメント",
+    "image": ""
   },
   "sunlu-pla-plus": {
     "id": "sunlu-pla-plus",
@@ -99,7 +109,8 @@ export const products: Record<string, Product> = {
     "asin": "",
     "price": "約1,800円（1kg）",
     "description": "コスパ良好。色のバリエーションが豊富。",
-    "keyword": "SUNLU PLA+ フィラメント 1kg"
+    "keyword": "SUNLU PLA+ フィラメント 1kg",
+    "image": ""
   },
   "creality-hyper-pla": {
     "id": "creality-hyper-pla",
@@ -107,6 +118,7 @@ export const products: Record<string, Product> = {
     "asin": "",
     "price": "約2,600円（1kg）",
     "description": "高速プリンター向け。最大600mm/s対応。",
-    "keyword": "Creality Hyper PLA フィラメント"
+    "keyword": "Creality Hyper PLA フィラメント",
+    "image": ""
   }
 };
