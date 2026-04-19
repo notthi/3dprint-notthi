@@ -1,24 +1,195 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: #1e293b;
+    --accent: #06b6d4;
+    --accent-hover: #0891b2;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply text-gray-800 bg-white;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   }
 }
 
 @layer components {
+  /* === 共通ダークカード === */
+  .dark-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+  }
+  .dark-card:hover {
+    border-color: var(--accent);
+    transform: translateX(4px);
+  }
+
+  /* カテゴリーカード（縦方向ホバー） */
+  .category-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .category-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(6, 182, 212, 0.15);
+  }
+
+  /* フィラメントカード（紫アクセント） */
+  .dark-card-purple:hover {
+    border-color: #8b5cf6;
+  }
+
+  /* ノウハウカード（緑アクセント） */
+  .dark-card-green:hover {
+    border-color: #10b981;
+  }
+
+  /* === ナビリンク === */
+  .nav-link {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+  }
+  .nav-link:hover {
+    color: var(--accent);
+  }
+
+  /* === フッターリンク === */
+  .footer-link {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+  }
+  .footer-link:hover {
+    color: var(--accent);
+  }
+
+  /* === CTAボタン === */
+  .btn-primary {
+    background-color: var(--accent);
+    color: #0f172a;
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border-radius: 0.625rem;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+  .btn-primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    border: 1px solid #334155;
+    color: #cbd5e1;
+    font-weight: 600;
+    padding: 0.875rem 2rem;
+    border-radius: 0.625rem;
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    background-color: transparent;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover {
+    border-color: #475569;
+    color: #f1f5f9;
+  }
+
+  /* === 記事ページ（白背景） === */
   .prose h2 {
-    @apply text-2xl font-bold mt-8 mb-4 text-gray-900 border-l-4 border-orange-500 pl-3;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-left: 4px solid var(--accent);
+    padding-left: 0.75rem;
+    margin: 2rem 0 1rem;
+    color: #0f172a;
   }
+
   .prose h3 {
-    @apply text-xl font-bold mt-6 mb-3 text-gray-900;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 1.5rem 0 0.75rem;
+    color: #1e293b;
   }
+
   .prose p {
-    @apply mb-4 leading-relaxed;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #374151;
   }
+
+  .prose ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.5rem;
+    color: #374151;
+    line-height: 1.7;
+  }
+
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+  }
+
+  .prose th {
+    background-color: #f1f5f9;
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+    font-weight: 600;
+  }
+
+  .prose td {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+  }
+
+  /* === テキストクランプ === */
   .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
