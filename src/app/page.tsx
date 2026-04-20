@@ -1,8 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import CategoryCard from "@/components/CategoryCard";
-import FeaturedProduct from "@/components/FeaturedProduct";
-import { affiliateConfig, amazonSearchUrl, rakutenSearchUrl, yahooSearchUrl, mercariSearchUrl } from "@/lib/affiliateConfig";
 
 export const metadata: Metadata = {
   title: "3Dプリントラボ | おすすめ機種・フィラメント・使い方を徹底解説",
@@ -62,7 +60,7 @@ const features = [
   {
     icon: "🔧",
     title: "スペック＋実機で比較",
-    desc: "Bambu P1S・Anycubic Mega-Proの実機レビューをベースに、各機種のスペックと特徴を比較。",
+    desc: "Bambu P1S・Anycubic Mega-Sの実機レビューをベースに、各機種のスペックと特徴を比較。",
   },
 ];
 
@@ -161,49 +159,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ===== Featured Product: Bambu P1S Combo ===== */}
-      <FeaturedProduct
-        badge="編集部イチオシ No.1"
-        name="Bambu Lab P1S Combo"
-        tagline="速さ・品質・マルチカラーを全部持ち合わせたハイエンド機"
-        points={[
-          "最大500mm/sの超高速印刷で待ち時間を大幅短縮",
-          "AMS（自動マルチカラーシステム）で最大4色同時印刷",
-          "完全密閉チャンバーでABSやASAなど高温フィラメントも安定印刷",
-          "Wi-Fi＋カメラ付きでスマホからリモート監視・制御",
-          "実際に使用中 ─ 正直レビューをnotthi.comに掲載",
-        ]}
-        price="¥239,800〜（税込）"
-        image=""
-        reviewUrl="https://notthi.com/bambu-p1s-review"
-        shops={[
-          {
-            label: "Amazonで見る",
-            href: `https://www.amazon.co.jp/s?k=Bambu+P1S+Combo&tag=${affiliateConfig.amazonTag}`,
-            bg: "#FF9900",
-            color: "#000000",
-          },
-          {
-            label: "楽天で見る",
-            href: rakutenSearchUrl("Bambu P1S Combo"),
-            bg: "#BF0000",
-            color: "#ffffff",
-          },
-          {
-            label: "Yahoo!で見る",
-            href: yahooSearchUrl("Bambu P1S Combo"),
-            bg: "#FF0033",
-            color: "#ffffff",
-          },
-          {
-            label: "メルカリで見る",
-            href: mercariSearchUrl("Bambu P1S"),
-            bg: "#FF4455",
-            color: "#ffffff",
-          },
-        ]}
-      />
 
       {/* ===== Category Cards ===== */}
       <section style={{ maxWidth: "72rem", margin: "0 auto", padding: "4rem 1.5rem" }}>
