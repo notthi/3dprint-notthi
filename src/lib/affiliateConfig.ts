@@ -2,7 +2,7 @@ export const affiliateConfig = {
   amazonTag: "22020-22",
   rakutenAffiliateId: "122f9eae.b916c8ee.122f9eaf.7c33c34b",
   yahooSid: "3768361",
-  yahooVcPid: "890216131",
+  yahooVcPid: "892598647",
   mercariAmbassadorId: "2738561503",
 };
 
