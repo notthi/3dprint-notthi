@@ -1,11 +1,11 @@
-import AffiliateCTA from "./AffiliateCTA";
+import { affiliateConfig, rakutenSearchUrl, yahooSearchUrl, mercariSearchUrl } from "@/lib/affiliateConfig";
 
 type RankingItemProps = {
   rank: number;
   name: string;
   description: string;
   price: string;
-  amazonUrl: string;
+  amazonUrl?: string;
   pros: string[];
   cons: string[];
   badge?: string;
@@ -13,57 +13,182 @@ type RankingItemProps = {
   image?: string;
 };
 
-const rankStyle: { [key: number]: string } = {
-  1: "bg-yellow-400 text-white",
-  2: "bg-gray-300 text-gray-700",
-  3: "bg-amber-600 text-white",
+const rankColors: { [key: number]: { bg: string; color: string; label: string } } = {
+  1: { bg: "#F59E0B", color: "#000", label: "🥇" },
+  2: { bg: "#94A3B8", color: "#000", label: "🥈" },
+  3: { bg: "#B45309", color: "#fff", label: "🥉" },
 };
 
-const RankingItem = ({ rank, name, description, price, amazonUrl, pros, cons, badge, asin, image }: RankingItemProps) => {
-  const imageUrl = image ?? null;
+export default function RankingItem({
+  rank,
+  name,
+  description,
+  price,
+  amazonUrl,
+  pros,
+  cons,
+  badge,
+  asin,
+  image,
+}: RankingItemProps) {
+  const rankInfo = rankColors[rank] ?? { bg: "#334155", color: "#94a3b8", label: String(rank) };
+
+  const amazonHref =
+    amazonUrl ??
+    `https://www.amazon.co.jp/s?k=${encodeURIComponent(name)}&tag=${affiliateConfig.amazonTag}`;
+  const rakutenHref = rakutenSearchUrl(name);
+  const yahooHref = yahooSearchUrl(name);
+  const mercariHref = mercariSearchUrl(name);
+
+  const shopButtons = [
+    { label: "Amazon", href: amazonHref, bg: "#FF9900", color: "#000" },
+    { label: "楽天", href: rakutenHref, bg: "#BF0000", color: "#fff" },
+    { label: "Yahoo!", href: yahooHref, bg: "#FF0033", color: "#fff" },
+    { label: "メルカリ", href: mercariHref, bg: "#FF4455", color: "#fff" },
+  ];
 
   return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <div className="flex items-start gap-4">
-        <div className={"w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 " + (rankStyle[rank] || "bg-gray-100 text-gray-600")}>
-          {rank}
+    <div
+      id={`rank-${rank}`}
+      style={{
+        backgroundColor: "#1e293b",
+        border: rank <= 3 ? "1px solid #334155" : "1px solid #1e293b",
+        borderRadius: "1rem",
+        padding: "1.5rem",
+        position: "relative",
+        boxShadow: rank === 1 ? "0 0 0 1px rgba(245,158,11,0.3), 0 4px 20px rgba(245,158,11,0.08)" : "none",
+      }}
+    >
+      {/* Rank badge */}
+      <div style={{ display: "flex", alignItems: "flex-start", gap: "1rem" }}>
+        <div
+          style={{
+            width: "44px",
+            height: "44px",
+            borderRadius: "50%",
+            backgroundColor: rankInfo.bg,
+            color: rankInfo.color,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontWeight: "800",
+            fontSize: rank <= 3 ? "1.2rem" : "1rem",
+            flexShrink: 0,
+          }}
+        >
+          {rankInfo.label}
         </div>
-        <div className="flex-1">
-          <div className="flex items-start gap-3 flex-wrap">
-            {imageUrl && (
-              <a href={amazonUrl} target="_blank" rel="noopener noreferrer nofollow" className="flex-shrink-0">
-                <img src={imageUrl} alt={name} width={80} height={80} className="w-20 h-20 object-contain border border-gray-100 rounded" />
+
+        <div style={{ flex: 1, minWidth: 0 }}>
+          {/* Name + badge */}
+          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap", marginBottom: "0.375rem" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "#f1f5f9", margin: 0 }}>
+              {name}
+            </h3>
+            {badge && (
+              <span
+                style={{
+                  backgroundColor: "rgba(6,182,212,0.15)",
+                  color: "#06b6d4",
+                  border: "1px solid rgba(6,182,212,0.3)",
+                  borderRadius: "9999px",
+                  padding: "0.15rem 0.625rem",
+                  fontSize: "0.7rem",
+                  fontWeight: "600",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {badge}
+              </span>
+            )}
+          </div>
+
+          {/* Image + description */}
+          <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start", marginBottom: "1rem" }}>
+            {image && (
+              <a href={amazonHref} target="_blank" rel="noopener noreferrer nofollow" style={{ flexShrink: 0 }}>
+                <img
+                  src={image}
+                  alt={name}
+                  width={88}
+                  height={88}
+                  style={{
+                    width: "88px",
+                    height: "88px",
+                    objectFit: "contain",
+                    backgroundColor: "#0f172a",
+                    borderRadius: "0.5rem",
+                    border: "1px solid #334155",
+                    padding: "4px",
+                  }}
+                />
               </a>
             )}
-            <div className="flex-1">
-              <div className="flex items-center gap-2 flex-wrap">
-                <h3 className="font-bold text-lg text-gray-900">{name}</h3>
-                {badge && (
-                  <span className="text-xs font-medium text-orange-600 bg-orange-50 border border-orange-200 px-2 py-0.5 rounded">
-                    {badge}
-                  </span>
-                )}
-              </div>
-              <p className="mt-2 text-sm text-gray-600 leading-relaxed">{description}</p>
+            <p style={{ color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7", margin: 0 }}>
+              {description}
+            </p>
+          </div>
+
+          {/* Pros / Cons */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1.25rem" }}>
+            <div>
+              <p style={{ color: "#10b981", fontSize: "0.75rem", fontWeight: "700", marginBottom: "0.375rem" }}>
+                ✓ メリット
+              </p>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.3rem" }}>
+                {pros.map((p, i) => (
+                  <li key={i} style={{ color: "#cbd5e1", fontSize: "0.8rem", lineHeight: "1.5" }}>
+                    • {p}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p style={{ color: "#ef4444", fontSize: "0.75rem", fontWeight: "700", marginBottom: "0.375rem" }}>
+                ✗ デメリット
+              </p>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.3rem" }}>
+                {cons.map((c, i) => (
+                  <li key={i} style={{ color: "#cbd5e1", fontSize: "0.8rem", lineHeight: "1.5" }}>
+                    • {c}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-          <div className="mt-4 grid grid-cols-2 gap-4">
+
+          {/* Price + Shop buttons */}
+          <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}>
             <div>
-              <p className="text-xs font-bold text-green-600 mb-1">✓ メリット</p>
-              <ul className="space-y-1">{pros.map((p, i) => <li key={i} className="text-xs text-gray-600">• {p}</li>)}</ul>
+              <span style={{ color: "#64748b", fontSize: "0.75rem" }}>参考価格</span>
+              <p style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "1rem", margin: 0 }}>{price}</p>
             </div>
-            <div>
-              <p className="text-xs font-bold text-red-500 mb-1">✗ デメリット</p>
-              <ul className="space-y-1">{cons.map((c, i) => <li key={i} className="text-xs text-gray-600">• {c}</li>)}</ul>
+            <div style={{ display: "flex", gap: "0.375rem", flexWrap: "wrap" }}>
+              {shopButtons.map((btn) => (
+                <a
+                  key={btn.label}
+                  href={btn.href}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  style={{
+                    backgroundColor: btn.bg,
+                    color: btn.color,
+                    fontSize: "0.75rem",
+                    fontWeight: "700",
+                    padding: "0.4rem 0.875rem",
+                    borderRadius: "0.375rem",
+                    textDecoration: "none",
+                    display: "inline-block",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {btn.label}
+                </a>
+              ))}
             </div>
-          </div>
-          <div className="mt-4 flex items-center justify-between flex-wrap gap-3">
-            <p className="text-sm font-bold text-gray-900">参考価格: <span className="text-orange-500">{price}</span></p>
-            <AffiliateCTA href={amazonUrl} label="Amazonで見る" size="sm" />
           </div>
         </div>
       </div>
     </div>
   );
-};
-export default RankingItem;
+}
