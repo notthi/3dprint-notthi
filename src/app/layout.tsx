@@ -7,9 +7,35 @@ import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const baseUrl = "https://3dprint.notthi.com";
+
 export const metadata: Metadata = {
-  title: { template: "%s | 3Dプリントラボ", default: "3Dプリントラボ - 3Dプリンター・フィラメントの専門情報サイト" },
+  metadataBase: new URL(baseUrl),
+  title: {
+    template: "%s | 3Dプリントラボ",
+    default: "3Dプリントラボ - 3Dプリンター・フィラメントの専門情報サイト",
+  },
   description: "3Dプリンター初心者からマニアまで。おすすめ機種・フィラメント比較・使い方ガイドを徹底解説。",
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "3Dプリントラボ",
+    url: baseUrl,
+    title: "3Dプリントラボ - 3Dプリンター・フィラメントの専門情報サイト",
+    description: "3Dプリンター初心者からマニアまで。おすすめ機種・フィラメント比較・使い方ガイドを徹底解説。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "3Dプリントラボ - 3Dプリンター・フィラメントの専門情報サイト",
+    description: "3Dプリンター初心者からマニアまで。おすすめ機種・フィラメント比較・使い方ガイドを徹底解説。",
+  },
+  alternates: {
+    canonical: baseUrl,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -5,6 +5,22 @@ export const metadata: Metadata = {
   title: "3Dプリンター初心者ガイド完全版【2026年】購入から初めての印刷まで",
   description:
     "3Dプリンターを初めて使う方向けに、機種選び・セットアップ・スライサーの使い方・最初の印刷まで丁寧に解説します。",
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "3Dプリントラボ",
+    url: "https://3dprint.notthi.com/howto/beginners",
+    title: "3Dプリンター初心者ガイド完全版【2026年】購入から初めての印刷まで",
+    description: "3Dプリンターを初めて使う方向けに、機種選び・セットアップ・スライサーの使い方・最初の印刷まで丁寧に解説します。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "3Dプリンター初心者ガイド完全版【2026年】購入から初めての印刷まで",
+    description: "3Dプリンターを初めて使う方向けに、機種選び・セットアップ・スライサーの使い方・最初の印刷まで丁寧に解説します。",
+  },
+  alternates: {
+    canonical: "https://3dprint.notthi.com/howto/beginners",
+  },
 };
 
 const toc = [

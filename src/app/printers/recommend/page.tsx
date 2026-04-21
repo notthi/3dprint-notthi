@@ -6,6 +6,22 @@ export const metadata: Metadata = {
   title: "家庭用3Dプリンターおすすめ7選【2026年版】初心者でも失敗しない選び方",
   description:
     "家庭用に最適な3Dプリンターを徹底比較。価格・精度・使いやすさを総合評価したランキング形式で解説。初心者が失敗しない選び方のポイントも詳しく紹介します。",
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "3Dプリントラボ",
+    url: "https://3dprint.notthi.com/printers/recommend",
+    title: "家庭用3Dプリンターおすすめ7選【2026年版】初心者でも失敗しない選び方",
+    description: "家庭用に最適な3Dプリンターを徹底比較。価格・精度・使いやすさを総合評価したランキング形式で解説。初心者が失敗しない選び方のポイントも詳しく紹介します。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "家庭用3Dプリンターおすすめ7選【2026年版】初心者でも失敗しない選び方",
+    description: "家庭用に最適な3Dプリンターを徹底比較。価格・精度・使いやすさを総合評価したランキング形式で解説。初心者が失敗しない選び方のポイントも詳しく紹介します。",
+  },
+  alternates: {
+    canonical: "https://3dprint.notthi.com/printers/recommend",
+  },
 };
 
 const printers = [

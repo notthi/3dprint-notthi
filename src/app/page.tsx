@@ -6,6 +6,22 @@ export const metadata: Metadata = {
   title: "3Dプリントラボ | おすすめ機種・フィラメント・使い方を徹底解説",
   description:
     "3Dプリンターの選び方からフィラメントの比較、印刷テクニックまで初心者にわかりやすく解説。2024年最新のおすすめ機種ランキングも掲載。",
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "3Dプリントラボ",
+    url: "https://3dprint.notthi.com/",
+    title: "3Dプリントラボ | おすすめ機種・フィラメント・使い方を徹底解説",
+    description: "3Dプリンターの選び方からフィラメントの比較、印刷テクニックまで初心者にわかりやすく解説。2024年最新のおすすめ機種ランキングも掲載。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "3Dプリントラボ | おすすめ機種・フィラメント・使い方を徹底解説",
+    description: "3Dプリンターの選び方からフィラメントの比較、印刷テクニックまで初心者にわかりやすく解説。2024年最新のおすすめ機種ランキングも掲載。",
+  },
+  alternates: {
+    canonical: "https://3dprint.notthi.com/",
+  },
 };
 
 const categories = [

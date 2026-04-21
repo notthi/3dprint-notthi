@@ -5,6 +5,22 @@ import ArticleCard from "@/components/ArticleCard";
 export const metadata: Metadata = {
   title: "3Dプリンター フィラメントおすすめ比較 | PLA・PETG・TPU解説",
   description: "3DプリンターのフィラメントをPLA・PETG・TPU別に比較。素材の特性・用途・おすすめ製品を解説。",
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "3Dプリントラボ",
+    url: "https://3dprint.notthi.com/filaments",
+    title: "3Dプリンター フィラメントおすすめ比較 | PLA・PETG・TPU解説",
+    description: "3DプリンターのフィラメントをPLA・PETG・TPU別に比較。素材の特性・用途・おすすめ製品を解説。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "3Dプリンター フィラメントおすすめ比較 | PLA・PETG・TPU解説",
+    description: "3DプリンターのフィラメントをPLA・PETG・TPU別に比較。素材の特性・用途・おすすめ製品を解説。",
+  },
+  alternates: {
+    canonical: "https://3dprint.notthi.com/filaments",
+  },
 };
 
 const articles = [

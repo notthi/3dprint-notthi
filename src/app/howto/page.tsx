@@ -5,6 +5,22 @@ import ArticleCard from "@/components/ArticleCard";
 export const metadata: Metadata = {
   title: "3Dプリンターの使い方・ノウハウ | 初心者から上級者まで",
   description: "3Dプリンターのセットアップ・スライサー設定・トラブル解決など実践的なノウハウを解説。",
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "3Dプリントラボ",
+    url: "https://3dprint.notthi.com/howto",
+    title: "3Dプリンターの使い方・ノウハウ | 初心者から上級者まで",
+    description: "3Dプリンターのセットアップ・スライサー設定・トラブル解決など実践的なノウハウを解説。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "3Dプリンターの使い方・ノウハウ | 初心者から上級者まで",
+    description: "3Dプリンターのセットアップ・スライサー設定・トラブル解決など実践的なノウハウを解説。",
+  },
+  alternates: {
+    canonical: "https://3dprint.notthi.com/howto",
+  },
 };
 
 const articles = [

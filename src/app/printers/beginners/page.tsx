@@ -5,6 +5,22 @@ export const metadata: Metadata = {
   title: "初心者向け3Dプリンターの選び方【2026年版】失敗しない5つのチェックポイント",
   description:
     "3Dプリンター初心者が最初の1台を選ぶときに確認すべきポイントを解説。自動レベリング・価格・サポートなど重要な5項目でおすすめ機種を比較します。",
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "3Dプリントラボ",
+    url: "https://3dprint.notthi.com/printers/beginners",
+    title: "初心者向け3Dプリンターの選び方【2026年版】失敗しない5つのチェックポイント",
+    description: "3Dプリンター初心者が最初の1台を選ぶときに確認すべきポイントを解説。自動レベリング・価格・サポートなど重要な5項目でおすすめ機種を比較します。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "初心者向け3Dプリンターの選び方【2026年版】失敗しない5つのチェックポイント",
+    description: "3Dプリンター初心者が最初の1台を選ぶときに確認すべきポイントを解説。自動レベリング・価格・サポートなど重要な5項目でおすすめ機種を比較します。",
+  },
+  alternates: {
+    canonical: "https://3dprint.notthi.com/printers/beginners",
+  },
 };
 
 const toc = [

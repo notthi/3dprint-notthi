@@ -5,6 +5,22 @@ export const metadata: Metadata = {
   title: "3Dプリンター トラブル解決ガイド【2026年版】よくある失敗と対策を徹底解説",
   description:
     "3Dプリンターのよくあるトラブル（貼り付かない・詰まり・反り・糸引き・層剥離）の原因と解決策を網羅的にまとめました。初心者から中級者まで役立つ対処法ガイドです。",
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "3Dプリントラボ",
+    url: "https://3dprint.notthi.com/howto/trouble",
+    title: "3Dプリンター トラブル解決ガイド【2026年版】よくある失敗と対策を徹底解説",
+    description: "3Dプリンターのよくあるトラブル（貼り付かない・詰まり・反り・糸引き・層剥離）の原因と解決策を網羅的にまとめました。初心者から中級者まで役立つ対処法ガイドです。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "3Dプリンター トラブル解決ガイド【2026年版】よくある失敗と対策を徹底解説",
+    description: "3Dプリンターのよくあるトラブル（貼り付かない・詰まり・反り・糸引き・層剥離）の原因と解決策を網羅的にまとめました。初心者から中級者まで役立つ対処法ガイドです。",
+  },
+  alternates: {
+    canonical: "https://3dprint.notthi.com/howto/trouble",
+  },
 };
 
 const toc = [

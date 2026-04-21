@@ -5,6 +5,22 @@ export const metadata: Metadata = {
   title: "PLAフィラメントとは？特徴・使い方・注意点を徹底解説【2026年版】",
   description:
     "3Dプリンターで最も普及しているPLAフィラメントの特徴、印刷設定、メリット・デメリットをわかりやすく解説。初心者が最初に知っておくべき知識をまとめました。",
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "3Dプリントラボ",
+    url: "https://3dprint.notthi.com/filaments/pla",
+    title: "PLAフィラメントとは？特徴・使い方・注意点を徹底解説【2026年版】",
+    description: "3Dプリンターで最も普及しているPLAフィラメントの特徴、印刷設定、メリット・デメリットをわかりやすく解説。初心者が最初に知っておくべき知識をまとめました。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PLAフィラメントとは？特徴・使い方・注意点を徹底解説【2026年版】",
+    description: "3Dプリンターで最も普及しているPLAフィラメントの特徴、印刷設定、メリット・デメリットをわかりやすく解説。初心者が最初に知っておくべき知識をまとめました。",
+  },
+  alternates: {
+    canonical: "https://3dprint.notthi.com/filaments/pla",
+  },
 };
 
 const toc = [

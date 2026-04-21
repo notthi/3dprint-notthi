@@ -5,6 +5,22 @@ import ArticleCard from "@/components/ArticleCard";
 export const metadata: Metadata = {
   title: "3Dプリンターおすすめ比較 | 機種選びの完全ガイド",
   description: "3Dプリンターのおすすめ機種を価格帯・用途別に比較。初心者向けから本格機まで厳選して紹介。",
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "3Dプリントラボ",
+    url: "https://3dprint.notthi.com/printers",
+    title: "3Dプリンターおすすめ比較 | 機種選びの完全ガイド",
+    description: "3Dプリンターのおすすめ機種を価格帯・用途別に比較。初心者向けから本格機まで厳選して紹介。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "3Dプリンターおすすめ比較 | 機種選びの完全ガイド",
+    description: "3Dプリンターのおすすめ機種を価格帯・用途別に比較。初心者向けから本格機まで厳選して紹介。",
+  },
+  alternates: {
+    canonical: "https://3dprint.notthi.com/printers",
+  },
 };
 
 const articles = [

@@ -5,6 +5,22 @@ export const metadata: Metadata = {
   title: "PETGフィラメントとは？PLAとの違い・使い方を徹底解説【2026年版】",
   description:
     "PLAより耐久性・耐熱性が高いPETGフィラメントの特徴、印刷設定、PLA・ABSとの比較をわかりやすく解説します。実用パーツ作りに最適な素材です。",
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "3Dプリントラボ",
+    url: "https://3dprint.notthi.com/filaments/petg",
+    title: "PETGフィラメントとは？PLAとの違い・使い方を徹底解説【2026年版】",
+    description: "PLAより耐久性・耐熱性が高いPETGフィラメントの特徴、印刷設定、PLA・ABSとの比較をわかりやすく解説します。実用パーツ作りに最適な素材です。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PETGフィラメントとは？PLAとの違い・使い方を徹底解説【2026年版】",
+    description: "PLAより耐久性・耐熱性が高いPETGフィラメントの特徴、印刷設定、PLA・ABSとの比較をわかりやすく解説します。実用パーツ作りに最適な素材です。",
+  },
+  alternates: {
+    canonical: "https://3dprint.notthi.com/filaments/petg",
+  },
 };
 
 const toc = [

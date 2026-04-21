@@ -6,6 +6,22 @@ export const metadata: Metadata = {
   title: "PLAフィラメントおすすめ8選【2026年版】初心者でも使いやすい定番素材を比較",
   description:
     "3Dプリンター初心者に最もおすすめのPLAフィラメントを徹底比較。コスパ・品質・色の豊富さで選ぶべきブランドをランキング形式で紹介します。",
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "3Dプリントラボ",
+    url: "https://3dprint.notthi.com/filaments/recommend",
+    title: "PLAフィラメントおすすめ8選【2026年版】初心者でも使いやすい定番素材を比較",
+    description: "3Dプリンター初心者に最もおすすめのPLAフィラメントを徹底比較。コスパ・品質・色の豊富さで選ぶべきブランドをランキング形式で紹介します。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PLAフィラメントおすすめ8選【2026年版】初心者でも使いやすい定番素材を比較",
+    description: "3Dプリンター初心者に最もおすすめのPLAフィラメントを徹底比較。コスパ・品質・色の豊富さで選ぶべきブランドをランキング形式で紹介します。",
+  },
+  alternates: {
+    canonical: "https://3dprint.notthi.com/filaments/recommend",
+  },
 };
 
 const rankings = [

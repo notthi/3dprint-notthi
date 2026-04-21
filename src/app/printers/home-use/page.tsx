@@ -5,6 +5,22 @@ export const metadata: Metadata = {
   title: "家庭用3Dプリンターの選び方【2026年版】リビング・子供部屋に置ける静音機種とは",
   description:
     "リビングや子供部屋に設置できる静音・コンパクトな家庭用3Dプリンターの選び方を解説。騒音・サイズ・使いやすさで比較したおすすめ機種も紹介します。",
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "3Dプリントラボ",
+    url: "https://3dprint.notthi.com/printers/home-use",
+    title: "家庭用3Dプリンターの選び方【2026年版】リビング・子供部屋に置ける静音機種とは",
+    description: "リビングや子供部屋に設置できる静音・コンパクトな家庭用3Dプリンターの選び方を解説。騒音・サイズ・使いやすさで比較したおすすめ機種も紹介します。",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "家庭用3Dプリンターの選び方【2026年版】リビング・子供部屋に置ける静音機種とは",
+    description: "リビングや子供部屋に設置できる静音・コンパクトな家庭用3Dプリンターの選び方を解説。騒音・サイズ・使いやすさで比較したおすすめ機種も紹介します。",
+  },
+  alternates: {
+    canonical: "https://3dprint.notthi.com/printers/home-use",
+  },
 };
 
 const toc = [
