@@ -1,0 +1,118 @@
+export const S = {
+  card: { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2: { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p: { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted: { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  disclaimer: { color: "#475569", fontSize: "0.75rem", borderTop: "1px solid #1e293b", paddingTop: "1.25rem", lineHeight: "1.6" },
+};
+
+<div style={S.card}>
+  <p style={S.p}>
+    3Dプリンターは種類が多く、初心者が最初の1台を選ぶのは難しいと感じるかもしれません。
+    でも<strong style={{ color: "#f1f5f9" }}>5つのポイント</strong>を押さえれば、失敗なく選べます。
+  </p>
+  <p style={{ ...S.p, marginBottom: 0 }}>
+    この記事では初心者が特に重視すべき項目を整理し、予算別のおすすめも紹介します。
+  </p>
+</div>
+
+<section id="checklist" style={S.section}>
+  <h2 style={S.h2}>初心者が確認すべき5項目</h2>
+  <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <span style={{ flexShrink: 0, color: "#06b6d4", fontWeight: "800", fontSize: "1.1rem", minWidth: "28px" }}>01</span>
+      <div><p style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>自動レベリング搭載か</p><p style={{ ...S.muted, margin: 0 }}>ベッドの水平調整は初心者最大の難関。自動化されているかどうかが成功率を大きく左右します。</p></div>
+    </div>
+    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <span style={{ flexShrink: 0, color: "#06b6d4", fontWeight: "800", fontSize: "1.1rem", minWidth: "28px" }}>02</span>
+      <div><p style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>組み立て作業は少ないか</p><p style={{ ...S.muted, margin: 0 }}>完成品に近い状態で届く機種ほど、最初の印刷までスムーズに進められます。</p></div>
+    </div>
+    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <span style={{ flexShrink: 0, color: "#06b6d4", fontWeight: "800", fontSize: "1.1rem", minWidth: "28px" }}>03</span>
+      <div><p style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>日本語サポートはあるか</p><p style={{ ...S.muted, margin: 0 }}>困ったときに頼れる日本語のサポートや充実したコミュニティがある機種を選びましょう。</p></div>
+    </div>
+    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <span style={{ flexShrink: 0, color: "#06b6d4", fontWeight: "800", fontSize: "1.1rem", minWidth: "28px" }}>04</span>
+      <div><p style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>消耗品が入手しやすいか</p><p style={{ ...S.muted, margin: 0 }}>ノズルやフィラメントなど消耗品がAmazon等で簡単に購入できる機種を選ぶと長続きします。</p></div>
+    </div>
+    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <span style={{ flexShrink: 0, color: "#06b6d4", fontWeight: "800", fontSize: "1.1rem", minWidth: "28px" }}>05</span>
+      <div><p style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>静音性・設置スペースは適切か</p><p style={{ ...S.muted, margin: 0 }}>使用環境に合った騒音レベルとサイズかどうかを事前に確認しましょう。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="auto-level" style={S.section}>
+  <h2 style={S.h2}>自動レベリングの重要性</h2>
+  <div style={S.card}>
+    <p style={S.p}>
+      3Dプリンターの「レベリング」とは、ノズルとベッドの距離を均一に保つ調整作業です。
+      この調整が不十分だと印刷物がベッドに付かなかったり、1層目が潰れてしまったりします。
+    </p>
+    <p style={S.p}>
+      <strong style={{ color: "#f1f5f9" }}>自動レベリング機能</strong>があれば、この作業をプリンターが自動で行います。
+      初心者にとって最も大きなつまずきポイントがなくなるため、
+      最初の1台には<strong style={{ color: "#06b6d4" }}>自動レベリング搭載機種を強くおすすめ</strong>します。
+    </p>
+    <p style={{ ...S.p, marginBottom: 0 }}>
+      2026年現在、3万円以上の機種のほとんどに自動レベリングが搭載されています。
+    </p>
+  </div>
+</section>
+
+<section id="budget" style={S.section}>
+  <h2 style={S.h2}>予算別おすすめ</h2>
+  <div style={{ display: "flex", flexDirection: "column", gap: "0.875rem" }}>
+    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem", borderLeft: "3px solid #f59e0b" }}>
+      <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", marginBottom: "0.5rem" }}>
+        <span style={{ backgroundColor: "#f59e0b22", color: "#f59e0b", border: "1px solid #f59e0b44", borderRadius: "9999px", padding: "0.1rem 0.625rem", fontSize: "0.75rem", fontWeight: "700" }}>2〜3万円</span>
+        <span style={{ color: "#f1f5f9", fontWeight: "700" }}>Creality Ender-3 V3 SE</span>
+      </div>
+      <p style={{ ...S.muted, margin: 0 }}>自動レベリング搭載の入門機定番。世界中に使用者がいてトラブル情報も豊富。</p>
+    </div>
+    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem", borderLeft: "3px solid #06b6d4" }}>
+      <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", marginBottom: "0.5rem" }}>
+        <span style={{ backgroundColor: "#06b6d422", color: "#06b6d4", border: "1px solid #06b6d444", borderRadius: "9999px", padding: "0.1rem 0.625rem", fontSize: "0.75rem", fontWeight: "700" }}>4〜5万円</span>
+        <span style={{ color: "#f1f5f9", fontWeight: "700" }}>Bambu Lab A1 Mini</span>
+      </div>
+      <p style={{ ...S.muted, margin: 0 }}>初心者に最もおすすめ。自動キャリブレーション・静音・コンパクトを全部備えた最強コスパ機。</p>
+    </div>
+    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem", borderLeft: "3px solid #10b981" }}>
+      <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", marginBottom: "0.5rem" }}>
+        <span style={{ backgroundColor: "#10b98122", color: "#10b981", border: "1px solid #10b98144", borderRadius: "9999px", padding: "0.1rem 0.625rem", fontSize: "0.75rem", fontWeight: "700" }}>6〜8万円</span>
+        <span style={{ color: "#f1f5f9", fontWeight: "700" }}>Bambu Lab A1</span>
+      </div>
+      <p style={{ ...S.muted, margin: 0 }}>A1 Miniより印刷サイズが広く、大きなパーツも一度で印刷可能。本格的に楽しみたい方に。</p>
+    </div>
+  </div>
+</section>
+
+<section id="avoid" style={S.section}>
+  <h2 style={S.h2}>初心者が避けるべき機種</h2>
+  <div style={S.card}>
+    <p style={S.p}>以下の特徴を持つ機種は、初心者には扱いが難しくなりがちです。</p>
+    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+      <li style={{ display: "flex", gap: "0.625rem", alignItems: "flex-start" }}><span style={{ color: "#ef4444", flexShrink: 0 }}>✗</span><span style={S.muted}>手動レベリングのみで自動機能がない機種</span></li>
+      <li style={{ display: "flex", gap: "0.625rem", alignItems: "flex-start" }}><span style={{ color: "#ef4444", flexShrink: 0 }}>✗</span><span style={S.muted}>購入後の組み立て工数が非常に多い機種（キット型）</span></li>
+      <li style={{ display: "flex", gap: "0.625rem", alignItems: "flex-start" }}><span style={{ color: "#ef4444", flexShrink: 0 }}>✗</span><span style={S.muted}>レジン（光造形）プリンター（後処理が複雑で初心者には不向き）</span></li>
+      <li style={{ display: "flex", gap: "0.625rem", alignItems: "flex-start" }}><span style={{ color: "#ef4444", flexShrink: 0 }}>✗</span><span style={S.muted}>安すぎるノーブランド機（品質が不安定・サポートなし）</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="recommend" style={S.section}>
+  <h2 style={S.h2}>最終おすすめ</h2>
+  <div style={{ backgroundColor: "rgba(6,182,212,0.06)", border: "1px solid rgba(6,182,212,0.2)", borderRadius: "0.75rem", padding: "1.5rem" }}>
+    <p style={S.p}>
+      詳細なスペック比較・購入リンク・価格情報は以下のランキング記事でご確認ください。
+    </p>
+    <a href="/printers/recommend" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", backgroundColor: "#06b6d4", color: "#0f172a", fontWeight: "700", fontSize: "0.875rem", padding: "0.625rem 1.25rem", borderRadius: "0.5rem", textDecoration: "none" }}>
+      → 家庭用3Dプリンターおすすめ7選を見る
+    </a>
+  </div>
+</section>
+
+<p style={S.disclaimer}>
+  当サイトはAmazonアソシエイト・楽天アフィリエイト・ValueCommerce・メルカリアンバサダーに参加しています。価格は記事執筆時点のものです。
+</p>

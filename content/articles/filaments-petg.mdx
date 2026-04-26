@@ -1,0 +1,164 @@
+export const S = {
+  card: { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2: { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p: { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted: { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  disclaimer: { color: "#475569", fontSize: "0.75rem", borderTop: "1px solid #1e293b", paddingTop: "1.25rem", lineHeight: "1.6" },
+};
+
+<div style={S.card}>
+  <p style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>PETG（ポリエチレンテレフタレートグリコール）</strong>はPLAとABSの中間に位置するフィラメントです。
+    PLAより<strong style={{ color: "#f1f5f9" }}>耐熱性・耐衝撃性が高く</strong>、ABSより扱いやすいため、
+    実用的なパーツを作りたい方に人気の素材です。
+  </p>
+  <p style={{ ...S.p, marginBottom: 0 }}>
+    PETGはペットボトルと同じ樹脂系統で、食品容器などにも使われる安全性の高い素材です。
+  </p>
+</div>
+
+<section id="what-is-petg" style={S.section}>
+  <h2 style={S.h2}>PETGフィラメントとは</h2>
+  <div style={S.card}>
+    <p style={S.p}>
+      PETGはPET（ポリエチレンテレフタレート）にグリコールを添加した素材で、
+      純粋なPETに比べて<strong style={{ color: "#f1f5f9" }}>透明度が高く加工しやすい</strong>特性があります。
+    </p>
+    <p style={{ ...S.p, marginBottom: 0 }}>
+      ノズル温度230〜250℃、ベッド温度70〜85℃で印刷します。
+      PLAより少し温度が高いため、対応したプリンターが必要です。
+    </p>
+  </div>
+</section>
+
+<section id="pros-cons" style={S.section}>
+  <h2 style={S.h2}>メリット・デメリット</h2>
+  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+    <div style={{ backgroundColor: "rgba(16,185,129,0.06)", border: "1px solid rgba(16,185,129,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <p style={{ color: "#10b981", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.75rem" }}>✓ メリット</p>
+      <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+        <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• PLAより耐熱性が高い（80℃前後）</li>
+        <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 耐衝撃性が高く折れにくい</li>
+        <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 透明度が高い色もある</li>
+        <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 層間密着性が優れている</li>
+        <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• ABSより反りにくい</li>
+      </ul>
+    </div>
+    <div style={{ backgroundColor: "rgba(239,68,68,0.06)", border: "1px solid rgba(239,68,68,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <p style={{ color: "#ef4444", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.75rem" }}>✗ デメリット</p>
+      <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+        <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 糸引き（ストリング）が出やすい</li>
+        <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• PLAより印刷温度が高い</li>
+        <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• ベッドへの貼り付きが強すぎることも</li>
+        <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 吸湿しやすい（保管に注意）</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="vs-pla" style={S.section}>
+  <h2 style={S.h2}>PLA・ABSとの比較</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.8rem" }}>
+      <thead>
+        <tr style={{ borderBottom: "2px solid #334155" }}>
+          <th style={{ color: "#06b6d4", fontWeight: "700", padding: "0.625rem 0.75rem", textAlign: "left" }}>項目</th>
+          <th style={{ color: "#06b6d4", fontWeight: "700", padding: "0.625rem 0.75rem", textAlign: "left" }}>PLA</th>
+          <th style={{ color: "#06b6d4", fontWeight: "700", padding: "0.625rem 0.75rem", textAlign: "left" }}>PETG</th>
+          <th style={{ color: "#06b6d4", fontWeight: "700", padding: "0.625rem 0.75rem", textAlign: "left" }}>ABS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ borderBottom: "1px solid #1e293b", backgroundColor: "#1e293b" }}>
+          <td style={{ color: "#94a3b8", padding: "0.625rem 0.75rem" }}>扱いやすさ</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>◎ 非常に簡単</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>○ 普通</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>△ 難しい</td>
+        </tr>
+        <tr style={{ borderBottom: "1px solid #1e293b" }}>
+          <td style={{ color: "#94a3b8", padding: "0.625rem 0.75rem" }}>耐熱性</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>△ 60℃前後</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>○ 80℃前後</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>◎ 100℃前後</td>
+        </tr>
+        <tr style={{ borderBottom: "1px solid #1e293b", backgroundColor: "#1e293b" }}>
+          <td style={{ color: "#94a3b8", padding: "0.625rem 0.75rem" }}>耐衝撃性</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>△ やや脆い</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>○ 良好</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>○ 良好</td>
+        </tr>
+        <tr style={{ borderBottom: "1px solid #1e293b" }}>
+          <td style={{ color: "#94a3b8", padding: "0.625rem 0.75rem" }}>反りにくさ</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>◎ 反りにくい</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>○ 普通</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>△ 反りやすい</td>
+        </tr>
+        <tr style={{ borderBottom: "1px solid #1e293b", backgroundColor: "#1e293b" }}>
+          <td style={{ color: "#94a3b8", padding: "0.625rem 0.75rem" }}>臭い</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>○ 少ない</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>○ 少ない</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>△ 強い</td>
+        </tr>
+        <tr style={{ borderBottom: "1px solid #1e293b" }}>
+          <td style={{ color: "#94a3b8", padding: "0.625rem 0.75rem" }}>価格（1kg）</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>○ 1,500〜2,500円</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>○ 2,000〜3,000円</td>
+          <td style={{ color: "#cbd5e1", padding: "0.625rem 0.75rem" }}>△ 2,000〜3,500円</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="print-settings" style={S.section}>
+  <h2 style={S.h2}>推奨印刷設定</h2>
+  <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem" }}>
+    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem", alignItems: "center" }}>
+      <span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "100px" }}>ノズル温度</span>
+      <span style={S.muted}>230〜250℃（ブランドにより調整）</span>
+    </div>
+    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem", alignItems: "center" }}>
+      <span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "100px" }}>ベッド温度</span>
+      <span style={S.muted}>70〜85℃（推奨）</span>
+    </div>
+    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem", alignItems: "center" }}>
+      <span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "100px" }}>印刷速度</span>
+      <span style={S.muted}>30〜60mm/s（ゆっくりめが安定）</span>
+    </div>
+    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem", alignItems: "center" }}>
+      <span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "100px" }}>リトラクション</span>
+      <span style={S.muted}>多めに設定して糸引きを防止</span>
+    </div>
+    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem", alignItems: "center" }}>
+      <span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "100px" }}>保管方法</span>
+      <span style={S.muted}>乾燥剤と密封袋で湿気から守る</span>
+    </div>
+  </div>
+</section>
+
+<section id="use-cases" style={S.section}>
+  <h2 style={S.h2}>PETGに向いた用途</h2>
+  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "0.75rem" }}>
+    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1rem" }}>
+      <p style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", marginBottom: "0.375rem" }}>機械・実用パーツ</p>
+      <p style={{ ...S.muted, margin: 0, fontSize: "0.775rem" }}>ブラケット・クリップなど衝撃に強いパーツ</p>
+    </div>
+    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1rem" }}>
+      <p style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", marginBottom: "0.375rem" }}>食品周りのアイテム</p>
+      <p style={{ ...S.muted, margin: 0, fontSize: "0.775rem" }}>食器・容器など（フードセーフグレード確認を）</p>
+    </div>
+    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1rem" }}>
+      <p style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", marginBottom: "0.375rem" }}>屋外・高温環境</p>
+      <p style={{ ...S.muted, margin: 0, fontSize: "0.775rem" }}>車内アクセサリー・屋外設置品</p>
+    </div>
+    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1rem" }}>
+      <p style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", marginBottom: "0.375rem" }}>透明・半透明パーツ</p>
+      <p style={{ ...S.muted, margin: 0, fontSize: "0.775rem" }}>ランプカバー・光拡散パーツなど</p>
+    </div>
+  </div>
+</section>
+
+<p style={S.disclaimer}>
+  当サイトはAmazonアソシエイト・楽天アフィリエイト・ValueCommerce・メルカリアンバサダーに参加しています。価格は記事執筆時点のものです。
+</p>
