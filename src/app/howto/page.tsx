@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import ArticleCard from "@/components/ArticleCard";
+import { getArticlesByCategory } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "3Dプリンターの使い方・ノウハウ | 初心者から上級者まで",
@@ -23,26 +24,7 @@ export const metadata: Metadata = {
   },
 };
 
-const articles = [
-  {
-    href: "/howto/beginners",
-    badge: "入門",
-    badgeColor: "#10b981",
-    title: "3Dプリンター初心者ガイド【購入から最初の印刷まで】",
-    desc: "3Dプリンターを初めて使う方のための完全ガイド。購入・開封・セットアップ・スライサー設定・最初の印刷まで丁寧に解説。",
-    tags: ["初心者", "セットアップ", "入門"],
-    hoverBorderColor: "#10b981",
-  },
-  {
-    href: "/howto/trouble",
-    badge: "トラブル",
-    badgeColor: "#ef4444",
-    title: "3Dプリンターのトラブル解決集【よくある失敗と対策】",
-    desc: "反り・糸引き・剥離・ノズル詰まりなどよくあるトラブルの原因と解決方法をまとめて解説。",
-    tags: ["トラブル", "失敗", "解決"],
-    hoverBorderColor: "#ef4444",
-  },
-];
+const articles = getArticlesByCategory("howto");
 
 export default function HowtoPage() {
   return (
@@ -75,7 +57,16 @@ export default function HowtoPage() {
       <section style={{ maxWidth: "72rem", margin: "0 auto", padding: "3rem 1.5rem" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
           {articles.map((article) => (
-            <ArticleCard key={article.href} {...article} />
+            <ArticleCard
+              key={article.href}
+              href={article.href}
+              badge={article.badge}
+              badgeColor={article.badgeColor}
+              title={article.title}
+              desc={article.description}
+              tags={article.tags}
+              hoverBorderColor={article.hoverBorderColor}
+            />
           ))}
         </div>
       </section>

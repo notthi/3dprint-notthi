@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import ArticleCard from "@/components/ArticleCard";
+import { getArticlesByCategory } from "@/lib/articles";
 
 export const metadata: Metadata = {
   title: "3Dプリンター フィラメントおすすめ比較 | PLA・PETG・TPU解説",
@@ -23,35 +24,7 @@ export const metadata: Metadata = {
   },
 };
 
-const articles = [
-  {
-    href: "/filaments/recommend",
-    badge: "ランキング",
-    badgeColor: "#8b5cf6",
-    title: "3Dプリンターフィラメントおすすめランキング【素材別】",
-    desc: "PLA・PETG・TPUなど素材別におすすめフィラメントを比較。用途に合った選び方も解説。",
-    tags: ["比較", "ランキング", "PLA", "PETG"],
-    hoverBorderColor: "#8b5cf6",
-  },
-  {
-    href: "/filaments/pla",
-    badge: "PLA",
-    badgeColor: "#06b6d4",
-    title: "PLAフィラメントおすすめ8選【初心者にも使いやすい】",
-    desc: "最も一般的な素材PLAフィラメントの人気製品8選を比較。強度・色・価格の違いを詳しく解説。",
-    tags: ["PLA", "初心者", "コスパ"],
-    hoverBorderColor: "#06b6d4",
-  },
-  {
-    href: "/filaments/petg",
-    badge: "PETG",
-    badgeColor: "#f59e0b",
-    title: "PETGフィラメントおすすめ5選【耐熱・強度が必要な用途に】",
-    desc: "PLAより強く耐熱性も高いPETGフィラメントの選び方とおすすめ製品を紹介。",
-    tags: ["PETG", "耐熱", "強度"],
-    hoverBorderColor: "#f59e0b",
-  },
-];
+const articles = getArticlesByCategory("filaments");
 
 export default function FilamentsPage() {
   return (
@@ -84,7 +57,16 @@ export default function FilamentsPage() {
       <section style={{ maxWidth: "72rem", margin: "0 auto", padding: "3rem 1.5rem" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
           {articles.map((article) => (
-            <ArticleCard key={article.href} {...article} />
+            <ArticleCard
+              key={article.href}
+              href={article.href}
+              badge={article.badge}
+              badgeColor={article.badgeColor}
+              title={article.title}
+              desc={article.description}
+              tags={article.tags}
+              hoverBorderColor={article.hoverBorderColor}
+            />
           ))}
         </div>
       </section>

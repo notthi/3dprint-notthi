@@ -2,41 +2,21 @@ import type { Metadata } from "next";
 import ArticleLayout from "@/components/ArticleLayout";
 import PlaContent from "../../../../content/articles/filaments-pla.mdx";
 import { meta } from "../../../../content/articles/filaments-pla.meta";
+import { generateArticleMetadata } from "@/lib/metadata";
+import { buildRelated } from "@/lib/articles";
 
-export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
-  openGraph: {
-    type: "website",
-    locale: "ja_JP",
-    siteName: "3Dプリントラボ",
-    url: "https://3dprint.notthi.com/filaments/pla",
-    title: meta.title,
-    description: meta.description,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: meta.title,
-    description: meta.description,
-  },
-  alternates: {
-    canonical: "https://3dprint.notthi.com/filaments/pla",
-  },
-};
+export const metadata: Metadata = generateArticleMetadata("/filaments/pla", meta);
 
 export default function FilamentsPlaPage() {
+  const related = buildRelated(meta.related, "filaments", "/filaments/pla");
   return (
     <ArticleLayout
-      breadcrumb={[
-        { label: "ホーム", href: "/" },
-        { label: "フィラメント", href: "/filaments" },
-        { label: "PLA" },
-      ]}
+      breadcrumb={[{ label: "ホーム", href: "/" }, { label: "フィラメント", href: "/filaments" }, { label: "PLA" }]}
       title={meta.title}
       updatedAt={meta.updatedAt}
       tags={meta.tags}
       toc={meta.toc}
-      related={meta.related}
+      related={related}
     >
       <PlaContent />
     </ArticleLayout>

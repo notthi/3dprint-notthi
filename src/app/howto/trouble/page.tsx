@@ -2,23 +2,13 @@ import type { Metadata } from "next";
 import ArticleLayout from "@/components/ArticleLayout";
 import Content from "../../../../content/articles/howto-trouble.mdx";
 import { meta } from "../../../../content/articles/howto-trouble.meta";
+import { generateArticleMetadata } from "@/lib/metadata";
+import { buildRelated } from "@/lib/articles";
 
-export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.description,
-  openGraph: {
-    type: "website",
-    locale: "ja_JP",
-    siteName: "3Dプリントラボ",
-    url: "https://3dprint.notthi.com/howto/trouble",
-    title: meta.title,
-    description: meta.description,
-  },
-  twitter: { card: "summary_large_image", title: meta.title, description: meta.description },
-  alternates: { canonical: "https://3dprint.notthi.com/howto/trouble" },
-};
+export const metadata: Metadata = generateArticleMetadata("/howto/trouble", meta);
 
 export default function HowtoTroublePage() {
+  const related = buildRelated(meta.related, "howto", "/howto/trouble");
   return (
     <ArticleLayout
       breadcrumb={[{ label: "ホーム", href: "/" }, { label: "使い方", href: "/howto" }, { label: "トラブル解決" }]}
@@ -26,7 +16,7 @@ export default function HowtoTroublePage() {
       updatedAt={meta.updatedAt}
       tags={meta.tags}
       toc={meta.toc}
-      related={meta.related}
+      related={related}
     >
       <Content />
     </ArticleLayout>
