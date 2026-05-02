@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
 import ArticleLayout from "@/components/ArticleLayout";
 import Content from "../../../../content/articles/printers-recommend.mdx";
 import { meta } from "../../../../content/articles/printers-recommend.meta";
 import { generateArticleMetadata } from "@/lib/metadata";
 import { buildRelated } from "@/lib/articles";
 
-export const metadata: Metadata = generateArticleMetadata("/printers/recommend", meta);
+export const metadata = generateArticleMetadata("/printers/recommend", meta);
 
 export default function PrintersRecommendPage() {
   const related = buildRelated(meta.related, "printers", "/printers/recommend");
