@@ -1,13 +1,15 @@
+import type { Metadata } from "next";
 import ArticleLayout from "@/components/ArticleLayout";
-import Content from "../../../../content/articles/filaments-petg.mdx";
-import { meta } from "../../../../content/articles/filaments-petg.meta";
+import Content from "../../../../content/articles/filaments-pla.mdx";
+import { meta } from "../../../../content/articles/filaments-pla.meta";
 import { generateArticleMetadata } from "@/lib/metadata";
 import { buildBreadcrumb, buildRelated } from "@/lib/articles";
 
-export const metadata = generateArticleMetadata(`/${meta.category}/${meta.slug}`, meta);
+const href = `/${meta.category}/${meta.slug}`;
+
+export const metadata: Metadata = generateArticleMetadata(href, meta);
 
 export default function Page() {
-  const href = `/${meta.category}/${meta.slug}`;
   return (
     <ArticleLayout
       breadcrumb={buildBreadcrumb(meta)}
