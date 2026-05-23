@@ -4,11 +4,10 @@ import { meta } from "../../../../content/articles/printers-recommend.meta";
 import { generateArticleMetadata } from "@/lib/metadata";
 import { buildBreadcrumb, buildRelated } from "@/lib/articles";
 
-const href = `/${meta.category}/${meta.slug}`;
-
-export const metadata = generateArticleMetadata(href, meta);
+export const metadata = generateArticleMetadata(`/${meta.category}/${meta.slug}`, meta);
 
 export default function Page() {
+  const href = `/${meta.category}/${meta.slug}`;
   return (
     <ArticleLayout
       breadcrumb={buildBreadcrumb(meta)}
