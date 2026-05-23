@@ -1,4 +1,9 @@
 export const meta = {
+  category: "howto" as const,
+  slug: "trouble",
+  badge: "トラブル",
+  badgeColor: "#ef4444",
+  breadcrumbLabel: "トラブル解決",
   title: "3Dプリンター トラブル解決ガイド【2026年版】よくある失敗と対策を徹底解説",
   description:
     "3Dプリンターのよくあるトラブル（貼り付かない・詰まり・反り・糸引き・層剥離）の原因と解決策を網羅的にまとめました。初心者から中級者まで役立つ対処法ガイドです。",

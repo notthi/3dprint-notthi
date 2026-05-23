@@ -2,20 +2,21 @@ import ArticleLayout from "@/components/ArticleLayout";
 import Content from "../../../../content/articles/howto-trouble.mdx";
 import { meta } from "../../../../content/articles/howto-trouble.meta";
 import { generateArticleMetadata } from "@/lib/metadata";
-import { buildRelated } from "@/lib/articles";
+import { buildBreadcrumb, buildRelated } from "@/lib/articles";
 
-export const metadata = generateArticleMetadata("/howto/trouble", meta);
+const href = `/${meta.category}/${meta.slug}`;
 
-export default function HowtoTroublePage() {
-  const related = buildRelated(meta.related, "howto", "/howto/trouble");
+export const metadata = generateArticleMetadata(href, meta);
+
+export default function Page() {
   return (
     <ArticleLayout
-      breadcrumb={[{ label: "ホーム", href: "/" }, { label: "使い方", href: "/howto" }, { label: "トラブル解決" }]}
+      breadcrumb={buildBreadcrumb(meta)}
       title={meta.title}
       updatedAt={meta.updatedAt}
       tags={meta.tags}
       toc={meta.toc}
-      related={related}
+      related={buildRelated(meta.related, meta.category, href)}
     >
       <Content />
     </ArticleLayout>

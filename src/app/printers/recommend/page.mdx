@@ -2,20 +2,21 @@ import ArticleLayout from "@/components/ArticleLayout";
 import Content from "../../../../content/articles/printers-recommend.mdx";
 import { meta } from "../../../../content/articles/printers-recommend.meta";
 import { generateArticleMetadata } from "@/lib/metadata";
-import { buildRelated } from "@/lib/articles";
+import { buildBreadcrumb, buildRelated } from "@/lib/articles";
 
-export const metadata = generateArticleMetadata("/printers/recommend", meta);
+const href = `/${meta.category}/${meta.slug}`;
 
-export default function PrintersRecommendPage() {
-  const related = buildRelated(meta.related, "printers", "/printers/recommend");
+export const metadata = generateArticleMetadata(href, meta);
+
+export default function Page() {
   return (
     <ArticleLayout
-      breadcrumb={[{ label: "ホーム", href: "/" }, { label: "プリンター", href: "/printers" }, { label: "おすすめ7選" }]}
+      breadcrumb={buildBreadcrumb(meta)}
       title={meta.title}
       updatedAt={meta.updatedAt}
       tags={meta.tags}
       toc={meta.toc}
-      related={related}
+      related={buildRelated(meta.related, meta.category, href)}
     >
       <Content />
     </ArticleLayout>

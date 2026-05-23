@@ -1,4 +1,9 @@
 export const meta = {
+  category: "filaments" as const,
+  slug: "recommend",
+  badge: "ランキング",
+  badgeColor: "#8b5cf6",
+  breadcrumbLabel: "おすすめランキング",
   title: "PLAフィラメントおすすめ8選【2026年版】初心者でも使いやすい定番素材を比較",
   description:
     "3Dプリンター初心者に最もおすすめのPLAフィラメントを徹底比較。コスパ・品質・色の豊富さで選ぶべきブランドをランキング形式で紹介します。",

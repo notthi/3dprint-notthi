@@ -1,4 +1,9 @@
 export const meta = {
+  category: "printers" as const,
+  slug: "beginners",
+  badge: "初心者",
+  badgeColor: "#10b981",
+  breadcrumbLabel: "初心者の選び方",
   title: "初心者向け3Dプリンターの選び方【2026年版】失敗しない5つのチェックポイント",
   description:
     "3Dプリンター初心者が最初の1台を選ぶときに確認すべきポイントを解説。自動レベリング・価格・サポートなど重要な5項目でおすすめ機種を比較します。",

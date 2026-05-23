@@ -1,4 +1,9 @@
 export const meta = {
+  category: "printers" as const,
+  slug: "home-use",
+  badge: "家庭用",
+  badgeColor: "#8b5cf6",
+  breadcrumbLabel: "家庭用・静音",
   title: "家庭用3Dプリンターの選び方【2026年版】リビング・子供部屋に置ける静音機種とは",
   description:
     "リビングや子供部屋に設置できる静音・コンパクトな家庭用3Dプリンターの選び方を解説。騒音・サイズ・使いやすさで比較したおすすめ機種も紹介します。",

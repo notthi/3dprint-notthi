@@ -1,4 +1,9 @@
 export const meta = {
+  category: "printers" as const,
+  slug: "recommend",
+  badge: "ランキング",
+  badgeColor: "#06b6d4",
+  breadcrumbLabel: "おすすめ7選",
   title: "家庭用3Dプリンターおすすめ7選【2026年版】初心者でも失敗しない選び方",
   description:
     "家庭用に最適な3Dプリンターを徹底比較。価格・精度・使いやすさを総合評価したランキング形式で解説。初心者が失敗しない選び方のポイントも詳しく紹介します。",

@@ -1,4 +1,9 @@
 export const meta = {
+  category: "howto" as const,
+  slug: "beginners",
+  badge: "入門",
+  badgeColor: "#10b981",
+  breadcrumbLabel: "初心者ガイド",
   title: "3Dプリンター初心者ガイド完全版【2026年】購入から初めての印刷まで",
   description:
     "3Dプリンターを初めて使う方向けに、機種選び・セットアップ・スライサーの使い方・最初の印刷まで丁寧に解説します。",
