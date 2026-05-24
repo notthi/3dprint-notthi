@@ -23,6 +23,10 @@ import { meta as howtoBambuStudio } from "../../content/articles/howto-bambu-stu
 import { meta as howtoSlicer } from "../../content/articles/howto-slicer.meta";
 import { meta as howtoOrcaslicerGuide } from "../../content/articles/howto-orcaslicer-guide.meta";
 import { meta as howtoMakerworldGuide } from "../../content/articles/howto-makerworld-guide.meta";
+import { meta as howtoInfillGuide } from "../../content/articles/howto-infill-guide.meta";
+import { meta as howtoNozzleClog } from "../../content/articles/howto-nozzle-clog.meta";
+import { meta as howtoBedLeveling } from "../../content/articles/howto-bed-leveling.meta";
+import { meta as howtoSupport } from "../../content/articles/howto-support.meta";
 // AUTO_INJECT_IMPORT — このコメントの上に新しい記事のimportを追加すること。`npm run new-article` が自動で追記する。
 
 export type ArticleCategory = "filaments" | "printers" | "howto";
@@ -93,6 +97,10 @@ export const articles: ArticleEntry[] = [
   toEntry(howtoSlicer),
   toEntry(howtoOrcaslicerGuide),
   toEntry(howtoMakerworldGuide),
+  toEntry(howtoInfillGuide),
+  toEntry(howtoNozzleClog),
+  toEntry(howtoBedLeveling),
+  toEntry(howtoSupport),
   // AUTO_INJECT_ENTRY — このコメントの上に toEntry(xxx) を追加すること。`npm run new-article` が自動で追記する。
 ];
 

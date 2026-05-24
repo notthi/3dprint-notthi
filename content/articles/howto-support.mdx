@@ -1,0 +1,210 @@
+export const S = {
+  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
+  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
+};
+
+<div style={S.card}>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>サポート材（支持材）は、空中に浮いた部分を支えるために一時的に出力される構造です。</strong> FDM方式の3Dプリンターは下から積み上げる方式のため、途中に空間がある形状ではサポートが必要になります。
+  </div>
+  <div style={{ ...S.p, marginBottom: 0 }}>
+    サポートの種類・設定・取り外し方を理解すると、仕上がりが大きく向上します。
+  </div>
+</div>
+
+<section id="why" style={S.section}>
+  <h2 style={S.h2}>サポート材が必要な理由</h2>
+  <div style={S.p}>
+    FDM（熱溶解積層）方式は、フィラメントを下から順番に積み重ねて造形します。そのため、<strong style={{ color: "#f1f5f9" }}>下に何もない空間（オーバーハング）</strong>があると、フィラメントが空中に垂れてしまいます。
+  </div>
+  <div style={S.tip}>
+    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>📐 45度ルール</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      一般的に<strong style={{ color: "#f1f5f9" }}>45度以上のオーバーハング</strong>になるとサポートが必要です。45度以下であれば多くの場合サポートなしで印刷できます。ただしプリンターや素材によって異なります。
+    </div>
+  </div>
+</section>
+
+<section id="types" style={S.section}>
+  <h2 style={S.h2}>サポートの種類</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>種類</th>
+          <th style={S.th}>特徴</th>
+          <th style={S.th}>向いている用途</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, fontWeight: "700" }}>通常サポート（Normal）</td>
+          <td style={S.td}>格子状の柱。シンプルで速いが、外し跡が残りやすい</td>
+          <td style={S.td}>シンプルな形状・機能パーツ</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>ツリーサポート（Tree）</td>
+          <td style={S.td}>枝状に伸びてオーバーハングを支える。外しやすく跡が残りにくい</td>
+          <td style={{ ...S.td, color: "#06b6d4" }}>フィギュア・複雑な形状（初心者推奨）</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>水溶性サポート（PVA）</td>
+          <td style={S.td}>水に溶ける素材。完璧な仕上がりになるが、マルチノズル機が必要</td>
+          <td style={S.td}>精密パーツ・除去が難しい内部空洞</td>
+        </tr>
+        <tr>
+          <td style={S.td}>ブレークアウェイ</td>
+          <td style={S.td}>本体と異なる素材でサポート。通常より外しやすい</td>
+          <td style={S.td}>マルチカラー機・PETG＋PLA組み合わせ</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style={{ ...S.p, marginTop: "1rem" }}>
+    迷ったら<strong style={{ color: "#06b6d4" }}>ツリーサポート</strong>を選んでください。取り外しやすく仕上がりもきれいです。
+  </div>
+</section>
+
+<section id="settings" style={S.section}>
+  <h2 style={S.h2}>スライサーでの設定</h2>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>Bambu Studio の場合：</strong> プロセスタブ → 「サポート」セクションで「サポートを有効にする」をオン。タイプをNormal / Treeから選択。Z距離（ベッド面からの隙間）は0.2mmが標準です。
+  </div>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>Cura の場合：</strong> 「サポートを生成」をオンにして、サポート構造を「通常」または「ツリー」から選択。オーバーハング角度は45度が標準設定です。
+  </div>
+  <div style={S.tip}>
+    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>💡 サポートのZ距離について</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      Z距離（サポートと本体の隙間）は取り外しやすさと面品質のバランスです。<strong style={{ color: "#f1f5f9" }}>0.2mm</strong>が一般的な推奨値。広げると外しやすくなりますが、面がザラつきます。
+    </div>
+  </div>
+</section>
+
+<section id="removal" style={S.section}>
+  <h2 style={S.h2}>きれいに取り外すコツ</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>道具</th>
+          <th style={S.th}>使い方</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>ニッパー</td>
+          <td style={S.td}>サポートを根元からカット。細い部分を切り離すのに便利</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>スクレーパー（ヘラ）</td>
+          <td style={S.td}>ベッドに近いサポートをすくい取るように剥がす</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>ラジオペンチ</td>
+          <td style={S.td}>内部のサポートをつかんで引き抜く</td>
+        </tr>
+        <tr>
+          <td style={S.td}>温水（水溶性サポートのみ）</td>
+          <td style={S.td}>PVAサポートは水に30〜60分漬けると溶ける</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style={S.tip}>
+    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>💡 外しやすくする印刷設定</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      サポートの充填率を低め（5〜15%）に設定すると取り外しやすくなります。また、印刷後すぐ（まだ温かい状態）に取り外すとPLAは折れやすく取れやすいです。
+    </div>
+  </div>
+</section>
+
+<section id="reduce" style={S.section}>
+  <h2 style={S.h2}>サポートを減らす設計のコツ</h2>
+  <div style={S.p}>
+    そもそもサポートが必要な箇所を減らすことが最善策です。
+  </div>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>テクニック</th>
+          <th style={S.th}>内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#22c55e", fontWeight: "700" }}>印刷向きの変更</td>
+          <td style={S.td}>モデルの向きを変えてオーバーハングをなくす（最も効果的）</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#22c55e", fontWeight: "700" }}>ブリッジを活用</td>
+          <td style={S.td}>水平スパン5cm以下ならサポートなしで橋渡しが可能</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>モデルの分割</td>
+          <td style={S.td}>複雑な形状を複数パーツに分割して後で接着</td>
+        </tr>
+        <tr>
+          <td style={S.td}>チャンファー・フィレット</td>
+          <td style={S.td}>角の部分を面取りして45度以下のオーバーハングにする</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="trouble" style={S.section}>
+  <h2 style={S.h2}>よくあるトラブル</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>症状</th>
+          <th style={S.th}>対処法</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#ef4444" }}>サポートが外れない・本体にくっついている</td>
+          <td style={S.td}>Z距離を広げる（0.2→0.25mm）/ ツリーサポートに変更</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#ef4444" }}>サポートの接触面がザラつく</td>
+          <td style={S.td}>Z距離を狭める / インターフェース層を有効にする</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>サポートが途中で倒れる</td>
+          <td style={S.td}>サポートの充填率を上げる / ブリムを追加</td>
+        </tr>
+        <tr>
+          <td style={S.td}>サポートが多すぎて時間がかかる</td>
+          <td style={S.td}>印刷方向を変えて不要なサポートを減らす</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="summary" style={S.section}>
+  <h2 style={S.h2}>まとめ</h2>
+  <div style={S.card}>
+    <div style={{ color: "#f1f5f9", fontWeight: "700", marginBottom: "0.75rem" }}>サポート材の選び方まとめ</div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#06b6d4" }}>フィギュア・複雑な形状：</strong> ツリーサポート（外しやすく仕上がりがきれい）
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#06b6d4" }}>機能パーツ・シンプルな形状：</strong> 通常サポート（速くて確実）
+    </div>
+    <div style={{ ...S.p, marginBottom: "1rem" }}>
+      <strong style={{ color: "#06b6d4" }}>精密パーツ・完璧な仕上がり：</strong> 水溶性サポート（マルチノズル機が必要）
+    </div>
+    <div style={{ color: "#06b6d4", fontWeight: "700" }}>→ まずツリーサポートを試して、取り外しやすさと仕上がりのバランスを確認しましょう。</div>
+  </div>
+</section>

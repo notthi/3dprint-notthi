@@ -1,0 +1,178 @@
+export const S = {
+  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  warn:    { backgroundColor: "#1c0a0a", border: "1px solid #ef4444", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #ef4444", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
+  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
+  step:    { backgroundColor: "#0f172a", border: "1px solid #334155", borderRadius: "0.5rem", padding: "1rem 1.25rem", marginBottom: "0.75rem" },
+  num:     { color: "#ef4444", fontWeight: "700", fontSize: "1rem", marginRight: "0.5rem" },
+};
+
+<div style={S.card}>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>ノズル詰まり（クロッグ）は3Dプリンターで最もよく起こるトラブルのひとつです。</strong> フィラメントが出なくなったり、層がスカスカになったりした場合は、まずノズル詰まりを疑いましょう。
+  </div>
+  <div style={{ ...S.p, marginBottom: 0 }}>
+    ほとんどのケースは<strong style={{ color: "#ef4444" }}>コールドプル</strong>で解決できます。交換が必要な場合も手順は簡単です。
+  </div>
+</div>
+
+<section id="cause" style={S.section}>
+  <h2 style={S.h2}>主な原因</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>原因</th>
+          <th style={S.th}>詳細</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#ef4444", fontWeight: "700" }}>フィラメントの吸湿</td>
+          <td style={S.td}>水分を含んだフィラメントは気泡が発生し、ノズル内で炭化して詰まりの原因になる</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#ef4444", fontWeight: "700" }}>低すぎる温度での印刷</td>
+          <td style={S.td}>フィラメントが十分に溶けずノズル内で固まる</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>フィラメントの炭化</td>
+          <td style={S.td}>長時間の印刷や高温放置でフィラメントが焦げて詰まる</td>
+        </tr>
+        <tr>
+          <td style={S.td}>異なる素材の混在</td>
+          <td style={S.td}>前の素材が残ったまま新しい素材を入れると詰まりやすい</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>ノズルの摩耗・劣化</td>
+          <td style={S.td}>カーボンファイバー入りフィラメントなどによる内壁の削れ</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="cold-pull" style={S.section}>
+  <h2 style={S.h2}>解決①：コールドプル（最も効果的）</h2>
+  <div style={S.p}>
+    コールドプルはノズル内の汚れや詰まりを引き抜く方法です。ほとんどの詰まりはこれで解消できます。
+  </div>
+  <div style={S.step}>
+    <span style={S.num}>1.</span>
+    <span style={{ color: "#f1f5f9" }}>ノズルを印刷温度（PLAなら220℃）まで加熱する</span>
+  </div>
+  <div style={S.step}>
+    <span style={S.num}>2.</span>
+    <span style={{ color: "#f1f5f9" }}>フィラメントを少し押し出して、ノズル内を満たす</span>
+  </div>
+  <div style={S.step}>
+    <span style={S.num}>3.</span>
+    <span style={{ color: "#f1f5f9" }}>温度をゆっくり下げ、PLA: 70〜90℃ / PETG: 90〜110℃ まで冷ます</span>
+  </div>
+  <div style={S.step}>
+    <span style={S.num}>4.</span>
+    <span style={{ color: "#f1f5f9" }}>フィラメントをゆっくり、一定の力で引き抜く（急いで引かない）</span>
+  </div>
+  <div style={S.step}>
+    <span style={S.num}>5.</span>
+    <span style={{ color: "#f1f5f9" }}>引き抜いたフィラメントの先端が汚れている間は1〜3を繰り返す</span>
+  </div>
+  <div style={S.tip}>
+    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>💡 成功のサイン</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      引き抜いたフィラメントの先端がノズル形状に成形されていれば成功です。先端がきれいになるまで繰り返してください。
+    </div>
+  </div>
+</section>
+
+<section id="heat" style={S.section}>
+  <h2 style={S.h2}>解決②：温度を上げて押し出す</h2>
+  <div style={S.p}>
+    コールドプルで改善しない場合は、通常より<strong style={{ color: "#f1f5f9" }}>10〜20℃高い温度</strong>に設定してフィラメントを押し出してみましょう。
+  </div>
+  <div style={S.p}>
+    例：PLAを通常200℃で印刷している場合 → 220〜230℃に上げて、少量押し出す。固まった樹脂が溶けて出てくることがあります。
+  </div>
+  <div style={S.warn}>
+    <div style={{ color: "#ef4444", fontWeight: "700", marginBottom: "0.5rem" }}>⚠️ 注意</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      素材ごとの最大温度を超えないようにしてください（PLA: 240℃、PETG: 260℃が目安）。過熱するとフィラメントが焦げて悪化することがあります。
+    </div>
+  </div>
+</section>
+
+<section id="replace" style={S.section}>
+  <h2 style={S.h2}>解決③：ノズル交換</h2>
+  <div style={S.p}>
+    コールドプルと高温押し出しを試しても改善しない場合は、ノズル交換が最も確実な解決策です。
+  </div>
+  <div style={S.p}>
+    ノズルは消耗品です。詰まりが繰り返す場合も迷わず交換しましょう。交換用ノズルは数百円で入手できます。
+  </div>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>使用素材</th>
+          <th style={S.th}>交換目安</th>
+          <th style={S.th}>推奨ノズル</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>PLA / PETG</td>
+          <td style={S.td}>3〜6ヶ月（使用頻度による）</td>
+          <td style={S.td}>真鍮ノズル</td>
+        </tr>
+        <tr>
+          <td style={S.td}>PETG / ABS混用</td>
+          <td style={S.td}>1〜3ヶ月</td>
+          <td style={S.td}>真鍮ノズル</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#f59e0b" }}>カーボンファイバー入り</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>50〜100時間</td>
+          <td style={S.td}>硬化鋼ノズル（必須）</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="prevention" style={S.section}>
+  <h2 style={S.h2}>詰まりを防ぐ予防策</h2>
+  <div style={S.tip}>
+    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.75rem" }}>💡 詰まらせないための3つの習慣</div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#f1f5f9" }}>① フィラメントを乾燥させる</strong> — 湿気を吸ったフィラメントは詰まりの最大原因。未使用時はジップロック＋乾燥剤で保管、印刷前に乾燥機で乾燥させる。
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#f1f5f9" }}>② 素材交換時にパージする</strong> — 異なる素材に変える際は、旧素材が完全に出るまでパージ（押し出し）する。
+    </div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      <strong style={{ color: "#f1f5f9" }}>③ 月1回のコールドプル</strong> — 詰まっていなくても定期的にコールドプルすると、蓄積した汚れを取り除けます。
+    </div>
+  </div>
+</section>
+
+<section id="summary" style={S.section}>
+  <h2 style={S.h2}>まとめ</h2>
+  <div style={S.card}>
+    <div style={{ color: "#f1f5f9", fontWeight: "700", marginBottom: "0.75rem" }}>ノズル詰まり対処フロー</div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#ef4444" }}>Step 1：</strong> まずコールドプルを試す（2〜3回繰り返す）
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#f59e0b" }}>Step 2：</strong> 改善しなければ高温で押し出す
+    </div>
+    <div style={{ ...S.p, marginBottom: "1rem" }}>
+      <strong style={{ color: "#22c55e" }}>Step 3：</strong> それでもダメならノズル交換（数百円で解決）
+    </div>
+    <div style={{ color: "#06b6d4", fontWeight: "700" }}>→ 予防が最大の対策。フィラメントの乾燥と定期メンテを忘れずに。</div>
+  </div>
+</section>
