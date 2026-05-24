@@ -1,0 +1,204 @@
+export const S = {
+  card:       { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2:         { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #f97316", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p:          { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted:      { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section:    { marginBottom: "2.5rem" },
+  warn:       { backgroundColor: "rgba(249,115,22,0.06)", border: "1px solid rgba(249,115,22,0.3)", borderRadius: "0.75rem", padding: "1.25rem", marginBottom: "1rem" },
+  disclaimer: { color: "#475569", fontSize: "0.75rem", borderTop: "1px solid #1e293b", paddingTop: "1.25rem", lineHeight: "1.6" },
+};
+
+<div style={S.card}>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>ABS（アクリロニトリル・ブタジエン・スチレン）</strong>は、
+    耐熱性・強度に優れた上級者向けフィラメントです。
+    PLA では変形してしまう<strong style={{ color: "#f1f5f9" }}>60℃以上の環境や、機械的強度が必要なパーツ</strong>に使われます。
+  </div>
+  <div style={{ ...S.p, marginBottom: 0 }}>
+    ただし扱いにはコツが必要です。この記事では ABS を選ぶ前に知っておくべきポイントと、
+    おすすめ5選を解説します。
+  </div>
+</div>
+
+<section id="before-buy" style={S.section}>
+  <h2 style={S.h2}>ABSを選ぶ前に確認すること</h2>
+
+  <div style={S.warn}>
+    <div style={{ color: "#fb923c", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.5rem" }}>⚠ 密閉チャンバーが必須です</div>
+    <div style={S.muted}>
+      ABS は反り（ワーピング）が非常に起きやすい素材です。
+      密閉チャンバー搭載機（Bambu Lab P1S・X1C・Creality K1C 等）がないと安定した印刷は困難です。
+      <strong style={{ color: "#f1f5f9" }}>A1 Mini・A1・Ender-3 系での ABS 印刷は非推奨</strong>です。
+    </div>
+  </div>
+
+  <div style={S.card}>
+    <div style={S.p}>
+      <strong style={{ color: "#f1f5f9" }}>ABSよりASAが向いている場合もあります。</strong>
+      「屋外で使う」「UV耐性が必要」な場合は ASA を選びましょう。
+      ABS は屋外での紫外線で劣化しやすいため、外装パーツには不向きです。
+    </div>
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+      <div style={{ backgroundColor: "rgba(249,115,22,0.06)", border: "1px solid rgba(249,115,22,0.2)", borderRadius: "0.5rem", padding: "1rem" }}>
+        <div style={{ color: "#fb923c", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.5rem" }}>ABS が向く用途</div>
+        <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.35rem" }}>
+          {["車内パーツ・ダッシュボード部品", "工業用筐体・ケース類", "機械的強度が必要なパーツ", "熱がかかる環境（60〜80℃）"].map(t => (
+            <li key={t} style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• {t}</li>
+          ))}
+        </ul>
+      </div>
+      <div style={{ backgroundColor: "rgba(99,102,241,0.06)", border: "1px solid rgba(99,102,241,0.2)", borderRadius: "0.5rem", padding: "1rem" }}>
+        <div style={{ color: "#818cf8", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.5rem" }}>ASA が向く用途</div>
+        <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.35rem" }}>
+          {["屋外設置パーツ・標識類", "車の外装・ルーフレール部品", "UV・雨・熱に長期さらされるもの", "ABSより反りにくく扱いやすい"].map(t => (
+            <li key={t} style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• {t}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ranking" style={S.section}>
+  <h2 style={S.h2}>ABSフィラメントおすすめ5選</h2>
+
+  <div style={{ backgroundColor: "rgba(249,115,22,0.06)", border: "1px solid rgba(249,115,22,0.3)", borderRadius: "0.5rem", padding: "0.75rem 1.25rem", marginBottom: "1.5rem", fontSize: "0.85rem", color: "#fb923c" }}>
+    🏆 総合評価順（品質・価格・安定性を総合）
+  </div>
+
+  <div style={{ marginBottom: "1rem" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
+      <span style={{ backgroundColor: "#f59e0b", color: "#000", fontWeight: "800", fontSize: "0.75rem", padding: "0.2rem 0.6rem", borderRadius: "9999px" }}>1位</span>
+      <span style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.95rem" }}>Bambu Lab ABS — Bambu機種ユーザーの最適解</span>
+    </div>
+    <div style={{ ...S.muted, marginBottom: "0.75rem", paddingLeft: "0.5rem" }}>
+      P1S・X1C との組み合わせで最も安定。Bambu Studio にプリセット入りで設定不要。純正品ならではの信頼性。
+    </div>
+    <ProductCard productId="bambu-abs" />
+  </div>
+
+  <div style={{ marginBottom: "1rem" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
+      <span style={{ backgroundColor: "#94a3b8", color: "#000", fontWeight: "800", fontSize: "0.75rem", padding: "0.2rem 0.6rem", borderRadius: "9999px" }}>2位</span>
+      <span style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.95rem" }}>eSUN ABS+ — 定番コスパ品</span>
+    </div>
+    <div style={{ ...S.muted, marginBottom: "0.75rem", paddingLeft: "0.5rem" }}>
+      通常 ABS より反りにくく改良された定番品。品質安定性が高く、サードパーティ製の中ではトップクラス。
+    </div>
+    <ProductCard productId="esun-abs-plus" />
+  </div>
+
+  <div style={{ marginBottom: "1rem" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
+      <span style={{ backgroundColor: "#b45309", color: "#fff", fontWeight: "800", fontSize: "0.75rem", padding: "0.2rem 0.6rem", borderRadius: "9999px" }}>3位</span>
+      <span style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.95rem" }}>Polymaker PolyLite ABS — 高品質・精密パーツ向き</span>
+    </div>
+    <div style={{ ...S.muted, marginBottom: "0.75rem", paddingLeft: "0.5rem" }}>
+      寸法精度が高く機械部品・精密パーツに向く。品質重視派に。
+    </div>
+    <ProductCard productId="polymaker-polylite-abs" />
+  </div>
+
+  <div style={{ marginBottom: "1rem" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
+      <span style={{ backgroundColor: "#334155", color: "#94a3b8", fontWeight: "800", fontSize: "0.75rem", padding: "0.2rem 0.6rem", borderRadius: "9999px" }}>4位</span>
+      <span style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.95rem" }}>SUNLU ABS — コスパ重視の試作用</span>
+    </div>
+    <div style={{ ...S.muted, marginBottom: "0.75rem", paddingLeft: "0.5rem" }}>
+      試作品・大量印刷向き。品質は上位品より劣るが、使い捨て用途には十分。
+    </div>
+    <ProductCard productId="sunlu-abs" />
+  </div>
+
+  <div style={{ marginBottom: "1rem" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
+      <span style={{ backgroundColor: "#334155", color: "#94a3b8", fontWeight: "800", fontSize: "0.75rem", padding: "0.2rem 0.6rem", borderRadius: "9999px" }}>5位</span>
+      <span style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.95rem" }}>Creality Hyper ABS — 高速印刷対応</span>
+    </div>
+    <div style={{ ...S.muted, marginBottom: "0.75rem", paddingLeft: "0.5rem" }}>
+      高速印刷設計。Creality K1C との相性が特に良い。速さ重視ユーザーに。
+    </div>
+    <ProductCard productId="creality-hyper-abs" />
+  </div>
+</section>
+
+<section id="print-settings" style={S.section}>
+  <h2 style={S.h2}>ABSの印刷設定の目安</h2>
+  <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem" }}>
+    {[
+      { label: "ノズル温度",       val: "240〜260℃（ブランドにより調整）" },
+      { label: "ベッド温度",       val: "100〜110℃（PEIシートまたはABS用接着剤を使用）" },
+      { label: "チャンバー温度",   val: "40〜60℃（密閉チャンバー必須）" },
+      { label: "冷却ファン",       val: "OFF または最小限（冷やすと反りが増す）" },
+      { label: "エンクロージャー", val: "必須（開放型プリンターでの ABS 印刷は非推奨）" },
+      { label: "印刷速度",         val: "40〜60mm/s（速すぎると層間剥離のリスク）" },
+    ].map(({ label, val }) => (
+      <div key={label} style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem", alignItems: "flex-start" }}>
+        <span style={{ color: "#f97316", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "140px" }}>{label}</span>
+        <span style={S.muted}>{val}</span>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section id="abs-vs-asa" style={S.section}>
+  <h2 style={S.h2}>ABSとASAの使い分け</h2>
+  <div style={{ overflowX: "auto", borderRadius: "0.75rem", border: "1px solid #334155", marginBottom: "1rem" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={{ backgroundColor: "#0f172a", color: "#94a3b8", fontSize: "0.75rem", fontWeight: "700", padding: "0.625rem 1rem", textAlign: "left", borderBottom: "1px solid #334155" }}>比較項目</th>
+          <th style={{ backgroundColor: "#0f172a", color: "#fb923c", fontSize: "0.75rem", fontWeight: "700", padding: "0.625rem 1rem", textAlign: "left", borderBottom: "1px solid #334155" }}>ABS</th>
+          <th style={{ backgroundColor: "#0f172a", color: "#818cf8", fontSize: "0.75rem", fontWeight: "700", padding: "0.625rem 1rem", textAlign: "left", borderBottom: "1px solid #334155" }}>ASA</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          ["UV耐性",   "低（屋外で劣化しやすい）",   "高（屋外長期使用OK）"],
+          ["耐熱性",   "〜80℃程度",                  "〜90℃程度（ABS以上）"],
+          ["反りやすさ", "やや多い",                  "ABS と同程度"],
+          ["臭い",     "強め（換気必須）",             "ABS と同程度"],
+          ["主な用途", "車内・工業部品・ケース類",    "屋外パーツ・車外装備"],
+          ["価格",     "やや安い",                    "やや高い"],
+        ].map(([item, abs, asa]) => (
+          <tr key={item}>
+            <td style={{ padding: "0.625rem 1rem", fontSize: "0.875rem", borderBottom: "1px solid #1e293b", color: "#94a3b8" }}>{item}</td>
+            <td style={{ padding: "0.625rem 1rem", fontSize: "0.875rem", borderBottom: "1px solid #1e293b", color: "#cbd5e1" }}>{abs}</td>
+            <td style={{ padding: "0.625rem 1rem", fontSize: "0.875rem", borderBottom: "1px solid #1e293b", color: "#cbd5e1" }}>{asa}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <div style={S.muted}>
+    屋外で使うなら迷わず ASA を選んでください。ABS は屋内の高温環境向けと覚えておくとわかりやすいです。
+  </div>
+</section>
+
+<section id="summary" style={S.section}>
+  <h2 style={S.h2}>まとめ</h2>
+  <div style={S.card}>
+    <div style={S.p}>
+      ABS は P1S・X1C・K1C などの<strong style={{ color: "#f1f5f9" }}>密閉チャンバー搭載機ユーザー向けの素材</strong>です。
+      まず A1 Mini や Ender-3 で PLA/PETG に慣れてから、P1S などにステップアップしたタイミングで ABS に挑戦するのが定番ルートです。
+    </div>
+    <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem" }}>
+      {[
+        { label: "Bambu P1S/X1C ユーザー", rec: "→ Bambu Lab ABS 純正（設定不要で最安定）" },
+        { label: "コスパ重視",             rec: "→ eSUN ABS+（定番の高コスパ品）" },
+        { label: "精密パーツ・機械部品",   rec: "→ Polymaker PolyLite ABS（高寸法精度）" },
+        { label: "Creality K1C ユーザー",  rec: "→ Creality Hyper ABS（高速対応）" },
+        { label: "屋外パーツが目的",       rec: "→ ABS ではなく ASA を選ぶ" },
+      ].map(({ label, rec }) => (
+        <div key={label} style={{ display: "flex", gap: "1rem", backgroundColor: "#0f172a", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem" }}>
+          <span style={{ color: "#f97316", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "170px" }}>{label}</span>
+          <span style={S.muted}>{rec}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<div style={S.disclaimer}>
+  当サイトはAmazonアソシエイト・楽天アフィリエイト・ValueCommerce・メルカリアンバサダーに参加しています。価格は記事執筆時点のものです。
+</div>

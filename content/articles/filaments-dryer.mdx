@@ -1,0 +1,179 @@
+export const S = {
+  card:       { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2:         { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #0ea5e9", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p:          { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted:      { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section:    { marginBottom: "2.5rem" },
+  badge:      { display: "inline-block", borderRadius: "9999px", padding: "0.2rem 0.75rem", fontSize: "0.75rem", fontWeight: "600", marginRight: "0.5rem" },
+  disclaimer: { color: "#475569", fontSize: "0.75rem", borderTop: "1px solid #1e293b", paddingTop: "1.25rem", lineHeight: "1.6" },
+};
+
+<div style={S.card}>
+  <div style={S.p}>
+    フィラメントは空気中の水分を吸って<strong style={{ color: "#f1f5f9" }}>吸湿（きゅうしつ）</strong>します。
+    吸湿したフィラメントで印刷すると、気泡・糸引き・層剥離などのトラブルが一気に増えます。
+    乾燥機（ドライヤー）を使えば、フィラメントを最適な状態に保って印刷品質を安定させられます。
+  </div>
+  <div style={{ ...S.p, marginBottom: 0 }}>
+    この記事では2026年時点のおすすめ乾燥機4選と、選び方のポイントを解説します。
+  </div>
+</div>
+
+<section id="why-dryer" style={S.section}>
+  <h2 style={S.h2}>乾燥機が必要な理由</h2>
+  <div style={S.card}>
+    <div style={S.p}>
+      PLA・PETG・TPU・ナイロンなどの熱可塑性フィラメントは<strong style={{ color: "#f1f5f9" }}>吸湿性が高く</strong>、
+      未開封でも数週間で印刷品質が落ちることがあります。
+      特に湿度が高い梅雨〜夏は劣化が早く、乾燥機なしでは安定した品質を維持するのが難しくなります。
+    </div>
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+      <div style={{ backgroundColor: "rgba(239,68,68,0.06)", border: "1px solid rgba(239,68,68,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
+        <div style={{ color: "#ef4444", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.75rem" }}>吸湿すると起きること</div>
+        <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+          <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 気泡・プチプチ音が出る</li>
+          <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 糸引き（ストリング）が増える</li>
+          <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 表面がざらざらになる</li>
+          <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 層間の密着が弱くなる</li>
+          <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 色がくすむ・光沢が失われる</li>
+        </ul>
+      </div>
+      <div style={{ backgroundColor: "rgba(14,165,233,0.06)", border: "1px solid rgba(14,165,233,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
+        <div style={{ color: "#0ea5e9", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.75rem" }}>乾燥機で解決できること</div>
+        <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+          <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 印刷前に素早くリフレッシュ</li>
+          <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 印刷中も乾燥しながら給送</li>
+          <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 保管中の吸湿を防ぐ</li>
+          <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• フィラメントの寿命を延ばす</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="symptoms" style={S.section}>
+  <h2 style={S.h2}>吸湿しているサイン</h2>
+  <div style={S.card}>
+    <div style={S.p}>
+      以下のいずれかに当てはまる場合、フィラメントが吸湿している可能性が高いです。
+      乾燥機で4〜6時間乾燥させてから再印刷してみましょう。
+    </div>
+    <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem" }}>
+      {[
+        { sign: "プチプチ・シューという音", detail: "押し出し時に水分が蒸発して気泡が弾ける音" },
+        { sign: "ノズルから白煙・水蒸気", detail: "吸湿フィラメントが加熱されて水分が気化" },
+        { sign: "表面がざらざら・マット調になった", detail: "本来光沢があるはずのフィラメントで顕著" },
+        { sign: "糸引きが急に増えた", detail: "水分が粘度を下げ、リトラクションが効きにくくなる" },
+        { sign: "開封後1ヶ月以上経っている", detail: "保管状況にもよるが、要注意のサイン" },
+      ].map(({ sign, detail }) => (
+        <div key={sign} style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem", alignItems: "flex-start" }}>
+          <span style={{ color: "#ef4444", fontSize: "0.85rem", flexShrink: 0, marginTop: "0.1rem" }}>⚠</span>
+          <div>
+            <div style={{ color: "#f1f5f9", fontWeight: "600", fontSize: "0.875rem" }}>{sign}</div>
+            <div style={S.muted}>{detail}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section id="how-to-choose" style={S.section}>
+  <h2 style={S.h2}>選び方のポイント</h2>
+  <div style={S.card}>
+    <div style={{ display: "flex", flexDirection: "column", gap: "0.875rem" }}>
+      {[
+        { label: "温度設定範囲", desc: "PLAは45℃、PETGは55℃、ナイロン・TPUは65℃程度が目安。素材に合わせて温度を変えられるモデルを選ぶ。" },
+        { label: "給送機能（印刷しながら乾燥）", desc: "フィラメント出口からプリンターへ直接供給できると、長時間印刷でも乾燥した状態を維持できる。" },
+        { label: "湿度表示", desc: "乾燥具合を数値で確認できると便利。目安は30%RH以下。" },
+        { label: "容量・スプール対応", desc: "1スプール（1kg）なのか2スプール対応なのかを確認。大容量モデルはデュアル押し出し機に向いている。" },
+        { label: "価格帯", desc: "3,000〜12,000円が主流。コスパ重視ならSUNLU・eSUN、高精度ならPrintDry、Bambu対応ならBambu純正が候補。" },
+      ].map(({ label, desc }) => (
+        <div key={label} style={{ display: "flex", gap: "1rem", backgroundColor: "#0f172a", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.875rem 1.25rem" }}>
+          <span style={{ color: "#0ea5e9", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "160px" }}>{label}</span>
+          <span style={S.muted}>{desc}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section id="ranking" style={S.section}>
+  <h2 style={S.h2}>おすすめ乾燥機4選</h2>
+
+  <div style={{ backgroundColor: "rgba(14,165,233,0.06)", border: "1px solid rgba(14,165,233,0.3)", borderRadius: "0.5rem", padding: "0.75rem 1.25rem", marginBottom: "1.5rem", fontSize: "0.85rem", color: "#7dd3fc" }}>
+    🏆 総合評価順（価格・使いやすさ・実績を総合）
+  </div>
+
+  <div style={{ marginBottom: "1rem" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
+      <span style={{ backgroundColor: "#0ea5e9", color: "#0f172a", fontWeight: "800", fontSize: "0.75rem", padding: "0.2rem 0.6rem", borderRadius: "9999px" }}>1位</span>
+      <span style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.95rem" }}>SUNLU FilaDryer S2 — コスパ最強の定番</span>
+    </div>
+    <div style={{ ...S.muted, marginBottom: "0.75rem", paddingLeft: "0.5rem" }}>
+      4,500円前後で湿度表示・温度タイマー設定・給送機能を全部備えた優等生。初めての乾燥機として最もおすすめ。
+    </div>
+    <ProductCard productId="sunlu-filadryer-s2" />
+  </div>
+
+  <div style={{ marginBottom: "1rem" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
+      <span style={{ backgroundColor: "#64748b", color: "#f1f5f9", fontWeight: "800", fontSize: "0.75rem", padding: "0.2rem 0.6rem", borderRadius: "9999px" }}>2位</span>
+      <span style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.95rem" }}>eSUN eBOX Lite — 超コンパクトで場所を取らない</span>
+    </div>
+    <div style={{ ...S.muted, marginBottom: "0.75rem", paddingLeft: "0.5rem" }}>
+      3,500円前後と最安クラス。給送しながら乾燥できるコンパクトモデル。Bambu以外のプリンターユーザーに人気。
+    </div>
+    <ProductCard productId="esun-ebox-lite" />
+  </div>
+
+  <div style={{ marginBottom: "1rem" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
+      <span style={{ backgroundColor: "#92400e", color: "#fbbf24", fontWeight: "800", fontSize: "0.75rem", padding: "0.2rem 0.6rem", borderRadius: "9999px" }}>3位</span>
+      <span style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.95rem" }}>Bambu Lab 乾燥機 — Bambu使いなら一択</span>
+    </div>
+    <div style={{ ...S.muted, marginBottom: "0.75rem", paddingLeft: "0.5rem" }}>
+      8,000円前後。AMS / AMS Liteと並列接続して印刷しながら乾燥できる唯一のモデル。Bambu Lab機ユーザーは純正を選ぶべき。
+    </div>
+    <ProductCard productId="bambu-filament-dryer" />
+  </div>
+
+  <div style={{ marginBottom: "1rem" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
+      <span style={{ backgroundColor: "#334155", color: "#94a3b8", fontWeight: "800", fontSize: "0.75rem", padding: "0.2rem 0.6rem", borderRadius: "9999px" }}>4位</span>
+      <span style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.95rem" }}>PrintDry Pro — 大容量・高精度で上級者向け</span>
+    </div>
+    <div style={{ ...S.muted, marginBottom: "0.75rem", paddingLeft: "0.5rem" }}>
+      12,000円前後。2スプール同時乾燥、温度精度が高く、ナイロン・TPU・ABSの乾燥にも対応。デュアル押し出し機ユーザーや本格派に。
+    </div>
+    <ProductCard productId="printdry-pro" />
+  </div>
+</section>
+
+<section id="summary" style={S.section}>
+  <h2 style={S.h2}>まとめ</h2>
+  <div style={S.card}>
+    <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem" }}>
+      {[
+        { label: "初めての1台",       rec: "SUNLU FilaDryer S2 — 4,500円・湿度表示・給送機能すべて揃う" },
+        { label: "最安で試したい",    rec: "eSUN eBOX Lite — 3,500円・コンパクト" },
+        { label: "Bambu Lab機ユーザー", rec: "Bambu Lab 乾燥機 — AMS並列接続が唯一の強み" },
+        { label: "大量印刷・上級者",  rec: "PrintDry Pro — 2スプール・高精度温度管理" },
+      ].map(({ label, rec }) => (
+        <div key={label} style={{ display: "flex", gap: "1rem", backgroundColor: "#0f172a", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem" }}>
+          <span style={{ color: "#0ea5e9", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "130px" }}>{label}</span>
+          <span style={S.muted}>{rec}</span>
+        </div>
+      ))}
+    </div>
+    <div style={{ ...S.p, marginTop: "1.25rem", marginBottom: 0 }}>
+      乾燥機は一度導入すると「なぜもっと早く買わなかったのか」と思うほど印刷品質が安定します。
+      特にPETGやTPUを使う方は、乾燥機なしでは本来の性能を発揮できません。
+      まずは<strong style={{ color: "#f1f5f9" }}>SUNLU FilaDryer S2</strong>から始めるのがおすすめです。
+    </div>
+  </div>
+</section>
+
+<div style={S.disclaimer}>
+  当サイトはAmazonアソシエイト・楽天アフィリエイト・ValueCommerce・メルカリアンバサダーに参加しています。価格は記事執筆時点のものです。
+</div>

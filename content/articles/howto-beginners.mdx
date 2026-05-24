@@ -9,14 +9,14 @@ export const S = {
 };
 
 <div style={S.card}>
-  <p style={S.p}>
+  <div style={S.p}>
     「3Dプリンターを買ってみたいけど難しそう…」と思っていませんか？
     実は<strong style={{ color: "#f1f5f9" }}>最新の機種は設定がほぼ自動化</strong>されており、
     初心者でも1時間以内に最初の印刷ができます。
-  </p>
-  <p style={{ ...S.p, marginBottom: 0 }}>
+  </div>
+  <div style={{ ...S.p, marginBottom: 0 }}>
     このガイドでは購入から印刷完了まで、つまずかずに進める手順を解説します。
-  </p>
+  </div>
 </div>
 
 <section id="overview" style={S.section}>
@@ -34,12 +34,12 @@ export const S = {
 <section id="step1" style={S.section}>
   <h2 style={S.h2}>ステップ1：機種を選んで購入する</h2>
   <div style={S.card}>
-    <p style={S.p}>
+    <div style={S.p}>
       初心者には<strong style={{ color: "#f1f5f9" }}>自動キャリブレーション搭載機種</strong>を強くおすすめします。
       手動でベッドを水平にする作業（レベリング）は初心者が最も躓くポイントですが、
       自動化されていればこの問題がなくなります。
-    </p>
-    <p style={{ ...S.p, marginBottom: "0.75rem" }}>予算別のおすすめ：</p>
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.75rem" }}>予算別のおすすめ：</div>
     <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
       <li style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
         <span style={{ flexShrink: 0, backgroundColor: "rgba(6,182,212,0.12)", color: "#06b6d4", border: "1px solid rgba(6,182,212,0.25)", borderRadius: "9999px", padding: "0.1rem 0.625rem", fontSize: "0.75rem", fontWeight: "700", whiteSpace: "nowrap" }}>〜3万円</span>
@@ -55,19 +55,19 @@ export const S = {
       </li>
     </ul>
   </div>
-  <p style={{ ...S.muted, marginTop: "-0.5rem" }}>
+  <div style={{ ...S.muted, marginTop: "-0.5rem" }}>
     詳しくは「<a href="/printers/recommend" style={{ color: "#06b6d4", textDecoration: "underline", textUnderlineOffset: "3px" }}>家庭用3Dプリンターおすすめ7選</a>」をご覧ください。
-  </p>
+  </div>
 </section>
 
 <section id="step2" style={S.section}>
   <h2 style={S.h2}>ステップ2：本体を組み立て・セットアップする</h2>
   <div style={S.card}>
-    <p style={S.p}>
+    <div style={S.p}>
       Bambu Lab A1 Miniのような機種は<strong style={{ color: "#f1f5f9" }}>ほぼ組み立て済み</strong>で届きます。
       箱から出してケーブルを数本つなぐだけでOKです。
-    </p>
-    <p style={{ ...S.p, marginBottom: "0.75rem" }}>セットアップ時に確認するポイント：</p>
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.75rem" }}>セットアップ時に確認するポイント：</div>
     <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
       <li style={{ ...S.muted, display: "flex", gap: "0.5rem" }}><span style={{ color: "#06b6d4" }}>›</span>ベッドのレベリング（自動の場合はタッチパネルから実行）</li>
       <li style={{ ...S.muted, display: "flex", gap: "0.5rem" }}><span style={{ color: "#06b6d4" }}>›</span>フィラメントのロード（本体の指示に従って挿入）</li>
@@ -79,10 +79,10 @@ export const S = {
 <section id="step3" style={S.section}>
   <h2 style={S.h2}>ステップ3：スライサーソフトをインストールする</h2>
   <div style={S.card}>
-    <p style={S.p}>
+    <div style={S.p}>
       スライサーとは<strong style={{ color: "#f1f5f9" }}>3Dデータを印刷用データに変換するソフト</strong>です。
       機種によって推奨ソフトが異なります。
-    </p>
+    </div>
     <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
       <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}><span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, paddingTop: "0.1rem" }}>Bambu Lab：</span><span style={S.muted}>Bambu Studio（無料・直感的で初心者向け）</span></div>
       <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}><span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, paddingTop: "0.1rem" }}>Creality：</span><span style={S.muted}>Creality Print または Cura（無料）</span></div>
@@ -94,25 +94,25 @@ export const S = {
 <section id="step4" style={S.section}>
   <h2 style={S.h2}>ステップ4：3Dデータ（STLファイル）を用意する</h2>
   <div style={S.card}>
-    <p style={S.p}>
+    <div style={S.p}>
       最初は自分でデータを作る必要はありません。
       <strong style={{ color: "#f1f5f9" }}>無料でダウンロードできるサイト</strong>を使いましょう。
-    </p>
+    </div>
     <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
       <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}><span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, paddingTop: "0.1rem" }}>Thingiverse：</span><span style={S.muted}>世界最大の無料STLデータベース（thingiverse.com）</span></div>
       <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}><span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, paddingTop: "0.1rem" }}>Printables：</span><span style={S.muted}>Prusaが運営、品質が高め（printables.com）</span></div>
       <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}><span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, paddingTop: "0.1rem" }}>Makerworld：</span><span style={S.muted}>Bambu Labが運営、A1 Mini向けデータが多い（makerworld.com）</span></div>
     </div>
-    <p style={{ ...S.muted, marginTop: "0.875rem", marginBottom: 0 }}>
+    <div style={{ ...S.muted, marginTop: "0.875rem", marginBottom: 0 }}>
       まずは小さくてシンプルな「テストキューブ」や「スマホスタンド」などから始めるのがおすすめです。
-    </p>
+    </div>
   </div>
 </section>
 
 <section id="step5" style={S.section}>
   <h2 style={S.h2}>ステップ5：スライスして印刷する</h2>
   <div style={S.card}>
-    <p style={{ ...S.p, marginBottom: "0.875rem" }}>STLファイルをスライサーに読み込んで印刷する手順：</p>
+    <div style={{ ...S.p, marginBottom: "0.875rem" }}>STLファイルをスライサーに読み込んで印刷する手順：</div>
     <ol style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
       {["スライサーにSTLファイルをドラッグ＆ドロップ", "フィラメントの種類（PLA）と印刷品質を選択", "「スライス」ボタンをクリック", "SDカード・USB・Wi-Fiでプリンターに転送", "プリンターで印刷開始"].map((step, i) => (
         <li key={i} style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
@@ -121,9 +121,9 @@ export const S = {
         </li>
       ))}
     </ol>
-    <p style={{ ...S.muted, marginTop: "1rem", marginBottom: 0 }}>
+    <div style={{ ...S.muted, marginTop: "1rem", marginBottom: 0 }}>
       最初の印刷はPLAフィラメントで<strong style={{ color: "#f1f5f9" }}>品質「標準（0.2mm）」</strong>を選ぶのがおすすめです。
-    </p>
+    </div>
   </div>
 </section>
 
@@ -131,40 +131,40 @@ export const S = {
   <h2 style={S.h2}>初心者がよくやる失敗と対策</h2>
   <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
     <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1rem 1.25rem", borderLeft: "3px solid #ef4444" }}>
-      <p style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.375rem" }}>❌ 印刷物がベッドに貼り付かない</p>
-      <p style={{ ...S.muted, margin: 0 }}>✅ ベッドを再レベリング / ノズル温度を5℃上げる / ベッド面を清掃する</p>
+      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.375rem" }}>❌ 印刷物がベッドに貼り付かない</div>
+      <div style={{ ...S.muted, margin: 0 }}>✅ ベッドを再レベリング / ノズル温度を5℃上げる / ベッド面を清掃する</div>
     </div>
     <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1rem 1.25rem", borderLeft: "3px solid #ef4444" }}>
-      <p style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.375rem" }}>❌ フィラメントが詰まる（目詰まり）</p>
-      <p style={{ ...S.muted, margin: 0 }}>✅ ノズル温度を上げてゆっくり引き抜く / ノズルを交換する</p>
+      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.375rem" }}>❌ フィラメントが詰まる（目詰まり）</div>
+      <div style={{ ...S.muted, margin: 0 }}>✅ ノズル温度を上げてゆっくり引き抜く / ノズルを交換する</div>
     </div>
     <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1rem 1.25rem", borderLeft: "3px solid #ef4444" }}>
-      <p style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.375rem" }}>❌ 印刷物が反る（ワーピング）</p>
-      <p style={{ ...S.muted, margin: 0 }}>✅ ヒートベッドを使う / ブリム（縁取り）を追加する</p>
+      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.375rem" }}>❌ 印刷物が反る（ワーピング）</div>
+      <div style={{ ...S.muted, margin: 0 }}>✅ ヒートベッドを使う / ブリム（縁取り）を追加する</div>
     </div>
     <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1rem 1.25rem", borderLeft: "3px solid #ef4444" }}>
-      <p style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.375rem" }}>❌ 糸引き（ストリング）が出る</p>
-      <p style={{ ...S.muted, margin: 0 }}>✅ リトラクション設定を増やす / 印刷速度を下げる</p>
+      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.375rem" }}>❌ 糸引き（ストリング）が出る</div>
+      <div style={{ ...S.muted, margin: 0 }}>✅ リトラクション設定を増やす / 印刷速度を下げる</div>
     </div>
   </div>
-  <p style={{ ...S.muted, marginTop: "1rem" }}>
+  <div style={{ ...S.muted, marginTop: "1rem" }}>
     詳しい対処法は「<a href="/howto/trouble" style={{ color: "#06b6d4", textDecoration: "underline", textUnderlineOffset: "3px" }}>3Dプリンタートラブル解決ガイド</a>」をご覧ください。
-  </p>
+  </div>
 </section>
 
 <section id="summary" style={S.section}>
   <h2 style={S.h2}>まとめ：まず1台買って動かしてみよう</h2>
   <div style={S.card}>
-    <p style={S.p}>
+    <div style={S.p}>
       3Dプリンターは<strong style={{ color: "#f1f5f9" }}>使いながら覚えるのが最短ルート</strong>です。
       最初から完璧を目指す必要はありません。失敗しながら少しずつ設定を覚えていきましょう。
-    </p>
-    <p style={{ ...S.p, marginBottom: 0 }}>
+    </div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
       機種選びに迷っている方は「<a href="/printers/recommend" style={{ color: "#06b6d4", textDecoration: "underline", textUnderlineOffset: "3px" }}>家庭用3Dプリンターおすすめ7選</a>」、フィラメント選びは「<a href="/filaments/recommend" style={{ color: "#06b6d4", textDecoration: "underline", textUnderlineOffset: "3px" }}>PLAフィラメントおすすめ8選</a>」もご覧ください。
-    </p>
+    </div>
   </div>
 </section>
 
-<p style={S.disclaimer}>
+<div style={S.disclaimer}>
   当サイトはAmazonアソシエイト・楽天アフィリエイト・ValueCommerce・メルカリアンバサダーに参加しています。記事内のリンクから商品を購入すると、売上の一部が当サイトに還元される場合があります。価格は記事執筆時点のものです。
-</p>
+</div>

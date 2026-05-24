@@ -8,26 +8,26 @@ export const S = {
 };
 
 <div style={S.card}>
-  <p style={S.p}>
+  <div style={S.p}>
     <strong style={{ color: "#f1f5f9" }}>PLA（ポリ乳酸）</strong>は家庭用3Dプリンターで最も広く使われているフィラメントです。
     植物由来の素材で扱いやすく、初心者でも失敗しにくいのが最大の特長です。
-  </p>
-  <p style={{ ...S.p, marginBottom: 0 }}>
+  </div>
+  <div style={{ ...S.p, marginBottom: 0 }}>
     この記事ではPLAの特徴・印刷設定・PLA+との違いを詳しく解説します。
-  </p>
+  </div>
 </div>
 
 <section id="what-is-pla" style={S.section}>
   <h2 style={S.h2}>PLAフィラメントとは</h2>
   <div style={S.card}>
-    <p style={S.p}>
+    <div style={S.p}>
       PLAはトウモロコシや砂糖きびなど<strong style={{ color: "#f1f5f9" }}>植物由来の生分解性プラスチック</strong>です。
       石油由来のプラスチックに比べて環境負荷が低く、印刷時の臭いも少ないため室内で使いやすい素材です。
-    </p>
-    <p style={{ ...S.p, marginBottom: 0 }}>
+    </div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
       融点が約180〜200℃と低く、ヒートベッドなしでも印刷できるため、
       エントリー機種でも問題なく扱えます。
-    </p>
+    </div>
   </div>
 </section>
 
@@ -35,7 +35,7 @@ export const S = {
   <h2 style={S.h2}>メリット・デメリット</h2>
   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
     <div style={{ backgroundColor: "rgba(16,185,129,0.06)", border: "1px solid rgba(16,185,129,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <p style={{ color: "#10b981", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.75rem" }}>✓ メリット</p>
+      <div style={{ color: "#10b981", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.75rem" }}>✓ メリット</div>
       <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
         <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 扱いやすく初心者向け</li>
         <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 反りにくい（ヒートベッド不要）</li>
@@ -45,7 +45,7 @@ export const S = {
       </ul>
     </div>
     <div style={{ backgroundColor: "rgba(239,68,68,0.06)", border: "1px solid rgba(239,68,68,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <p style={{ color: "#ef4444", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.75rem" }}>✗ デメリット</p>
+      <div style={{ color: "#ef4444", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.75rem" }}>✗ デメリット</div>
       <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
         <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 耐熱性が低い（60℃前後で変形）</li>
         <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 紫外線に弱い（屋外使用には不向き）</li>
@@ -85,14 +85,14 @@ export const S = {
 <section id="pla-plus" style={S.section}>
   <h2 style={S.h2}>PLA vs PLA+：どちらを選ぶ？</h2>
   <div style={S.card}>
-    <p style={S.p}>
+    <div style={S.p}>
       <strong style={{ color: "#f1f5f9" }}>PLA+</strong>は通常のPLAに改良を加えたバージョンです。
       靭性（粘り強さ）が高く、曲げや衝撃に対して折れにくくなっています。
-    </p>
-    <p style={{ ...S.p, marginBottom: 0 }}>
+    </div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
       価格差が数百円以内であれば<strong style={{ color: "#f1f5f9" }}>PLA+を選ぶのがおすすめ</strong>です。
       印刷設定はほぼ同じなので、初心者でも気軽に使えます。
-    </p>
+    </div>
   </div>
 </section>
 
@@ -102,9 +102,9 @@ export const S = {
   <ProductCard productId="esun-pla-plus" />
   <ProductCard productId="overture-pla" />
   <div style={{ backgroundColor: "rgba(6,182,212,0.06)", border: "1px solid rgba(6,182,212,0.2)", borderRadius: "0.75rem", padding: "1.5rem" }}>
-    <p style={S.p}>
+    <div style={S.p}>
       詳しいランキングと各ブランドのレビューは以下の記事をご覧ください。
-    </p>
+    </div>
     <a
       href="/filaments/recommend"
       style={{
@@ -125,6 +125,6 @@ export const S = {
   </div>
 </section>
 
-<p style={S.disclaimer}>
+<div style={S.disclaimer}>
   当サイトはAmazonアソシエイト・楽天アフィリエイト・ValueCommerce・メルカリアンバサダーに参加しています。価格は記事執筆時点のものです。
-</p>
+</div>

@@ -1,9 +1,14 @@
 export const meta = {
+  category: "filaments" as const,
+  slug: "dryer",
+  badge: "乾燥機",
+  badgeColor: "#0ea5e9",
+  breadcrumbLabel: "乾燥機おすすめ4選",
   title: "フィラメント乾燥機おすすめ4選【2026年版】吸湿対策と選び方を解説",
   description:
     "3Dプリンター用フィラメント乾燥機のおすすめ4選を比較。Bambu純正・SUNLU・eSUN・PrintDryを価格・性能・使いやすさで徹底比較。吸湿による印刷失敗を防ぐ方法も解説します。",
   updatedAt: "2026年5月",
-  tags: ["乾燥機", "吸湿対策", "PETG", "フィラメント管理"],
+  tags: ["乾燥機", "吸湿対策", "PETG", "フィラメント管理"] as string[],
   toc: [
     { id: "why-dryer",     label: "乾燥機が必要な理由" },
     { id: "symptoms",      label: "吸湿しているサイン" },

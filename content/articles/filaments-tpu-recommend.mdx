@@ -1,0 +1,221 @@
+import ProductCard from "@/components/ProductCard";
+
+export const S = {
+  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  tip:     { backgroundColor: "#1a0f2e", border: "1px solid #8b5cf6", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  warn:    { backgroundColor: "#1c1917", border: "1px solid #f97316", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "1.25rem" },
+  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #8b5cf6", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
+  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
+  rank:    { display: "inline-flex", alignItems: "center", justifyContent: "center", width: "2rem", height: "2rem", borderRadius: "50%", fontWeight: "800", fontSize: "0.9rem", flexShrink: 0 },
+};
+
+<div style={S.card}>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>TPU（熱可塑性ポリウレタン）は、3Dプリンターで唯一「曲げても割れない」柔軟パーツを作れる素材です。</strong>
+  </div>
+  <div style={{ ...S.p, marginBottom: 0 }}>
+    スマホケース・釣りルアー・ラジコンタイヤ・防振マウントなど、PLAやPETGでは作れない用途に使います。この記事では<strong style={{ color: "#8b5cf6" }}>おすすめTPU 5選と印刷設定のコツ</strong>を解説します。
+  </div>
+</div>
+
+<section id="before-buy" style={S.section}>
+  <h2 style={S.h2}>TPUを使う前に知っておくこと</h2>
+
+  <div style={{ color: "#f1f5f9", fontWeight: "700", marginBottom: "0.75rem" }}>Shore A硬度で柔らかさが決まる</div>
+  <div style={{ overflowX: "auto", marginBottom: "1.5rem" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>Shore A硬度</th>
+          <th style={S.th}>質感の目安</th>
+          <th style={S.th}>主な用途</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>85A以下</td>
+          <td style={S.td}>非常に柔らかい（シリコン風）</td>
+          <td style={S.td}>防振・グリップ素材</td>
+        </tr>
+        <tr>
+          <td style={S.td}>87〜90A</td>
+          <td style={S.td}>標準的な柔軟性</td>
+          <td style={S.td}>スマホケース・靴底</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#8b5cf6", fontWeight: "700" }}>95A（最も汎用）</td>
+          <td style={S.td}>やや硬め（硬質ゴム風）</td>
+          <td style={S.td}>ドローンパーツ・タイヤ・汎用</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style={{ color: "#f1f5f9", fontWeight: "700", marginBottom: "0.75rem" }}>印刷の注意点</div>
+  <div style={S.warn}>
+    <div style={{ color: "#f97316", fontWeight: "700", marginBottom: "0.5rem" }}>⚠ TPUは詰まりやすい素材です</div>
+    <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+      <div style={{ display: "flex", gap: "0.75rem" }}>
+        <span style={{ color: "#f97316", flexShrink: 0 }}>▸</span>
+        <div style={{ ...S.muted, margin: 0 }}>印刷速度を遅めに設定（25〜40mm/s推奨）</div>
+      </div>
+      <div style={{ display: "flex", gap: "0.75rem" }}>
+        <span style={{ color: "#f97316", flexShrink: 0 }}>▸</span>
+        <div style={{ ...S.muted, margin: 0 }}>リトラクション距離は最小限に（0〜1mm）</div>
+      </div>
+      <div style={{ display: "flex", gap: "0.75rem" }}>
+        <span style={{ color: "#f97316", flexShrink: 0 }}>▸</span>
+        <div style={{ ...S.muted, margin: 0 }}>ダイレクトドライブ式の方がボーデン式より扱いやすい</div>
+      </div>
+      <div style={{ display: "flex", gap: "0.75rem" }}>
+        <span style={{ color: "#f97316", flexShrink: 0 }}>▸</span>
+        <div style={{ ...S.muted, margin: 0 }}>Bambu Lab機種はTPUを低速モードで印刷するのが基本</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ranking" style={S.section}>
+  <h2 style={S.h2}>TPUフィラメントおすすめ5選</h2>
+
+  <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", marginBottom: "0.75rem" }}>
+    <span style={{ ...S.rank, backgroundColor: "#f59e0b", color: "#0f172a" }}>1</span>
+    <span style={{ color: "#f1f5f9", fontWeight: "700" }}>Bambu Lab TPU 95A ― Bambu機種ユーザーの最適解</span>
+  </div>
+  <div style={{ ...S.muted, marginBottom: "0.5rem" }}>Shore A：95A ／ 印刷温度：230〜240℃</div>
+  <div style={{ ...S.muted, marginBottom: "1rem" }}>Bambu Lab純正。Bambu Studioにプリセット入りで設定不要。詰まりにくく品質安定。幅広い用途に対応できる95Aが使いやすい。</div>
+  <ProductCard productId="bambu-tpu-95a" />
+
+  <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", marginBottom: "0.75rem" }}>
+    <span style={{ ...S.rank, backgroundColor: "#94a3b8", color: "#0f172a" }}>2</span>
+    <span style={{ color: "#f1f5f9", fontWeight: "700" }}>eSUN eTPU-95A ― 定番コスパ品</span>
+  </div>
+  <div style={{ ...S.muted, marginBottom: "0.5rem" }}>Shore A：95A ／ 印刷温度：220〜235℃</div>
+  <div style={{ ...S.muted, marginBottom: "1rem" }}>定番ブランドeSUNのTPUライン。どのFDMプリンターとも相性が良く、初めてTPUを試す場合に最もおすすめ。</div>
+  <ProductCard productId="esun-etpu-95a" />
+
+  <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", marginBottom: "0.75rem" }}>
+    <span style={{ ...S.rank, backgroundColor: "#cd7f32", color: "#0f172a" }}>3</span>
+    <span style={{ color: "#f1f5f9", fontWeight: "700" }}>Polymaker PolyFlex TPU90 ― 柔軟性最重視</span>
+  </div>
+  <div style={{ ...S.muted, marginBottom: "0.5rem" }}>Shore A：90A ／ ※低速印刷必須</div>
+  <div style={{ ...S.muted, marginBottom: "1rem" }}>90Aとやや柔らかめ。スマホケース・グリップ素材など「もう少し柔らかくしたい」用途向き。90Aは詰まりやすいため低速印刷が必須です。</div>
+  <ProductCard productId="polymaker-polyflex-tpu90" />
+
+  <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", marginBottom: "0.75rem" }}>
+    <span style={{ backgroundColor: "#1e293b", border: "1px solid #334155", ...S.rank, color: "#94a3b8" }}>4</span>
+    <span style={{ color: "#f1f5f9", fontWeight: "700" }}>SUNLU TPU ― コスパ重視・大量印刷用</span>
+  </div>
+  <div style={{ ...S.muted, marginBottom: "1rem" }}>最安クラスのTPU。試作品・プロトタイプ向き。ロットによって品質ばらつきあり。</div>
+  <ProductCard productId="sunlu-tpu" />
+
+  <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", marginBottom: "0.75rem" }}>
+    <span style={{ backgroundColor: "#1e293b", border: "1px solid #334155", ...S.rank, color: "#94a3b8" }}>5</span>
+    <span style={{ color: "#f1f5f9", fontWeight: "700" }}>OVERTURE TPU ― 手軽な入門用</span>
+  </div>
+  <div style={{ ...S.muted, marginBottom: "1rem" }}>入手しやすく手軽なTPU。初めてTPUを試す場合の入門用に向いています。</div>
+  <ProductCard productId="overture-tpu" />
+</section>
+
+<section id="print-settings" style={S.section}>
+  <h2 style={S.h2}>TPUの印刷設定ガイド</h2>
+  <div style={{ overflowX: "auto", marginBottom: "1.25rem" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>設定項目</th>
+          <th style={S.th}>推奨値</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>ノズル温度</td>
+          <td style={{ ...S.td, color: "#8b5cf6" }}>230〜240℃</td>
+        </tr>
+        <tr>
+          <td style={S.td}>ベッド温度</td>
+          <td style={S.td}>35〜45℃</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>印刷速度</td>
+          <td style={{ ...S.td, color: "#f97316" }}>25〜35mm/s（遅めが重要）</td>
+        </tr>
+        <tr>
+          <td style={S.td}>リトラクション</td>
+          <td style={S.td}>0.8〜1.0mm（最小限に）</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>インフィル</td>
+          <td style={S.td}>40〜60%（強度重視は80%以上）</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style={S.tip}>
+    <div style={{ color: "#8b5cf6", fontWeight: "700", marginBottom: "0.5rem" }}>💡 失敗を防ぐコツ</div>
+    <div style={{ ...S.muted, margin: 0 }}>速度を遅めにする・リトラクションを最小限にする・PEIシートと相性が良い（定着しない場合はスティックのりを薄く塗る）</div>
+  </div>
+</section>
+
+<section id="use-cases" style={S.section}>
+  <h2 style={S.h2}>TPUで作れるものアイデア</h2>
+  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <div style={{ color: "#8b5cf6", fontWeight: "700", marginBottom: "0.5rem" }}>📱 スマホ・ガジェット系</div>
+      <div style={{ ...S.muted, margin: 0 }}>スマホケース・イヤホンケース・スマートウォッチバンド・ケーブルプロテクター</div>
+    </div>
+    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <div style={{ color: "#8b5cf6", fontWeight: "700", marginBottom: "0.5rem" }}>🎣 アウトドア・釣り</div>
+      <div style={{ ...S.muted, margin: 0 }}>釣りルアー（ソフトベイト）・ロッドガイドプロテクター・アウトドアギアグリップ</div>
+    </div>
+    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <div style={{ color: "#8b5cf6", fontWeight: "700", marginBottom: "0.5rem" }}>🚁 ドローン・ラジコン</div>
+      <div style={{ ...S.muted, margin: 0 }}>プロペラガード・ランディングギア・ラジコンタイヤ</div>
+    </div>
+    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <div style={{ color: "#8b5cf6", fontWeight: "700", marginBottom: "0.5rem" }}>🔧 日用品・工具</div>
+      <div style={{ ...S.muted, margin: 0 }}>防振グリップ・スマホスタンド滑り止め脚・工具ラバーグリップ</div>
+    </div>
+  </div>
+</section>
+
+<section id="summary" style={S.section}>
+  <h2 style={S.h2}>まとめ</h2>
+  <div style={{ overflowX: "auto", marginBottom: "1.25rem" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>用途</th>
+          <th style={S.th}>おすすめ製品</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>Bambu機種ユーザー</td>
+          <td style={{ ...S.td, color: "#8b5cf6" }}>Bambu Lab TPU 95A</td>
+        </tr>
+        <tr>
+          <td style={S.td}>どのプリンターでも安心</td>
+          <td style={{ ...S.td, color: "#8b5cf6" }}>eSUN eTPU-95A</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>柔らかさ重視（スマホケース）</td>
+          <td style={S.td}>Polymaker PolyFlex TPU90</td>
+        </tr>
+        <tr>
+          <td style={S.td}>コスト重視・試作用</td>
+          <td style={S.td}>SUNLU TPU</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style={S.tip}>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      <strong style={{ color: "#8b5cf6" }}>初めてTPUを試すならeSUN eTPU-95A</strong>が最もおすすめです。Bambu Lab機種ユーザーならBambu Lab TPU 95Aを選べば設定不要でスムーズに使えます。
+    </div>
+  </div>
+</section>
