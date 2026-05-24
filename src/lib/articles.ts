@@ -35,6 +35,10 @@ import { meta as howtoWarpingGuide } from "../../content/articles/howto-warping-
 import { meta as howtoThingiverseGuide } from "../../content/articles/howto-thingiverse-guide.meta";
 import { meta as printersTypes } from "../../content/articles/printers-types.meta";
 import { meta as printersFdmVsResin } from "../../content/articles/printers-fdm-vs-resin.meta";
+import { meta as howtoRunningCost } from "../../content/articles/howto-running-cost.meta";
+import { meta as filamentsEsunVsPolymaker } from "../../content/articles/filaments-esun-vs-polymaker.meta";
+import { meta as howtoWhatToMake } from "../../content/articles/howto-what-to-make.meta";
+import { meta as howtoFigure } from "../../content/articles/howto-figure.meta";
 // AUTO_INJECT_IMPORT — このコメントの上に新しい記事のimportを追加すること。`npm run new-article` が自動で追記する。
 
 export type ArticleCategory = "filaments" | "printers" | "howto";
@@ -117,6 +121,10 @@ export const articles: ArticleEntry[] = [
   toEntry(howtoThingiverseGuide),
   toEntry(printersTypes),
   toEntry(printersFdmVsResin),
+  toEntry(howtoRunningCost),
+  toEntry(filamentsEsunVsPolymaker),
+  toEntry(howtoWhatToMake),
+  toEntry(howtoFigure),
   // AUTO_INJECT_ENTRY — このコメントの上に toEntry(xxx) を追加すること。`npm run new-article` が自動で追記する。
 ];
 

@@ -1,0 +1,165 @@
+export const S = {
+  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #10b981", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #10b981", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  h3:      { fontSize: "1rem", fontWeight: "700", color: "#06b6d4", marginBottom: "0.5rem", marginTop: "1rem" },
+  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  list:    { color: "#cbd5e1", fontSize: "0.875rem", lineHeight: "1.9", paddingLeft: "1.25rem", marginBottom: "0.875rem" },
+};
+
+<div style={S.card}>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>「3Dプリンターって実際に何が作れるの？」——日用品からアート作品、ビジネスで使えるパーツまで、アイデア次第でほぼ何でも作れます。</strong>
+  </div>
+  <div style={{ ...S.p, marginBottom: 0 }}>
+    カテゴリ別に50選をまとめました。作りたいものが見つかったら、Thingiverse・Makerworldで無料データを探してみましょう。
+  </div>
+</div>
+
+<section id="daily" style={S.section}>
+  <h2 style={S.h2}>日用品・生活グッズ</h2>
+  <div style={S.p}>
+    最もわかりやすい活用法です。市販品では見つからないサイズ・形のものを自分で作れます。
+  </div>
+  <ul style={S.list}>
+    <li>スマートフォンスタンド・ホルダー</li>
+    <li>ケーブルオーガナイザー（配線整理）</li>
+    <li>フック・壁掛け収納</li>
+    <li>カードホルダー・名刺入れ</li>
+    <li>鍵のホルダー・キーケース</li>
+    <li>ドアストッパー</li>
+    <li>コースター・トレー</li>
+    <li>歯ブラシホルダー</li>
+    <li>石鹸置き</li>
+    <li>シャンプーボトルのホルダー</li>
+  </ul>
+  <div style={S.tip}>
+    <div style={{ color: "#10b981", fontWeight: "700", marginBottom: "0.25rem" }}>💡 ポイント</div>
+    <div style={{ ...S.muted }}>
+      既製品にないサイズや色で作れるのが3Dプリンターの強み。「ちょうどいい物がない」を自分で解決できます。
+    </div>
+  </div>
+</section>
+
+<section id="hobby" style={S.section}>
+  <h2 style={S.h2}>趣味・ホビー</h2>
+  <div style={S.p}>趣味と3Dプリンターの組み合わせは特に相性抜群です。</div>
+
+  <div style={S.h3}>フィギュア・ガレキ</div>
+  <div style={S.p}>
+    光造形プリンターを使えば、アニメ・ゲームのキャラクターや自分でデザインしたオリジナルフィギュアが作れます。
+  </div>
+
+  <div style={S.h3}>ボードゲーム・テーブルトップRPG</div>
+  <ul style={S.list}>
+    <li>ミニチュア兵士・モンスター</li>
+    <li>ダンジョンのタイルパーツ</li>
+    <li>カードスリーブ・トークン入れ</li>
+  </ul>
+
+  <div style={S.h3}>ドローン・ラジコン</div>
+  <ul style={S.list}>
+    <li>ドローンのフレームパーツ・プロペラガード</li>
+    <li>カメラマウント・バッテリーホルダー</li>
+  </ul>
+  <div style={{ ...S.muted, marginBottom: "1rem" }}>
+    レース用マイクロドローンのパーツはほとんどが3Dプリント品です。
+  </div>
+
+  <div style={S.h3}>釣り</div>
+  <ul style={S.list}>
+    <li>自作ルアーの製作（PETGやTPU素材）</li>
+    <li>ロッドホルダー・仕掛け収納ケース・フックホルダー</li>
+  </ul>
+
+  <div style={S.h3}>カメラ・撮影</div>
+  <ul style={S.list}>
+    <li>レンズキャップ・カメラリグのパーツ</li>
+    <li>マクロ撮影用アダプター・照明ディフューザー</li>
+  </ul>
+</section>
+
+<section id="tools" style={S.section}>
+  <h2 style={S.h2}>工具・工作補助</h2>
+  <div style={S.p}>DIYや工作をする人に特に役立ちます。</div>
+  <ul style={S.list}>
+    <li>作業台のジグ・治具</li>
+    <li>ドリルガイド・計測用テンプレート</li>
+    <li>工具のホルダー・電動工具の補助パーツ</li>
+    <li>ケーブルクリップ・クランプ</li>
+  </ul>
+</section>
+
+<section id="kids" style={S.section}>
+  <h2 style={S.h2}>子ども・教育</h2>
+  <ul style={S.list}>
+    <li>積み木・パズル</li>
+    <li>恐竜・動物のフィギュア</li>
+    <li>理科の教材（原子モデル・地形モデル）</li>
+    <li>知育おもちゃ</li>
+  </ul>
+</section>
+
+<section id="cosplay" style={S.section}>
+  <h2 style={S.h2}>コスプレ・イベント</h2>
+  <ul style={S.list}>
+    <li>鎧・武器のプロップ（小道具）</li>
+    <li>バッジ・ブローチ</li>
+    <li>カチューシャ・ヘアアクセサリー</li>
+    <li>イベント用ネームプレート</li>
+  </ul>
+  <div style={{ ...S.muted }}>
+    コスプレパーツは大きいものも多いため、FDMプリンターが活躍します。複数パーツに分割して印刷し、組み合わせる手法が主流です。
+  </div>
+</section>
+
+<section id="business" style={S.section}>
+  <h2 style={S.h2}>ビジネス・プロトタイプ</h2>
+  <ul style={S.list}>
+    <li>製品の試作品（プロトタイプ）</li>
+    <li>展示会用モデル</li>
+    <li>建築模型</li>
+    <li>販促グッズ・ノベルティ</li>
+  </ul>
+  <div style={S.p}>
+    中小企業が試作品を作るためにコストをかけていた時代は終わりました。今では3Dプリンターで数時間のうちに手元でテストできます。
+  </div>
+</section>
+
+<section id="repair" style={S.section}>
+  <h2 style={S.h2}>修理・補修パーツ</h2>
+  <div style={S.p}>
+    3Dプリンターの実用的な使い方として、<strong style={{ color: "#f1f5f9" }}>壊れた既製品のパーツを再現して修理する</strong>というものがあります。
+  </div>
+  <ul style={S.list}>
+    <li>家電の壊れたボタン・スイッチカバー</li>
+    <li>棚の脚・フック</li>
+    <li>家具の金具代替品</li>
+    <li>車のインテリアパーツ</li>
+  </ul>
+  <div style={{ ...S.muted }}>
+    入手できなくなったパーツを3Dプリンターで自作して修理している例は多く、特に古い製品のパーツ確保に有効です。
+  </div>
+</section>
+
+<section id="start" style={S.section}>
+  <h2 style={S.h2}>何から作り始めるべきか</h2>
+  <div style={S.tip}>
+    <div style={{ color: "#10b981", fontWeight: "700", marginBottom: "0.5rem" }}>💡 初心者へのアドバイス</div>
+    <div style={S.p}>
+      最初はすでに公開されている<strong style={{ color: "#f1f5f9" }}>無料データを使って印刷する</strong>ところから始めましょう。自分でデータをモデリングするのは後からで十分です。
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.75rem" }}>無料データの入手先：</div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#f1f5f9" }}>Thingiverse</strong> — 世界最大の3Dデータライブラリ
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#f1f5f9" }}>Printables</strong> — 品質の高いデータが多い
+    </div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      <strong style={{ color: "#f1f5f9" }}>Makerworld</strong> — Bambu Lab公式コミュニティ
+    </div>
+  </div>
+</section>
