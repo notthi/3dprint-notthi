@@ -1,0 +1,137 @@
+export const S = {
+  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
+  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
+};
+
+<div style={S.card}>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>結論：初心者・実用品メインはFDM、フィギュア専用なら光造形です。</strong>
+  </div>
+  <div style={{ ...S.p, marginBottom: 0 }}>
+    どちらを選ぶかは「何を作りたいか」で決まります。迷っているなら<strong style={{ color: "#06b6d4" }}>FDMから始めてください</strong>。扱いやすく、幅広い用途に対応できます。
+  </div>
+</div>
+
+<section id="comparison" style={S.section}>
+  <h2 style={S.h2}>FDM vs 光造形 比較表</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>比較項目</th>
+          <th style={{ ...S.th, color: "#10b981" }}>FDM</th>
+          <th style={{ ...S.th, color: "#8b5cf6" }}>光造形（MSLA）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>表面精度</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>△ 積層跡が残る</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎ なめらか</td>
+        </tr>
+        <tr>
+          <td style={S.td}>細部再現</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>△</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>ビルドサイズ</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎ 大きいものOK</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>△ 小〜中型向き</td>
+        </tr>
+        <tr>
+          <td style={S.td}>扱いやすさ</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎ 簡単</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>△ 換気・後処理必要</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>ランニングコスト</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎ 安い</td>
+          <td style={S.td}>○ やや高い</td>
+        </tr>
+        <tr>
+          <td style={S.td}>フィギュア向き</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>△</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>実用品向き</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>△</td>
+        </tr>
+        <tr>
+          <td style={S.td}>初心者向け</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎</td>
+          <td style={{ ...S.td, color: "#ef4444" }}>△</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="fdm" style={S.section}>
+  <h2 style={S.h2}>FDMを選ぶべき場合</h2>
+  <div style={S.tip}>
+    <div style={{ color: "#10b981", fontWeight: "700", marginBottom: "0.5rem" }}>✅ FDMがおすすめな用途</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      初心者 / 日用品・収納グッズ・修理パーツ / 大型パーツ / コスプレパーツ・プロップ / ドローンパーツ / とにかく手軽に始めたい
+    </div>
+  </div>
+  <div style={S.p}>
+    FDMの代表機種：<strong style={{ color: "#f1f5f9" }}>Bambu Lab A1 mini（約50,000円）</strong>が2026年現在最もバランスの良い選択です。全自動キャリブレーション・静音・高速印刷を備えています。
+  </div>
+</section>
+
+<section id="resin" style={S.section}>
+  <h2 style={S.h2}>光造形を選ぶべき場合</h2>
+  <div style={S.tip}>
+    <div style={{ color: "#8b5cf6", fontWeight: "700", marginBottom: "0.5rem" }}>✅ 光造形がおすすめな用途</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      キャラクターフィギュア・ガレキ / アクセサリー・ジュエリー / 積層跡のない滑らかな表面が必要 / 換気できる専用作業スペースがある
+    </div>
+  </div>
+  <div style={S.p}>
+    光造形の代表機種：<strong style={{ color: "#f1f5f9" }}>Elegoo Mars 4 Ultra（約35,000〜45,000円）</strong>がコスパ最強の入門機です。ただしレジンの換気・後処理（洗浄・UV硬化）が必須です。
+  </div>
+</section>
+
+<section id="both" style={S.section}>
+  <h2 style={S.h2}>両方持つのもあり</h2>
+  <div style={S.p}>
+    FDMで大型・実用品、光造形でフィギュア・精密品という使い分けをする上級者も多いです。<strong style={{ color: "#f1f5f9" }}>まずFDMから始めて、フィギュア制作に興味が出たら光造形を追加する</strong>のが定番ルートです。
+  </div>
+</section>
+
+<section id="summary" style={S.section}>
+  <h2 style={S.h2}>まとめ</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>目的</th>
+          <th style={S.th}>おすすめ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>初心者・実用品・大型造形</td>
+          <td style={{ ...S.td, color: "#10b981", fontWeight: "700" }}>FDM（Bambu Lab A1 mini）</td>
+        </tr>
+        <tr>
+          <td style={S.td}>フィギュア・精密・小型造形</td>
+          <td style={{ ...S.td, color: "#8b5cf6", fontWeight: "700" }}>光造形（Elegoo Mars 4 Ultra）</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>どちらかわからない</td>
+          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>FDMから始める</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
