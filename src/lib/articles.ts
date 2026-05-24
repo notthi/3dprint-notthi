@@ -39,6 +39,10 @@ import { meta as howtoRunningCost } from "../../content/articles/howto-running-c
 import { meta as filamentsEsunVsPolymaker } from "../../content/articles/filaments-esun-vs-polymaker.meta";
 import { meta as howtoWhatToMake } from "../../content/articles/howto-what-to-make.meta";
 import { meta as howtoFigure } from "../../content/articles/howto-figure.meta";
+import { meta as printersBambuA1MiniCombo } from "../../content/articles/printers-bambu-a1-mini-combo.meta";
+import { meta as printersBambuP1sVsP2s } from "../../content/articles/printers-bambu-p1s-vs-p2s.meta";
+import { meta as howtoSideBusiness } from "../../content/articles/howto-side-business.meta";
+import { meta as howtoCosplayParts } from "../../content/articles/howto-cosplay-parts.meta";
 // AUTO_INJECT_IMPORT — このコメントの上に新しい記事のimportを追加すること。`npm run new-article` が自動で追記する。
 
 export type ArticleCategory = "filaments" | "printers" | "howto";
@@ -125,6 +129,10 @@ export const articles: ArticleEntry[] = [
   toEntry(filamentsEsunVsPolymaker),
   toEntry(howtoWhatToMake),
   toEntry(howtoFigure),
+  toEntry(printersBambuA1MiniCombo),
+  toEntry(printersBambuP1sVsP2s),
+  toEntry(howtoSideBusiness),
+  toEntry(howtoCosplayParts),
   // AUTO_INJECT_ENTRY — このコメントの上に toEntry(xxx) を追加すること。`npm run new-article` が自動で追記する。
 ];
 
