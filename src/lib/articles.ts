@@ -27,6 +27,10 @@ import { meta as howtoInfillGuide } from "../../content/articles/howto-infill-gu
 import { meta as howtoNozzleClog } from "../../content/articles/howto-nozzle-clog.meta";
 import { meta as howtoBedLeveling } from "../../content/articles/howto-bed-leveling.meta";
 import { meta as howtoSupport } from "../../content/articles/howto-support.meta";
+import { meta as filamentsPlaVsPetg } from "../../content/articles/filaments-pla-vs-petg.meta";
+import { meta as printersBambuLabLineup } from "../../content/articles/printers-bambu-lab-lineup.meta";
+import { meta as filamentsMaterials } from "../../content/articles/filaments-materials.meta";
+import { meta as howtoFilamentStorage } from "../../content/articles/howto-filament-storage.meta";
 // AUTO_INJECT_IMPORT — このコメントの上に新しい記事のimportを追加すること。`npm run new-article` が自動で追記する。
 
 export type ArticleCategory = "filaments" | "printers" | "howto";
@@ -101,6 +105,10 @@ export const articles: ArticleEntry[] = [
   toEntry(howtoNozzleClog),
   toEntry(howtoBedLeveling),
   toEntry(howtoSupport),
+  toEntry(filamentsPlaVsPetg),
+  toEntry(printersBambuLabLineup),
+  toEntry(filamentsMaterials),
+  toEntry(howtoFilamentStorage),
   // AUTO_INJECT_ENTRY — このコメントの上に toEntry(xxx) を追加すること。`npm run new-article` が自動で追記する。
 ];
 

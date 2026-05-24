@@ -1,0 +1,195 @@
+export const S = {
+  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
+  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
+};
+
+<div style={S.card}>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>「印刷がうまくいかない」「気泡が出る」「ノズルが詰まる」——その原因の多くはフィラメントの吸湿です。</strong>
+  </div>
+  <div style={{ ...S.p, marginBottom: 0 }}>
+    フィラメントは適切に保管・乾燥することで品質を長く保てます。特にPETG・TPU・ナイロンは開封後すぐに対策が必要です。
+  </div>
+</div>
+
+<section id="symptom" style={S.section}>
+  <h2 style={S.h2}>吸湿するとどうなるか</h2>
+  <div style={S.p}>
+    フィラメントが湿気を吸収すると以下の症状が出ます。
+  </div>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>症状</th>
+          <th style={S.th}>原因</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#ef4444" }}>印刷中にパチパチ音がする</td>
+          <td style={S.td}>水分が熱で気化して弾ける</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#ef4444" }}>表面にブツブツ・気泡が出る</td>
+          <td style={S.td}>水蒸気が樹脂内に気泡を作る</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#ef4444" }}>糸引き（ストリング）が増加</td>
+          <td style={S.td}>フィラメントの粘度変化</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#ef4444" }}>ノズル詰まりが起きやすくなる</td>
+          <td style={S.td}>炭化した水分がノズルに堆積</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="humidity" style={S.section}>
+  <h2 style={S.h2}>素材別の吸湿しやすさ</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>素材</th>
+          <th style={S.th}>吸湿速度</th>
+          <th style={S.th}>影響</th>
+          <th style={S.th}>注意レベル</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>PLA</td>
+          <td style={S.td}>遅い</td>
+          <td style={S.td}>小〜中</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>低</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>PETG・TPU</td>
+          <td style={S.td}>速い</td>
+          <td style={S.td}>大</td>
+          <td style={{ ...S.td, color: "#f59e0b", fontWeight: "700" }}>高</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#ef4444", fontWeight: "700" }}>Nylon</td>
+          <td style={S.td}>非常に速い</td>
+          <td style={S.td}>非常に大</td>
+          <td style={{ ...S.td, color: "#ef4444", fontWeight: "700" }}>最高</td>
+        </tr>
+        <tr>
+          <td style={S.td}>ABS・ASA</td>
+          <td style={S.td}>中</td>
+          <td style={S.td}>中</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>中</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="storage" style={S.section}>
+  <h2 style={S.h2}>保管方法3段階</h2>
+  <div style={S.card}>
+    <div style={{ color: "#22c55e", fontWeight: "700", marginBottom: "0.5rem" }}>① 基本：乾燥剤＋密閉袋（コスト：ほぼゼロ）</div>
+    <div style={{ ...S.p, marginBottom: "1.25rem" }}>
+      使用後はシリカゲル乾燥剤と一緒にジップロックへ。PLA程度の素材ならこれで十分です。
+    </div>
+    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>② 推奨：防湿ケース（ドライボックス）（コスト：約1,500〜2,500円）</div>
+    <div style={{ ...S.p, marginBottom: "1.25rem" }}>
+      SUNLU フィラメントボックスなどがコスパ良。複数スプールをまとめて保管できます。湿度計付きのものを選ぶと管理が楽です。
+    </div>
+    <div style={{ color: "#8b5cf6", fontWeight: "700", marginBottom: "0.5rem" }}>③ 上級：フィラメントドライヤー（コスト：約4,000〜15,000円）</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      スプールを乗せたまま加熱。乾燥しながら印刷できるためナイロン・TPUに最適です。
+    </div>
+  </div>
+</section>
+
+<section id="dryer" style={S.section}>
+  <h2 style={S.h2}>おすすめフィラメントドライヤー</h2>
+  <div style={S.tip}>
+    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>💡 SUNLU S4（約4,000〜6,000円）</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      最大4スプール同時乾燥・温度設定が細かい・PLA〜ナイロンまで対応。コストパフォーマンス最高。食品乾燥機での代用も可能ですが、温度精度は劣ります。
+    </div>
+  </div>
+</section>
+
+<section id="temp-table" style={S.section}>
+  <h2 style={S.h2}>素材別の乾燥設定</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>素材</th>
+          <th style={S.th}>乾燥温度</th>
+          <th style={S.th}>乾燥時間</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>PLA</td>
+          <td style={S.td}>45〜50℃</td>
+          <td style={S.td}>4〜6時間</td>
+        </tr>
+        <tr>
+          <td style={S.td}>PETG</td>
+          <td style={S.td}>65〜70℃</td>
+          <td style={S.td}>4〜6時間</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>ABS・ASA</td>
+          <td style={S.td}>70〜80℃</td>
+          <td style={S.td}>4〜6時間</td>
+        </tr>
+        <tr>
+          <td style={S.td}>TPU</td>
+          <td style={S.td}>50〜60℃</td>
+          <td style={S.td}>4〜6時間</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#ef4444", fontWeight: "700" }}>Nylon</td>
+          <td style={{ ...S.td, color: "#ef4444" }}>80〜90℃</td>
+          <td style={{ ...S.td, color: "#ef4444" }}>8〜12時間</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="check" style={S.section}>
+  <h2 style={S.h2}>吸湿しているか確認する方法</h2>
+  <div style={S.p}>
+    印刷中の<strong style={{ color: "#f1f5f9" }}>「パチパチ音」</strong>が吸湿の最もわかりやすいサインです。普段より糸引きが増えた、表面がザラついてきた、という場合もフィラメントの乾燥を試してみましょう。
+  </div>
+  <div style={S.tip}>
+    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>💡 簡単な確認テスト</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      スライサーでフィラメントをノズルから少量押し出してみてください。押し出した樹脂に気泡・ブツブツが見えれば吸湿しています。
+    </div>
+  </div>
+</section>
+
+<section id="summary" style={S.section}>
+  <h2 style={S.h2}>まとめ：保管の基本3点</h2>
+  <div style={S.card}>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#22c55e" }}>① 使用後は即座に密閉袋＋乾燥剤へ</strong>
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#06b6d4" }}>② PETG・ナイロン・TPUは特に注意して乾燥保管</strong>
+    </div>
+    <div style={{ ...S.p, marginBottom: "1rem" }}>
+      <strong style={{ color: "#8b5cf6" }}>③ 印刷品質が落ちたらまず乾燥を試す</strong>
+    </div>
+    <div style={{ color: "#06b6d4", fontWeight: "700" }}>→ フィラメントの乾燥は印刷品質を回復させる最も簡単な方法です。まず乾燥を疑いましょう。</div>
+  </div>
+</section>
