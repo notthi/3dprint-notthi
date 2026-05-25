@@ -19,8 +19,9 @@ export const meta = {
     { id: "checklist", label: "印刷前チェックリスト" },
   ],
   related: [
-    { href: "/howto/beginners", title: "3Dプリンター初心者ガイド完全版", badge: "入門", badgeColor: "#10b981" },
-    { href: "/printers/recommend", title: "家庭用3Dプリンターおすすめ7選", badge: "ランキング" },
-    { href: "/filaments/pla", title: "PLAフィラメントの特徴・使い方", badge: "PLA", badgeColor: "#06b6d4" },
+    { href: "/howto/calibration",  title: "キャリブレーション完全ガイド",         badge: "キャリブレーション", badgeColor: "#06b6d4" },
+    { href: "/howto/nozzle-clog",  title: "ノズル詰まりの原因と解消法",            badge: "ノズル詰まり",      badgeColor: "#ef4444" },
+    { href: "/howto/warping-guide", title: "反り（ワーピング）対策完全ガイド",     badge: "反り対策",          badgeColor: "#06b6d4" },
+    { href: "/howto/beginners",    title: "3Dプリンター初心者ガイド完全版",         badge: "入門",             badgeColor: "#10b981" },
   ],
 };

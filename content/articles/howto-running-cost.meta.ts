@@ -18,8 +18,9 @@ export const meta = {
     { id: "summary",      label: "まとめ" },
   ],
   related: [
-    { href: "/filaments/pla-recommend",   title: "PLAフィラメントおすすめ8選",    badge: "PLA",       badgeColor: "#10b981" },
-    { href: "/filaments/petg-recommend",  title: "PETGフィラメントおすすめ5選",   badge: "PETG",      badgeColor: "#06b6d4" },
-    { href: "/howto/filament-storage",    title: "フィラメントの保管・乾燥方法",   badge: "フィラメント保管", badgeColor: "#06b6d4" },
+    { href: "/howto/side-business",       title: "3Dプリンターで副業を始める方法",  badge: "副業ガイド",      badgeColor: "#10b981" },
+    { href: "/filaments/pla-recommend",   title: "PLAフィラメントおすすめ8選",     badge: "PLA",             badgeColor: "#10b981" },
+    { href: "/filaments/petg-recommend",  title: "PETGフィラメントおすすめ5選",    badge: "PETG",            badgeColor: "#06b6d4" },
+    { href: "/howto/filament-storage",    title: "フィラメントの保管・乾燥方法",    badge: "フィラメント保管", badgeColor: "#06b6d4" },
   ],
 };

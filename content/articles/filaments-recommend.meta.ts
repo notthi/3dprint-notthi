@@ -18,8 +18,9 @@ export const meta = {
     { id: "summary", label: "まとめ" },
   ],
   related: [
-    { href: "/filaments/petg", title: "PETGフィラメントおすすめ解説", badge: "PETG", badgeColor: "#8b5cf6" },
-    { href: "/printers/recommend", title: "家庭用3Dプリンターおすすめ7選", badge: "ランキング" },
-    { href: "/howto/beginners", title: "3Dプリンター初心者ガイド", badge: "入門", badgeColor: "#10b981" },
+    { href: "/filaments/materials",       title: "フィラメント素材の選び方ガイド",    badge: "素材比較",  badgeColor: "#06b6d4" },
+    { href: "/filaments/esun-vs-polymaker", title: "eSUN vs Polymaker どちらが良い？", badge: "ブランド比較", badgeColor: "#06b6d4" },
+    { href: "/filaments/petg",            title: "PETGフィラメントおすすめ解説",      badge: "PETG",      badgeColor: "#8b5cf6" },
+    { href: "/printers/recommend",        title: "家庭用3Dプリンターおすすめ7選",     badge: "ランキング" },
   ],
 };

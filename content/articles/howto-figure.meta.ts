@@ -19,8 +19,9 @@ export const meta = {
     { id: "summary",       label: "まとめ" },
   ],
   related: [
-    { href: "/printers/fdm-vs-resin",     title: "FDMと光造形どっちを買う？",     badge: "比較",    badgeColor: "#06b6d4" },
-    { href: "/howto/thingiverse-guide",   title: "Thingiverseの使い方",           badge: "Thingiverse", badgeColor: "#06b6d4" },
-    { href: "/howto/support",             title: "サポート材の種類・設定・外し方",  badge: "サポート材", badgeColor: "#06b6d4" },
+    { href: "/printers/resin-recommend",   title: "レジンプリンターおすすめ5選",    badge: "レジン",    badgeColor: "#8b5cf6" },
+    { href: "/howto/modeling-software",    title: "3Dモデリングソフトおすすめ比較",  badge: "モデリング", badgeColor: "#f59e0b" },
+    { href: "/printers/fdm-vs-resin",      title: "FDMと光造形どっちを買う？",      badge: "比較",      badgeColor: "#06b6d4" },
+    { href: "/howto/support",              title: "サポート材の種類・設定・外し方",   badge: "サポート材", badgeColor: "#06b6d4" },
   ],
 };

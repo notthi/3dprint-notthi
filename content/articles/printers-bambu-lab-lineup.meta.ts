@@ -22,7 +22,8 @@ export const meta = {
   ],
   related: [
     { href: "/printers/bambu-a1-mini-review",  title: "Bambu Lab A1 Mini レビュー",        badge: "レビュー",  badgeColor: "#06b6d4" },
+    { href: "/printers/bambu-p2s-review",      title: "Bambu Lab P2S レビュー",            badge: "P2S",       badgeColor: "#06b6d4" },
     { href: "/printers/bambu-a1-vs-a1-mini",   title: "A1 vs A1 Mini どっちを買うべきか",  badge: "比較",      badgeColor: "#06b6d4" },
-    { href: "/printers/bambu-p1s-beginners",   title: "P1Sは初心者向き？正直に答える",      badge: "P1S",       badgeColor: "#06b6d4" },
+    { href: "/howto/bambu-ams",                title: "Bambu AMS・AMS Lite完全ガイド",     badge: "AMS",       badgeColor: "#06b6d4" },
   ],
 };

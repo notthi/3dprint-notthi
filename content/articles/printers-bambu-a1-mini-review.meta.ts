@@ -19,8 +19,9 @@ export const meta = {
     { id: "summary",       label: "まとめ" },
   ],
   related: [
-    { href: "/printers/bambu-a1-vs-a1-mini", title: "A1 vs A1 Mini どっちを買うべき？", badge: "比較",     badgeColor: "#06b6d4" },
-    { href: "/printers/recommend",            title: "家庭用3Dプリンターおすすめ7選",     badge: "ランキング" },
-    { href: "/printers/beginners",            title: "3Dプリンター選び方ガイド",           badge: "初心者",   badgeColor: "#10b981" },
+    { href: "/printers/bambu-a1-vs-a1-mini",  title: "A1 vs A1 Mini どっちを買うべき？", badge: "比較",      badgeColor: "#06b6d4" },
+    { href: "/printers/bambu-a1-mini-combo",   title: "A1 mini Combo vs 通常版の違い",    badge: "Combo比較", badgeColor: "#06b6d4" },
+    { href: "/howto/bambu-ams",                title: "Bambu AMS・AMS Lite完全ガイド",   badge: "AMS",      badgeColor: "#06b6d4" },
+    { href: "/printers/recommend",             title: "家庭用3Dプリンターおすすめ7選",    badge: "ランキング" },
   ],
 };

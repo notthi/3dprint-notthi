@@ -17,8 +17,9 @@ export const meta = {
     { id: "recommend", label: "最終おすすめ" },
   ],
   related: [
-    { href: "/printers/recommend", title: "家庭用3Dプリンターおすすめ7選ランキング", badge: "ランキング" },
-    { href: "/printers/home-use", title: "家庭用・静音モデルの選び方", badge: "家庭用", badgeColor: "#06b6d4" },
-    { href: "/howto/beginners", title: "3Dプリンター初心者ガイド完全版", badge: "入門", badgeColor: "#10b981" },
+    { href: "/printers/types",     title: "3Dプリンターの種類を解説",          badge: "種類",      badgeColor: "#8b5cf6" },
+    { href: "/printers/ender-3-v3-se-review", title: "Ender-3 V3 SE レビュー", badge: "Ender-3",   badgeColor: "#06b6d4" },
+    { href: "/printers/home-use",  title: "家庭用・静音モデルの選び方",         badge: "家庭用",    badgeColor: "#06b6d4" },
+    { href: "/printers/recommend", title: "家庭用3Dプリンターおすすめ7選",      badge: "ランキング" },
   ],
 };

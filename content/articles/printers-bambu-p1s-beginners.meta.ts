@@ -19,8 +19,9 @@ export const meta = {
     { id: "summary",       label: "まとめ" },
   ],
   related: [
-    { href: "/printers/recommend",          title: "家庭用3Dプリンターおすすめ7選",       badge: "ランキング",  badgeColor: "#8b5cf6" },
-    { href: "/printers/bambu-a1-mini-review", title: "Bambu A1 Mini 実機レビュー",         badge: "A1 Mini",    badgeColor: "#06b6d4" },
-    { href: "/filaments/recommend",         title: "フィラメントおすすめランキング",       badge: "フィラメント", badgeColor: "#8b5cf6" },
+    { href: "/printers/bambu-p1s-vs-combo",    title: "P1S vs P1S Combo どちらを選ぶ？",  badge: "比較",       badgeColor: "#06b6d4" },
+    { href: "/printers/bambu-p2s-review",      title: "Bambu Lab P2S レビュー",           badge: "P2S",        badgeColor: "#06b6d4" },
+    { href: "/printers/recommend",             title: "家庭用3Dプリンターおすすめ7選",     badge: "ランキング",  badgeColor: "#8b5cf6" },
+    { href: "/printers/bambu-a1-mini-review",  title: "Bambu A1 Mini 実機レビュー",        badge: "A1 Mini",    badgeColor: "#06b6d4" },
   ],
 };

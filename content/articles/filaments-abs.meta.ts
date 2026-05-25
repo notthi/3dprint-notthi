@@ -17,8 +17,9 @@ export const meta = {
     { id: "summary",      label: "まとめ" },
   ],
   related: [
-    { href: "/filaments/petg",      title: "PETGフィラメントおすすめ",         badge: "PETG",     badgeColor: "#f59e0b" },
-    { href: "/filaments/recommend", title: "フィラメントおすすめランキング",     badge: "ランキング", badgeColor: "#8b5cf6" },
-    { href: "/howto/trouble",       title: "3Dプリンター トラブル解決ガイド",   badge: "トラブル",  badgeColor: "#ef4444" },
+    { href: "/filaments/carbon-fiber", title: "カーボンファイバーフィラメント完全ガイド", badge: "カーボン系", badgeColor: "#334155" },
+    { href: "/filaments/petg",         title: "PETGフィラメントおすすめ",                badge: "PETG",      badgeColor: "#f59e0b" },
+    { href: "/filaments/recommend",    title: "フィラメントおすすめランキング",            badge: "ランキング", badgeColor: "#8b5cf6" },
+    { href: "/printers/bambu-p2s-review", title: "Bambu Lab P2Sレビュー（ABS対応）",    badge: "P2S",       badgeColor: "#06b6d4" },
   ],
 };

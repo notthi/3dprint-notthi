@@ -17,8 +17,8 @@ export const meta = {
     { id: "summary",     label: "まとめ" },
   ],
   related: [
+    { href: "/printers/resin-recommend",      title: "レジンプリンターおすすめ5選",    badge: "レジン",   badgeColor: "#8b5cf6" },
     { href: "/printers/types",              title: "3Dプリンターの種類を解説",        badge: "種類",     badgeColor: "#8b5cf6" },
     { href: "/printers/bambu-a1-mini-review", title: "Bambu Lab A1 Mini レビュー",  badge: "レビュー", badgeColor: "#06b6d4" },
-    { href: "/printers/beginners",          title: "初心者向け3Dプリンター選び方",    badge: "初心者",   badgeColor: "#10b981" },
   ],
 };

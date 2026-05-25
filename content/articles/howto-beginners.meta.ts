@@ -20,8 +20,9 @@ export const meta = {
     { id: "summary", label: "まとめ" },
   ],
   related: [
-    { href: "/printers/recommend", title: "家庭用3Dプリンターおすすめ7選", badge: "ランキング" },
-    { href: "/filaments/recommend", title: "PLAフィラメントおすすめ8選", badge: "PLA", badgeColor: "#06b6d4" },
-    { href: "/howto/trouble", title: "3Dプリンタートラブル解決ガイド", badge: "トラブル", badgeColor: "#ef4444" },
+    { href: "/printers/recommend",       title: "家庭用3Dプリンターおすすめ7選",    badge: "ランキング" },
+    { href: "/howto/stl-sites",          title: "3DデータダウンロードサイトTop5",    badge: "STLサイト",     badgeColor: "#10b981" },
+    { href: "/howto/modeling-software",  title: "3Dモデリングソフトおすすめ比較",    badge: "モデリングソフト", badgeColor: "#f59e0b" },
+    { href: "/howto/trouble",            title: "3Dプリンタートラブル解決ガイド",    badge: "トラブル",       badgeColor: "#ef4444" },
   ],
 };

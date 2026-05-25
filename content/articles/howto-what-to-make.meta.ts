@@ -20,8 +20,9 @@ export const meta = {
     { id: "start",      label: "何から作り始めるべきか" },
   ],
   related: [
+    { href: "/howto/side-business",       title: "3Dプリンターで副業を始める方法",  badge: "副業ガイド",   badgeColor: "#10b981" },
     { href: "/howto/thingiverse-guide",   title: "Thingiverseの使い方",            badge: "Thingiverse", badgeColor: "#06b6d4" },
+    { href: "/howto/stl-sites",           title: "3DデータダウンロードサイトTop5",  badge: "STLサイト",   badgeColor: "#10b981" },
     { href: "/howto/makerworld-guide",    title: "Makerworldの使い方ガイド",        badge: "Makerworld",  badgeColor: "#06b6d4" },
-    { href: "/printers/bambu-a1-mini-review", title: "Bambu Lab A1 Mini レビュー", badge: "レビュー",    badgeColor: "#06b6d4" },
   ],
 };

@@ -19,8 +19,9 @@ export const meta = {
     { id: "summary", label: "チェックリスト・まとめ" },
   ],
   related: [
-    { href: "/howto/trouble", title: "3Dプリンタートラブル解決ガイド", badge: "トラブル", badgeColor: "#ef4444" },
-    { href: "/filaments/pla", title: "PLAフィラメントの特徴・使い方", badge: "PLA", badgeColor: "#06b6d4" },
-    { href: "/howto/beginners", title: "3Dプリンター初心者ガイド完全版", badge: "入門", badgeColor: "#10b981" },
+    { href: "/howto/warping-guide",  title: "反り（ワーピング）対策完全ガイド",   badge: "反り対策",  badgeColor: "#06b6d4" },
+    { href: "/howto/trouble",        title: "3Dプリンタートラブル解決ガイド",     badge: "トラブル",  badgeColor: "#ef4444" },
+    { href: "/howto/pla-settings",   title: "PLA印刷設定の完全ガイド",            badge: "PLA設定",   badgeColor: "#22c55e" },
+    { href: "/filaments/pla",        title: "PLAフィラメントの特徴・使い方",       badge: "PLA",       badgeColor: "#06b6d4" },
   ],
 };

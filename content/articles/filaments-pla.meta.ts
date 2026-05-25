@@ -17,8 +17,9 @@ export const meta = {
     { id: "recommend", label: "おすすめフィラメント" },
   ],
   related: [
-    { href: "/filaments/recommend", title: "PLAフィラメントおすすめ8選ランキング", badge: "ランキング" },
-    { href: "/filaments/petg", title: "PETGフィラメントの特徴・使い方", badge: "PETG", badgeColor: "#8b5cf6" },
-    { href: "/howto/beginners", title: "3Dプリンター初心者ガイド", badge: "入門", badgeColor: "#10b981" },
+    { href: "/howto/pla-settings",    title: "PLA印刷設定の完全ガイド",         badge: "PLA設定",   badgeColor: "#22c55e" },
+    { href: "/filaments/tpu-recommend", title: "TPUフィラメントおすすめ5選",    badge: "TPU",       badgeColor: "#10b981" },
+    { href: "/filaments/recommend",   title: "PLAフィラメントおすすめ8選",       badge: "ランキング" },
+    { href: "/filaments/petg",        title: "PETGフィラメントの特徴・使い方",   badge: "PETG",      badgeColor: "#8b5cf6" },
   ],
 };

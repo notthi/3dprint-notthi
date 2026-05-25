@@ -18,8 +18,9 @@ export const meta = {
     { id: "summary", label: "まとめ" },
   ],
   related: [
-    { href: "/filaments/recommend", title: "フィラメントおすすめランキング【素材別】", badge: "ランキング" },
-    { href: "/filaments/pla", title: "PLAフィラメントおすすめ8選", badge: "PLA", badgeColor: "#06b6d4" },
-    { href: "/howto/beginners", title: "3Dプリンター初心者ガイド", badge: "入門", badgeColor: "#10b981" },
+    { href: "/printers/bambu-a1-mini-vs-prusa-mk4", title: "A1 mini vs Prusa MK4 比較",      badge: "比較",      badgeColor: "#06b6d4" },
+    { href: "/printers/creality-k1c-review",        title: "Creality K1C レビュー",            badge: "K1C",       badgeColor: "#06b6d4" },
+    { href: "/filaments/recommend",                 title: "フィラメントおすすめランキング",     badge: "ランキング" },
+    { href: "/howto/beginners",                     title: "3Dプリンター初心者ガイド",          badge: "入門",      badgeColor: "#10b981" },
   ],
 };
