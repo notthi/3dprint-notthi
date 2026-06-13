@@ -156,6 +156,33 @@ export const products: Product[] = [
     keyword: "PrintDry Pro フィラメント乾燥機",
     image: "https://m.media-amazon.com/images/I/61lCiCETxbL._AC_SL1500_.jpg",
   },
+  {
+    id: "bambu-h2d",
+    name: "Bambu Lab H2D",
+    asin: "",
+    price: "¥345,800〜",
+    description: "2025年登場のBambu Lab新フラッグシップ。デュアルノズル・350℃対応・65℃チャンバー加熱・レーザー加工も対応。",
+    keyword: "Bambu Lab H2D 3Dプリンター",
+    image: "",
+  },
+  {
+    id: "bambu-x1-carbon",
+    name: "Bambu Lab X1 Carbon",
+    asin: "",
+    price: "約¥205,900〜",
+    description: "マイクロLiDAR・AI印刷監視・300℃対応ノズル搭載。Bambu Labの信頼性の象徴。",
+    keyword: "Bambu Lab X1 Carbon 3Dプリンター",
+    image: "",
+  },
+  {
+    id: "creality-k1-max",
+    name: "Creality K1 Max",
+    asin: "",
+    price: "約¥90,000〜",
+    description: "300×300×300mmの大型ビルドサイズ。AIカメラ・LiDAR搭載。Creality最上位機。",
+    keyword: "Creality K1 Max 3Dプリンター",
+    image: "",
+  },
 ];
 
 // IDで商品を取得するヘルパー

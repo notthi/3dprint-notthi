@@ -1,0 +1,202 @@
+
+export const S = {
+  card: { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2: { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p: { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted: { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  disclaimer: { color: "#475569", fontSize: "0.75rem", borderTop: "1px solid #1e293b", paddingTop: "1.25rem", lineHeight: "1.6" },
+  th: { textAlign: "left", padding: "0.6rem 0.75rem", color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", borderBottom: "1px solid #334155" },
+  td: { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.85rem", borderBottom: "1px solid #1e293b" },
+  tdLabel: { padding: "0.6rem 0.75rem", color: "#94a3b8", fontWeight: "600", fontSize: "0.85rem", borderBottom: "1px solid #1e293b" },
+};
+
+{/* ── 冒頭カード ─────────────────────────────────────────── */}
+<div style={S.card}>
+  <p style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>Bambu Lab X1 Carbon</strong>は「初心者卒業後の本命機」として長く支持されているBambu Labのハイエンドモデルです。
+    密閉チャンバー・300℃対応ノズル・マイクロLiDAR搭載のAI失敗検知など、業務用に近い機能を家庭で使えるレベルまで落とし込んだ1台。
+  </p>
+  <p style={{ ...S.p, marginBottom: 0 }}>
+    2025年5月からは最新マルチカラーシステム「<strong style={{ color: "#f1f5f9" }}>AMS 2 Pro</strong>」にも対応し、さらに完成度が高まりました。
+  </p>
+</div>
+
+{/* ── 結論 ───────────────────────────────────────────────── */}
+<section id="conclusion" style={S.section}>
+  <h2 style={S.h2}>結論：こんな人におすすめ</h2>
+  <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+    <div style={{ backgroundColor: "rgba(16,185,129,0.06)", border: "1px solid rgba(16,185,129,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <p style={{ color: "#10b981", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.5rem" }}>✓ X1 Carbonが向いている人</p>
+      <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+        {["ABS・ASA・カーボンファイバー等の高機能素材を扱いたい","印刷失敗を減らしたい（AI監視・LiDAR搭載）","マルチカラー・マルチマテリアル印刷を本格的に試したい","3Dプリンターを趣味から一歩進めた使い方をしたい"].map((t, i) => (
+          <li key={i} style={{ color: "#cbd5e1", fontSize: "0.875rem" }}>• {t}</li>
+        ))}
+      </ul>
+    </div>
+    <div style={{ backgroundColor: "rgba(239,68,68,0.06)", border: "1px solid rgba(239,68,68,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <p style={{ color: "#ef4444", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.5rem" }}>✗ X1 Carbonが向いていない人</p>
+      <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+        {["PLAメインの趣味用途（→ A1 miniで十分）","予算10万円以内（→ A1 or A1 miniが選択肢）","30万円以上出して最大スペックが欲しい（→ H2Dを検討）"].map((t, i) => (
+          <li key={i} style={{ color: "#cbd5e1", fontSize: "0.875rem" }}>• {t}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{/* ── スペック ─────────────────────────────────────────────── */}
+<section id="specs" style={S.section}>
+  <h2 style={S.h2}>スペック詳細</h2>
+  <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+    {[
+      { label: "ビルドサイズ", val: "256 × 256 × 256 mm" },
+      { label: "最大ノズル温度", val: "300℃（CF・ABS・ナイロン対応）" },
+      { label: "最大ベッド温度", val: "110℃（220V）" },
+      { label: "最大印刷速度", val: "500mm/s" },
+      { label: "最大加速度", val: "20m/s²" },
+      { label: "マイクロLiDAR", val: "搭載（7μm解像度）" },
+      { label: "AI第1層検査", val: "搭載（自動一時停止）" },
+      { label: "スパゲッティ検知", val: "搭載（自動停止）" },
+      { label: "AMS 2 Pro対応", val: "✅（2025年5月〜）" },
+      { label: "内蔵カメラ", val: "搭載（タイムラプス対応）" },
+      { label: "本体サイズ", val: "389 × 389 × 457 mm" },
+      { label: "参考価格", val: "約¥205,900〜" },
+    ].map((item) => (
+      <div key={item.label} style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem", alignItems: "center" }}>
+        <span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "160px" }}>{item.label}</span>
+        <span style={S.muted}>{item.val}</span>
+      </div>
+    ))}
+  </div>
+</section>
+
+{/* ── 5つの強み ───────────────────────────────────────────── */}
+<section id="features" style={S.section}>
+  <h2 style={S.h2}>X1 Carbonの5つの強み</h2>
+  {[
+    {
+      title: "1. マイクロLiDARによる高精度ベッドレベリング",
+      body: "7μm解像度のマイクロLiDARがベッド表面を精密スキャンして自動レベリング。手動調整がほぼ不要で、印刷開始時の第1層をAIがリアルタイム検査し、問題があれば自動一時停止します。",
+    },
+    {
+      title: "2. AI搭載の印刷監視機能",
+      body: "第1層AI検査・スパゲッティ検知・停電復帰・タイムラプス自動記録の4機能が搭載。「気づいたら失敗していた」という状況が大幅に減ります。",
+    },
+    {
+      title: "3. 密閉チャンバーでABS・CF・ナイロンに対応",
+      body: "完全密閉チャンバーによりABS・ASA・ナイロン・カーボンファイバー系フィラメントを安定印刷。屋外で使うパーツ・ドローンフレーム・工具・治具など強度が求められる用途に最適です。",
+    },
+    {
+      title: "4. AMS 2 Pro対応でマルチカラー・マルチマテリアルに拡張",
+      body: "2025年5月から最新マルチカラーシステムAMS 2 Proに対応。最大4色（複数接続で16色）の自動切替が可能。フィラメント切替時のパージ廃棄を最小化する設計で、旧AMSより経済的です。",
+    },
+    {
+      title: "5. 500mm/s・20m/s²の高速印刷",
+      body: "一般機の2〜4倍速で印刷できます。素材・精度設定により実速度は変わりますが、大型パーツでも印刷時間が大幅に短縮されます。",
+    },
+  ].map((item, i) => (
+    <div key={i} style={{ ...S.card, marginBottom: "1rem" }}>
+      <p style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.5rem" }}>{item.title}</p>
+      <p style={{ ...S.p, marginBottom: 0 }}>{item.body}</p>
+    </div>
+  ))}
+</section>
+
+{/* ── P2Sとの比較 ─────────────────────────────────────────── */}
+<section id="vs-p2s" style={S.section}>
+  <h2 style={S.h2}>P2SとX1 Carbonどちらを選ぶべき？</h2>
+  <div style={{ overflowX: "auto", marginBottom: "1rem" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+      <thead>
+        <tr>{["比較軸", "X1 Carbon", "P2S"].map((h) => <th key={h} style={S.th}>{h}</th>)}</tr>
+      </thead>
+      <tbody>
+        {[
+          ["価格", "約¥205,900〜", "約¥120,000〜"],
+          ["マイクロLiDAR", "✅", "✗"],
+          ["AI印刷監視", "✅", "✗"],
+          ["最大ノズル温度", "300℃", "320℃"],
+          ["最大ベッド温度", "110℃", "120℃"],
+          ["対応素材", "ほぼ同等", "ほぼ同等"],
+        ].map((row, i) => (
+          <tr key={i}>
+            <td style={S.tdLabel}>{row[0]}</td>
+            {row.slice(1).map((v, j) => <td key={j} style={S.td}>{v}</td>)}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
+    <div style={{ backgroundColor: "rgba(148,163,184,0.06)", border: "1px solid rgba(148,163,184,0.2)", borderRadius: "0.75rem", padding: "1rem" }}>
+      <p style={{ color: "#94a3b8", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.5rem" }}>P2Sを選ぶ人</p>
+      <p style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>コスパ重視・AI機能より価格優先・高温印刷（320℃）が必要</p>
+    </div>
+    <div style={{ backgroundColor: "rgba(6,182,212,0.06)", border: "1px solid rgba(6,182,212,0.2)", borderRadius: "0.75rem", padding: "1rem" }}>
+      <p style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.5rem" }}>X1 Carbonを選ぶ人</p>
+      <p style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>印刷失敗を最小化・LiDARの高精度レベリング・タイムラプス・信頼性重視</p>
+    </div>
+  </div>
+</section>
+
+{/* ── H2Dとの比較 ────────────────────────────────────────── */}
+<section id="vs-h2d" style={S.section}>
+  <h2 style={S.h2}>H2Dとの比較：さらなる上位機が必要？</h2>
+  <div style={{ overflowX: "auto", marginBottom: "1rem" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+      <thead>
+        <tr>{["比較軸", "X1 Carbon", "H2D"].map((h) => <th key={h} style={S.th}>{h}</th>)}</tr>
+      </thead>
+      <tbody>
+        {[
+          ["価格", "約¥205,900〜", "¥345,800〜"],
+          ["ビルドサイズ", "256×256×256mm", "325×320×325mm"],
+          ["ノズル", "シングル", "デュアル（2材同時）"],
+          ["最大温度", "300℃", "350℃"],
+          ["チャンバー加熱", "パッシブ", "アクティブ65℃"],
+          ["レーザー拡張", "✗", "✅"],
+          ["初心者向け", "◎", "△"],
+        ].map((row, i) => (
+          <tr key={i}>
+            <td style={S.tdLabel}>{row[0]}</td>
+            {row.slice(1).map((v, j) => <td key={j} style={S.td}>{v}</td>)}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p style={S.muted}>大型造形・2素材同時印刷・レーザー加工が必要でなければX1 Carbonで十分です。詳細は <a href="/printers/bambu-h2d-review" style={{ color: "#06b6d4" }}>H2Dレビュー</a> を参照。</p>
+</section>
+
+{/* ── 購入 ────────────────────────────────────────────────── */}
+<section id="price" style={S.section}>
+  <h2 style={S.h2}>価格・購入先</h2>
+  <p style={S.muted}>購入は <a href="https://bambulab.com/ja-jp" target="_blank" rel="noopener noreferrer" style={{ color: "#06b6d4" }}>Bambu Lab公式サイト</a> が最安値です。年2〜3回のセールを狙うとお得に購入できます。</p>
+  <RankingItem
+    rank={1}
+    productId="bambu-x1-carbon"
+    pros={["マイクロLiDARで高精度ベッドレベリング・手動不要","AI監視で印刷失敗を大幅削減","密閉チャンバーでABS・CF・ナイロンに対応","AMS 2 Proでマルチカラー印刷に拡張可能"]}
+    cons={["価格が高い（約¥205,900〜）","H2Dと比べてビルドサイズがやや小さい","マイクロLiDAR等の恩恵を受けるには慣れが必要"]}
+    badge="ハイエンド定番機"
+  />
+</section>
+
+{/* ── まとめ ─────────────────────────────────────────────── */}
+<section id="summary" style={S.section}>
+  <h2 style={S.h2}>まとめ</h2>
+  <div style={S.card}>
+    <p style={S.p}>
+      Bambu Lab X1 Carbonは<strong style={{ color: "#f1f5f9" }}>「趣味の3Dプリントを本気でやりたい人の本命機」</strong>です。
+      AI監視・LiDAR・密閉チャンバー・高速印刷が揃い、失敗のストレスを最小化しながら高機能素材まで扱えます。
+    </p>
+    <p style={{ ...S.p, marginBottom: 0 }}>
+      価格は安くないですが、長く使える信頼性を考えるとコストパフォーマンスは高い部類です。
+      まず3Dプリントを始めるなら <a href="/printers/bambu-a1-mini-review" style={{ color: "#06b6d4" }}>A1 Mini</a> から、本格的に始めるならX1 Carbonが王道の選択です。
+    </p>
+  </div>
+</section>
+
+<p style={S.disclaimer}>
+  当サイトはAmazonアソシエイト・楽天アフィリエイト・ValueCommerce・メルカリアンバサダーに参加しています。記事内のリンクから商品を購入すると、売上の一部が当サイトに還元される場合があります。価格は記事執筆時点のものです。
+</p>
