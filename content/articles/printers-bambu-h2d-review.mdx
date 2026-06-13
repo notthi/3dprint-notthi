@@ -1,0 +1,233 @@
+
+export const S = {
+  card: { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2: { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p: { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted: { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  disclaimer: { color: "#475569", fontSize: "0.75rem", borderTop: "1px solid #1e293b", paddingTop: "1.25rem", lineHeight: "1.6" },
+  th: { textAlign: "left", padding: "0.6rem 0.75rem", color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", borderBottom: "1px solid #334155" },
+  td: { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.85rem", borderBottom: "1px solid #1e293b" },
+  tdLabel: { padding: "0.6rem 0.75rem", color: "#94a3b8", fontWeight: "600", fontSize: "0.85rem", borderBottom: "1px solid #1e293b" },
+};
+
+{/* ── 冒頭カード ─────────────────────────────────────────── */}
+<div style={S.card}>
+  <p style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>Bambu Lab H2D</strong>は2025年3月に登場した、Bambu Lab史上最大・最高スペックのフラッグシップ3Dプリンターです。
+    デュアルノズル・最大350℃の高温印刷・65℃アクティブチャンバー加熱・レーザー加工まで対応した多機能設計が特徴です。
+  </p>
+  <p style={{ ...S.p, marginBottom: 0 }}>
+    SD（競合難易度）14というキーワードで検索されており、日本語のレビュー記事がまだ少ない今がチャンスです。
+    この記事では<strong style={{ color: "#f1f5f9" }}>スペック・H2シリーズの選び方・X1 Carbonとの比較</strong>を徹底解説します。
+  </p>
+</div>
+
+{/* ── 結論 ───────────────────────────────────────────────── */}
+<section id="conclusion" style={S.section}>
+  <h2 style={S.h2}>結論：こんな人に向いている</h2>
+  <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+    <div style={{ backgroundColor: "rgba(16,185,129,0.06)", border: "1px solid rgba(16,185,129,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <p style={{ color: "#10b981", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.5rem" }}>✓ H2Dが向いている人</p>
+      <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+        {["ABS・ナイロン・カーボンファイバーなど高温・エンジニアリング系素材を扱いたい","デュアルノズルで2素材同時印刷・パージ廃棄ゼロを実現したい","レーザー加工・カッティングも1台でまかないたい","本格的な造形・業務用途を視野に入れている"].map((t, i) => (
+          <li key={i} style={{ color: "#cbd5e1", fontSize: "0.875rem" }}>• {t}</li>
+        ))}
+      </ul>
+    </div>
+    <div style={{ backgroundColor: "rgba(239,68,68,0.06)", border: "1px solid rgba(239,68,68,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <p style={{ color: "#ef4444", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.5rem" }}>✗ H2Dが向いていない人</p>
+      <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+        {["PLAメインで趣味用途（→ A1 miniで十分）","予算30万円以内（→ P2SやX1 Carbonが選択肢）","3Dプリンター初心者（→ 機能が多く複雑すぎる）"].map((t, i) => (
+          <li key={i} style={{ color: "#cbd5e1", fontSize: "0.875rem" }}>• {t}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{/* ── スペック比較 ────────────────────────────────────────── */}
+<section id="specs" style={S.section}>
+  <h2 style={S.h2}>スペック比較</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+      <thead>
+        <tr>
+          {["項目", "H2D", "X1 Carbon", "P2S"].map((h) => (
+            <th key={h} style={S.th}>{h}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          ["ビルドサイズ", "325×320×325mm（シングル）", "256×256×256mm", "256×256×256mm"],
+          ["ノズル構成", "デュアル（独立2本）", "シングル", "シングル"],
+          ["最大ノズル温度", "350℃", "300℃", "320℃"],
+          ["チャンバー加熱", "アクティブ最大65℃", "パッシブ", "パッシブ"],
+          ["最大印刷速度", "600mm/s", "500mm/s", "500mm/s"],
+          ["AMS対応", "✅（AMS 2 Pro）", "✅", "✅"],
+          ["レーザー加工", "✅（オプション10W/40W）", "✗", "✗"],
+          ["参考価格", "¥345,800〜", "約¥205,900〜", "約¥120,000〜"],
+        ].map((row, i) => (
+          <tr key={i}>
+            <td style={S.tdLabel}>{row[0]}</td>
+            {row.slice(1).map((v, j) => <td key={j} style={S.td}>{v}</td>)}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+{/* ── 5つの特徴 ──────────────────────────────────────────── */}
+<section id="features" style={S.section}>
+  <h2 style={S.h2}>H2Dの5つの特徴</h2>
+
+  {[
+    {
+      title: "1. Bambu Lab最大のビルドサイズ",
+      body: "325×320×325mmはBambu Labの中で最大。X1 CarbonやP2Sの256mm角と比べて容量は約2倍。大型フィギュア・コスプレパーツ・産業部品の一体成型が現実的になります。",
+    },
+    {
+      title: "2. デュアルノズル――パージ廃棄ゼロの2素材同時印刷",
+      body: "独立した2本のノズルがAMSのようなフィラメント切替なしに異素材を同時印刷。PVAサポート+メイン素材の組み合わせで、サポートを水で溶かして剥がせるきれいな造形が可能です。",
+    },
+    {
+      title: "3. 350℃対応ノズル――エンジニアリング素材に完全対応",
+      body: "最大350℃はカーボンファイバー混合・ガラスファイバー・ポリカーボネート・ナイロンPA12など、業務用に近い高機能素材に対応。X1 Carbon（300℃）では印刷できない素材も扱えます。",
+    },
+    {
+      title: "4. アクティブチャンバー加熱（最大65℃）",
+      body: "チャンバーを積極的に加熱することで、ABSなど反りやすい素材でも安定印刷が可能。X1CarbonやP2Sのパッシブ加熱（印刷熱が溜まるだけ）と異なり、温度管理が精密です。",
+    },
+    {
+      title: "5. 3Dプリント以外の4つのモード",
+      body: "レーザー加工（10W/40W）・デジタルカッティング・ペン描画のツールヘッドを換装することで、木材・アクリル・革の加工まで1台でこなせる多機能プラットフォームになります。",
+    },
+  ].map((item, i) => (
+    <div key={i} style={{ ...S.card, marginBottom: "1rem" }}>
+      <p style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.5rem" }}>{item.title}</p>
+      <p style={{ ...S.p, marginBottom: 0 }}>{item.body}</p>
+    </div>
+  ))}
+</section>
+
+{/* ── H2シリーズの選び方 ──────────────────────────────────── */}
+<section id="series" style={S.section}>
+  <h2 style={S.h2}>H2シリーズ4機種の違いと選び方</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+      <thead>
+        <tr>
+          {["機種", "ノズル構成", "特徴", "こんな人に"].map((h) => (
+            <th key={h} style={S.th}>{h}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          ["H2D", "デュアル（独立2本）", "2素材同時・PVAサポート効率化", "多素材・高機能を求める人"],
+          ["H2S", "シングル", "シンプル・高速・安定", "単色大型造形に集中したい人"],
+          ["H2C", "自動ホットエンド交換", "ノズル含めホットエンド丸ごと自動交換", "素材・ノズル径を頻繁に切り替える人"],
+          ["H2D Pro", "デュアル（強化版）", "H2Dの上位モデル（公式サイト参照）", "プロ・業務用途"],
+        ].map((row, i) => (
+          <tr key={i}>
+            <td style={{ ...S.tdLabel, color: "#06b6d4" }}>{row[0]}</td>
+            {row.slice(1).map((v, j) => <td key={j} style={S.td}>{v}</td>)}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <div style={S.card}>
+    <p style={{ ...S.p, marginBottom: 0 }}>
+      迷ったら<strong style={{ color: "#f1f5f9" }}>H2Dを選ぶのが無難</strong>です。デュアルノズルで対応できる幅が最も広く、H2シリーズでバランスが一番取れています。
+    </p>
+  </div>
+</section>
+
+{/* ── 価格 ────────────────────────────────────────────────── */}
+<section id="price" style={S.section}>
+  <h2 style={S.h2}>価格・ラインナップ</h2>
+  <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginBottom: "1.5rem" }}>
+    {[
+      { model: "H2D（本体のみ）", price: "¥345,800" },
+      { model: "H2D AMS Combo（AMS 2 Pro付き）", price: "¥399,800" },
+      { model: "H2D Laser Full Combo（10Wレーザー）", price: "¥495,600" },
+      { model: "H2D Laser Full Combo（40Wレーザー）", price: "¥527,000" },
+    ].map((item, i) => (
+      <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem" }}>
+        <span style={{ color: "#cbd5e1", fontSize: "0.875rem" }}>{item.model}</span>
+        <span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.95rem" }}>{item.price}</span>
+      </div>
+    ))}
+  </div>
+  <p style={S.muted}>購入は <a href="https://bambulab.com/ja-jp" target="_blank" rel="noopener noreferrer" style={{ color: "#06b6d4" }}>Bambu Lab公式サイト</a> が国内最安値。Amazon・楽天でも一部取り扱いあり。</p>
+
+  <RankingItem
+    rank={1}
+    productId="bambu-h2d"
+    pros={["デュアルノズルで2素材同時印刷・パージ廃棄ゼロ","350℃対応でエンジニアリング素材フルカバー","65℃アクティブチャンバー加熱で反り防止","レーザー加工・カッティングも1台でこなせる"]}
+    cons={["価格が高い（¥345,800〜）","本体が大きい（492×514×626mm）","初心者には機能が複雑すぎる"]}
+    badge="2025年新フラッグシップ"
+  />
+</section>
+
+{/* ── X1 Carbonとの比較 ───────────────────────────────────── */}
+<section id="vs-x1c" style={S.section}>
+  <h2 style={S.h2}>X1 Carbonとの比較：どちらを選ぶべき？</h2>
+  <div style={{ overflowX: "auto", marginBottom: "1.5rem" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+      <thead>
+        <tr>
+          {["比較軸", "H2D", "X1 Carbon"].map((h) => <th key={h} style={S.th}>{h}</th>)}
+        </tr>
+      </thead>
+      <tbody>
+        {[
+          ["価格", "¥345,800〜", "約¥205,900〜"],
+          ["ビルドサイズ", "325×320×325mm", "256×256×256mm"],
+          ["ノズル", "デュアル（2材同時）", "シングル"],
+          ["最大温度", "350℃", "300℃"],
+          ["チャンバー加熱", "アクティブ65℃", "パッシブ"],
+          ["レーザー拡張", "✅（オプション）", "✗"],
+          ["初心者向け", "△", "◎"],
+        ].map((row, i) => (
+          <tr key={i}>
+            <td style={S.tdLabel}>{row[0]}</td>
+            {row.slice(1).map((v, j) => <td key={j} style={S.td}>{v}</td>)}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
+    <div style={{ backgroundColor: "rgba(16,185,129,0.06)", border: "1px solid rgba(16,185,129,0.2)", borderRadius: "0.75rem", padding: "1rem" }}>
+      <p style={{ color: "#10b981", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.5rem" }}>X1 Carbonを選ぶ人</p>
+      <p style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>コスパ重視・標準サイズの造形で十分・H2Dは予算オーバー</p>
+    </div>
+    <div style={{ backgroundColor: "rgba(6,182,212,0.06)", border: "1px solid rgba(6,182,212,0.2)", borderRadius: "0.75rem", padding: "1rem" }}>
+      <p style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.5rem" }}>H2Dを選ぶ人</p>
+      <p style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>大型造形・2素材同時・350℃エンプラ・レーザー加工まで1台でこなしたい</p>
+    </div>
+  </div>
+</section>
+
+{/* ── まとめ ─────────────────────────────────────────────── */}
+<section id="summary" style={S.section}>
+  <h2 style={S.h2}>まとめ</h2>
+  <div style={S.card}>
+    <p style={S.p}>
+      Bambu Lab H2Dは「3Dプリント専用機」の枠を超えた<strong style={{ color: "#f1f5f9" }}>造形・加工のオールインワンプラットフォーム</strong>です。
+      ただし価格・サイズ・操作の複雑さを考えると初心者には過剰スペック。
+    </p>
+    <p style={{ ...S.p, marginBottom: 0 }}>
+      既にBambu Labや他社機を使いこなしていて「もっと高機能な機種にステップアップしたい」人に向けた1台です。
+      まず3Dプリントを始めるなら <a href="/printers/bambu-a1-mini-review" style={{ color: "#06b6d4" }}>A1 Mini</a> からスタートするのが王道です。
+    </p>
+  </div>
+</section>
+
+<p style={S.disclaimer}>
+  当サイトはAmazonアソシエイト・楽天アフィリエイト・ValueCommerce・メルカリアンバサダーに参加しています。記事内のリンクから商品を購入すると、売上の一部が当サイトに還元される場合があります。価格は記事執筆時点のものです。
+</p>

@@ -51,6 +51,11 @@ import { meta as howtoCalibration } from "../../content/articles/howto-calibrati
 import { meta as howtoModelingSoftware } from "../../content/articles/howto-modeling-software.meta";
 import { meta as filamentsCarbonFiber } from "../../content/articles/filaments-carbon-fiber.meta";
 import { meta as howtoStlSites } from "../../content/articles/howto-stl-sites.meta";
+import { meta as printersBambuH2dReview } from "../../content/articles/printers-bambu-h2d-review.meta";
+import { meta as printersBambuX1CarbonReview } from "../../content/articles/printers-bambu-x1-carbon-review.meta";
+import { meta as printersCrealityComparison } from "../../content/articles/printers-creality-comparison.meta";
+import { meta as printersPriceGuide } from "../../content/articles/printers-price-guide.meta";
+import { meta as howtoRental } from "../../content/articles/howto-rental.meta";
 // AUTO_INJECT_IMPORT — このコメントの上に新しい記事のimportを追加すること。`npm run new-article` が自動で追記する。
 
 export type ArticleCategory = "filaments" | "printers" | "howto";
@@ -149,6 +154,11 @@ export const articles: ArticleEntry[] = [
   toEntry(howtoModelingSoftware),
   toEntry(filamentsCarbonFiber),
   toEntry(howtoStlSites),
+  toEntry(printersBambuH2dReview),
+  toEntry(printersBambuX1CarbonReview),
+  toEntry(printersCrealityComparison),
+  toEntry(printersPriceGuide),
+  toEntry(howtoRental),
   // AUTO_INJECT_ENTRY — このコメントの上に toEntry(xxx) を追加すること。`npm run new-article` が自動で追記する。
 ];
 
