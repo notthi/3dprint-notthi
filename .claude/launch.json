@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "3dprint-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "/Users/notthi/Library/CloudStorage/Dropbox/Programing/3dprint-notthi",
+      "port": 3000
+    }
+  ]
+}
