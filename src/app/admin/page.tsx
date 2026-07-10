@@ -3,6 +3,7 @@ import Link from "next/link";
 import { readFile } from "fs/promises";
 import path from "path";
 import { articles } from "@/lib/articles";
+import PublishButton from "@/components/admin/PublishButton";
 
 export const metadata: Metadata = {
   title: "記事管理 | 3Dプリントラボ",
@@ -71,6 +72,23 @@ export default async function AdminPage() {
             記事管理ダッシュボード
           </h1>
           <p style={{ color: "#475569", fontSize: "0.8rem" }}>noindex — 検索エンジンにインデックスされません</p>
+        </div>
+
+        {/* 編集・公開アクション（ローカル環境で使用） */}
+        <div style={{
+          display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap",
+          backgroundColor: "#1e293b", border: "1px solid #334155",
+          borderRadius: "0.75rem", padding: "1.25rem", marginBottom: "2.5rem",
+        }}>
+          <a href="/keystatic" style={{
+            display: "inline-flex", alignItems: "center", gap: "0.5rem",
+            backgroundColor: "#06b6d4", color: "#0f172a", fontWeight: 700,
+            fontSize: "0.9rem", padding: "0.625rem 1.5rem", borderRadius: "0.5rem",
+            textDecoration: "none",
+          }}>
+            ✏️ 記事を編集（ブロックエディタ）
+          </a>
+          <PublishButton />
         </div>
 
         {/* サマリーカード */}
