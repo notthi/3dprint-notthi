@@ -1,0 +1,331 @@
+---
+badge: P2S レビュー
+badgeColor: '#06b6d4'
+breadcrumbLabel: P2S レビュー
+title: Bambu Lab P2S レビュー【2026年版】密閉チャンバー×高速印刷の実力を検証
+description: >-
+  Bambu Lab
+  P2Sを徹底レビュー。密閉チャンバーの効果・印刷速度・ABS/ASA対応・AMS連携・P1Sとの違いを実機で検証。本格派ユーザーに本当にP2Sが必要かを正直に解説します。
+updatedAt: 2026年5月
+tags:
+  - Bambu Lab
+  - P2S
+  - レビュー
+  - 密閉チャンバー
+  - ABS
+related:
+  - href: /printers/bambu-p1s-vs-p2s
+    title: P1S vs P2S どちらを買うべき？
+    badge: 比較
+    badgeColor: '#06b6d4'
+  - href: /printers/bambu-lab-lineup
+    title: Bambu Lab全機種ラインナップ比較
+    badge: 全機種
+    badgeColor: '#06b6d4'
+  - href: /printers/bambu-a1-mini-review
+    title: A1 Mini レビュー
+    badge: レビュー
+    badgeColor: '#06b6d4'
+---
+export const S = {
+  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  warn:    { backgroundColor: "#1c1a0e", border: "1px solid #f59e0b", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
+  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
+};
+
+<div style={S.card}>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>Bambu Lab P2Sは「本格派のための密閉チャンバー高速プリンター」です。</strong> ABS・ASA・ナイロンなど高温素材を安定して扱え、AMS連携で最大16色の多色印刷も可能。ただしA1 miniの3倍の価格帯なので、本当に必要かを見極めることが大切です。
+  </div>
+</div>
+
+<section id="conclusion" style={S.section}>
+  <h2 style={S.h2}>結論：こんな人向け</h2>
+  <div style={S.tip}>
+    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>✅ P2Sがおすすめな人</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      ABS・ASA・ナイロン・PCを日常的に使いたい / 大型パーツ（256mm³）が必要 / 業務・試作品用途で耐久性を重視 / AMSで多色印刷をガチでやりたい
+    </div>
+  </div>
+  <div style={S.warn}>
+    <div style={{ color: "#f59e0b", fontWeight: "700", marginBottom: "0.5rem" }}>⚠️ A1 miniで十分な人</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      PLA・PETGメインのホビー用途 / 予算を抑えたい / 初めての3Dプリンター
+    </div>
+  </div>
+</section>
+
+<section id="specs" style={S.section}>
+  <h2 style={S.h2}>スペック詳細</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>項目</th>
+          <th style={{ ...S.th, color: "#06b6d4" }}>P2S</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>造形サイズ</td>
+          <td style={{ ...S.td, color: "#06b6d4" }}>256 × 256 × 256 mm</td>
+        </tr>
+        <tr>
+          <td style={S.td}>最高印刷速度</td>
+          <td style={{ ...S.td, color: "#06b6d4" }}>600 mm/s</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>加速度</td>
+          <td style={{ ...S.td, color: "#06b6d4" }}>20,000 mm/s²</td>
+        </tr>
+        <tr>
+          <td style={S.td}>ノズル温度（最高）</td>
+          <td style={{ ...S.td, color: "#06b6d4" }}>320℃</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>ベッド温度（最高）</td>
+          <td style={{ ...S.td, color: "#06b6d4" }}>120℃</td>
+        </tr>
+        <tr>
+          <td style={S.td}>密閉チャンバー</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>あり（能動的加熱対応）</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>チャンバー最高温度</td>
+          <td style={{ ...S.td, color: "#06b6d4" }}>60℃</td>
+        </tr>
+        <tr>
+          <td style={S.td}>カメラ</td>
+          <td style={{ ...S.td, color: "#06b6d4" }}>高解像度カメラ（AIスパゲッティ検知）</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>AMS対応</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>あり（最大4台接続で16色）</td>
+        </tr>
+        <tr>
+          <td style={S.td}>参考価格（本体）</td>
+          <td style={{ ...S.td, color: "#06b6d4" }}>約150,000円〜</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="chamber" style={S.section}>
+  <h2 style={S.h2}>密閉チャンバーの効果</h2>
+  <div style={S.p}>
+    P2Sの最大の特徴は能動加熱式の密閉チャンバーです。チャンバー内を最高60℃まで加熱でき、高温素材印刷時の反りや層間剥離を大幅に抑えます。
+  </div>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>素材</th>
+          <th style={S.th}>密閉チャンバーの必要性</th>
+          <th style={S.th}>P2Sでの安定性</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>PLA</td>
+          <td style={S.td}>不要</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎ 問題なし</td>
+        </tr>
+        <tr>
+          <td style={S.td}>PETG</td>
+          <td style={S.td}>ほぼ不要</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎ 問題なし</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#06b6d4" }}>ABS</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>必要（反り・割れ対策）</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎ 安定して印刷可能</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#06b6d4" }}>ASA</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>必要</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎ 安定して印刷可能</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#06b6d4" }}>PA（ナイロン）</td>
+          <td style={{ ...S.td, color: "#ef4444" }}>強く推奨</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎ 高温チャンバーが効果的</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#06b6d4" }}>PC</td>
+          <td style={{ ...S.td, color: "#ef4444" }}>必須</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>○ 320℃ノズルで対応</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="print-quality" style={S.section}>
+  <h2 style={S.h2}>印刷品質・速度</h2>
+  <div style={S.p}>
+    最高600mm/sの印刷速度は実用的で、一般的な印刷では200〜300mm/s程度でも十分な品質が得られます。高速印刷時でも振動補正（ACS）が有効で、積層のズレや波打ちを抑えます。
+  </div>
+  <div style={S.tip}>
+    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>💡 実用速度の目安</div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#f1f5f9" }}>高品質モード（~150mm/s）</strong>：フィギュア・精密パーツ向け
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#f1f5f9" }}>標準モード（~250mm/s）</strong>：日常使いに最適なバランス
+    </div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      <strong style={{ color: "#f1f5f9" }}>高速モード（~500mm/s）</strong>：試作・大量生産向け。品質はやや落ちる
+    </div>
+  </div>
+</section>
+
+<section id="ams" style={S.section}>
+  <h2 style={S.h2}>AMS対応（最大16色）</h2>
+  <div style={S.p}>
+    P2SはAMS（Auto Material System）に対応しており、最大4台のAMSを接続して16色での印刷が可能です。Bambu Studioからカラーアサインを直感的に操作できます。
+  </div>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>機能</th>
+          <th style={S.th}>詳細</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#06b6d4" }}>自動フィラメント切り替え</td>
+          <td style={S.td}>1回の印刷中に最大16色を自動切り替え</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#06b6d4" }}>パージブロック</td>
+          <td style={S.td}>色切り替え時の廃材。Bambu Studioのフラッシュ最適化で削減可能</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#06b6d4" }}>RFID認識</td>
+          <td style={S.td}>Bambu純正フィラメントは自動でプロファイルを読み込み</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#06b6d4" }}>サードパーティ対応</td>
+          <td style={S.td}>手動設定でサードパーティフィラメントも使用可能</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="pros-cons" style={S.section}>
+  <h2 style={S.h2}>メリット・デメリット</h2>
+  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+    <div style={S.tip}>
+      <div style={{ color: "#22c55e", fontWeight: "700", marginBottom: "0.5rem" }}>✅ メリット</div>
+      <div style={S.muted}>
+        密閉チャンバーでABS/ASA/PA/PCが安定<br />
+        600mm/sの高速印刷<br />
+        AMS最大16色対応<br />
+        高解像度カメラ＋AIスパゲッティ検知<br />
+        Bambu Studioの直感的な操作<br />
+        リモートモニタリング対応
+      </div>
+    </div>
+    <div style={S.warn}>
+      <div style={{ color: "#f59e0b", fontWeight: "700", marginBottom: "0.5rem" }}>⚠️ デメリット</div>
+      <div style={S.muted}>
+        価格が高い（A1 miniの約3倍）<br />
+        本体サイズが大きい<br />
+        ABS印刷時のVOC・臭気管理が必要<br />
+        PLA中心ならオーバースペック<br />
+        消耗品コストが高め
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vs-a1mini" style={S.section}>
+  <h2 style={S.h2}>A1 miniとの比較</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>項目</th>
+          <th style={S.th}>A1 mini</th>
+          <th style={{ ...S.th, color: "#06b6d4" }}>P2S</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>価格（本体）</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>約50,000円〜</td>
+          <td style={S.td}>約150,000円〜</td>
+        </tr>
+        <tr>
+          <td style={S.td}>造形サイズ</td>
+          <td style={S.td}>180 × 180 × 180 mm</td>
+          <td style={{ ...S.td, color: "#06b6d4" }}>256 × 256 × 256 mm</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>密閉チャンバー</td>
+          <td style={{ ...S.td, color: "#ef4444" }}>なし（オープンフレーム）</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>あり（能動加熱式）</td>
+        </tr>
+        <tr>
+          <td style={S.td}>ABS/ASA印刷</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>難しい（反りが出やすい）</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>安定して印刷可能</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>PLA/PETG印刷</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎ 最適</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎ 問題なし</td>
+        </tr>
+        <tr>
+          <td style={S.td}>AMS（多色）</td>
+          <td style={S.td}>AMS Lite（4色〜）</td>
+          <td style={{ ...S.td, color: "#06b6d4" }}>AMS（最大16色）</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="summary" style={S.section}>
+  <h2 style={S.h2}>まとめ</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>用途</th>
+          <th style={S.th}>おすすめ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>PLA/PETGのホビー・日用品</td>
+          <td style={{ ...S.td, color: "#22c55e", fontWeight: "700" }}>A1 mini（コスパ最高）</td>
+        </tr>
+        <tr>
+          <td style={S.td}>ABS/ASA/PA/PCを使う本格用途</td>
+          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>P2S</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>大型パーツ（180mm超）が必要</td>
+          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>P2S</td>
+        </tr>
+        <tr>
+          <td style={S.td}>業務・試作品用途</td>
+          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>P2S</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style={{ ...S.p, marginTop: "1rem" }}>
+    P2Sは<strong style={{ color: "#06b6d4" }}>高温素材・大型造形・業務用途</strong>に特化した本格機です。PLA中心であればA1 miniで十分ですが、ABS・ASAを安定させたい・造形サイズを超えたい場合にはP2Sが明確な答えになります。
+  </div>
+</section>

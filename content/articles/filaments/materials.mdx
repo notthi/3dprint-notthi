@@ -1,0 +1,239 @@
+---
+badge: 素材ガイド
+badgeColor: '#8b5cf6'
+breadcrumbLabel: 素材の種類と選び方
+title: 3Dプリンターの素材（フィラメント）完全比較【PLA・PETG・ABS・TPU】
+description: 3Dプリンターで使う素材（フィラメント）の種類を徹底比較。PLA・PETG・ABS・TPU・ASAそれぞれの特徴・強度・耐熱性・価格を一覧表で解説します。
+updatedAt: 2026年5月
+tags:
+  - 素材
+  - フィラメント
+  - 比較
+  - PLA
+  - PETG
+  - ABS
+  - TPU
+related:
+  - href: /filaments/pla-vs-petg
+    title: PLAとPETGどっちを選ぶ？徹底比較
+    badge: 比較
+    badgeColor: '#06b6d4'
+  - href: /filaments/pla
+    title: PLAフィラメントとは？特徴・おすすめ
+    badge: PLA
+    badgeColor: '#10b981'
+  - href: /filaments/petg
+    title: PETGフィラメントとは？特徴・おすすめ
+    badge: PETG
+    badgeColor: '#06b6d4'
+---
+export const S = {
+  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  warn:    { backgroundColor: "#1c0a0a", border: "1px solid #ef4444", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #8b5cf6", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  h3:      { fontSize: "1rem", fontWeight: "700", color: "#06b6d4", marginBottom: "0.5rem", marginTop: "1.25rem" },
+  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
+  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
+};
+
+<div style={S.card}>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>3Dプリンターの素材（フィラメント）は種類が多く、最初はどれを選べばいいか迷いがちです。</strong> 素材によって強度・耐熱性・柔軟性・印刷のしやすさがまったく異なります。
+  </div>
+  <div style={{ ...S.p, marginBottom: 0 }}>
+    <strong style={{ color: "#8b5cf6" }}>迷ったらまずPLA。</strong> 実用品はPETG、柔軟パーツはTPU、という3つを覚えておけば大半の用途に対応できます。
+  </div>
+</div>
+
+<section id="table" style={S.section}>
+  <h2 style={S.h2}>素材一覧比較表</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>素材</th>
+          <th style={S.th}>印刷難易度</th>
+          <th style={S.th}>強度</th>
+          <th style={S.th}>耐熱性</th>
+          <th style={S.th}>価格（1kg）</th>
+          <th style={S.th}>主な用途</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#10b981", fontWeight: "700" }}>PLA</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>★☆☆（易）</td>
+          <td style={S.td}>普通</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>低（〜60℃）</td>
+          <td style={S.td}>1,500〜2,500円</td>
+          <td style={S.td}>試作・インテリア・フィギュア</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#10b981", fontWeight: "700" }}>PLA+</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>★☆☆（易）</td>
+          <td style={S.td}>高め</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>低（〜65℃）</td>
+          <td style={S.td}>2,000〜3,000円</td>
+          <td style={S.td}>PLA強化版・実用品</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>PETG</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>★★☆（中）</td>
+          <td style={S.td}>高い</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>中（〜80℃）</td>
+          <td style={S.td}>2,000〜3,500円</td>
+          <td style={S.td}>実用品・ドローンパーツ</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#f59e0b", fontWeight: "700" }}>ABS</td>
+          <td style={{ ...S.td, color: "#ef4444" }}>★★★（難）</td>
+          <td style={S.td}>高い</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>高（〜100℃）</td>
+          <td style={S.td}>2,000〜3,000円</td>
+          <td style={S.td}>工業部品・高耐熱品</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#f59e0b", fontWeight: "700" }}>ASA</td>
+          <td style={{ ...S.td, color: "#ef4444" }}>★★★（難）</td>
+          <td style={S.td}>高い</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>高（〜100℃）</td>
+          <td style={S.td}>2,500〜4,000円</td>
+          <td style={S.td}>屋外使用・UV耐性</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#8b5cf6", fontWeight: "700" }}>TPU</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>★★☆（中）</td>
+          <td style={S.td}>引裂き強</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>低〜中</td>
+          <td style={S.td}>2,500〜4,000円</td>
+          <td style={S.td}>スマホケース・ルアー</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#ef4444", fontWeight: "700" }}>Nylon</td>
+          <td style={{ ...S.td, color: "#ef4444" }}>★★★（難）</td>
+          <td style={S.td}>非常に高い</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>高い</td>
+          <td style={S.td}>3,000〜5,000円</td>
+          <td style={S.td}>機械部品・高強度品</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#ef4444", fontWeight: "700" }}>PC</td>
+          <td style={{ ...S.td, color: "#ef4444" }}>★★★（難）</td>
+          <td style={S.td}>最高クラス</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>非常に高い</td>
+          <td style={S.td}>4,000〜6,000円</td>
+          <td style={S.td}>エンジニアリング用途</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="pla" style={S.section}>
+  <h2 style={S.h2}>PLA — 最初の1択</h2>
+  <div style={S.p}>
+    3Dプリンター初心者には<strong style={{ color: "#10b981" }}>無条件でPLAを推奨</strong>します。印刷のしやすさ、コストパフォーマンス、仕上がりの美しさがバランスよく揃った素材です。植物由来（トウモロコシのデンプン等）の生分解性プラスチックで、印刷時の嫌な臭いも少ないです。
+  </div>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>弱点</strong>は耐熱性の低さ。夏の車内（80℃超）に放置すると変形します。屋外での長期使用や熱がかかる用途には向きません。
+  </div>
+</section>
+
+<section id="pla-plus" style={S.section}>
+  <h2 style={S.h2}>PLA+ — PLAの強化版</h2>
+  <div style={S.p}>
+    同じ印刷しやすさを維持しながら衝撃強度を高めたグレードです。Bambu Lab Pure PLA、eSUN PLA+、Polymaker PolyMax PLAなどが代表的。PLA対比で衝撃強度が約1.5〜2倍になります。最初からPLA+を選ぶのも合理的な選択です。
+  </div>
+</section>
+
+<section id="petg" style={S.section}>
+  <h2 style={S.h2}>PETG — 実用品の定番</h2>
+  <div style={S.p}>
+    食品容器にも使われるPETGは<strong style={{ color: "#06b6d4" }}>安全性が高く、強度も十分</strong>な優等生素材です。PLAより耐熱・耐衝撃に優れ、実用品を作るならまずPETGを検討してください。
+  </div>
+  <div style={S.p}>
+    欠点は<strong style={{ color: "#f1f5f9" }}>糸引き（ストリング）</strong>が出やすいこと。リトラクション設定を丁寧に調整する必要があります。
+  </div>
+</section>
+
+<section id="abs" style={S.section}>
+  <h2 style={S.h2}>ABS — 上級者向け</h2>
+  <div style={S.p}>
+    古くから使われる素材ですが、<strong style={{ color: "#f1f5f9" }}>反り（ワーピング）</strong>が非常に起きやすく、温度管理が難しい。エンクロージャー（密閉チャンバー）があるプリンター（Bambu Lab P2S等）でないと安定した印刷は難しいです。
+  </div>
+  <div style={S.warn}>
+    <div style={{ color: "#ef4444", fontWeight: "700", marginBottom: "0.5rem" }}>⚠️ 初心者はABSを避けてください</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      ABSが必要な耐熱用途には、印刷しやすい<strong style={{ color: "#f1f5f9" }}>ASA</strong>で代替できることが多いです。
+    </div>
+  </div>
+</section>
+
+<section id="asa" style={S.section}>
+  <h2 style={S.h2}>ASA — 屋外最強素材</h2>
+  <div style={S.p}>
+    ABSの欠点（UV劣化）を改善した素材です。<strong style={{ color: "#f1f5f9" }}>紫外線や雨風に強く</strong>、屋外での長期使用に最適です。庭のパーツ、車外装備、ドローンのフレーム等に向いています。印刷の難しさはABSと同等ですが、ABSよりも積極的に選ぶ価値があります。
+  </div>
+</section>
+
+<section id="tpu" style={S.section}>
+  <h2 style={S.h2}>TPU — 柔軟素材の王様</h2>
+  <div style={S.p}>
+    ゴムのような弾性を持ち、<strong style={{ color: "#8b5cf6" }}>曲げても割れない</strong>のが最大の特徴です。スマートフォンケース、釣りのルアー、ラジコンタイヤ、靴底パーツ等に使われます。
+  </div>
+  <div style={S.p}>
+    柔らかいがゆえに送り出し（エクストルーダー）で詰まりやすいため、印刷速度を遅めに設定する必要があります。Bambu Labのような高速プリンターでも、TPUは低速モードで印刷するのが基本です。
+  </div>
+</section>
+
+<section id="nylon" style={S.section}>
+  <h2 style={S.h2}>Nylon / PC — 上級エンジニアリング素材</h2>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>Nylon（ナイロン）</strong>は機械部品レベルの強度を持つ上級者向け素材です。吸湿性が非常に高いため、乾燥保管が必須。フィラメントドライヤーを使いながら印刷しないと品質が安定しません。
+  </div>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>PC（ポリカーボネート）</strong>は最高クラスの強度・耐熱性を誇りますが、260〜300℃という高い印刷温度が必要で、対応プリンターが限られます。真剣に工業用途を考えている方向けです。
+  </div>
+</section>
+
+<section id="flowchart" style={S.section}>
+  <h2 style={S.h2}>素材選びのフロー</h2>
+  <div style={S.card}>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#f59e0b" }}>屋外で使う（UV・雨に晒される） →</strong> <span style={{ color: "#f1f5f9" }}>ASA</span>
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#8b5cf6" }}>柔軟性が必要（曲がっても壊れない） →</strong> <span style={{ color: "#f1f5f9" }}>TPU</span>
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#f59e0b" }}>耐熱性が重要（80℃以上） →</strong> <span style={{ color: "#f1f5f9" }}>ABS / ASA / Nylon</span>
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#06b6d4" }}>強度重視の実用品 →</strong> <span style={{ color: "#f1f5f9" }}>PETG / PLA+</span>
+    </div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      <strong style={{ color: "#10b981" }}>上記以外すべて →</strong> <span style={{ color: "#f1f5f9" }}>PLA（デフォルト）</span>
+    </div>
+  </div>
+</section>
+
+<section id="summary" style={S.section}>
+  <h2 style={S.h2}>まとめ</h2>
+  <div style={S.card}>
+    <div style={{ color: "#f1f5f9", fontWeight: "700", marginBottom: "0.75rem" }}>迷ったらこの3つから始めましょう</div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#10b981" }}>① PLA</strong> — まず最初の素材。印刷が一番楽
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#06b6d4" }}>② PETG</strong> — 実用品を作りたくなったら次に試す
+    </div>
+    <div style={{ ...S.p, marginBottom: "1rem" }}>
+      <strong style={{ color: "#8b5cf6" }}>③ TPU</strong> — 柔軟パーツ（スマホケース・ルアー）専用
+    </div>
+    <div style={{ color: "#8b5cf6", fontWeight: "700" }}>→ ABS・Nylon・PCは特定の理由がある場合だけ選んでください。</div>
+  </div>
+</section>

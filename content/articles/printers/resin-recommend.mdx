@@ -1,0 +1,255 @@
+---
+badge: レジンプリンター
+badgeColor: '#8b5cf6'
+breadcrumbLabel: レジンプリンターおすすめ
+title: レジン（光造形）3Dプリンターおすすめ5選【2026年版・初心者向け選び方】
+description: >-
+  レジン（光造形）3Dプリンターのおすすめ5選を解説。Elegoo・Anycubic・Bambuを比較し、初心者でも失敗しない選び方・安全な使い方・FDMとの違いをまとめました。
+updatedAt: 2026年5月
+tags:
+  - レジンプリンター
+  - 光造形
+  - Elegoo
+  - Anycubic
+  - おすすめ
+related:
+  - href: /printers/fdm-vs-resin
+    title: FDMとレジン どちらを選ぶ？
+    badge: 比較
+    badgeColor: '#06b6d4'
+  - href: /printers/recommend
+    title: 家庭用3Dプリンターおすすめ7選
+    badge: ランキング
+  - href: /howto/cosplay-parts
+    title: コスプレパーツの作り方
+    badge: コスプレ制作
+    badgeColor: '#8b5cf6'
+---
+export const S = {
+  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  warn:    { backgroundColor: "#1c1a0e", border: "1px solid #f59e0b", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #8b5cf6", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
+  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
+};
+
+<div style={S.card}>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>レジン（光造形）プリンターはFDMとは別物の精密さを持つ造形機です。</strong> フィギュア・ミニチュア・アクセサリーなど、0.05mm単位の細部表現が必要な用途で圧倒的な力を発揮します。取り扱いには換気と保護具が必要です。
+  </div>
+</div>
+
+<section id="fdm-vs-resin" style={S.section}>
+  <h2 style={S.h2}>FDMとレジンの違い</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>項目</th>
+          <th style={{ ...S.th, color: "#06b6d4" }}>FDM（フィラメント）</th>
+          <th style={{ ...S.th, color: "#8b5cf6" }}>レジン（光造形）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>精度</td>
+          <td style={S.td}>0.1〜0.2mm程度</td>
+          <td style={{ ...S.td, color: "#8b5cf6" }}>0.01〜0.05mm（超精密）</td>
+        </tr>
+        <tr>
+          <td style={S.td}>表面品質</td>
+          <td style={S.td}>積層痕あり（後処理必要）</td>
+          <td style={{ ...S.td, color: "#8b5cf6" }}>ほぼ滑らか</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>造形サイズ</td>
+          <td style={{ ...S.td, color: "#06b6d4" }}>大型対応（200mm+）</td>
+          <td style={S.td}>比較的小さい（150mm以下が多い）</td>
+        </tr>
+        <tr>
+          <td style={S.td}>素材コスト</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>安い（PLA 約2,000円/kg）</td>
+          <td style={S.td}>中程度（レジン 約3,000〜5,000円/kg）</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>後処理</td>
+          <td style={S.td}>サポート除去のみ</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>洗浄（IPA）＋UV硬化が必要</td>
+        </tr>
+        <tr>
+          <td style={S.td}>安全性</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>比較的安全</td>
+          <td style={{ ...S.td, color: "#f59e0b" }}>換気・手袋・保護メガネが必要</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="types" style={S.section}>
+  <h2 style={S.h2}>レジンプリンターの種類</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>方式</th>
+          <th style={S.th}>特徴</th>
+          <th style={S.th}>価格帯</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#8b5cf6" }}>MSLA（LCD）</td>
+          <td style={S.td}>LCDパネルで層全体を一括露光。安価・高速が特徴。主流</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>20,000〜70,000円</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#8b5cf6" }}>DLP</td>
+          <td style={S.td}>プロジェクターで一括露光。解像度・速度が高い</td>
+          <td style={S.td}>50,000〜200,000円+</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#8b5cf6" }}>SLA（レーザー）</td>
+          <td style={S.td}>レーザースキャンで高精度。主に業務用</td>
+          <td style={S.td}>200,000円〜</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style={{ ...S.p, marginTop: "1rem" }}>
+    家庭用途では<strong style={{ color: "#8b5cf6" }}>MSLA（LCD方式）</strong>が主流です。安価で精度も十分高く、初心者でも扱いやすいです。
+  </div>
+</section>
+
+<section id="recommend" style={S.section}>
+  <h2 style={S.h2}>おすすめ5選</h2>
+
+  <div style={S.card}>
+    <div style={{ color: "#8b5cf6", fontWeight: "700", fontSize: "1rem", marginBottom: "0.5rem" }}>1位｜Elegoo Mars 4 Ultra</div>
+    <div style={S.p}>
+      <strong style={{ color: "#f1f5f9" }}>初心者〜中級者に最もおすすめ。</strong> 12K解像度のLCDパネルを搭載し、超高精細なフィギュア・ミニチュアを印刷可能。傾斜リフト機構で剥離時のダメージを軽減し、失敗率が低いです。
+    </div>
+    <div style={S.muted}>造形サイズ：165 × 165 × 165 mm ／ 参考価格：約55,000円</div>
+  </div>
+
+  <div style={S.card}>
+    <div style={{ color: "#8b5cf6", fontWeight: "700", fontSize: "1rem", marginBottom: "0.5rem" }}>2位｜Elegoo Saturn 4 Ultra</div>
+    <div style={S.p}>
+      <strong style={{ color: "#f1f5f9" }}>大型レジン印刷の定番。</strong> 210 × 218 mmという広い造形面積で、大型フィギュアや複数パーツの一括印刷が可能。コスプレパーツや大型プロップの制作に向いています。
+    </div>
+    <div style={S.muted}>造形サイズ：218 × 123 × 220 mm ／ 参考価格：約95,000円</div>
+  </div>
+
+  <div style={S.card}>
+    <div style={{ color: "#8b5cf6", fontWeight: "700", fontSize: "1rem", marginBottom: "0.5rem" }}>3位｜Anycubic Photon Mono M5s</div>
+    <div style={S.p}>
+      <strong style={{ color: "#f1f5f9" }}>自動レベリング搭載で初心者に優しい。</strong> セットアップが簡単で、初めてのレジンプリンターとして失敗が少ない機種。Anycubicのサポート体制も充実しています。
+    </div>
+    <div style={S.muted}>造形サイズ：200 × 122 × 200 mm ／ 参考価格：約60,000円</div>
+  </div>
+
+  <div style={S.card}>
+    <div style={{ color: "#8b5cf6", fontWeight: "700", fontSize: "1rem", marginBottom: "0.5rem" }}>4位｜Anycubic Photon Mono 2</div>
+    <div style={S.p}>
+      <strong style={{ color: "#f1f5f9" }}>コスパ重視のエントリーモデル。</strong> 約20,000円台で入手でき、「まずレジンを試してみたい」という入門機として最適。精度は上位機種より落ちますが、日用品・アクセサリーには十分です。
+    </div>
+    <div style={S.muted}>造形サイズ：143 × 89 × 165 mm ／ 参考価格：約25,000円〜</div>
+  </div>
+
+  <div style={S.card}>
+    <div style={{ color: "#8b5cf6", fontWeight: "700", fontSize: "1rem", marginBottom: "0.5rem" }}>5位｜Bambu Lab Photon（仮）</div>
+    <div style={S.p}>
+      <strong style={{ color: "#f1f5f9" }}>Bambuエコシステムを使いたい人向け。</strong> Bambu Labはレジンプリンター市場への参入を予定しており、既存のBambu Studioとの連携が期待されます。FDMとの一元管理を重視するなら今後の動向に注目。
+    </div>
+    <div style={S.muted}>※ 2026年5月時点の情報。発売スケジュールは公式サイトでご確認ください。</div>
+  </div>
+</section>
+
+<section id="safety" style={S.section}>
+  <h2 style={S.h2}>安全な使い方</h2>
+  <div style={S.warn}>
+    <div style={{ color: "#f59e0b", fontWeight: "700", marginBottom: "0.5rem" }}>⚠️ レジン取り扱いの注意点</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      未硬化レジンは皮膚・目への刺激があります。ニトリル手袋・保護メガネの着用が必須です。また揮発性があるため、必ず換気の良い場所で使用してください。IPA（イソプロピルアルコール）での洗浄後は、廃液を日光やUVライトで硬化させてから廃棄してください。
+    </div>
+  </div>
+  <div style={{ overflowX: "auto", marginTop: "1rem" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>必要な装備・環境</th>
+          <th style={S.th}>理由</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#f59e0b" }}>ニトリル手袋</td>
+          <td style={S.td}>未硬化レジンが直接肌に触れるのを防ぐ</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#f59e0b" }}>換気（窓開け・換気扇）</td>
+          <td style={S.td}>VOC（揮発性有機化合物）の排出</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#f59e0b" }}>UV硬化機</td>
+          <td style={S.td}>印刷後の後処理に必須。多くの機種でセット販売</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#f59e0b" }}>洗浄用IPA（またはウォッシュアンドキュア液）</td>
+          <td style={S.td}>未硬化レジンを表面から除去する</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="cost" style={S.section}>
+  <h2 style={S.h2}>ランニングコスト</h2>
+  <div style={S.card}>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>レジン（1kg）：<strong style={{ color: "#f1f5f9" }}>約3,000〜5,000円</strong></div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>IPA洗浄液（1L）：<strong style={{ color: "#f1f5f9" }}>約500〜1,000円</strong></div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>FEPフィルム（消耗品）：<strong style={{ color: "#f1f5f9" }}>約1,000〜2,000円/枚（50〜100回印刷で交換目安）</strong></div>
+    <div style={{ color: "#8b5cf6", fontWeight: "700", marginTop: "0.75rem" }}>
+      → FDMより材料費は高めですが、小型精密パーツの品質を考えると十分コスパが良いです。
+    </div>
+  </div>
+</section>
+
+<section id="summary" style={S.section}>
+  <h2 style={S.h2}>まとめ</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollease: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>用途</th>
+          <th style={S.th}>おすすめ機種</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>フィギュア・ミニチュア（精度重視）</td>
+          <td style={{ ...S.td, color: "#8b5cf6", fontWeight: "700" }}>Elegoo Mars 4 Ultra</td>
+        </tr>
+        <tr>
+          <td style={S.td}>大型レジンパーツ</td>
+          <td style={{ ...S.td, color: "#8b5cf6", fontWeight: "700" }}>Elegoo Saturn 4 Ultra</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>初めてのレジン（エントリー）</td>
+          <td style={{ ...S.td, color: "#8b5cf6", fontWeight: "700" }}>Anycubic Photon Mono 2</td>
+        </tr>
+        <tr>
+          <td style={S.td}>自動レベリング重視</td>
+          <td style={{ ...S.td, color: "#8b5cf6", fontWeight: "700" }}>Anycubic Photon Mono M5s</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style={{ ...S.p, marginTop: "1rem" }}>
+    レジンプリンターはFDMの代替ではなく<strong style={{ color: "#8b5cf6" }}>補完的なツール</strong>です。精密さが必要なパーツにはレジン、大型・実用パーツにはFDMという使い分けが最も効率的です。
+  </div>
+</section>

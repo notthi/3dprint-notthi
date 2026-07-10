@@ -1,0 +1,178 @@
+---
+badge: MakerWorld
+badgeColor: '#06b6d4'
+breadcrumbLabel: MakerWorld使い方
+title: MakerWorldの使い方【Bambu Lab公式3Dデータサイト】無料モデルの探し方【2026年版】
+description: >-
+  Bambu
+  Lab公式のSTLデータ共有サイト「MakerWorld」の使い方を解説。無料モデルのダウンロード方法、検索のコツ、アップロードして収益を得る方法まで紹介します。
+updatedAt: 2026年5月
+tags:
+  - MakerWorld
+  - STLデータ
+  - 無料
+  - ダウンロード
+  - Bambu Lab
+related:
+  - href: /howto/bambu-studio
+    title: Bambu Studioの使い方ガイド
+    badge: Bambu Studio
+    badgeColor: '#06b6d4'
+  - href: /howto/beginners
+    title: 3Dプリンター初心者ガイド完全版
+    badge: 入門
+    badgeColor: '#10b981'
+  - href: /howto/trouble
+    title: 3Dプリンタートラブル解決集
+    badge: トラブル
+    badgeColor: '#ef4444'
+---
+export const S = {
+  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
+  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
+  step:    { display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem", marginBottom: "0.75rem" },
+  stepNum: { flexShrink: 0, backgroundColor: "#06b6d4", color: "#0f172a", fontWeight: "800", fontSize: "0.9rem", width: "2rem", height: "2rem", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" },
+};
+
+<div style={S.card}>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>MakerworldはBambu Labが運営する3Dデータの共有・販売プラットフォームです。</strong> Bambu Lab機種との連携が特に優れており、ワンクリックで最適設定での印刷が始められます。
+  </div>
+  <div style={{ ...S.p, marginBottom: 0 }}>
+    URL：<strong style={{ color: "#06b6d4" }}>makerworld.com</strong>
+  </div>
+</div>
+
+<section id="features" style={S.section}>
+  <h2 style={S.h2}>MakerWorldの主な特徴</h2>
+  <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+    <div style={{ display: "flex", gap: "0.75rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <span style={{ color: "#06b6d4", flexShrink: 0 }}>▸</span>
+      <div>
+        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>Bambu Studioとの直接連携</div>
+        <div style={{ ...S.muted, margin: 0 }}>モデルページからBambu Studioに直接インポート。スライス設定ごと入ってくるため初心者でもすぐ印刷できます。</div>
+      </div>
+    </div>
+    <div style={{ display: "flex", gap: "0.75rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <span style={{ color: "#06b6d4", flexShrink: 0 }}>▸</span>
+      <div>
+        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>高品質なデータが多い</div>
+        <div style={{ ...S.muted, margin: 0 }}>Bambu Labのキュレーションにより平均的なデータ品質がThingiverseより高い傾向。印刷プロファイルが付いているモデルが多い。</div>
+      </div>
+    </div>
+    <div style={{ display: "flex", gap: "0.75rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <span style={{ color: "#06b6d4", flexShrink: 0 }}>▸</span>
+      <div>
+        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>ポイントシステム</div>
+        <div style={{ ...S.muted, margin: 0 }}>モデルをアップロードするとダウンロード数に応じてポイントが貯まり、Bambu Lab製品と交換できます。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="download" style={S.section}>
+  <h2 style={S.h2}>無料モデルのダウンロード方法</h2>
+  <div style={S.step}>
+    <div style={S.stepNum}>1</div>
+    <div>
+      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>アカウント作成・ログイン</div>
+      <div style={{ ...S.muted, margin: 0 }}>makerworld.comにアクセス → Bambu Labアカウント（無料）でログイン</div>
+    </div>
+  </div>
+  <div style={S.step}>
+    <div style={S.stepNum}>2</div>
+    <div>
+      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>検索する</div>
+      <div style={{ ...S.muted, margin: 0 }}>検索バーにキーワード入力（英語が結果多い）。「Most Downloaded」「Best Rating」でソートして品質の高いものを探す。</div>
+    </div>
+  </div>
+  <div style={S.step}>
+    <div style={S.stepNum}>3</div>
+    <div>
+      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>モデルページを確認</div>
+      <div style={{ ...S.muted, margin: 0 }}>プレビュー・印刷プロファイル・レビューを確認してから選ぶ。</div>
+    </div>
+  </div>
+  <div style={S.step}>
+    <div style={S.stepNum}>4</div>
+    <div>
+      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>印刷またはダウンロード</div>
+      <div style={{ ...S.muted, margin: 0 }}>「Print」でBambu Studioに直接インポート、または「Download」でSTLをダウンロード。</div>
+    </div>
+  </div>
+  <div style={S.tip}>
+    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>💡 おすすめ検索ワード</div>
+    <div style={{ ...S.muted, margin: 0 }}>
+      phone stand ・ cable organizer ・ wall hook ・ vase ・ fishing lure ・ tool holder
+    </div>
+  </div>
+</section>
+
+<section id="upload" style={S.section}>
+  <h2 style={S.h2}>モデルをアップロードして収益化（ポイント制）</h2>
+  <div style={S.p}>
+    モデルがダウンロードされるたびにポイント獲得 → Bambu Labのフィラメント・パーツと交換できます。直接的な現金収益にはなりませんが、<strong style={{ color: "#f1f5f9" }}>フィラメント代の実質削減</strong>になります。
+  </div>
+  <div style={S.card}>
+    <div style={{ color: "#f1f5f9", fontWeight: "700", marginBottom: "0.5rem" }}>Etsy・BOOTHとの組み合わせ戦略</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      「無料版はMakerworld、有料版はEtsy」という戦略を取るクリエイターも多いです。無料公開で認知を広げ、プレミアムモデルは有料販売するモデルです。
+    </div>
+  </div>
+</section>
+
+<section id="vs-thingiverse" style={S.section}>
+  <h2 style={S.h2}>ThingiverseとMakerworldの違い</h2>
+  <div style={{ overflowX: "auto", marginBottom: "1.25rem" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>比較</th>
+          <th style={{ ...S.th, color: "#06b6d4" }}>MakerWorld</th>
+          <th style={S.th}>Thingiverse</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>Bambu Lab連携</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎ 直接連携</td>
+          <td style={S.td}>△ 手動インポート</td>
+        </tr>
+        <tr>
+          <td style={S.td}>データ品質</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>高い（キュレーション）</td>
+          <td style={S.td}>ばらつきあり</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>スライスプロファイル</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>◎ 多い</td>
+          <td style={S.td}>△ 少ない</td>
+        </tr>
+        <tr>
+          <td style={S.td}>収益化</td>
+          <td style={S.td}>ポイント制</td>
+          <td style={S.td}>なし</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style={S.p}>
+    Bambu機種ユーザーはMakerworldを主力に、品揃えが少ない場合はThingiverseを補完として使うのがおすすめです。
+  </div>
+</section>
+
+<section id="summary" style={S.section}>
+  <h2 style={S.h2}>まとめ</h2>
+  <div style={S.tip}>
+    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>💡 Bambu Lab機種ユーザーに最もおすすめ</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      MakerworldはBambu Lab機種ユーザーにとって最も使いやすいSTLデータプラットフォームです。Bambu Studioとのワンクリック連携と高品質なデータがそろっており、印刷設定で迷わずにすぐ印刷できます。
+    </div>
+  </div>
+</section>

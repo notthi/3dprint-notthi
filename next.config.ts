@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
 const withMDX = createMDX({
   options: {
     // Turbopack対応のためプラグインは文字列で指定する（Next 16公式仕様）
-    remarkPlugins: ["remark-gfm"],
+    remarkPlugins: ["remark-gfm", "remark-frontmatter"],
     rehypePlugins: ["rehype-slug"],
   },
 });

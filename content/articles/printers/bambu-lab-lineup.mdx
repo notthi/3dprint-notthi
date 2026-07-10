@@ -1,0 +1,245 @@
+---
+badge: Bambu Lab
+badgeColor: '#06b6d4'
+breadcrumbLabel: Bambu Lab全機種比較
+title: Bambu Labとは？全機種ラインナップ比較【2026年版】どれを選べばいい？
+description: >-
+  Bambu Labの全機種（A1
+  mini・A1・P2S・X1C）をラインナップ比較。価格・ビルドサイズ・密閉チャンバーの有無・AMS対応で整理し、用途別の選び方を解説します。
+updatedAt: 2026年5月
+tags:
+  - Bambu Lab
+  - 比較
+  - 全機種
+  - ラインナップ
+  - 選び方
+related:
+  - href: /printers/bambu-a1-mini-review
+    title: Bambu Lab A1 Mini レビュー
+    badge: レビュー
+    badgeColor: '#06b6d4'
+  - href: /printers/bambu-p2s-review
+    title: Bambu Lab P2S レビュー
+    badge: P2S
+    badgeColor: '#06b6d4'
+  - href: /printers/bambu-a1-vs-a1-mini
+    title: A1 vs A1 Mini どっちを買うべきか
+    badge: 比較
+    badgeColor: '#06b6d4'
+  - href: /howto/bambu-ams
+    title: Bambu AMS・AMS Lite完全ガイド
+    badge: AMS
+    badgeColor: '#06b6d4'
+---
+export const S = {
+  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  h3:      { fontSize: "1rem", fontWeight: "700", color: "#06b6d4", marginBottom: "0.75rem", marginTop: "1.25rem" },
+  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  section: { marginBottom: "2.5rem" },
+  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
+  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
+};
+
+<div style={S.card}>
+  <div style={S.p}>
+    <strong style={{ color: "#f1f5f9" }}>Bambu Labは2022年に登場し、わずか数年で3Dプリンター市場のトップブランドになった中国発のメーカーです。</strong> 「箱から出してすぐ印刷できる」使いやすさと高速・高品質な印刷で世界中のユーザーを獲得しています。
+  </div>
+  <div style={{ ...S.p, marginBottom: 0 }}>
+    この記事では全機種のスペックと用途別の選び方を解説します。
+  </div>
+</div>
+
+<section id="why" style={S.section}>
+  <h2 style={S.h2}>Bambu Labが選ばれる理由</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>特徴</th>
+          <th style={S.th}>詳細</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>全自動キャリブレーション</td>
+          <td style={S.td}>ベッドレベリング・Zオフセット・振動補正をすべて自動化。初心者でも開封30分で印刷できる</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>高速印刷</td>
+          <td style={S.td}>最大500mm/s。他社の2〜5倍の速度で同等以上の品質を実現</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>Bambu Studio</td>
+          <td style={S.td}>機種・素材を選ぶだけで最適設定が自動入力される直感的なスライサー</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>AMS（マルチカラー）</td>
+          <td style={S.td}>最大16色のフィラメントを自動切り替えして多色印刷が可能</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="lineup" style={S.section}>
+  <h2 style={S.h2}>全機種スペック比較</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}>機種</th>
+          <th style={S.th}>ビルドサイズ</th>
+          <th style={S.th}>密閉チャンバー</th>
+          <th style={S.th}>AMS</th>
+          <th style={S.th}>参考価格</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#22c55e", fontWeight: "700" }}>A1 mini</td>
+          <td style={S.td}>180×180×180mm</td>
+          <td style={{ ...S.td, color: "#ef4444" }}>✗</td>
+          <td style={S.td}>AMS Lite対応</td>
+          <td style={S.td}>約50,000円</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>A1</td>
+          <td style={S.td}>256×256×256mm</td>
+          <td style={{ ...S.td, color: "#ef4444" }}>✗</td>
+          <td style={S.td}>AMS Lite対応</td>
+          <td style={S.td}>約75,000〜80,000円</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={{ ...S.td, color: "#f59e0b", fontWeight: "700" }}>P2S</td>
+          <td style={S.td}>256×256×256mm</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>✅</td>
+          <td style={S.td}>AMS対応</td>
+          <td style={S.td}>約120,000〜130,000円</td>
+        </tr>
+        <tr>
+          <td style={{ ...S.td, color: "#8b5cf6", fontWeight: "700" }}>X1C</td>
+          <td style={S.td}>256×256×256mm</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>✅</td>
+          <td style={S.td}>AMS対応</td>
+          <td style={S.td}>約170,000円〜</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style={S.muted}>※ Combo版はAMS/AMS Lite同梱（別途5〜6万円相当）</div>
+</section>
+
+<section id="a1-mini" style={S.section}>
+  <h2 style={S.h2}>A1 mini — 初心者・コンパクト派の最適解</h2>
+  <div style={S.p}>
+    ビルドサイズ180×180×180mmのエントリー機。PLA・PETG・TPU・PLA-CFに対応し、デスクに置けるコンパクトサイズと静音性（約45dB）で生活スペースへの設置に向きます。
+  </div>
+  <div style={S.tip}>
+    <div style={{ color: "#22c55e", fontWeight: "700", marginBottom: "0.5rem" }}>こんな人に</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      初めての3Dプリンター / 小〜中サイズの造形がメイン / 設置スペースが限られる / 快適さ重視でコストも抑えたい
+    </div>
+  </div>
+</section>
+
+<section id="a1" style={S.section}>
+  <h2 style={S.h2}>A1 — 上位ビルドサイズ版</h2>
+  <div style={S.p}>
+    A1 miniと同じ開放型ながらビルドサイズ256×256×256mmに拡張。コスプレパーツ・建築模型・大型の実用品向きです。速度・品質・使いやすさはA1 miniと同等です。
+  </div>
+  <div style={S.tip}>
+    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>こんな人に</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      A1 miniのビルドサイズでは物足りない / 180mmを超えるパーツを作りたい / コスプレパーツ・建築模型に挑戦したい
+    </div>
+  </div>
+</section>
+
+<section id="p2s" style={S.section}>
+  <h2 style={S.h2}>P2S — 密閉チャンバー搭載のミドルハイ機</h2>
+  <div style={S.p}>
+    P1Sの後継機。密閉チャンバーでABS・ASA・ナイロンなど難しい素材も安定印刷が可能です。カメラ搭載で遠隔監視もできます。
+  </div>
+  <div style={S.tip}>
+    <div style={{ color: "#f59e0b", fontWeight: "700", marginBottom: "0.5rem" }}>こんな人に</div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      ABS・ASA・ナイロンを使いたい / 本格的な機能パーツを作りたい / 予算12万円まで出せる
+    </div>
+  </div>
+</section>
+
+<section id="x1c" style={S.section}>
+  <h2 style={S.h2}>X1C — フラッグシップモデル</h2>
+  <div style={S.p}>
+    LiDARスキャナー搭載で印刷中の自動品質補正が可能なBambu Labの最上位機種。プロ・業務用途向けです。「最高品質を出したい」「業務レベルの精度が必要」という方以外には不要です。
+  </div>
+</section>
+
+<section id="ams" style={S.section}>
+  <h2 style={S.h2}>AMS Liteとフルの違い</h2>
+  <div style={{ overflowX: "auto" }}>
+    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
+      <thead>
+        <tr>
+          <th style={S.th}></th>
+          <th style={S.th}>AMS Lite</th>
+          <th style={S.th}>AMS（フルAMS）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>対応機種</td>
+          <td style={S.td}>A1 mini・A1</td>
+          <td style={S.td}>P2S・X1C</td>
+        </tr>
+        <tr>
+          <td style={S.td}>スプール数</td>
+          <td style={S.td}>4（最大2台連結で8色）</td>
+          <td style={S.td}>4（最大4台連結で16色）</td>
+        </tr>
+        <tr style={{ backgroundColor: "#0f172a" }}>
+          <td style={S.td}>価格</td>
+          <td style={{ ...S.td, color: "#22c55e" }}>約25,000円</td>
+          <td style={S.td}>約55,000円</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style={{ ...S.p, marginTop: "1rem" }}>
+    多色印刷の機能自体に大きな差はありません。「AMS Liteを使いたい」という理由だけでP2Sを選ぶ必要はありません。
+  </div>
+</section>
+
+<section id="flowchart" style={S.section}>
+  <h2 style={S.h2}>機種選びのフロー</h2>
+  <div style={S.card}>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#22c55e" }}>予算5万円以内 → A1 mini</strong>
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#06b6d4" }}>大きなもの（220mm以上）を作りたい → A1</strong>
+    </div>
+    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
+      <strong style={{ color: "#f59e0b" }}>ABS・ASA・ナイロンを使いたい → P2S</strong>
+    </div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      <strong style={{ color: "#8b5cf6" }}>最高精度・業務用途 → X1C</strong>
+    </div>
+  </div>
+</section>
+
+<section id="summary" style={S.section}>
+  <h2 style={S.h2}>まとめ</h2>
+  <div style={S.card}>
+    <div style={{ color: "#f1f5f9", fontWeight: "700", marginBottom: "0.75rem" }}>初めての3Dプリンターで悩んでいるなら</div>
+    <div style={S.p}>
+      <strong style={{ color: "#22c55e" }}>Bambu Lab A1 Miniを選んでください。</strong> 全自動・静音・高速・Wi-Fi連携・AMS Lite拡張性を備えながら5万円前後というコスパは現時点で最も初心者に向いています。
+    </div>
+    <div style={{ ...S.p, marginBottom: 0 }}>
+      「ABS・ナイロンを使いたい」「業務用途」「最高精度が必要」という具体的な理由がある場合だけP2S・X1Cを選んでください。
+    </div>
+  </div>
+</section>
