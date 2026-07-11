@@ -3,6 +3,8 @@ import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  // 親ディレクトリのlockfileに惑わされないようルートを固定（複数lockfile警告の抑制）
+  turbopack: { root: __dirname },
 };
 
 const withMDX = createMDX({
