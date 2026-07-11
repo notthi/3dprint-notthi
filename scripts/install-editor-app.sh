@@ -122,6 +122,31 @@ fi
 make_app "3Dプリントラボ 記事編集" "$START_SCRIPT"
 make_app "3Dプリントラボ 編集終了" "$STOP_SCRIPT"
 
+# ── 文字入りアイコン生成（swiftがあれば） ───────────────────
+make_icon() {
+  local NAME="$1" MAIN="$2" SUB="$3" COLOR="$4"
+  local APP="$APPS_DIR/$NAME.app"
+  local TMP; TMP=$(mktemp -d)
+  if ! /usr/bin/swift "$PROJECT/scripts/make-app-icon.swift" "$TMP/icon.png" "$MAIN" "$SUB" "$COLOR" >/dev/null 2>&1; then
+    echo "  [SKIP] アイコン生成不可（swift未使用環境）"; rm -rf "$TMP"; return
+  fi
+  mkdir -p "$TMP/icon.iconset"
+  for s in 16 32 128 256 512; do
+    /usr/bin/sips -z $s $s "$TMP/icon.png" --out "$TMP/icon.iconset/icon_${s}x${s}.png" >/dev/null
+    /usr/bin/sips -z $((s*2)) $((s*2)) "$TMP/icon.png" --out "$TMP/icon.iconset/icon_${s}x${s}@2x.png" >/dev/null
+  done
+  /usr/bin/iconutil -c icns "$TMP/icon.iconset" -o "$TMP/icon.icns"
+  mkdir -p "$APP/Contents/Resources"
+  cp "$TMP/icon.icns" "$APP/Contents/Resources/icon.icns"
+  /usr/libexec/PlistBuddy -c "Add :CFBundleIconFile string icon" "$APP/Contents/Info.plist" 2>/dev/null || \
+  /usr/libexec/PlistBuddy -c "Set :CFBundleIconFile icon" "$APP/Contents/Info.plist"
+  touch "$APP"
+  rm -rf "$TMP"
+  echo "  🎨 $NAME にアイコン適用"
+}
+make_icon "3Dプリントラボ 記事編集" "編集" "記事エディタ起動" "#06B6D4"
+make_icon "3Dプリントラボ 編集終了" "停止" "エディタ終了" "#EF4444"
+
 echo ""
 echo "インストール完了。Finderの「移動 > アプリケーション」（ユーザー側 ~/Applications）から"
 echo "「3Dプリントラボ 記事編集」をダブルクリックで起動できます。"
