@@ -83,7 +83,9 @@ while true; do
   TOTAL=$(ps -o rss= -p $(echo $PIDS | tr " " ",") 2>/dev/null | awk "{s+=\$1} END {print int(s/1024)}")
   if [ "${TOTAL:-0}" -gt "$LIMIT_MB" ]; then
     pkill -f "next dev"; pkill -f "\.next/dev"
-    osascript -e "display notification \"メモリ使用が${TOTAL}MBに達したため自動停止しました\" with title \"3Dプリントラボ 記事編集\"" >/dev/null 2>&1
+    # 暴走時のキャッシュは壊れたルート情報を焼き付けている恐れがあるため自動削除（自己回復）
+    rm -rf "'"$PROJECT"'/.next"
+    osascript -e "display notification \"メモリ${TOTAL}MBで自動停止し、キャッシュを削除しました。もう一度起動してください\" with title \"3Dプリントラボ 記事編集\"" >/dev/null 2>&1
     exit 1
   fi
 done
