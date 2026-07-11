@@ -1,0 +1,91 @@
+---
+badge: OrcaSlicer
+badgeColor: '#8b5cf6'
+breadcrumbLabel: OrcaSlicer使い方
+title: OrcaSlicerの使い方【Bambu Lab対応・高機能スライサー】設定と特徴を解説【2026年版】
+description: >-
+  OrcaSlicerの使い方を初心者〜上級者向けに解説。Bambu
+  Lab対応の高機能オープンソーススライサーで、キャリブレーション機能・細かい設定の活用方法をまとめます。
+updatedAt: 2026年5月
+tags:
+  - OrcaSlicer
+  - スライサー
+  - Bambu Lab
+  - 設定
+  - 上級者
+related:
+  - href: /howto/bambu-studio
+    title: Bambu Studioの使い方ガイド
+    badge: Bambu Studio
+    badgeColor: '#06b6d4'
+  - href: /howto/slicer
+    title: スライサーソフトの選び方・比較
+    badge: スライサー
+    badgeColor: '#06b6d4'
+  - href: /howto/trouble
+    title: 3Dプリンタートラブル解決集
+    badge: トラブル
+    badgeColor: '#ef4444'
+---
+<Lead>
+**OrcaSlicerはBambu Lab機種にも対応したオープンソースの高機能スライサーです。** Bambu Studioより細かい設定ができる中級〜上級ユーザー向け。無料。
+
+ダウンロード：github.com/SoftFever/OrcaSlicer
+</Lead>
+
+## Bambu StudioとOrcaSlicerの違い
+
+| 比較 | Bambu Studio | OrcaSlicer |
+|---|---|---|
+| 対応機種 | Bambu Lab専用 | Bambu Lab＋ほぼ全機種 |
+| 操作の簡単さ | ◎ | ○（慣れが必要） |
+| 設定の細かさ | ○ | ◎ |
+| キャリブレーション機能 | △ | ◎ |
+| 推奨ユーザー | 初心者〜中級者 | 中級〜上級者 |
+
+## OrcaSlicerでできること
+
+**充実したキャリブレーション機能**
+
+<SpecList items={[
+  { label: "温度タワーテスト", value: "最適印刷温度を自動で見つける。フィラメントごとに最適温度を特定できます。" },
+  { label: "フロー補正", value: "押し出し量を精密に調整。ラインが太すぎる・細すぎる問題の解決に有効。" },
+  { label: "リトラクションテスト", value: "糸引きを最小化。適切なリトラクション距離・速度を特定。" },
+  { label: "プレッシャーアドバンス（K値）調整", value: "コーナーの品質向上。高速印刷時の精度改善に効果的。" },
+]} />
+
+- より細かい速度設定：内壁・外壁・インフィルを個別に設定
+- 機種横断使用：BambuとCrealityなど複数機種を同じスライサーで管理
+
+## インストールと初期設定
+
+<Steps items={[
+  { title: "ダウンロード", body: "GitHubのReleasesページ（github.com/SoftFever/OrcaSlicer）から最新版をダウンロード" },
+  { title: "プリンター追加", body: "インストール後「プリンター追加」でBambu Lab機種（またはその他機種）を選択" },
+  { title: "接続設定", body: "IPアドレスまたはシリアルナンバーでプリンターと接続" },
+]} />
+
+## キャリブレーション機能の活用
+
+### 温度タワーの使い方
+
+異なる温度で変化するテストモデルを印刷 → 最も品質が良い温度を確認 → フィラメントプロファイルに保存。これにより各フィラメントの最適温度が個別に分かります。
+
+### フロー補正の使い方
+
+ラインが太すぎる・細すぎるなどの問題解決に有効。押し出し量の過不足を補正します。フィラメントを変えた際にも実施すると安定します。
+
+## 推奨の使い方
+
+<SpecList items={[
+  { label: "普段の印刷", value: "Bambu Studio（簡単・速い）" },
+  { label: "新素材の試し・精度重視", value: "OrcaSlicer（細かい設定）" },
+]} />
+
+この**2本立て運用**が多くのユーザーの定番スタイルです。
+
+## まとめ
+
+<Tip title="こんな方におすすめ">
+Bambu Studioに物足りなさを感じてきた中級〜上級ユーザーへの自然なステップアップです。新しいフィラメントを試す際のキャリブレーションや、精度重視の印刷に特に効果を発揮します。
+</Tip>

@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { Disclaimer } from "@/components/blocks";
 
 type BreadcrumbItem = { label: string; href?: string };
 type TocItem = { id: string; label: string };
@@ -95,7 +96,10 @@ export default function ArticleLayout({
         )}
 
         {/* Main Content */}
-        <article>{children}</article>
+        <article className="article-body">
+          {children}
+          <Disclaimer />
+        </article>
 
         {/* Related Articles */}
         {related.length > 0 && (

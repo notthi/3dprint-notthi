@@ -194,3 +194,116 @@
     overflow: hidden;
   }
 }
+
+/* ============================================================
+   記事本文（.article-body）— 素のMarkdown要素のスタイル
+   ビジュアルエディタ移行後は記事側にインラインstyleを書かない。
+   ============================================================ */
+.article-body {
+  color: #cbd5e1;
+}
+.article-body h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  border-left: 4px solid #06b6d4;
+  padding-left: 0.75rem;
+  margin: 2.5rem 0 1.25rem;
+  scroll-margin-top: 5rem;
+}
+.article-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 1.75rem 0 0.875rem;
+  scroll-margin-top: 5rem;
+}
+.article-body p {
+  color: #cbd5e1;
+  line-height: 1.85;
+  margin-bottom: 0.875rem;
+}
+.article-body strong {
+  color: #f1f5f9;
+}
+.article-body a {
+  color: #06b6d4;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.article-body ul,
+.article-body ol {
+  margin: 0 0 1.25rem;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.article-body li {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.article-body blockquote {
+  border-left: 3px solid #334155;
+  padding-left: 1rem;
+  color: #94a3b8;
+  margin: 0 0 1.25rem;
+}
+.article-body hr {
+  border: none;
+  border-top: 1px solid #1e293b;
+  margin: 2rem 0;
+}
+/* GFMテーブル */
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  display: block;
+  overflow-x: auto;
+}
+.article-body th {
+  text-align: left;
+  color: #06b6d4;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 2px solid #334155;
+  white-space: nowrap;
+}
+.article-body td {
+  color: #cbd5e1;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #1e293b;
+}
+.article-body td:first-child {
+  color: #94a3b8;
+  font-weight: 600;
+}
+.article-body tbody tr:nth-child(odd) {
+  background-color: #1e293b;
+}
+/* ブロック共通 */
+.article-body .blk-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+.article-body .blk-lead > p:last-child {
+  margin-bottom: 0;
+}
+.article-body .blk-proscons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 640px) {
+  .article-body .blk-proscons {
+    grid-template-columns: 1fr;
+  }
+}
