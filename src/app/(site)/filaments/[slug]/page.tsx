@@ -21,7 +21,7 @@ export default async function Page(props: { params: Promise<{ slug: string }> })
   const meta = getArticle("filaments", slug);
   if (!meta) notFound();
 
-  const { default: Content } = await import(`../../../../content/articles/filaments/${slug}.mdx`);
+  const { default: Content } = await import(`../../../../../content/articles/filaments/${slug}.mdx`);
 
   return (
     <ArticleLayout

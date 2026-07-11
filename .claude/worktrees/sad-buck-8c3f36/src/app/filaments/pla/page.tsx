@@ -1,0 +1,24 @@
+import type { Metadata } from "next";
+import ArticleLayout from "@/components/ArticleLayout";
+import PlaContent from "../../../../content/articles/filaments-pla.mdx";
+import { meta } from "../../../../content/articles/filaments-pla.meta";
+import { generateArticleMetadata } from "@/lib/metadata";
+import { buildRelated } from "@/lib/articles";
+
+export const metadata: Metadata = generateArticleMetadata("/filaments/pla", meta);
+
+export default function FilamentsPlaPage() {
+  const related = buildRelated(meta.related, "filaments", "/filaments/pla");
+  return (
+    <ArticleLayout
+      breadcrumb={[{ label: "ホーム", href: "/" }, { label: "フィラメント", href: "/filaments" }, { label: "PLA" }]}
+      title={meta.title}
+      updatedAt={meta.updatedAt}
+      tags={meta.tags}
+      toc={meta.toc}
+      related={related}
+    >
+      <PlaContent />
+    </ArticleLayout>
+  );
+}

@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,32 +41,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
-      <body className={inter.className}>
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
-
-        {/* Google Analytics 4 */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-S43BE05M60"
-          strategy="afterInteractive"
-        />
-        <Script id="ga4-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-S43BE05M60');`}
-        </Script>
-
-        {/* Yahoo! ValueCommerce LinkSwitch */}
-        <Script id="vc-pid" strategy="afterInteractive">
-          {`var vc_pid = "892598647";`}
-        </Script>
-        <Script
-          src="//aml.valuecommerce.com/vcdal.js"
-          strategy="afterInteractive"
-        />
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
