@@ -5,23 +5,23 @@ import { generateArticleMetadata } from "@/lib/metadata";
 import { buildBreadcrumb, buildRelated, getArticle, getArticlesByCategory } from "@/lib/articles";
 
 export function generateStaticParams() {
-  return getArticlesByCategory("howto").map((a) => ({ slug: a.slug }));
+  return getArticlesByCategory("printers").map((a) => ({ slug: a.slug }));
 }
 export const dynamicParams = false;
 
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await props.params;
-  const meta = getArticle("howto", slug);
+  const meta = getArticle("printers", slug);
   if (!meta) return {};
   return generateArticleMetadata(meta.href, meta);
 }
 
 export default async function Page(props: { params: Promise<{ slug: string }> }) {
   const { slug } = await props.params;
-  const meta = getArticle("howto", slug);
+  const meta = getArticle("printers", slug);
   if (!meta) notFound();
 
-  const { default: Content } = await import(`../../../../content/articles/howto/${slug}.mdx`);
+  const { default: Content } = await import(`../../../../../content/articles/printers/${slug}.mdx`);
 
   return (
     <ArticleLayout
