@@ -108,7 +108,27 @@ fi
 # ── 停止アプリ ──────────────────────────────────────────────
 STOP_SCRIPT='#!/bin/bash
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+PROJECT="'"$PROJECT"'"
 notify() { osascript -e "display notification \"$1\" with title \"3Dプリントラボ 記事編集\"" >/dev/null 2>&1 || true; }
+
+# 公開し忘れチェック：未公開の記事変更があればダイアログで確認
+cd "$PROJECT"
+if [ -n "$(git status --porcelain content/articles 2>/dev/null)" ]; then
+  CHOICE=$(osascript -e '"'"'button returned of (display dialog "未公開の記事変更があります。公開してから終了しますか？" with title "3Dプリントラボ 記事編集" buttons {"そのまま終了", "公開して終了"} default button "公開して終了")'"'"' 2>/dev/null)
+  if [ "$CHOICE" = "公開して終了" ]; then
+    notify "公開中…"
+    git add content/articles
+    FILES=$(git diff --cached --name-only | sed "s/^/- /")
+    git commit -m "記事更新（ビジュアルエディタ）
+$FILES" >/dev/null 2>&1
+    if git push origin "$(git rev-parse --abbrev-ref HEAD)" >/dev/null 2>&1; then
+      notify "公開しました（2〜3分で本番に反映されます）"
+    else
+      notify "⚠ pushに失敗しました。変更はコミット済みです"
+    fi
+  fi
+fi
+
 pkill -f "next dev" 2>/dev/null
 pkill -f "\.next/dev" 2>/dev/null
 sleep 1
