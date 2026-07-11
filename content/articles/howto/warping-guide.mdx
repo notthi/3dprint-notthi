@@ -25,189 +25,65 @@ related:
     badge: トラブル
     badgeColor: '#ef4444'
 ---
-export const S = {
-  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #f59e0b", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
-  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
-  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
-  section: { marginBottom: "2.5rem" },
-  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
-  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
-  step:    { backgroundColor: "#0f172a", border: "1px solid #334155", borderRadius: "0.5rem", padding: "1rem 1.25rem", marginBottom: "0.75rem" },
-  num:     { color: "#f59e0b", fontWeight: "700", fontSize: "1rem", marginRight: "0.5rem" },
-};
+<Lead>
+**3Dプリンターで最もよく起きるトラブルのひとつが「反り（ワーピング）」です。** 印刷物の端や角がビルドプレートから剥がれて浮き上がる現象で、原因を理解すれば確実に防げます。
 
-<div style={S.card}>
-  <div style={S.p}>
-    <strong style={{ color: "#f1f5f9" }}>3Dプリンターで最もよく起きるトラブルのひとつが「反り（ワーピング）」です。</strong> 印刷物の端や角がビルドプレートから剥がれて浮き上がる現象で、原因を理解すれば確実に防げます。
-  </div>
-  <div style={{ ...S.p, marginBottom: 0 }}>
-    PLAなら①〜③の3ステップで大半の反りは解決できます。
-  </div>
-</div>
+PLAなら①〜③の3ステップで大半の反りは解決できます。
+</Lead>
 
-<section id="cause" style={S.section}>
-  <h2 style={S.h2}>反りが起きる原因</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>原因</th>
-          <th style={S.th}>メカニズム</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={{ ...S.td, color: "#f59e0b", fontWeight: "700" }}>熱収縮</td>
-          <td style={S.td}>プラスチックは冷えると縮む。下層が冷えて縮もうとすると端が持ち上がる</td>
-        </tr>
-        <tr>
-          <td style={{ ...S.td, color: "#f59e0b", fontWeight: "700" }}>ベッドへの定着不足</td>
-          <td style={S.td}>フィラメントとビルドプレートの密着が不十分だと冷えたときに剥がれる</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={{ ...S.td, color: "#f59e0b", fontWeight: "700" }}>環境温度の変化</td>
-          <td style={S.td}>エアコンや扇風機の風が当たると急激な温度変化で反りが起きやすくなる</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+## 反りが起きる原因
 
-<section id="materials" style={S.section}>
-  <h2 style={S.h2}>素材別の反りやすさ</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>素材</th>
-          <th style={S.th}>反りやすさ</th>
-          <th style={S.th}>主な対策</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={{ ...S.td, color: "#10b981", fontWeight: "700" }}>PLA</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>低い</td>
-          <td style={S.td}>ベッド温度55〜60℃で大抵OK</td>
-        </tr>
-        <tr>
-          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>PETG</td>
-          <td style={{ ...S.td, color: "#f59e0b" }}>中程度</td>
-          <td style={S.td}>ベッド温度80℃・スティックのり</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={{ ...S.td, color: "#ef4444", fontWeight: "700" }}>ABS</td>
-          <td style={{ ...S.td, color: "#ef4444" }}>非常に高い</td>
-          <td style={S.td}>密閉チャンバー必須</td>
-        </tr>
-        <tr>
-          <td style={{ ...S.td, color: "#f59e0b", fontWeight: "700" }}>ASA</td>
-          <td style={{ ...S.td, color: "#ef4444" }}>高い</td>
-          <td style={S.td}>密閉チャンバー推奨</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+| 原因 | メカニズム |
+|---|---|
+| 熱収縮 | プラスチックは冷えると縮む。下層が冷えて縮もうとすると端が持ち上がる |
+| ベッドへの定着不足 | フィラメントとビルドプレートの密着が不十分だと冷えたときに剥がれる |
+| 環境温度の変化 | エアコンや扇風機の風が当たると急激な温度変化で反りが起きやすくなる |
 
-<section id="checklist" style={S.section}>
-  <h2 style={S.h2}>反り対策チェックリスト（優先順）</h2>
-  <div style={S.step}>
-    <span style={S.num}>①</span>
-    <strong style={{ color: "#f1f5f9" }}>ベッドを清掃する（最初に試すべき）</strong>
-    <div style={{ ...S.muted, marginTop: "0.25rem" }}>IPA・無水エタノールで油分を拭き取る。指紋の油分だけで定着が大幅に落ちる</div>
-  </div>
-  <div style={S.step}>
-    <span style={S.num}>②</span>
-    <strong style={{ color: "#f1f5f9" }}>ベッド温度を上げる</strong>
-    <div style={{ ...S.muted, marginTop: "0.25rem" }}>PLA→55〜65℃、PETG→75〜85℃、ABS→100〜110℃</div>
-  </div>
-  <div style={S.step}>
-    <span style={S.num}>③</span>
-    <strong style={{ color: "#f1f5f9" }}>スティックのりを塗る</strong>
-    <div style={{ ...S.muted, marginTop: "0.25rem" }}>Prittなどの水性のりをビルドプレートに薄く塗る。コストほぼゼロで効果的</div>
-  </div>
-  <div style={S.step}>
-    <span style={S.num}>④</span>
-    <strong style={{ color: "#f1f5f9" }}>ブリムを追加する</strong>
-    <div style={{ ...S.muted, marginTop: "0.25rem" }}>スライサーでブリム（5〜10mm幅）を追加して定着面積を増やす。最も確実な対策のひとつ</div>
-  </div>
-  <div style={S.step}>
-    <span style={S.num}>⑤</span>
-    <strong style={{ color: "#f1f5f9" }}>Zオフセットを調整する</strong>
-    <div style={{ ...S.muted, marginTop: "0.25rem" }}>ノズルとベッドの距離を微調整。近すぎても遠すぎてもNG。第一層がしっかり潰れる距離に</div>
-  </div>
-  <div style={S.step}>
-    <span style={S.num}>⑥</span>
-    <strong style={{ color: "#f1f5f9" }}>扇風機・エアコンの風が当たらない場所に移動する</strong>
-    <div style={{ ...S.muted, marginTop: "0.25rem" }}>外部からの冷気が急激な温度変化を引き起こす。印刷中の冷風は反りの大敵</div>
-  </div>
-  <div style={S.step}>
-    <span style={S.num}>⑦</span>
-    <strong style={{ color: "#f1f5f9" }}>密閉チャンバーを使う（ABS・ASAのみ）</strong>
-    <div style={{ ...S.muted, marginTop: "0.25rem" }}>ABS・ASAは密閉チャンバー搭載機（Bambu Lab P2S等）での使用が前提</div>
-  </div>
-</section>
+## 素材別の反りやすさ
 
-<section id="firstlayer" style={S.section}>
-  <h2 style={S.h2}>第一層の確認方法</h2>
-  <div style={S.tip}>
-    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.75rem" }}>💡 良い第一層のサイン</div>
-    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
-      ✅ プレートにしっかり押しつぶされている
-    </div>
-    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
-      ✅ 均一な幅で積層されている
-    </div>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      ✅ 端が浮いていない
-    </div>
-  </div>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>症状</th>
-          <th style={S.th}>原因</th>
-          <th style={S.th}>対処</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={{ ...S.td, color: "#ef4444" }}>フィラメントが丸くなっている</td>
-          <td style={S.td}>Z距離が遠すぎ</td>
-          <td style={S.td}>Zオフセットをマイナスに調整</td>
-        </tr>
-        <tr>
-          <td style={{ ...S.td, color: "#ef4444" }}>潰れすぎて広がっている</td>
-          <td style={S.td}>Z距離が近すぎ</td>
-          <td style={S.td}>Zオフセットをプラスに調整</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={{ ...S.td, color: "#f59e0b" }}>端が少し浮いている</td>
-          <td style={S.td}>反りの始まり</td>
-          <td style={S.td}>ブリム追加・ベッド温度アップ</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+| 素材 | 反りやすさ | 主な対策 |
+|---|---|---|
+| PLA | 低い | ベッド温度55〜60℃で大抵OK |
+| PETG | 中程度 | ベッド温度80℃・スティックのり |
+| ABS | 非常に高い | 密閉チャンバー必須 |
+| ASA | 高い | 密閉チャンバー推奨 |
 
-<section id="summary" style={S.section}>
-  <h2 style={S.h2}>まとめ</h2>
-  <div style={S.card}>
-    <div style={{ color: "#f1f5f9", fontWeight: "700", marginBottom: "0.75rem" }}>反り対策の優先順位</div>
-    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
-      <strong style={{ color: "#22c55e" }}>PLAなら</strong> ①ベッド清掃 → ②ベッド温度アップ → ③スティックのりで大半解決
-    </div>
-    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
-      <strong style={{ color: "#f59e0b" }}>PETGなら</strong> 上記＋ブリム追加・Zオフセット調整
-    </div>
-    <div style={{ ...S.p, marginBottom: "1rem" }}>
-      <strong style={{ color: "#ef4444" }}>ABS・ASAなら</strong> 密閉チャンバー搭載機での使用が前提
-    </div>
-    <div style={{ color: "#f59e0b", fontWeight: "700" }}>→ まずベッドをクリーニングして、のりを塗るだけで多くの反りは防げます。</div>
-  </div>
-</section>
+## 反り対策チェックリスト（優先順）
+
+<Steps items={[
+  { title: "ベッドを清掃する（最初に試すべき）", body: "IPA・無水エタノールで油分を拭き取る。指紋の油分だけで定着が大幅に落ちる" },
+  { title: "ベッド温度を上げる", body: "PLA→55〜65℃、PETG→75〜85℃、ABS→100〜110℃" },
+  { title: "スティックのりを塗る", body: "Prittなどの水性のりをビルドプレートに薄く塗る。コストほぼゼロで効果的" },
+  { title: "ブリムを追加する", body: "スライサーでブリム（5〜10mm幅）を追加して定着面積を増やす。最も確実な対策のひとつ" },
+  { title: "Zオフセットを調整する", body: "ノズルとベッドの距離を微調整。近すぎても遠すぎてもNG。第一層がしっかり潰れる距離に" },
+  { title: "扇風機・エアコンの風が当たらない場所に移動する", body: "外部からの冷気が急激な温度変化を引き起こす。印刷中の冷風は反りの大敵" },
+  { title: "密閉チャンバーを使う（ABS・ASAのみ）", body: "ABS・ASAは密閉チャンバー搭載機（Bambu Lab P2S等）での使用が前提" },
+]} />
+
+## 第一層の確認方法
+
+<Tip title="💡 良い第一層のサイン">
+<CheckList items={[
+  "プレートにしっかり押しつぶされている",
+  "均一な幅で積層されている",
+  "端が浮いていない",
+]} variant="check" />
+</Tip>
+
+| 症状 | 原因 | 対処 |
+|---|---|---|
+| フィラメントが丸くなっている | Z距離が遠すぎ | Zオフセットをマイナスに調整 |
+| 潰れすぎて広がっている | Z距離が近すぎ | Zオフセットをプラスに調整 |
+| 端が少し浮いている | 反りの始まり | ブリム追加・ベッド温度アップ |
+
+## まとめ
+
+**反り対策の優先順位**
+
+**PLAなら** ①ベッド清掃 → ②ベッド温度アップ → ③スティックのりで大半解決
+
+**PETGなら** 上記＋ブリム追加・Zオフセット調整
+
+**ABS・ASAなら** 密閉チャンバー搭載機での使用が前提
+
+→ まずベッドをクリーニングして、のりを塗るだけで多くの反りは防げます。

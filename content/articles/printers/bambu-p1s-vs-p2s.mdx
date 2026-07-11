@@ -25,185 +25,62 @@ related:
     badge: P1S
     badgeColor: '#06b6d4'
 ---
-export const S = {
-  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  warn:    { backgroundColor: "#1c1a0e", border: "1px solid #f59e0b", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
-  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
-  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
-  section: { marginBottom: "2.5rem" },
-  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
-  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
-};
+<Lead>
+**結論：今から買うならP2S一択です。** P1Sは生産終了しており、P2Sが現行モデルです。P1Sの在庫品がP2Sより2〜3万円以上安い場合のみ検討の余地があります。
+</Lead>
 
-<div style={S.card}>
-  <div style={S.p}>
-    <strong style={{ color: "#f1f5f9" }}>結論：今から買うならP2S一択です。</strong> P1Sは生産終了しており、P2Sが現行モデルです。P1Sの在庫品がP2Sより2〜3万円以上安い場合のみ検討の余地があります。
-  </div>
-</div>
+## 現状の整理
 
-<section id="status" style={S.section}>
-  <h2 style={S.h2}>現状の整理</h2>
-  <div style={S.warn}>
-    <div style={{ color: "#f59e0b", fontWeight: "700", marginBottom: "0.5rem" }}>⚠️ P1Sは生産終了</div>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      Bambu Lab P1Sは2024年末に生産終了。現在は在庫限りの販売のみです。後継機のP2Sが2025年に発売されており、公式サポート・アップデートの観点からもP2Sが推奨されます。
-    </div>
-  </div>
-  <div style={S.p}>
-    P1Sはまだ一部のショップで在庫品が販売されています。価格差次第では選択肢になりますが、長期サポートの面でP2Sが有利です。
-  </div>
-</section>
+<Warn title="⚠️ P1Sは生産終了">
+Bambu Lab P1Sは2024年末に生産終了。現在は在庫限りの販売のみです。後継機のP2Sが2025年に発売されており、公式サポート・アップデートの観点からもP2Sが推奨されます。
+</Warn>
 
-<section id="specs" style={S.section}>
-  <h2 style={S.h2}>スペック比較</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>項目</th>
-          <th style={S.th}>P1S（生産終了）</th>
-          <th style={{ ...S.th, color: "#06b6d4" }}>P2S（現行）</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>ビルドサイズ</td>
-          <td style={S.td}>256 × 256 × 256 mm</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>256 × 256 × 256 mm</td>
-        </tr>
-        <tr>
-          <td style={S.td}>密閉チャンバー</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>あり</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>あり</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>最高印刷速度</td>
-          <td style={S.td}>500 mm/s</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>600 mm/s</td>
-        </tr>
-        <tr>
-          <td style={S.td}>ノズル最高温度</td>
-          <td style={S.td}>300℃</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>320℃</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>カメラ</td>
-          <td style={S.td}>標準カメラ</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>高解像度カメラ</td>
-        </tr>
-        <tr>
-          <td style={S.td}>AIスパゲッティ検知</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>あり</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>あり（精度向上）</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>対応素材</td>
-          <td style={S.td}>PLA/PETG/ABS/ASA/TPU/PA/PC</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>PLA/PETG/ABS/ASA/TPU/PA/PC/PEI</td>
-        </tr>
-        <tr>
-          <td style={S.td}>AMS対応</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>あり（最大16色）</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>あり（最大16色）</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>参考価格</td>
-          <td style={S.td}>在庫品 約110,000〜130,000円</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>約150,000円〜</td>
-        </tr>
-        <tr>
-          <td style={S.td}>公式サポート</td>
-          <td style={{ ...S.td, color: "#f59e0b" }}>限定的（生産終了）</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>継続サポート</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+P1Sはまだ一部のショップで在庫品が販売されています。価格差次第では選択肢になりますが、長期サポートの面でP2Sが有利です。
 
-<section id="p1s-case" style={S.section}>
-  <h2 style={S.h2}>P1Sを選ぶのはこんな場合</h2>
-  <div style={S.tip}>
-    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>💡 P1Sを検討できる条件</div>
-    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
-      P2Sより <strong style={{ color: "#f1f5f9" }}>2〜3万円以上安い</strong> 在庫品が見つかった場合のみ、P1Sを選ぶ理由があります。
-    </div>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      ただし生産終了品なので、交換パーツの入手性・ファームウェアのサポート継続期間に注意が必要です。「安さ」と「長期使用のリスク」を天秤にかけて判断してください。
-    </div>
-  </div>
-  <div style={S.p}>
-    価格差が1〜2万円程度しかない場合は、素直にP2Sを選んだほうが長期的にコスパが良いです。P2Sはノズル温度が20℃高くPEIにも対応しており、エンジニアリングフィラメントの幅が広がります。
-  </div>
-</section>
+## スペック比較
 
-<section id="vs-a1mini" style={S.section}>
-  <h2 style={S.h2}>A1 miniではなくP2Sを選ぶ理由</h2>
-  <div style={S.p}>
-    A1 mini（約50,000〜75,000円）とP2S（約150,000円〜）では価格差が大きいです。P2Sを選ぶ理由は明確な場合のみです。
-  </div>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>P2Sが必要な理由</th>
-          <th style={S.th}>詳細</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={{ ...S.td, color: "#06b6d4" }}>ABS・ASA・ナイロンを使いたい</td>
-          <td style={S.td}>密閉チャンバーが反り・割れを防ぐ。A1 miniはオープンフレームで高温素材が難しい</td>
-        </tr>
-        <tr>
-          <td style={{ ...S.td, color: "#06b6d4" }}>大型・高耐久パーツを作りたい</td>
-          <td style={S.td}>A1 miniの造形サイズ180mmを超えるパーツ（256mmまで対応）</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={{ ...S.td, color: "#06b6d4" }}>24時間連続稼働・業務利用</td>
-          <td style={S.td}>剛性の高いフレーム構造で長時間稼働に向いている</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div style={{ ...S.p, marginTop: "1rem" }}>
-    PLA・PETG中心の日用品・ホビー用途なら、<strong style={{ color: "#f1f5f9" }}>A1 miniで十分</strong>です。予算の差額でフィラメントや消耗品を揃えたほうが実用的です。
-  </div>
-</section>
+| 項目 | P1S（生産終了） | P2S（現行） |
+|---|---|---|
+| ビルドサイズ | 256 × 256 × 256 mm | 256 × 256 × 256 mm |
+| 密閉チャンバー | あり | あり |
+| 最高印刷速度 | 500 mm/s | 600 mm/s |
+| ノズル最高温度 | 300℃ | 320℃ |
+| カメラ | 標準カメラ | 高解像度カメラ |
+| AIスパゲッティ検知 | あり | あり（精度向上） |
+| 対応素材 | PLA/PETG/ABS/ASA/TPU/PA/PC | PLA/PETG/ABS/ASA/TPU/PA/PC/PEI |
+| AMS対応 | あり（最大16色） | あり（最大16色） |
+| 参考価格 | 在庫品 約110,000〜130,000円 | 約150,000円〜 |
+| 公式サポート | 限定的（生産終了） | 継続サポート |
 
-<section id="summary" style={S.section}>
-  <h2 style={S.h2}>まとめ</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>状況</th>
-          <th style={S.th}>おすすめ</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>今すぐ新品を購入したい</td>
-          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>P2S（現行）</td>
-        </tr>
-        <tr>
-          <td style={S.td}>P1S在庫品が2〜3万円以上安い</td>
-          <td style={{ ...S.td, color: "#f59e0b", fontWeight: "700" }}>P1Sも検討可</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>ABS/ASAを使いたい・大型パーツが必要</td>
-          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>P2S</td>
-        </tr>
-        <tr>
-          <td style={S.td}>PLA/PETGのホビー用途・コスト重視</td>
-          <td style={{ ...S.td, color: "#22c55e", fontWeight: "700" }}>A1 mini / A1 mini Combo</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div style={{ ...S.p, marginTop: "1rem" }}>
-    P1SとP2Sの基本性能差は大きくありませんが、<strong style={{ color: "#06b6d4" }}>生産終了モデルへの長期投資はリスクがあります。</strong>価格差が少ないなら迷わずP2Sを選びましょう。
-  </div>
-</section>
+## P1Sを選ぶのはこんな場合
+
+<Tip title="💡 P1Sを検討できる条件">
+P2Sより **2〜3万円以上安い** 在庫品が見つかった場合のみ、P1Sを選ぶ理由があります。
+
+ただし生産終了品なので、交換パーツの入手性・ファームウェアのサポート継続期間に注意が必要です。「安さ」と「長期使用のリスク」を天秤にかけて判断してください。
+</Tip>
+
+価格差が1〜2万円程度しかない場合は、素直にP2Sを選んだほうが長期的にコスパが良いです。P2Sはノズル温度が20℃高くPEIにも対応しており、エンジニアリングフィラメントの幅が広がります。
+
+## A1 miniではなくP2Sを選ぶ理由
+
+A1 mini（約50,000〜75,000円）とP2S（約150,000円〜）では価格差が大きいです。P2Sを選ぶ理由は明確な場合のみです。
+
+| P2Sが必要な理由 | 詳細 |
+|---|---|
+| ABS・ASA・ナイロンを使いたい | 密閉チャンバーが反り・割れを防ぐ。A1 miniはオープンフレームで高温素材が難しい |
+| 大型・高耐久パーツを作りたい | A1 miniの造形サイズ180mmを超えるパーツ（256mmまで対応） |
+| 24時間連続稼働・業務利用 | 剛性の高いフレーム構造で長時間稼働に向いている |
+
+PLA・PETG中心の日用品・ホビー用途なら、**A1 miniで十分**です。予算の差額でフィラメントや消耗品を揃えたほうが実用的です。
+
+## まとめ
+
+| 状況 | おすすめ |
+|---|---|
+| 今すぐ新品を購入したい | P2S（現行） |
+| P1S在庫品が2〜3万円以上安い | P1Sも検討可 |
+| ABS/ASAを使いたい・大型パーツが必要 | P2S |
+| PLA/PETGのホビー用途・コスト重視 | A1 mini / A1 mini Combo |
+
+P1SとP2Sの基本性能差は大きくありませんが、**生産終了モデルへの長期投資はリスクがあります。**価格差が少ないなら迷わずP2Sを選びましょう。

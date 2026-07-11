@@ -13,7 +13,7 @@ function extractText(src) {
     .replace(/^---[\s\S]*?---/, "")                 // frontmatter
     .replace(/^export const S = \{[\s\S]*?\};$/m, "") // スタイル定義
     .replace(/\{\/\*[\s\S]*?\*\/\}/g, "")           // JSXコメント
-    .replace(/<[^>]*>/g, " ")                        // タグ
+    .replace(/<[^>]*>/g, (tag) => (tag.match(/"(?:[^"\\]|\\.)*"/g) || []).join(" ")) // タグ（ブロックpropsの文字列リテラルは可視テキストとして保持）
     .replace(/[{}\[\]()"'`,:;=~|•✓✗→#*\-_\s]/g, "") // 記号・空白
     .replace(/[a-zA-Z0-9.%/]+/g, "");                // 英数（style値・URL等）
 }

@@ -25,254 +25,139 @@ related:
     badge: 比較
     badgeColor: '#06b6d4'
 ---
-export const S = {
-  card: { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  h2: { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
-  h3: { fontSize: "1rem", fontWeight: "700", color: "#f1f5f9", marginBottom: "0.75rem", marginTop: "1.25rem" },
-  p: { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
-  muted: { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
-  section: { marginBottom: "2.5rem" },
-  disclaimer: { color: "#475569", fontSize: "0.75rem", borderTop: "1px solid #1e293b", paddingTop: "1.25rem", lineHeight: "1.6" },
-  th: { textAlign: "left", padding: "0.6rem 0.75rem", color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", borderBottom: "1px solid #334155" },
-  td: { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.85rem", borderBottom: "1px solid #1e293b" },
-  tdLabel: { padding: "0.6rem 0.75rem", color: "#94a3b8", fontWeight: "600", fontSize: "0.85rem", borderBottom: "1px solid #1e293b" },
-  check: { color: "#10b981", fontSize: "0.75rem", fontWeight: "700", marginBottom: "0.4rem" },
-  cross: { color: "#ef4444", fontSize: "0.75rem", fontWeight: "700", marginBottom: "0.4rem" },
-  bullet: { color: "#cbd5e1", fontSize: "0.8rem", marginBottom: "0.25rem" },
-};
+<Lead>
+**「3Dプリンターが気になるけど、いきなり買うのは不安」**——そんなときに選択肢になるのがレンタルです。数万円の買い物を失敗したくない方や、一度だけ使いたい方にとって、購入前に実機を試せるのは大きなメリットです。
 
-{/* ── 冒頭カード ─────────────────────────────────────────── */}
-<div style={S.card}>
-  <p style={S.p}>
-    <strong style={{ color: "#f1f5f9" }}>「3Dプリンターが気になるけど、いきなり買うのは不安」</strong>——そんなときに選択肢になるのがレンタルです。数万円の買い物を失敗したくない方や、一度だけ使いたい方にとって、購入前に実機を試せるのは大きなメリットです。
-  </p>
-  <p style={{ ...S.p, marginBottom: 0 }}>
-    この記事では個人が3Dプリンターを借りる方法と、「借りるべきか買うべきか」の判断基準を解説します。
-  </p>
-</div>
+この記事では個人が3Dプリンターを借りる方法と、「借りるべきか買うべきか」の判断基準を解説します。
+</Lead>
 
-{/* ── 借りる3つの方法（表） ──────────────────────────────── */}
-<section id="methods" style={S.section}>
-  <h2 style={S.h2}>3Dプリンターを借りる3つの方法</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse" }}>
-      <thead>
-        <tr>
-          {["方法", "向いている人", "費用感"].map((h) => (
-            <th key={h} style={S.th}>{h}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["レンタルスペースで使う", "一度だけ・たまに使いたい", "1時間数百円〜"],
-          ["機材レンタルサービス", "数週間〜数ヶ月使いたい", "月額制"],
-          ["3Dプリント代行サービス", "印刷物だけ欲しい（機械は不要）", "1個数百円〜"],
-        ].map((row, i) => (
-          <tr key={i}>
-            <td style={{ ...S.tdLabel, color: "#06b6d4", fontWeight: "700" }}>{row[0]}</td>
-            <td style={S.td}>{row[1]}</td>
-            <td style={S.td}>{row[2]}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-</section>
+## 3Dプリンターを借りる3つの方法
 
-{/* ── 方法① ──────────────────────────────────────────────── */}
-<section id="space" style={S.section}>
-  <h2 style={S.h2}>方法①：レンタルスペース・施設で使う</h2>
-  <p style={S.p}>最も手軽なのが、3Dプリンターを設置している施設で時間貸しで使う方法です。</p>
+| 方法 | 向いている人 | 費用感 |
+|---|---|---|
+| **レンタルスペースで使う** | 一度だけ・たまに使いたい | 1時間数百円〜 |
+| **機材レンタルサービス** | 数週間〜数ヶ月使いたい | 月額制 |
+| **3Dプリント代行サービス** | 印刷物だけ欲しい（機械は不要） | 1個数百円〜 |
 
-  <div style={S.card}>
-    <p style={S.h3}>どこで使える？</p>
+## 方法①：レンタルスペース・施設で使う
 
-    <p style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.4rem" }}>ファブスペース・メイカースペース</p>
-    <p style={S.p}>3Dプリンターやレーザーカッターなどのデジタル工作機械を時間貸しする施設です。都市部を中心に増えています。スタッフのサポートを受けながら使えるため、初めてでも安心です。</p>
+最も手軽なのが、3Dプリンターを設置している施設で時間貸しで使う方法です。
 
-    <p style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.4rem" }}>図書館・公共施設</p>
-    <p style={S.p}>一部の公立図書館や生涯学習センターには3Dプリンターが設置されており、無料または低料金で使えます。お住まいの自治体の施設を調べてみる価値があります。</p>
+### どこで使える？
 
-    <p style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.4rem" }}>コワーキングスペース</p>
-    <p style={{ ...S.p, marginBottom: 0 }}>ものづくり系のコワーキングスペースには3Dプリンターを備えているところがあります。</p>
-  </div>
+**ファブスペース・メイカースペース**
 
-  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-    <div style={{ ...S.card, marginBottom: 0 }}>
-      <p style={S.check}>✓ メリット</p>
-      {[
-        "初期費用ゼロで実機を試せる",
-        "スタッフのサポートが受けられる",
-        "複数機種を比較できる施設もある",
-        "設置場所・騒音を気にしなくていい",
-      ].map((t, i) => <p key={i} style={S.bullet}>• {t}</p>)}
-    </div>
-    <div style={{ ...S.card, marginBottom: 0 }}>
-      <p style={S.cross}>✗ デメリット</p>
-      {[
-        "施設まで足を運ぶ必要がある",
-        "予約が必要なことが多い",
-        "自宅でじっくり試行錯誤はできない",
-      ].map((t, i) => <p key={i} style={S.bullet}>• {t}</p>)}
-    </div>
-  </div>
+3Dプリンターやレーザーカッターなどのデジタル工作機械を時間貸しする施設です。都市部を中心に増えています。スタッフのサポートを受けながら使えるため、初めてでも安心です。
 
-  <div style={{ marginTop: "1.25rem", backgroundColor: "#0f3460", border: "1px solid #1d4ed8", borderRadius: "0.5rem", padding: "1rem" }}>
-    <p style={{ ...S.muted, marginBottom: 0 }}>💡 「まず3Dプリンターがどんなものか体験したい」という段階なら、レンタルスペースが最適です。</p>
-  </div>
-</section>
+**図書館・公共施設**
 
-{/* ── 方法② ──────────────────────────────────────────────── */}
-<section id="rental" style={S.section}>
-  <h2 style={S.h2}>方法②：機材レンタルサービス（自宅で使える）</h2>
-  <p style={S.p}>3Dプリンター本体を一定期間借りて、自宅で使う方法です。</p>
+一部の公立図書館や生涯学習センターには3Dプリンターが設置されており、無料または低料金で使えます。お住まいの自治体の施設を調べてみる価値があります。
 
-  <div style={S.card}>
-    <p style={S.h3}>個人向けと法人向けがある</p>
+**コワーキングスペース**
 
-    <p style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.4rem" }}>法人・業務用レンタル</p>
-    <p style={S.p}>オリックス・レンテックなど大手レンタル会社は、産業用・金属3Dプリンターなど高額機材を月額制でレンタルしています。主に企業・研究機関向けで、数百万円クラスの機材を初期費用なしで使えるのが特徴です。</p>
+ものづくり系のコワーキングスペースには3Dプリンターを備えているところがあります。
 
-    <p style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.4rem" }}>個人向けレンタル</p>
-    <p style={{ ...S.p, marginBottom: 0 }}>家庭用3Dプリンター（Bambu Lab・Crealityなど）を個人にレンタルするサービスは、法人向けほど数は多くありませんが、一部のサービスやフリマアプリの個人間レンタルで利用できる場合があります。</p>
-  </div>
+<ProsCons pros={[
+  "初期費用ゼロで実機を試せる",
+  "スタッフのサポートが受けられる",
+  "複数機種を比較できる施設もある",
+  "設置場所・騒音を気にしなくていい",
+]} cons={[
+  "施設まで足を運ぶ必要がある",
+  "予約が必要なことが多い",
+  "自宅でじっくり試行錯誤はできない",
+]} />
 
-  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-    <div style={{ ...S.card, marginBottom: 0 }}>
-      <p style={S.check}>✓ メリット</p>
-      {[
-        "自宅で好きなだけ試せる",
-        "購入前に使用感を確かめられる",
-        "短期プロジェクトだけに使える",
-      ].map((t, i) => <p key={i} style={S.bullet}>• {t}</p>)}
-    </div>
-    <div style={{ ...S.card, marginBottom: 0 }}>
-      <p style={S.cross}>✗ デメリット</p>
-      {[
-        "個人向けの選択肢は少ない",
-        "長期間だと購入より高くなる場合も",
-        "故障・破損時の補償条件に注意",
-      ].map((t, i) => <p key={i} style={S.bullet}>• {t}</p>)}
-    </div>
-  </div>
-</section>
+<Tip>
+💡 「まず3Dプリンターがどんなものか体験したい」という段階なら、レンタルスペースが最適です。
+</Tip>
 
-{/* ── 方法③ ──────────────────────────────────────────────── */}
-<section id="service" style={S.section}>
-  <h2 style={S.h2}>方法③：3Dプリント代行サービス（機械は借りない）</h2>
-  <p style={S.p}>「3Dプリンターを使いたい」のではなく「<strong style={{ color: "#f1f5f9" }}>印刷物が欲しいだけ</strong>」なら、代行サービスが最も合理的です。</p>
+## 方法②：機材レンタルサービス（自宅で使える）
 
-  <div style={S.card}>
-    <p style={S.p}>3Dデータ（STLファイル）をアップロードすると、業者が印刷して郵送してくれるサービスです。DMM.make・3Dayプリンターなど複数のサービスがあり、FDM・光造形・金属まで幅広い素材に対応しています。</p>
+3Dプリンター本体を一定期間借りて、自宅で使う方法です。
 
-    <p style={S.h3}>こんな人に向いている</p>
-    {[
-      "一度だけ特定のパーツを作りたい",
-      "機械の操作・メンテナンスをしたくない",
-      "高品質な仕上がりが欲しい（業務用機材で出力される）",
-    ].map((t, i) => <p key={i} style={S.bullet}>• {t}</p>)}
+### 個人向けと法人向けがある
 
-    <p style={{ ...S.muted, marginTop: "1rem", marginBottom: 0 }}>料金目安：小さなパーツで数百円〜、複雑なものや大型は数千円〜</p>
-  </div>
-</section>
+**法人・業務用レンタル**
 
-{/* ── レンタル vs 購入 ─────────────────────────────────── */}
-<section id="vs" style={S.section}>
-  <h2 style={S.h2}>レンタル vs 購入：どちらを選ぶべき？</h2>
+オリックス・レンテックなど大手レンタル会社は、産業用・金属3Dプリンターなど高額機材を月額制でレンタルしています。主に企業・研究機関向けで、数百万円クラスの機材を初期費用なしで使えるのが特徴です。
 
-  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1.5rem" }}>
-    <div style={S.card}>
-      <p style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.75rem" }}>レンタル・代行が向くケース</p>
-      {[
-        "まず体験してみたい",
-        "使う頻度が年に数回程度",
-        "特定のプロジェクトだけ",
-        "設置スペース・騒音が問題",
-        "一度だけ印刷物が欲しい",
-      ].map((t, i) => <p key={i} style={S.bullet}>• {t}</p>)}
-    </div>
-    <div style={S.card}>
-      <p style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.75rem" }}>購入が向くケース</p>
-      {[
-        "月に何度も使う予定がある",
-        "試行錯誤しながら作りたい",
-        "副業・販売を考えている",
-        "長期的に趣味にしたい",
-      ].map((t, i) => <p key={i} style={S.bullet}>• {t}</p>)}
-    </div>
-  </div>
+**個人向けレンタル**
 
-  <div style={S.card}>
-    <p style={S.h3}>コストで比較する</p>
-    <p style={S.p}>家庭用3Dプリンターのエントリー機は約3〜5万円で購入できます。</p>
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-      {[
-        { label: "レンタルスペース", cost: "1時間500〜1,000円 × 利用回数" },
-        { label: "機材レンタル", cost: "機種による（月額数千円〜）" },
-        { label: "購入（Bambu Lab A1 Mini）", cost: "約50,000円（買い切り）" },
-      ].map((item, i) => (
-        <div key={i} style={{ display: "flex", justifyContent: "space-between", backgroundColor: "#0f172a", borderRadius: "0.375rem", padding: "0.6rem 0.875rem" }}>
-          <span style={{ color: "#94a3b8", fontSize: "0.85rem" }}>{item.label}</span>
-          <span style={{ color: "#cbd5e1", fontSize: "0.85rem" }}>{item.cost}</span>
-        </div>
-      ))}
-    </div>
-    <p style={{ ...S.muted, marginTop: "1rem", marginBottom: 0 }}>
-      ざっくり言えば、<strong style={{ color: "#f1f5f9" }}>月に2〜3回以上使うなら購入した方が早く元が取れます。</strong> 逆に「年に数回」程度なら、レンタルスペースや代行サービスの方が経済的です。
-    </p>
-  </div>
-</section>
+家庭用3Dプリンター（Bambu Lab・Crealityなど）を個人にレンタルするサービスは、法人向けほど数は多くありませんが、一部のサービスやフリマアプリの個人間レンタルで利用できる場合があります。
 
-{/* ── 最初の1台 ─────────────────────────────────────────── */}
-<section id="first" style={S.section}>
-  <h2 style={S.h2}>「買う」と決めたら：最初の1台の選び方</h2>
-  <p style={S.p}>レンタルで試して「これは欲しい」と感じたら、最初の1台を選びましょう。2026年現在、初心者の最有力候補は<strong style={{ color: "#f1f5f9" }}>Bambu Lab A1 Mini</strong>です。</p>
+<ProsCons pros={[
+  "自宅で好きなだけ試せる",
+  "購入前に使用感を確かめられる",
+  "短期プロジェクトだけに使える",
+]} cons={[
+  "個人向けの選択肢は少ない",
+  "長期間だと購入より高くなる場合も",
+  "故障・破損時の補償条件に注意",
+]} />
 
-  <div style={S.card}>
-    {[
-      "全自動キャリブレーションで失敗が少ない",
-      "静音設計で生活スペースに置ける",
-      "約50,000円というバランスの良い価格",
-    ].map((t, i) => (
-      <p key={i} style={{ ...S.p, marginBottom: "0.5rem" }}>✅ {t}</p>
-    ))}
-    <p style={{ ...S.muted, marginTop: "0.75rem", marginBottom: 0 }}>
-      詳しくは
-      <a href="/printers/bambu-a1-mini-review/" style={{ color: "#06b6d4", textDecoration: "none" }}>Bambu Lab A1 Mini レビュー</a>と
-      <a href="/printers/beginners-recommend/" style={{ color: "#06b6d4", textDecoration: "none" }}>3Dプリンター初心者におすすめ5選</a>をご覧ください。
-    </p>
-  </div>
-</section>
+## 方法③：3Dプリント代行サービス（機械は借りない）
 
-{/* ── まとめ表 ─────────────────────────────────────────── */}
-<section style={S.section}>
-  <h2 style={S.h2}>まとめ</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse" }}>
-      <thead>
-        <tr>
-          {["目的", "おすすめの方法"].map((h) => <th key={h} style={S.th}>{h}</th>)}
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["まず体験したい", "レンタルスペース・ファブ施設"],
-          ["自宅で一定期間試したい", "機材レンタルサービス"],
-          ["印刷物だけ欲しい", "3Dプリント代行サービス"],
-          ["何度も使う・長く使う", "購入（A1 miniなど）"],
-        ].map((row, i) => (
-          <tr key={i}>
-            <td style={S.tdLabel}>{row[0]}</td>
-            <td style={{ ...S.td, color: i === 3 ? "#06b6d4" : "#cbd5e1", fontWeight: i === 3 ? "700" : "400" }}>{row[1]}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
+「3Dプリンターを使いたい」のではなく「**印刷物が欲しいだけ**」なら、代行サービスが最も合理的です。
 
-  <p style={{ ...S.p, marginTop: "1.25rem" }}>
-    3Dプリンターは年々価格が下がり、エントリー機なら3〜5万円で買えるようになりました。「月に数回以上使う」なら購入が結局お得ですが、「まず試したい」「一度だけ使いたい」場合はレンタルや代行を上手に活用しましょう。
-  </p>
-</section>
+3Dデータ（STLファイル）をアップロードすると、業者が印刷して郵送してくれるサービスです。DMM.make・3Dayプリンターなど複数のサービスがあり、FDM・光造形・金属まで幅広い素材に対応しています。
 
+### こんな人に向いている
+
+- 一度だけ特定のパーツを作りたい
+- 機械の操作・メンテナンスをしたくない
+- 高品質な仕上がりが欲しい（業務用機材で出力される）
+
+料金目安：小さなパーツで数百円〜、複雑なものや大型は数千円〜
+
+## レンタル vs 購入：どちらを選ぶべき？
+
+### レンタル・代行が向くケース
+
+- まず体験してみたい
+- 使う頻度が年に数回程度
+- 特定のプロジェクトだけ
+- 設置スペース・騒音が問題
+- 一度だけ印刷物が欲しい
+
+### 購入が向くケース
+
+- 月に何度も使う予定がある
+- 試行錯誤しながら作りたい
+- 副業・販売を考えている
+- 長期的に趣味にしたい
+
+### コストで比較する
+
+家庭用3Dプリンターのエントリー機は約3〜5万円で購入できます。
+
+<PriceList items={[
+  { label: "レンタルスペース", price: "1時間500〜1,000円 × 利用回数" },
+  { label: "機材レンタル", price: "機種による（月額数千円〜）" },
+  { label: "購入（Bambu Lab A1 Mini）", price: "約50,000円（買い切り）" },
+]} />
+
+ざっくり言えば、**月に2〜3回以上使うなら購入した方が早く元が取れます。** 逆に「年に数回」程度なら、レンタルスペースや代行サービスの方が経済的です。
+
+## 「買う」と決めたら：最初の1台の選び方
+
+レンタルで試して「これは欲しい」と感じたら、最初の1台を選びましょう。2026年現在、初心者の最有力候補は**Bambu Lab A1 Mini**です。
+
+<CheckList variant="check" items={[
+  "全自動キャリブレーションで失敗が少ない",
+  "静音設計で生活スペースに置ける",
+  "約50,000円というバランスの良い価格",
+]} />
+
+詳しくは[Bambu Lab A1 Mini レビュー](/printers/bambu-a1-mini-review/)と[3Dプリンター初心者におすすめ5選](/printers/beginners-recommend/)をご覧ください。
+
+## まとめ
+
+| 目的 | おすすめの方法 |
+|---|---|
+| まず体験したい | レンタルスペース・ファブ施設 |
+| 自宅で一定期間試したい | 機材レンタルサービス |
+| 印刷物だけ欲しい | 3Dプリント代行サービス |
+| 何度も使う・長く使う | **購入（A1 miniなど）** |
+
+3Dプリンターは年々価格が下がり、エントリー機なら3〜5万円で買えるようになりました。「月に数回以上使う」なら購入が結局お得ですが、「まず試したい」「一度だけ使いたい」場合はレンタルや代行を上手に活用しましょう。

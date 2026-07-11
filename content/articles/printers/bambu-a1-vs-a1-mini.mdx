@@ -25,214 +25,102 @@ related:
     badge: 初心者
     badgeColor: '#10b981'
 ---
-export const S = {
-  card:       { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  h2:         { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
-  p:          { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
-  muted:      { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
-  section:    { marginBottom: "2.5rem" },
-  th:         { backgroundColor: "#0f172a", color: "#94a3b8", fontSize: "0.75rem", fontWeight: "700", padding: "0.625rem 1rem", textAlign: "left", borderBottom: "1px solid #334155" },
-  td:         { padding: "0.625rem 1rem", fontSize: "0.875rem", borderBottom: "1px solid #1e293b", color: "#cbd5e1", verticalAlign: "top" },
-  tdMini:     { padding: "0.625rem 1rem", fontSize: "0.875rem", borderBottom: "1px solid #1e293b", color: "#38bdf8", fontWeight: "600", verticalAlign: "top" },
-  tdA1:       { padding: "0.625rem 1rem", fontSize: "0.875rem", borderBottom: "1px solid #1e293b", color: "#34d399", fontWeight: "600", verticalAlign: "top" },
-  disclaimer: { color: "#475569", fontSize: "0.75rem", borderTop: "1px solid #1e293b", paddingTop: "1.25rem", lineHeight: "1.6" },
-};
+<Lead>
+Bambu Lab の2大人気機種、**A1 Mini** と **A1**。
+価格差は約20,000円。どちらも自動キャリブレーション・高速印刷に対応していますが、
+ビルドサイズ・AMS対応・価格に明確な違いがあります。
 
-<div style={S.card}>
-  <div style={S.p}>
-    Bambu Lab の2大人気機種、<strong style={{ color: "#38bdf8" }}>A1 Mini</strong> と <strong style={{ color: "#34d399" }}>A1</strong>。
-    価格差は約20,000円。どちらも自動キャリブレーション・高速印刷に対応していますが、
-    ビルドサイズ・AMS対応・価格に明確な違いがあります。
-  </div>
-  <div style={{ ...S.p, marginBottom: 0 }}>
-    「Mini で十分？それとも A1 にすべき？」— 用途別の結論から解説します。
-  </div>
-</div>
+「Mini で十分？それとも A1 にすべき？」— 用途別の結論から解説します。
+</Lead>
 
-<section id="conclusion" style={S.section}>
-  <h2 style={S.h2}>結論：用途別おすすめ</h2>
-  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1.5rem" }}>
-    <div style={{ backgroundColor: "rgba(56,189,248,0.06)", border: "2px solid rgba(56,189,248,0.4)", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ color: "#38bdf8", fontWeight: "800", fontSize: "1rem", marginBottom: "0.75rem" }}>A1 Mini を選ぶべき人</div>
-      <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-        {["初めての3Dプリンター", "置き場所が限られている", "小物・フィギュア中心", "予算を抑えたい（〜45,000円）", "静音性を重視する"].map(t => (
-          <li key={t} style={{ color: "#cbd5e1", fontSize: "0.85rem" }}>✓ {t}</li>
-        ))}
-      </ul>
-    </div>
-    <div style={{ backgroundColor: "rgba(52,211,153,0.06)", border: "2px solid rgba(52,211,153,0.4)", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ color: "#34d399", fontWeight: "800", fontSize: "1rem", marginBottom: "0.75rem" }}>A1 を選ぶべき人</div>
-      <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-        {["大きなものを印刷したい", "AMS（4色同時）を使いたい", "ケースや工具など実用品中心", "長期的に使い続けたい", "予算に余裕がある（〜65,000円）"].map(t => (
-          <li key={t} style={{ color: "#cbd5e1", fontSize: "0.85rem" }}>✓ {t}</li>
-        ))}
-      </ul>
-    </div>
-  </div>
-  <div style={S.card}>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      <strong style={{ color: "#f1f5f9" }}>迷ったら A1 Mini</strong> が正解です。
-      初心者が最初に買う機種として、コスト・サイズ・使いやすさのバランスが最も優れています。
-      ビルドサイズが足りなくなってから A1 を追加購入するより、Mini で始めてスキルを積む方が効率的です。
-    </div>
-  </div>
-</section>
+## 結論：用途別おすすめ
 
-<section id="difference" style={S.section}>
-  <h2 style={S.h2}>2機種の違い一覧</h2>
-  <div style={{ overflowX: "auto", borderRadius: "0.75rem", border: "1px solid #334155" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>スペック</th>
-          <th style={{ ...S.th, color: "#38bdf8" }}>A1 Mini</th>
-          <th style={{ ...S.th, color: "#34d399" }}>A1</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          ["価格（目安）",         "約45,000円",          "約65,000円"],
-          ["ビルドサイズ",         "180 × 180 × 180 mm",  "256 × 256 × 256 mm"],
-          ["最大印刷速度",         "500 mm/s",            "500 mm/s"],
-          ["ノズル最高温度",       "300℃",               "300℃"],
-          ["ベッド最高温度",       "80℃",                "100℃"],
-          ["AMS Lite",            "対応（2ユニットまで）", "非対応"],
-          ["AMS（本体）",          "非対応",              "対応（最大4色）"],
-          ["重量",                 "約9.7 kg",            "約17.5 kg"],
-          ["本体サイズ（W×D×H）", "347×315×365 mm",      "457×462×490 mm"],
-          ["自動キャリブレーション", "対応",               "対応"],
-          ["Wi-Fi・スマホ連携",    "対応",                "対応"],
-        ].map(([spec, mini, a1]) => (
-          <tr key={spec}>
-            <td style={S.td}>{spec}</td>
-            <td style={S.tdMini}>{mini}</td>
-            <td style={S.tdA1}>{a1}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-</section>
+<ProsCons
+  prosTitle="A1 Mini を選ぶべき人"
+  consTitle="A1 を選ぶべき人"
+  pros={["初めての3Dプリンター", "置き場所が限られている", "小物・フィギュア中心", "予算を抑えたい（〜45,000円）", "静音性を重視する"]}
+  cons={["大きなものを印刷したい", "AMS（4色同時）を使いたい", "ケースや工具など実用品中心", "長期的に使い続けたい", "予算に余裕がある（〜65,000円）"]}
+/>
 
-<section id="build-size" style={S.section}>
-  <h2 style={S.h2}>ビルドサイズの差は大きい？</h2>
-  <div style={S.card}>
-    <div style={S.p}>
-      A1 Mini は <strong style={{ color: "#38bdf8" }}>180mm 角</strong>、A1 は <strong style={{ color: "#34d399" }}>256mm 角</strong>。
-      体積にすると A1 は A1 Mini の約 2.8 倍です。
-    </div>
-    <div style={S.p}>
-      「180mm で何が作れる？」と気になるかもしれませんが、
-      フィギュア・スマホケース・小型ケース・デスクアクセサリーなど
-      <strong style={{ color: "#f1f5f9" }}>日用品の大半は 180mm 以内に収まります</strong>。
-      実際、3Dプリンター初心者が最初に作るものの 9 割は A1 Mini で対応可能です。
-    </div>
-    <div style={{ backgroundColor: "rgba(56,189,248,0.06)", border: "1px solid rgba(56,189,248,0.2)", borderRadius: "0.5rem", padding: "1rem", marginBottom: "0.875rem" }}>
-      <div style={{ color: "#38bdf8", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.5rem" }}>A1 Mini（180mm）で作れるもの</div>
-      <div style={S.muted}>スマホケース・フィギュア（頭身低め）・コースター・ペン立て・カードホルダー・小型ケース類・ゲームコントローラースタンド</div>
-    </div>
-    <div style={{ backgroundColor: "rgba(52,211,153,0.06)", border: "1px solid rgba(52,211,153,0.2)", borderRadius: "0.5rem", padding: "1rem" }}>
-      <div style={{ color: "#34d399", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.5rem" }}>A1（256mm）が必要なもの</div>
-      <div style={S.muted}>ノートPC スタンド・大型フィギュア・バイクや車のパーツ・工具類・ラジコンボディ・建築モデル</div>
-    </div>
-  </div>
-</section>
+**迷ったら A1 Mini** が正解です。
+初心者が最初に買う機種として、コスト・サイズ・使いやすさのバランスが最も優れています。
+ビルドサイズが足りなくなってから A1 を追加購入するより、Mini で始めてスキルを積む方が効率的です。
 
-<section id="ams" style={S.section}>
-  <h2 style={S.h2}>AMS対応の違い</h2>
-  <div style={S.card}>
-    <div style={S.p}>
-      Bambu Lab の多色印刷システムには <strong style={{ color: "#f1f5f9" }}>AMS</strong> と <strong style={{ color: "#f1f5f9" }}>AMS Lite</strong> の2種類があります。
-      これが A1 Mini と A1 の最大の違いのひとつです。
-    </div>
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-      <div style={{ backgroundColor: "#0f172a", border: "1px solid #334155", borderRadius: "0.5rem", padding: "1rem" }}>
-        <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-          <span style={{ backgroundColor: "rgba(56,189,248,0.15)", color: "#38bdf8", fontWeight: "700", fontSize: "0.75rem", padding: "0.15rem 0.5rem", borderRadius: "9999px", flexShrink: 0, marginTop: "0.1rem" }}>A1 Mini</span>
-          <div>
-            <div style={{ color: "#f1f5f9", fontWeight: "600", fontSize: "0.875rem", marginBottom: "0.25rem" }}>AMS Lite 対応（オプション追加購入）</div>
-            <div style={S.muted}>4色まで自動切り替え可能。2ユニット接続で最大8色に対応。ただし吸湿対策は別途必要。価格は1ユニット約8,000円。</div>
-          </div>
-        </div>
-      </div>
-      <div style={{ backgroundColor: "#0f172a", border: "1px solid #334155", borderRadius: "0.5rem", padding: "1rem" }}>
-        <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-          <span style={{ backgroundColor: "rgba(52,211,153,0.15)", color: "#34d399", fontWeight: "700", fontSize: "0.75rem", padding: "0.15rem 0.5rem", borderRadius: "9999px", flexShrink: 0, marginTop: "0.1rem" }}>A1</span>
-          <div>
-            <div style={{ color: "#f1f5f9", fontWeight: "600", fontSize: "0.875rem", marginBottom: "0.25rem" }}>AMS 本体対応（ボックス型・密閉式）</div>
-            <div style={S.muted}>密閉ボックスで吸湿防止効果あり。最大4色（2ユニットで8色）に対応。AMS Lite より吸湿対策が優れている。</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style={{ ...S.p, marginTop: "1rem", marginBottom: 0 }}>
-      多色印刷をするなら両機種ともオプション追加が必要です。
-      <strong style={{ color: "#f1f5f9" }}>吸湿が気になるならA1（AMS密閉式）、コストを抑えたいならA1 Mini（AMS Lite）</strong>という選択になります。
-    </div>
-  </div>
-</section>
+## 2機種の違い一覧
 
-<section id="choose-mini" style={S.section}>
-  <h2 style={S.h2}>A1 Miniを選ぶべき人</h2>
-  <div style={S.card}>
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem", marginBottom: "1.25rem" }}>
-      {[
-        { title: "初めての3Dプリンター",      desc: "セットアップが簡単で失敗しにくい。コストを抑えてスタートできる。" },
-        { title: "設置スペースが限られている", desc: "A1の約半分のフットプリント。デスクの一角に置ける。" },
-        { title: "小物・フィギュア・雑貨中心", desc: "180mm以内に収まるものがほとんど。サイズ不足を感じることは少ない。" },
-        { title: "静音・夜間印刷を重視する",   desc: "A1より本体が軽量でフレームの共振が少なく、体感的に静かなケースが多い。" },
-      ].map(({ title, desc }) => (
-        <div key={title} style={{ backgroundColor: "rgba(56,189,248,0.04)", border: "1px solid rgba(56,189,248,0.2)", borderRadius: "0.5rem", padding: "0.875rem 1.25rem" }}>
-          <div style={{ color: "#38bdf8", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>✓ {title}</div>
-          <div style={S.muted}>{desc}</div>
-        </div>
-      ))}
-    </div>
-    <ProductCard productId="bambu-a1-mini" />
-  </div>
-</section>
+| スペック | A1 Mini | A1 |
+|---|---|---|
+| 価格（目安） | 約45,000円 | 約65,000円 |
+| ビルドサイズ | 180 × 180 × 180 mm | 256 × 256 × 256 mm |
+| 最大印刷速度 | 500 mm/s | 500 mm/s |
+| ノズル最高温度 | 300℃ | 300℃ |
+| ベッド最高温度 | 80℃ | 100℃ |
+| AMS Lite | 対応（2ユニットまで） | 非対応 |
+| AMS（本体） | 非対応 | 対応（最大4色） |
+| 重量 | 約9.7 kg | 約17.5 kg |
+| 本体サイズ（W×D×H） | 347×315×365 mm | 457×462×490 mm |
+| 自動キャリブレーション | 対応 | 対応 |
+| Wi-Fi・スマホ連携 | 対応 | 対応 |
 
-<section id="choose-a1" style={S.section}>
-  <h2 style={S.h2}>A1を選ぶべき人</h2>
-  <div style={S.card}>
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem", marginBottom: "1.25rem" }}>
-      {[
-        { title: "大きなものを印刷したい",     desc: "256mm角の余裕は一度体感するとなかなか手放せない。パーツの分割が減り時間も節約できる。" },
-        { title: "AMS（密閉式）で管理したい", desc: "PETGやTPUなど吸湿しやすい素材を使うなら、密閉型AMSの方が安定する。" },
-        { title: "実用パーツ・工具・ケース類",  desc: "工具ホルダー・ラジコンパーツ・ドア用アクセサリーなど実用系は大きめが多い。" },
-        { title: "長期的にメイン機として使う", desc: "本体の堅牢性・フレームの重さを考えると長期運用はA1の方が安心感がある。" },
-      ].map(({ title, desc }) => (
-        <div key={title} style={{ backgroundColor: "rgba(52,211,153,0.04)", border: "1px solid rgba(52,211,153,0.2)", borderRadius: "0.5rem", padding: "0.875rem 1.25rem" }}>
-          <div style={{ color: "#34d399", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>✓ {title}</div>
-          <div style={S.muted}>{desc}</div>
-        </div>
-      ))}
-    </div>
-    <ProductCard productId="bambu-a1" />
-  </div>
-</section>
+## ビルドサイズの差は大きい？
 
-<section id="summary" style={S.section}>
-  <h2 style={S.h2}>まとめ</h2>
-  <div style={S.card}>
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem", marginBottom: "1.25rem" }}>
-      {[
-        { label: "初心者・コスパ重視",    rec: "→ A1 Mini（約45,000円）迷ったらこちら" },
-        { label: "大きいものを作りたい",   rec: "→ A1（約65,000円）256mm角の余裕を活かす" },
-        { label: "多色印刷・吸湿が気になる", rec: "→ A1 + AMS の組み合わせが安定" },
-        { label: "コスト最優先",           rec: "→ A1 Mini + AMS Lite（合計約53,000円〜）" },
-      ].map(({ label, rec }) => (
-        <div key={label} style={{ display: "flex", gap: "1rem", backgroundColor: "#0f172a", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem" }}>
-          <span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "150px" }}>{label}</span>
-          <span style={S.muted}>{rec}</span>
-        </div>
-      ))}
-    </div>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      価格差の20,000円は決して小さくありませんが、ビルドサイズ・AMS方式・本体の重さという
-      <strong style={{ color: "#f1f5f9" }}>本質的な違い</strong>に起因しています。
-      用途が明確であれば後悔しない選択ができます。まず「自分が作りたいもののサイズ」を確認してから決めましょう。
-    </div>
-  </div>
-</section>
+A1 Mini は **180mm 角**、A1 は **256mm 角**。
+体積にすると A1 は A1 Mini の約 2.8 倍です。
 
+「180mm で何が作れる？」と気になるかもしれませんが、
+フィギュア・スマホケース・小型ケース・デスクアクセサリーなど
+**日用品の大半は 180mm 以内に収まります**。
+実際、3Dプリンター初心者が最初に作るものの 9 割は A1 Mini で対応可能です。
+
+<SpecList items={[
+  { label: "A1 Mini（180mm）で作れるもの", value: "スマホケース・フィギュア（頭身低め）・コースター・ペン立て・カードホルダー・小型ケース類・ゲームコントローラースタンド" },
+  { label: "A1（256mm）が必要なもの", value: "ノートPC スタンド・大型フィギュア・バイクや車のパーツ・工具類・ラジコンボディ・建築モデル" },
+]} />
+
+## AMS対応の違い
+
+Bambu Lab の多色印刷システムには **AMS** と **AMS Lite** の2種類があります。
+これが A1 Mini と A1 の最大の違いのひとつです。
+
+<SpecList items={[
+  { label: "A1 Mini", value: "AMS Lite 対応（オプション追加購入） 4色まで自動切り替え可能。2ユニット接続で最大8色に対応。ただし吸湿対策は別途必要。価格は1ユニット約8,000円。" },
+  { label: "A1", value: "AMS 本体対応（ボックス型・密閉式） 密閉ボックスで吸湿防止効果あり。最大4色（2ユニットで8色）に対応。AMS Lite より吸湿対策が優れている。" },
+]} />
+
+多色印刷をするなら両機種ともオプション追加が必要です。
+**吸湿が気になるならA1（AMS密閉式）、コストを抑えたいならA1 Mini（AMS Lite）**という選択になります。
+
+## A1Miniを選ぶべき人
+
+<SpecList items={[
+  { label: "初めての3Dプリンター", value: "セットアップが簡単で失敗しにくい。コストを抑えてスタートできる。" },
+  { label: "設置スペースが限られている", value: "A1の約半分のフットプリント。デスクの一角に置ける。" },
+  { label: "小物・フィギュア・雑貨中心", value: "180mm以内に収まるものがほとんど。サイズ不足を感じることは少ない。" },
+  { label: "静音・夜間印刷を重視する", value: "A1より本体が軽量でフレームの共振が少なく、体感的に静かなケースが多い。" },
+]} />
+
+<ProductCard productId="bambu-a1-mini" />
+
+## A1を選ぶべき人
+
+<SpecList items={[
+  { label: "大きなものを印刷したい", value: "256mm角の余裕は一度体感するとなかなか手放せない。パーツの分割が減り時間も節約できる。" },
+  { label: "AMS（密閉式）で管理したい", value: "PETGやTPUなど吸湿しやすい素材を使うなら、密閉型AMSの方が安定する。" },
+  { label: "実用パーツ・工具・ケース類", value: "工具ホルダー・ラジコンパーツ・ドア用アクセサリーなど実用系は大きめが多い。" },
+  { label: "長期的にメイン機として使う", value: "本体の堅牢性・フレームの重さを考えると長期運用はA1の方が安心感がある。" },
+]} />
+
+<ProductCard productId="bambu-a1" />
+
+## まとめ
+
+<SpecList items={[
+  { label: "初心者・コスパ重視", value: "→ A1 Mini（約45,000円）迷ったらこちら" },
+  { label: "大きいものを作りたい", value: "→ A1（約65,000円）256mm角の余裕を活かす" },
+  { label: "多色印刷・吸湿が気になる", value: "→ A1 + AMS の組み合わせが安定" },
+  { label: "コスト最優先", value: "→ A1 Mini + AMS Lite（合計約53,000円〜）" },
+]} />
+
+価格差の20,000円は決して小さくありませんが、ビルドサイズ・AMS方式・本体の重さという
+**本質的な違い**に起因しています。
+用途が明確であれば後悔しない選択ができます。まず「自分が作りたいもののサイズ」を確認してから決めましょう。

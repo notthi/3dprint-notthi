@@ -27,181 +27,65 @@ related:
     badge: トラブル
     badgeColor: '#ef4444'
 ---
-export const S = {
-  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  tip:     { backgroundColor: "#1a0f2e", border: "1px solid #8b5cf6", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #8b5cf6", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
-  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
-  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
-  section: { marginBottom: "2.5rem" },
-  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
-  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
-  step:    { display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem", marginBottom: "0.75rem" },
-  stepNum: { flexShrink: 0, backgroundColor: "#8b5cf6", color: "#0f172a", fontWeight: "800", fontSize: "0.9rem", width: "2rem", height: "2rem", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" },
-};
+<Lead>
+**OrcaSlicerはBambu Lab機種にも対応したオープンソースの高機能スライサーです。** Bambu Studioより細かい設定ができる中級〜上級ユーザー向け。無料。
 
-<div style={S.card}>
-  <div style={S.p}>
-    <strong style={{ color: "#f1f5f9" }}>OrcaSlicerはBambu Lab機種にも対応したオープンソースの高機能スライサーです。</strong> Bambu Studioより細かい設定ができる中級〜上級ユーザー向け。無料。
-  </div>
-  <div style={{ ...S.p, marginBottom: 0 }}>
-    ダウンロード：github.com/SoftFever/OrcaSlicer
-  </div>
-</div>
+ダウンロード：github.com/SoftFever/OrcaSlicer
+</Lead>
 
-<section id="vs-bambu" style={S.section}>
-  <h2 style={S.h2}>Bambu StudioとOrcaSlicerの違い</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>比較</th>
-          <th style={{ ...S.th, color: "#06b6d4" }}>Bambu Studio</th>
-          <th style={{ ...S.th, color: "#8b5cf6" }}>OrcaSlicer</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>対応機種</td>
-          <td style={S.td}>Bambu Lab専用</td>
-          <td style={{ ...S.td, color: "#8b5cf6" }}>Bambu Lab＋ほぼ全機種</td>
-        </tr>
-        <tr>
-          <td style={S.td}>操作の簡単さ</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>◎</td>
-          <td style={S.td}>○（慣れが必要）</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>設定の細かさ</td>
-          <td style={S.td}>○</td>
-          <td style={{ ...S.td, color: "#8b5cf6" }}>◎</td>
-        </tr>
-        <tr>
-          <td style={S.td}>キャリブレーション機能</td>
-          <td style={S.td}>△</td>
-          <td style={{ ...S.td, color: "#8b5cf6" }}>◎</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>推奨ユーザー</td>
-          <td style={S.td}>初心者〜中級者</td>
-          <td style={{ ...S.td, color: "#8b5cf6" }}>中級〜上級者</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+## Bambu StudioとOrcaSlicerの違い
 
-<section id="features" style={S.section}>
-  <h2 style={S.h2}>OrcaSlicerでできること</h2>
-  <div style={{ ...S.p, marginBottom: "1rem" }}>
-    <strong style={{ color: "#f1f5f9" }}>充実したキャリブレーション機能</strong>
-  </div>
-  <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginBottom: "1.5rem" }}>
-    <div style={{ display: "flex", gap: "0.75rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <span style={{ color: "#8b5cf6", flexShrink: 0 }}>▸</span>
-      <div>
-        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>温度タワーテスト</div>
-        <div style={{ ...S.muted, margin: 0 }}>最適印刷温度を自動で見つける。フィラメントごとに最適温度を特定できます。</div>
-      </div>
-    </div>
-    <div style={{ display: "flex", gap: "0.75rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <span style={{ color: "#8b5cf6", flexShrink: 0 }}>▸</span>
-      <div>
-        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>フロー補正</div>
-        <div style={{ ...S.muted, margin: 0 }}>押し出し量を精密に調整。ラインが太すぎる・細すぎる問題の解決に有効。</div>
-      </div>
-    </div>
-    <div style={{ display: "flex", gap: "0.75rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <span style={{ color: "#8b5cf6", flexShrink: 0 }}>▸</span>
-      <div>
-        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>リトラクションテスト</div>
-        <div style={{ ...S.muted, margin: 0 }}>糸引きを最小化。適切なリトラクション距離・速度を特定。</div>
-      </div>
-    </div>
-    <div style={{ display: "flex", gap: "0.75rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <span style={{ color: "#8b5cf6", flexShrink: 0 }}>▸</span>
-      <div>
-        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>プレッシャーアドバンス（K値）調整</div>
-        <div style={{ ...S.muted, margin: 0 }}>コーナーの品質向上。高速印刷時の精度改善に効果的。</div>
-      </div>
-    </div>
-  </div>
-  <div style={{ display: "flex", gap: "0.75rem" }}>
-    <span style={{ color: "#8b5cf6", flexShrink: 0 }}>▸</span>
-    <div style={{ ...S.muted, margin: 0 }}>より細かい速度設定：内壁・外壁・インフィルを個別に設定</div>
-  </div>
-  <div style={{ display: "flex", gap: "0.75rem", marginTop: "0.5rem" }}>
-    <span style={{ color: "#8b5cf6", flexShrink: 0 }}>▸</span>
-    <div style={{ ...S.muted, margin: 0 }}>機種横断使用：BambuとCrealityなど複数機種を同じスライサーで管理</div>
-  </div>
-</section>
+| 比較 | Bambu Studio | OrcaSlicer |
+|---|---|---|
+| 対応機種 | Bambu Lab専用 | Bambu Lab＋ほぼ全機種 |
+| 操作の簡単さ | ◎ | ○（慣れが必要） |
+| 設定の細かさ | ○ | ◎ |
+| キャリブレーション機能 | △ | ◎ |
+| 推奨ユーザー | 初心者〜中級者 | 中級〜上級者 |
 
-<section id="install" style={S.section}>
-  <h2 style={S.h2}>インストールと初期設定</h2>
-  <div style={S.step}>
-    <div style={S.stepNum}>1</div>
-    <div>
-      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>ダウンロード</div>
-      <div style={{ ...S.muted, margin: 0 }}>GitHubのReleasesページ（github.com/SoftFever/OrcaSlicer）から最新版をダウンロード</div>
-    </div>
-  </div>
-  <div style={S.step}>
-    <div style={S.stepNum}>2</div>
-    <div>
-      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>プリンター追加</div>
-      <div style={{ ...S.muted, margin: 0 }}>インストール後「プリンター追加」でBambu Lab機種（またはその他機種）を選択</div>
-    </div>
-  </div>
-  <div style={S.step}>
-    <div style={S.stepNum}>3</div>
-    <div>
-      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>接続設定</div>
-      <div style={{ ...S.muted, margin: 0 }}>IPアドレスまたはシリアルナンバーでプリンターと接続</div>
-    </div>
-  </div>
-</section>
+## OrcaSlicerでできること
 
-<section id="calibration" style={S.section}>
-  <h2 style={S.h2}>キャリブレーション機能の活用</h2>
-  <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-    <div style={S.card}>
-      <div style={{ color: "#f1f5f9", fontWeight: "700", marginBottom: "0.5rem" }}>温度タワーの使い方</div>
-      <div style={{ ...S.p, marginBottom: 0 }}>
-        異なる温度で変化するテストモデルを印刷 → 最も品質が良い温度を確認 → フィラメントプロファイルに保存。これにより各フィラメントの最適温度が個別に分かります。
-      </div>
-    </div>
-    <div style={S.card}>
-      <div style={{ color: "#f1f5f9", fontWeight: "700", marginBottom: "0.5rem" }}>フロー補正の使い方</div>
-      <div style={{ ...S.p, marginBottom: 0 }}>
-        ラインが太すぎる・細すぎるなどの問題解決に有効。押し出し量の過不足を補正します。フィラメントを変えた際にも実施すると安定します。
-      </div>
-    </div>
-  </div>
-</section>
+**充実したキャリブレーション機能**
 
-<section id="how-to-use" style={S.section}>
-  <h2 style={S.h2}>推奨の使い方</h2>
-  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-    <div style={{ backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>普段の印刷</div>
-      <div style={{ ...S.muted, margin: 0 }}>Bambu Studio（簡単・速い）</div>
-    </div>
-    <div style={{ backgroundColor: "#1a0f2e", border: "1px solid #8b5cf6", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ color: "#8b5cf6", fontWeight: "700", marginBottom: "0.5rem" }}>新素材の試し・精度重視</div>
-      <div style={{ ...S.muted, margin: 0 }}>OrcaSlicer（細かい設定）</div>
-    </div>
-  </div>
-  <div style={{ ...S.p, marginTop: "1rem" }}>
-    この<strong style={{ color: "#f1f5f9" }}>2本立て運用</strong>が多くのユーザーの定番スタイルです。
-  </div>
-</section>
+<SpecList items={[
+  { label: "温度タワーテスト", value: "最適印刷温度を自動で見つける。フィラメントごとに最適温度を特定できます。" },
+  { label: "フロー補正", value: "押し出し量を精密に調整。ラインが太すぎる・細すぎる問題の解決に有効。" },
+  { label: "リトラクションテスト", value: "糸引きを最小化。適切なリトラクション距離・速度を特定。" },
+  { label: "プレッシャーアドバンス（K値）調整", value: "コーナーの品質向上。高速印刷時の精度改善に効果的。" },
+]} />
 
-<section id="summary" style={S.section}>
-  <h2 style={S.h2}>まとめ</h2>
-  <div style={S.tip}>
-    <div style={{ color: "#8b5cf6", fontWeight: "700", marginBottom: "0.5rem" }}>💡 こんな方におすすめ</div>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      Bambu Studioに物足りなさを感じてきた中級〜上級ユーザーへの自然なステップアップです。新しいフィラメントを試す際のキャリブレーションや、精度重視の印刷に特に効果を発揮します。
-    </div>
-  </div>
-</section>
+- より細かい速度設定：内壁・外壁・インフィルを個別に設定
+- 機種横断使用：BambuとCrealityなど複数機種を同じスライサーで管理
+
+## インストールと初期設定
+
+<Steps items={[
+  { title: "ダウンロード", body: "GitHubのReleasesページ（github.com/SoftFever/OrcaSlicer）から最新版をダウンロード" },
+  { title: "プリンター追加", body: "インストール後「プリンター追加」でBambu Lab機種（またはその他機種）を選択" },
+  { title: "接続設定", body: "IPアドレスまたはシリアルナンバーでプリンターと接続" },
+]} />
+
+## キャリブレーション機能の活用
+
+### 温度タワーの使い方
+
+異なる温度で変化するテストモデルを印刷 → 最も品質が良い温度を確認 → フィラメントプロファイルに保存。これにより各フィラメントの最適温度が個別に分かります。
+
+### フロー補正の使い方
+
+ラインが太すぎる・細すぎるなどの問題解決に有効。押し出し量の過不足を補正します。フィラメントを変えた際にも実施すると安定します。
+
+## 推奨の使い方
+
+<SpecList items={[
+  { label: "普段の印刷", value: "Bambu Studio（簡単・速い）" },
+  { label: "新素材の試し・精度重視", value: "OrcaSlicer（細かい設定）" },
+]} />
+
+この**2本立て運用**が多くのユーザーの定番スタイルです。
+
+## まとめ
+
+<Tip title="こんな方におすすめ">
+Bambu Studioに物足りなさを感じてきた中級〜上級ユーザーへの自然なステップアップです。新しいフィラメントを試す際のキャリブレーションや、精度重視の印刷に特に効果を発揮します。
+</Tip>

@@ -26,218 +26,68 @@ related:
     title: 家庭用3Dプリンターおすすめ7選
     badge: ランキング
 ---
-export const S = {
-  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
-  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
-  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
-  section: { marginBottom: "2.5rem" },
-  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
-  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
-};
+<Lead>
+**A1 miniは「速くて簡単」、Prusa MK4は「信頼性と自由度」が強みです。** どちらも3Dプリンター市場のベストセラーですが、哲学が正反対。自分の用途に合う方を選ぶことが最重要です。
+</Lead>
 
-<div style={S.card}>
-  <div style={S.p}>
-    <strong style={{ color: "#f1f5f9" }}>A1 miniは「速くて簡単」、Prusa MK4は「信頼性と自由度」が強みです。</strong> どちらも3Dプリンター市場のベストセラーですが、哲学が正反対。自分の用途に合う方を選ぶことが最重要です。
-  </div>
-</div>
+## 2機種の位置づけ
 
-<section id="overview" style={S.section}>
-  <h2 style={S.h2}>2機種の位置づけ</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>項目</th>
-          <th style={{ ...S.th, color: "#06b6d4" }}>Bambu Lab A1 mini</th>
-          <th style={{ ...S.th, color: "#10b981" }}>Prusa MK4</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>メーカー</td>
-          <td style={S.td}>Bambu Lab（中国・深圳）</td>
-          <td style={S.td}>Prusa Research（チェコ）</td>
-        </tr>
-        <tr>
-          <td style={S.td}>設計思想</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>オールインワン・自動化重視</td>
-          <td style={{ ...S.td, color: "#10b981" }}>オープンソース・信頼性重視</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>参考価格</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>約50,000円〜</td>
-          <td style={S.td}>約120,000円〜（完成品）</td>
-        </tr>
-        <tr>
-          <td style={S.td}>組み立て</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>即使用可（組立不要）</td>
-          <td style={S.td}>完成品あり・キットは自組み</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+| 項目 | Bambu Lab A1 mini | Prusa MK4 |
+|---|---|---|
+| メーカー | Bambu Lab（中国・深圳） | Prusa Research（チェコ） |
+| 設計思想 | オールインワン・自動化重視 | オープンソース・信頼性重視 |
+| 参考価格 | 約50,000円〜 | 約120,000円〜（完成品） |
+| 組み立て | 即使用可（組立不要） | 完成品あり・キットは自組み |
 
-<section id="specs" style={S.section}>
-  <h2 style={S.h2}>スペック比較</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>スペック</th>
-          <th style={{ ...S.th, color: "#06b6d4" }}>A1 mini</th>
-          <th style={{ ...S.th, color: "#10b981" }}>MK4</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>造形サイズ</td>
-          <td style={S.td}>180 × 180 × 180 mm</td>
-          <td style={{ ...S.td, color: "#10b981" }}>250 × 210 × 220 mm</td>
-        </tr>
-        <tr>
-          <td style={S.td}>最高印刷速度</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>500 mm/s</td>
-          <td style={S.td}>~300 mm/s（実用域）</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>ノズル温度</td>
-          <td style={S.td}>300℃</td>
-          <td style={{ ...S.td, color: "#10b981" }}>290℃（標準）/ 高温ノズル別売</td>
-        </tr>
-        <tr>
-          <td style={S.td}>自動ベッドレベリング</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>◎ 全自動</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>◎ 全自動（NextruderセンサーABL）</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>多色印刷</td>
-          <td style={S.td}>AMS Liteで最大16色（別売）</td>
-          <td style={{ ...S.td, color: "#10b981" }}>MMUで最大5色（別売）</td>
-        </tr>
-        <tr>
-          <td style={S.td}>Wi-Fi連携</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>◎ Bambu Studio・アプリ</td>
-          <td style={S.td}>○ PrusaConnect</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>オープンソース</td>
-          <td style={{ ...S.td, color: "#ef4444" }}>クローズド</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>完全オープンソース（GPL）</td>
-        </tr>
-        <tr>
-          <td style={S.td}>コミュニティ</td>
-          <td style={S.td}>成長中</td>
-          <td style={{ ...S.td, color: "#10b981" }}>巨大な歴史あるコミュニティ</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+## スペック比較
 
-<section id="speed" style={S.section}>
-  <h2 style={S.h2}>印刷速度・品質</h2>
-  <div style={S.p}>
-    印刷速度はA1 miniが圧倒的に有利です。同じモデルでA1 miniはMK4の1.5〜2倍速で完成することもあります。一方、MK4は速度よりも品質の安定性・再現性を重視した設計で、精密なパーツや繰り返し生産に強みを持ちます。
-  </div>
-  <div style={S.tip}>
-    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>💡 品質の比較</div>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      どちらも高品質な出力が可能です。A1 miniは速度優先の設計ですが振動補正（ACS）で品質を維持。MK4はNextruderの精密な押し出し制御で層の均一性が高いです。仕上がりの差は一般用途では体感しにくいレベルです。
-    </div>
-  </div>
-</section>
+| スペック | A1 mini | MK4 |
+|---|---|---|
+| 造形サイズ | 180 × 180 × 180 mm | 250 × 210 × 220 mm |
+| 最高印刷速度 | 500 mm/s | ~300 mm/s（実用域） |
+| ノズル温度 | 300℃ | 290℃（標準）/ 高温ノズル別売 |
+| 自動ベッドレベリング | ◎ 全自動 | ◎ 全自動（NextruderセンサーABL） |
+| 多色印刷 | AMS Liteで最大16色（別売） | MMUで最大5色（別売） |
+| Wi-Fi連携 | ◎ Bambu Studio・アプリ | ○ PrusaConnect |
+| オープンソース | クローズド | 完全オープンソース（GPL） |
+| コミュニティ | 成長中 | 巨大な歴史あるコミュニティ |
 
-<section id="ecosystem" style={S.section}>
-  <h2 style={S.h2}>エコシステム・ソフトウェア</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>項目</th>
-          <th style={{ ...S.th, color: "#06b6d4" }}>A1 mini（Bambu）</th>
-          <th style={{ ...S.th, color: "#10b981" }}>MK4（Prusa）</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>スライサー</td>
-          <td style={S.td}>Bambu Studio（OrcaSlicer互換）</td>
-          <td style={{ ...S.td, color: "#10b981" }}>PrusaSlicer（業界標準）</td>
-        </tr>
-        <tr>
-          <td style={S.td}>プリントファーム</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>MakerWorld（Bambu公式）</td>
-          <td style={{ ...S.td, color: "#10b981" }}>Printables（Prusa公式）</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>カスタマイズ性</td>
-          <td style={{ ...S.td, color: "#f59e0b" }}>限定的（クローズド設計）</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>高い（完全オープンソース）</td>
-        </tr>
-        <tr>
-          <td style={S.td}>ファームウェア更新</td>
-          <td style={S.td}>OTA自動更新</td>
-          <td style={{ ...S.td, color: "#10b981" }}>OTA + 手動選択可能</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+## 印刷速度・品質
 
-<section id="choose-a1" style={S.section}>
-  <h2 style={S.h2}>A1 miniを選ぶべき人</h2>
-  <div style={S.tip}>
-    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>✅ A1 miniがおすすめ</div>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      とにかく速く印刷したい / 設定の手間を最小化したい / 予算を抑えたい（約50,000円〜） / 初めての3Dプリンターとして手軽に始めたい / AMS Liteで多色印刷に挑戦したい
-    </div>
-  </div>
-</section>
+印刷速度はA1 miniが圧倒的に有利です。同じモデルでA1 miniはMK4の1.5〜2倍速で完成することもあります。一方、MK4は速度よりも品質の安定性・再現性を重視した設計で、精密なパーツや繰り返し生産に強みを持ちます。
 
-<section id="choose-prusa" style={S.section}>
-  <h2 style={S.h2}>MK4を選ぶべき人</h2>
-  <div style={S.tip}>
-    <div style={{ color: "#10b981", fontWeight: "700", marginBottom: "0.5rem" }}>✅ MK4がおすすめ</div>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      オープンソースの自由度を活かしてカスタマイズしたい / PrusaSlicerのエコシステムに精通している / 大きな造形サイズ（最大250×210×220mm）が必要 / コミュニティの豊富なノウハウを活用したい / 長期的な保守性・部品入手性を重視する
-    </div>
-  </div>
-</section>
+<Tip title="品質の比較">
+どちらも高品質な出力が可能です。A1 miniは速度優先の設計ですが振動補正（ACS）で品質を維持。MK4はNextruderの精密な押し出し制御で層の均一性が高いです。仕上がりの差は一般用途では体感しにくいレベルです。
+</Tip>
 
-<section id="summary" style={S.section}>
-  <h2 style={S.h2}>まとめ</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>重視するポイント</th>
-          <th style={S.th}>おすすめ</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>速度・手軽さ・コスパ</td>
-          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>Bambu Lab A1 mini</td>
-        </tr>
-        <tr>
-          <td style={S.td}>カスタマイズ・オープンソース</td>
-          <td style={{ ...S.td, color: "#10b981", fontWeight: "700" }}>Prusa MK4</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>初めての3Dプリンター</td>
-          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>Bambu Lab A1 mini</td>
-        </tr>
-        <tr>
-          <td style={S.td}>大きな造形サイズが必要</td>
-          <td style={{ ...S.td, color: "#10b981", fontWeight: "700" }}>Prusa MK4</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div style={{ ...S.p, marginTop: "1rem" }}>
-    <strong style={{ color: "#06b6d4" }}>迷ったらA1 mini</strong>が現時点のベストアンサーです。価格・速度・使いやすさのバランスが優れており、日本市場でも入手しやすいです。MK4はオープンソース文化やカスタマイズ性を重視する上級者向けの選択肢です。
-  </div>
-</section>
+## エコシステム・ソフトウェア
+
+| 項目 | A1 mini（Bambu） | MK4（Prusa） |
+|---|---|---|
+| スライサー | Bambu Studio（OrcaSlicer互換） | PrusaSlicer（業界標準） |
+| プリントファーム | MakerWorld（Bambu公式） | Printables（Prusa公式） |
+| カスタマイズ性 | 限定的（クローズド設計） | 高い（完全オープンソース） |
+| ファームウェア更新 | OTA自動更新 | OTA + 手動選択可能 |
+
+## A1 miniを選ぶべき人
+
+<Tip title="✅ A1 miniがおすすめ">
+とにかく速く印刷したい / 設定の手間を最小化したい / 予算を抑えたい（約50,000円〜） / 初めての3Dプリンターとして手軽に始めたい / AMS Liteで多色印刷に挑戦したい
+</Tip>
+
+## MK4を選ぶべき人
+
+<Tip title="✅ MK4がおすすめ">
+オープンソースの自由度を活かしてカスタマイズしたい / PrusaSlicerのエコシステムに精通している / 大きな造形サイズ（最大250×210×220mm）が必要 / コミュニティの豊富なノウハウを活用したい / 長期的な保守性・部品入手性を重視する
+</Tip>
+
+## まとめ
+
+| 重視するポイント | おすすめ |
+|---|---|
+| 速度・手軽さ・コスパ | Bambu Lab A1 mini |
+| カスタマイズ・オープンソース | Prusa MK4 |
+| 初めての3Dプリンター | Bambu Lab A1 mini |
+| 大きな造形サイズが必要 | Prusa MK4 |
+
+**迷ったらA1 mini**が現時点のベストアンサーです。価格・速度・使いやすさのバランスが優れており、日本市場でも入手しやすいです。MK4はオープンソース文化やカスタマイズ性を重視する上級者向けの選択肢です。

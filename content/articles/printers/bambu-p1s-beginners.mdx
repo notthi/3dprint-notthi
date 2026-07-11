@@ -30,218 +30,96 @@ related:
     badge: A1 Mini
     badgeColor: '#06b6d4'
 ---
-export const S = {
-  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  warn:    { backgroundColor: "#1c1917", border: "1px solid #f97316", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
-  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
-  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
-  section: { marginBottom: "2.5rem" },
-  label:   { display: "inline-block", backgroundColor: "#06b6d4", color: "#0f172a", fontSize: "0.7rem", fontWeight: "700", padding: "0.15rem 0.5rem", borderRadius: "0.25rem", marginRight: "0.5rem", verticalAlign: "middle" },
-};
+<Lead>
+Bambu Lab P1Sは「速い・きれい・簡単」と評判ですが、**初心者が最初の1台として選んでも大丈夫なのか**、正直に答えます。
 
-<div style={S.card}>
-  <div style={S.p}>
-    Bambu Lab P1Sは「速い・きれい・簡単」と評判ですが、<strong style={{ color: "#f1f5f9" }}>初心者が最初の1台として選んでも大丈夫なのか</strong>、正直に答えます。
-  </div>
-  <div style={{ ...S.p, marginBottom: 0 }}>
-    実際にP1S Comboを使っている機械系エンジニアの筆者が、3Dプリンター初心者だった頃の視点を思い出しながら書きました。
-  </div>
-</div>
+実際にP1S Comboを使っている機械系エンジニアの筆者が、3Dプリンター初心者だった頃の視点を思い出しながら書きました。
+</Lead>
 
-<section id="short-answer" style={S.section}>
-  <h2 style={S.h2}>結論：初心者でも使える、ただし条件あり</h2>
-  <div style={S.tip}>
-    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>✅ 結論</div>
-    <div style={S.p}>
-      <strong style={{ color: "#f1f5f9" }}>P1Sは初心者でも使えます。ただし、「高い買い物に見合った使い方ができるか」を先に考える必要があります。</strong>
-    </div>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      3Dプリンターとして見れば、P1Sはセットアップが簡単で自動キャリブレーションもあり、初心者がつまずきやすい部分の多くが解消されています。ただし本体価格が約12万円（P1S単体）と高額なため、「なんとなく試してみたい」という段階では過剰スペックになりがちです。
-    </div>
-  </div>
-</section>
+## 結論：初心者でも使える、ただし条件あり
 
-<section id="easy-points" style={S.section}>
-  <h2 style={S.h2}>初心者に優しいポイント</h2>
-  <div style={{ ...S.p, marginBottom: "1.25rem" }}>
-    P1Sは、従来の3Dプリンターと比べて<strong style={{ color: "#f1f5f9" }}>初期設定の手間が大幅に少ない</strong>設計になっています。
-  </div>
-  <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <span style={{ flexShrink: 0, color: "#06b6d4", fontWeight: "800", fontSize: "1.1rem", minWidth: "28px" }}>①</span>
-      <div>
-        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>自動キャリブレーション</div>
-        <div style={{ ...S.muted, margin: 0 }}>ベッドレベリング（印刷面の調整）を自動で行う。初心者最大のつまずきポイントがほぼ解消されています。</div>
-      </div>
-    </div>
-    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <span style={{ flexShrink: 0, color: "#06b6d4", fontWeight: "800", fontSize: "1.1rem", minWidth: "28px" }}>②</span>
-      <div>
-        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>Bambu Studio（専用スライサー）</div>
-        <div style={{ ...S.muted, margin: 0 }}>直感的なUIとプリセット設定が豊富。複雑なパラメータを触らなくても高品質な印刷が可能。</div>
-      </div>
-    </div>
-    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <span style={{ flexShrink: 0, color: "#06b6d4", fontWeight: "800", fontSize: "1.1rem", minWidth: "28px" }}>③</span>
-      <div>
-        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>密閉チャンバー</div>
-        <div style={{ ...S.muted, margin: 0 }}>温度が安定するため、反りや失敗が起きにくい。PLAからABSまで幅広いフィラメントに対応。</div>
-      </div>
-    </div>
-    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <span style={{ flexShrink: 0, color: "#06b6d4", fontWeight: "800", fontSize: "1.1rem", minWidth: "28px" }}>④</span>
-      <div>
-        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>最大500mm/sの高速印刷</div>
-        <div style={{ ...S.muted, margin: 0 }}>待ち時間が短いので試行錯誤しやすい。失敗→再印刷のサイクルが速く、上達も早くなります。</div>
-      </div>
-    </div>
-    <div style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <span style={{ flexShrink: 0, color: "#06b6d4", fontWeight: "800", fontSize: "1.1rem", minWidth: "28px" }}>⑤</span>
-      <div>
-        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>LAN接続・スマホ管理</div>
-        <div style={{ ...S.muted, margin: 0 }}>離れた場所からでも印刷状況を確認・操作可能。外出中に印刷を開始して帰宅時に完成している使い方もできます。</div>
-      </div>
-    </div>
-  </div>
-  <div style={{ ...S.p, marginTop: "1.25rem" }}>
-    従来機は「ベッドレベリングだけで1日かかった」という初心者の声もありましたが、P1Sはほぼ<strong style={{ color: "#f1f5f9" }}>箱から出してすぐ印刷できます</strong>。
-  </div>
-</section>
+<Tip title="✅ 結論">
+**P1Sは初心者でも使えます。ただし、「高い買い物に見合った使い方ができるか」を先に考える必要があります。**
 
-<section id="hard-points" style={S.section}>
-  <h2 style={S.h2}>初心者がつまずくポイント</h2>
-  <div style={S.p}>
-    それでも、つまずく場面がないわけではありません。
-  </div>
-  <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-    <div style={S.card}>
-      <div style={{ color: "#f97316", fontWeight: "700", marginBottom: "0.5rem" }}>⚠ フィラメント管理</div>
-      <div style={{ ...S.p, marginBottom: 0 }}>
-        PLAは比較的扱いやすいですが、ABSやTPUは温度設定や湿度の影響を受けやすく、失敗することがあります。最初はPLAに絞って練習するのが無難です。フィラメントの乾燥管理も覚えておく必要があります。
-      </div>
-    </div>
-    <div style={S.card}>
-      <div style={{ color: "#f97316", fontWeight: "700", marginBottom: "0.5rem" }}>⚠ 3Dモデルの入手・作成</div>
-      <div style={{ ...S.p, marginBottom: 0 }}>
-        プリンターが使えるようになっても、何を印刷するかが決まらないと宝の持ち腐れになります。まずはMakerWorld（Bambu公式サイト）やThingiverse（無料モデルサイト）からダウンロードして印刷するところから始めましょう。
-      </div>
-    </div>
-    <div style={S.card}>
-      <div style={{ color: "#f97316", fontWeight: "700", marginBottom: "0.5rem" }}>⚠ サポート材の後処理</div>
-      <div style={{ ...S.p, marginBottom: 0 }}>
-        複雑な形状を印刷する場合、サポート材の除去など後処理に時間がかかることがあります。最初はサポートが少なくて済む単純な形状のモデルから練習しましょう。
-      </div>
-    </div>
-  </div>
-</section>
+3Dプリンターとして見れば、P1Sはセットアップが簡単で自動キャリブレーションもあり、初心者がつまずきやすい部分の多くが解消されています。ただし本体価格が約12万円（P1S単体）と高額なため、「なんとなく試してみたい」という段階では過剰スペックになりがちです。
+</Tip>
 
-<section id="cost" style={S.section}>
-  <h2 style={S.h2}>コストは覚悟が必要</h2>
-  <div style={S.p}>
-    P1Sの本体価格は約12万円（P1S Comboは約18万円）。3Dプリンターの中では高価格帯です。
-  </div>
-  <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem", marginBottom: "1.25rem" }}>
-    <div style={{ color: "#f1f5f9", fontWeight: "700", marginBottom: "0.75rem" }}>本体価格以外にかかるコスト</div>
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-      <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-        <span style={{ color: "#06b6d4", flexShrink: 0, marginTop: "0.1rem" }}>▸</span>
-        <div style={{ ...S.muted, margin: 0 }}>フィラメント代：1スプール（1kg）で約2,000〜4,000円</div>
-      </div>
-      <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-        <span style={{ color: "#06b6d4", flexShrink: 0, marginTop: "0.1rem" }}>▸</span>
-        <div style={{ ...S.muted, margin: 0 }}>消耗品（ノズル・ビルドプレートなど）の交換費用</div>
-      </div>
-      <div style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-        <span style={{ color: "#06b6d4", flexShrink: 0, marginTop: "0.1rem" }}>▸</span>
-        <div style={{ ...S.muted, margin: 0 }}>失敗した印刷分のフィラメントロス（最初の数ヶ月は多め）</div>
-      </div>
-    </div>
-  </div>
-  <div style={S.tip}>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      最初の数ヶ月は失敗しながら覚えるため、フィラメントの消費量が多くなりがちです。「本体代＋フィラメント数スプール」のコストを合計した上で購入を判断しましょう。
-    </div>
-  </div>
-</section>
+## 初心者に優しいポイント
 
-<section id="who-fits" style={S.section}>
-  <h2 style={S.h2}>P1Sに向いている初心者像</h2>
-  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1.25rem" }}>
-    <div style={{ backgroundColor: "#0f2d1a", border: "1px solid #22c55e", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ color: "#22c55e", fontWeight: "700", marginBottom: "0.75rem" }}>✅ 向いている人</div>
-      <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-        <div style={{ ...S.muted, margin: 0 }}>▸ 作りたいものが明確にある</div>
-        <div style={{ ...S.muted, margin: 0 }}>▸ 失敗してもめげずに試行錯誤できる</div>
-        <div style={{ ...S.muted, margin: 0 }}>▸ 長期的に活用し続けるつもりがある</div>
-        <div style={{ ...S.muted, margin: 0 }}>▸ 品質・手間の少なさを重視する</div>
-      </div>
-    </div>
-    <div style={{ backgroundColor: "#2d0f0f", border: "1px solid #ef4444", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ color: "#ef4444", fontWeight: "700", marginBottom: "0.75rem" }}>❌ 向いていない人</div>
-      <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-        <div style={{ ...S.muted, margin: 0 }}>▸ まず体験してみたいだけ</div>
-        <div style={{ ...S.muted, margin: 0 }}>▸ 趣味でたまに使う程度</div>
-        <div style={{ ...S.muted, margin: 0 }}>▸ 初期コストを抑えたい</div>
-        <div style={{ ...S.muted, margin: 0 }}>▸ 何を作るか決まっていない</div>
-      </div>
-    </div>
-  </div>
-  <div style={S.p}>
-    「まず3Dプリンターがどんなものか体験したい」「趣味でたまに使う程度」という方は、2〜4万円台のエントリー機でスタートして、物足りなくなったらP1Sに乗り換える方が無駄がありません。
-  </div>
-</section>
+P1Sは、従来の3Dプリンターと比べて**初期設定の手間が大幅に少ない**設計になっています。
 
-<section id="alternatives" style={S.section}>
-  <h2 style={S.h2}>迷うなら他の選択肢も</h2>
-  <div style={S.p}>
-    P1Sが予算的にきつい、あるいはまず試してみたいという方向けの選択肢もあります。
-  </div>
-  <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-    <div style={{ backgroundColor: "#1e293b", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
-        <span style={{ backgroundColor: "#06b6d4", color: "#0f172a", fontSize: "0.7rem", fontWeight: "700", padding: "0.15rem 0.5rem", borderRadius: "0.25rem" }}>A1 Mini</span>
-        <span style={{ color: "#f1f5f9", fontWeight: "700" }}>Bambu A1 Mini（約5万円）</span>
-      </div>
-      <div style={{ ...S.p, marginBottom: "0.5rem" }}>
-        同じBambu Labの入門機。自動キャリブレーションなど使いやすさはP1Sに近く、コンパクトで低価格。まずBambu製品を体験したい初心者に最適です。
-      </div>
-      <div style={{ ...S.muted, margin: 0 }}>
-        ⚠ 密閉チャンバーなし→ABS非対応。印刷速度もP1Sより遅い点は注意。
-      </div>
-    </div>
-    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
-        <span style={{ backgroundColor: "#475569", color: "#f1f5f9", fontSize: "0.7rem", fontWeight: "700", padding: "0.15rem 0.5rem", borderRadius: "0.25rem" }}>エントリー機</span>
-        <span style={{ color: "#f1f5f9", fontWeight: "700" }}>Ender-3シリーズ / Creality K1C（2〜5万円台）</span>
-      </div>
-      <div style={{ ...S.p, marginBottom: "0.5rem" }}>
-        低コストで3Dプリンターを体験したい方向け。P1Sより設定・調整の手間はかかりますが、その分3Dプリンターの仕組みを深く理解できます。
-      </div>
-      <div style={{ ...S.muted, margin: 0 }}>
-        ⚠ 自動レベリングの精度や印刷品質でP1Sには及ばない。
-      </div>
-    </div>
-  </div>
-</section>
+<Steps items={[
+  { title: "自動キャリブレーション", body: "ベッドレベリング（印刷面の調整）を自動で行う。初心者最大のつまずきポイントがほぼ解消されています。" },
+  { title: "Bambu Studio（専用スライサー）", body: "直感的なUIとプリセット設定が豊富。複雑なパラメータを触らなくても高品質な印刷が可能。" },
+  { title: "密閉チャンバー", body: "温度が安定するため、反りや失敗が起きにくい。PLAからABSまで幅広いフィラメントに対応。" },
+  { title: "最大500mm/sの高速印刷", body: "待ち時間が短いので試行錯誤しやすい。失敗→再印刷のサイクルが速く、上達も早くなります。" },
+  { title: "LAN接続・スマホ管理", body: "離れた場所からでも印刷状況を確認・操作可能。外出中に印刷を開始して帰宅時に完成している使い方もできます。" },
+]} />
 
-<section id="summary" style={S.section}>
-  <h2 style={S.h2}>まとめ</h2>
-  <div style={S.card}>
-    <div style={{ color: "#f1f5f9", fontWeight: "700", marginBottom: "0.75rem" }}>P1Sを選ぶ基準</div>
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginBottom: "1rem" }}>
-      <div style={{ display: "flex", gap: "0.75rem" }}>
-        <span style={{ color: "#22c55e", flexShrink: 0 }}>✓</span>
-        <div style={{ ...S.p, marginBottom: 0 }}>作りたいものが明確で、長く使い続けるつもりがある → <strong style={{ color: "#06b6d4" }}>P1Sを選んで後悔は少ない</strong></div>
-      </div>
-      <div style={{ display: "flex", gap: "0.75rem" }}>
-        <span style={{ color: "#f97316", flexShrink: 0 }}>→</span>
-        <div style={{ ...S.p, marginBottom: 0 }}>まだ何を作るか決まっていない → <strong style={{ color: "#f97316" }}>A1 Miniや安価な機種でスタートが無難</strong></div>
-      </div>
-    </div>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      P1Sはセットアップが簡単なぶん、すぐに印刷を楽しめます。「高額な買い物に見合う使い方をする覚悟があるか」が選ぶ基準です。
-    </div>
-  </div>
-</section>
+従来機は「ベッドレベリングだけで1日かかった」という初心者の声もありましたが、P1Sはほぼ**箱から出してすぐ印刷できます**。
+
+## 初心者がつまずくポイント
+
+それでも、つまずく場面がないわけではありません。
+
+<Warn title="⚠ フィラメント管理">
+PLAは比較的扱いやすいですが、ABSやTPUは温度設定や湿度の影響を受けやすく、失敗することがあります。最初はPLAに絞って練習するのが無難です。フィラメントの乾燥管理も覚えておく必要があります。
+</Warn>
+
+<Warn title="⚠ 3Dモデルの入手・作成">
+プリンターが使えるようになっても、何を印刷するかが決まらないと宝の持ち腐れになります。まずはMakerWorld（Bambu公式サイト）やThingiverse（無料モデルサイト）からダウンロードして印刷するところから始めましょう。
+</Warn>
+
+<Warn title="⚠ サポート材の後処理">
+複雑な形状を印刷する場合、サポート材の除去など後処理に時間がかかることがあります。最初はサポートが少なくて済む単純な形状のモデルから練習しましょう。
+</Warn>
+
+## コストは覚悟が必要
+
+P1Sの本体価格は約12万円（P1S Comboは約18万円）。3Dプリンターの中では高価格帯です。
+
+**本体価格以外にかかるコスト**
+
+<CheckList items={[
+  "フィラメント代：1スプール（1kg）で約2,000〜4,000円",
+  "消耗品（ノズル・ビルドプレートなど）の交換費用",
+  "失敗した印刷分のフィラメントロス（最初の数ヶ月は多め）",
+]} variant="check" />
+
+<Tip>
+最初の数ヶ月は失敗しながら覚えるため、フィラメントの消費量が多くなりがちです。「本体代＋フィラメント数スプール」のコストを合計した上で購入を判断しましょう。
+</Tip>
+
+## P1Sに向いている初心者像
+
+<ProsCons
+  prosTitle="✅ 向いている人"
+  consTitle="❌ 向いていない人"
+  pros={["作りたいものが明確にある", "失敗してもめげずに試行錯誤できる", "長期的に活用し続けるつもりがある", "品質・手間の少なさを重視する"]}
+  cons={["まず体験してみたいだけ", "趣味でたまに使う程度", "初期コストを抑えたい", "何を作るか決まっていない"]}
+/>
+
+「まず3Dプリンターがどんなものか体験したい」「趣味でたまに使う程度」という方は、2〜4万円台のエントリー機でスタートして、物足りなくなったらP1Sに乗り換える方が無駄がありません。
+
+## 迷うなら他の選択肢も
+
+P1Sが予算的にきつい、あるいはまず試してみたいという方向けの選択肢もあります。
+
+<SpecList items={[
+  { label: "A1 Mini：Bambu A1 Mini（約5万円）", value: "同じBambu Labの入門機。自動キャリブレーションなど使いやすさはP1Sに近く、コンパクトで低価格。まずBambu製品を体験したい初心者に最適です。⚠ 密閉チャンバーなし→ABS非対応。印刷速度もP1Sより遅い点は注意。" },
+  { label: "エントリー機：Ender-3シリーズ / Creality K1C（2〜5万円台）", value: "低コストで3Dプリンターを体験したい方向け。P1Sより設定・調整の手間はかかりますが、その分3Dプリンターの仕組みを深く理解できます。⚠ 自動レベリングの精度や印刷品質でP1Sには及ばない。" },
+]} />
+
+## まとめ
+
+**P1Sを選ぶ基準**
+
+<CheckList items={[
+  "作りたいものが明確で、長く使い続けるつもりがある → P1Sを選んで後悔は少ない",
+]} variant="check" />
+
+<CheckList items={[
+  "まだ何を作るか決まっていない → A1 Miniや安価な機種でスタートが無難",
+]} variant="cross" />
+
+P1Sはセットアップが簡単なぶん、すぐに印刷を楽しめます。「高額な買い物に見合う使い方をする覚悟があるか」が選ぶ基準です。

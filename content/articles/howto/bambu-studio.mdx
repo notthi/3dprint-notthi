@@ -25,228 +25,89 @@ related:
     badge: トラブル
     badgeColor: '#ef4444'
 ---
-export const S = {
-  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  warn:    { backgroundColor: "#1c1917", border: "1px solid #f97316", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "1rem" },
-  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
-  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
-  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
-  section: { marginBottom: "2.5rem" },
-  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
-  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
-  step:    { display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem", marginBottom: "0.75rem" },
-  stepNum: { flexShrink: 0, backgroundColor: "#06b6d4", color: "#0f172a", fontWeight: "800", fontSize: "0.9rem", width: "2rem", height: "2rem", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" },
-};
+<Lead>
+**Bambu Studioは、Bambu Lab製3Dプリンターの専用スライサーソフトです。** ダウンロードして機種を登録するだけで、難しい設定を入力しなくても最適な状態で印刷できます。
 
-<div style={S.card}>
-  <div style={S.p}>
-    <strong style={{ color: "#f1f5f9" }}>Bambu Studioは、Bambu Lab製3Dプリンターの専用スライサーソフトです。</strong> ダウンロードして機種を登録するだけで、難しい設定を入力しなくても最適な状態で印刷できます。
-  </div>
-  <div style={{ ...S.p, marginBottom: 0 }}>
-    「設定項目が少なく見える」のは設計の意図で、よく使う設定だけを前面に出し、細かいチューニングは必要になったときに深掘りできる構造になっています。
-  </div>
-</div>
+「設定項目が少なく見える」のは設計の意図で、よく使う設定だけを前面に出し、細かいチューニングは必要になったときに深掘りできる構造になっています。
+</Lead>
 
-<section id="download" style={S.section}>
-  <h2 style={S.h2}>ダウンロードとインストール</h2>
-  <div style={S.p}>
-    <strong style={{ color: "#06b6d4" }}>bambulab.com/download/software</strong> からWindows・Mac・Linux版が無料でダウンロードできます。
-  </div>
-  <div style={S.tip}>
-    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>💡 アカウントについて</div>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      インストール後、Bambu Labアカウント（無料）でログインするとプリンターとのWi-Fi連携・クラウド印刷が使えます。ローカルネットワークのみで使いたい場合はログインなしでも動作します。
-    </div>
-  </div>
-</section>
+## ダウンロードとインストール
 
-<section id="layout" style={S.section}>
-  <h2 style={S.h2}>画面の基本構成</h2>
-  <div style={S.p}>起動すると3分割の画面が表示されます。</div>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>エリア</th>
-          <th style={S.th}>役割</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>左パネル</td>
-          <td style={S.td}>プリンター・フィラメント・プロセス設定</td>
-        </tr>
-        <tr>
-          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>中央（3Dビュー）</td>
-          <td style={S.td}>モデルの配置・向き調整・サポート確認</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>右パネル</td>
-          <td style={S.td}>オブジェクト一覧・カラー設定（AMS使用時）</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+**bambulab.com/download/software** からWindows・Mac・Linux版が無料でダウンロードできます。
 
-<section id="steps" style={S.section}>
-  <h2 style={S.h2}>基本的な使い方（5ステップ）</h2>
-  <div style={S.step}>
-    <div style={S.stepNum}>1</div>
-    <div>
-      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>プリンターとフィラメントを選ぶ</div>
-      <div style={{ ...S.muted, margin: 0 }}>左パネル上部で使用する機種（A1 Mini・A1・P1S等）とフィラメント素材を選択。選択した組み合わせに最適な温度・速度設定が自動で適用されます。</div>
-    </div>
-  </div>
-  <div style={S.step}>
-    <div style={S.stepNum}>2</div>
-    <div>
-      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>STLファイルを読み込む</div>
-      <div style={{ ...S.muted, margin: 0 }}>3Dビューにファイルをドラッグ＆ドロップ。対応形式は .stl .3mf .obj .step など。</div>
-    </div>
-  </div>
-  <div style={S.step}>
-    <div style={S.stepNum}>3</div>
-    <div>
-      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>向きとサイズを調整する</div>
-      <div style={{ ...S.muted, margin: 0 }}>移動・回転（底面が広く平らになる向きが基本）・スケール変更。「ベッドへ配置」ボタンでプレートにぴったり接地した状態に自動調整されます。</div>
-    </div>
-  </div>
-  <div style={S.step}>
-    <div style={S.stepNum}>4</div>
-    <div>
-      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>サポートを設定する（必要な場合）</div>
-      <div style={{ ...S.muted, margin: 0 }}>左パネルの「サポート」スイッチをONにすると45度以上のオーバーハング部分にサポートが自動生成されます。「ツリー（自動）」がおすすめです。</div>
-    </div>
-  </div>
-  <div style={S.step}>
-    <div style={S.stepNum}>5</div>
-    <div>
-      <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.25rem" }}>スライスして印刷を送信する</div>
-      <div style={{ ...S.muted, margin: 0 }}>「スライス」ボタンを押すとGコードが生成され、印刷時間とフィラメント使用量が表示されます。Wi-Fi送信またはSDカード書き出しで印刷開始。</div>
-    </div>
-  </div>
-</section>
+<Tip title="アカウントについて">
+インストール後、Bambu Labアカウント（無料）でログインするとプリンターとのWi-Fi連携・クラウド印刷が使えます。ローカルネットワークのみで使いたい場合はログインなしでも動作します。
+</Tip>
 
-<section id="settings" style={S.section}>
-  <h2 style={S.h2}>主要な設定項目</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>設定</th>
-          <th style={S.th}>内容</th>
-          <th style={S.th}>目安</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>積層高</td>
-          <td style={S.td}>印刷の精細さ</td>
-          <td style={S.td}>0.2mm（標準）/ 0.1mm（精細）/ 0.3mm（高速）</td>
-        </tr>
-        <tr>
-          <td style={S.td}>印刷速度</td>
-          <td style={S.td}>Standard / Sport / Ludicrous</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>最初はStandardで</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>インフィル密度</td>
-          <td style={S.td}>内部の充填率</td>
-          <td style={S.td}>15%（一般）/ 40%（強度重視）</td>
-        </tr>
-        <tr>
-          <td style={S.td}>ノズル温度</td>
-          <td style={S.td}>PLA 220℃、PETG 240℃</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>素材選択で自動入力</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>ベッド温度</td>
-          <td style={S.td}>PLA 55℃、PETG 80℃</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>素材選択で自動入力</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+## 画面の基本構成
 
-<section id="ams" style={S.section}>
-  <h2 style={S.h2}>AMS連携の設定方法</h2>
-  <div style={S.p}>
-    AMS・AMS Liteを接続している場合、右パネルに各スロットのフィラメントが表示されます。
-  </div>
-  <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginBottom: "1rem" }}>
-    <div style={{ display: "flex", gap: "0.75rem" }}>
-      <span style={{ color: "#06b6d4", flexShrink: 0 }}>①</span>
-      <div style={{ ...S.p, marginBottom: 0 }}>各AMSスロットにフィラメントをセット</div>
-    </div>
-    <div style={{ display: "flex", gap: "0.75rem" }}>
-      <span style={{ color: "#06b6d4", flexShrink: 0 }}>②</span>
-      <div style={{ ...S.p, marginBottom: 0 }}>右パネルでモデルの各パーツに色を割り当て</div>
-    </div>
-    <div style={{ display: "flex", gap: "0.75rem" }}>
-      <span style={{ color: "#06b6d4", flexShrink: 0 }}>③</span>
-      <div style={{ ...S.p, marginBottom: 0 }}>スライス実行 → 印刷送信</div>
-    </div>
-  </div>
-  <div style={S.tip}>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      パージ量が多い場合は「フラッシュ最適化」設定で削減できます。
-    </div>
-  </div>
-</section>
+起動すると3分割の画面が表示されます。
 
-<section id="features" style={S.section}>
-  <h2 style={S.h2}>便利な機能</h2>
-  <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-    <div style={{ display: "flex", gap: "0.75rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <span style={{ color: "#06b6d4", flexShrink: 0, marginTop: "0.1rem" }}>▸</span>
-      <div>
-        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>カメラ監視</div>
-        <div style={{ ...S.muted, margin: 0 }}>P1S・X1C等のカメラ搭載機種は印刷中の映像をリアルタイム確認できます。</div>
-      </div>
-    </div>
-    <div style={{ display: "flex", gap: "0.75rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <span style={{ color: "#06b6d4", flexShrink: 0, marginTop: "0.1rem" }}>▸</span>
-      <div>
-        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>印刷スケジュール</div>
-        <div style={{ ...S.muted, margin: 0 }}>指定時間に印刷開始するタイマー機能があります。</div>
-      </div>
-    </div>
-    <div style={{ display: "flex", gap: "0.75rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <span style={{ color: "#06b6d4", flexShrink: 0, marginTop: "0.1rem" }}>▸</span>
-      <div>
-        <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>Bambu Cloud</div>
-        <div style={{ ...S.muted, margin: 0 }}>スライスデータを保存してスマホアプリから印刷指示を出せます。</div>
-      </div>
-    </div>
-  </div>
-</section>
+| エリア | 役割 |
+|---|---|
+| 左パネル | プリンター・フィラメント・プロセス設定 |
+| 中央（3Dビュー） | モデルの配置・向き調整・サポート確認 |
+| 右パネル | オブジェクト一覧・カラー設定（AMS使用時） |
 
-<section id="trouble" style={S.section}>
-  <h2 style={S.h2}>よくあるトラブルと対処</h2>
-  <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ color: "#f97316", fontWeight: "700", marginBottom: "0.5rem" }}>プリンターが認識されない</div>
-      <div style={{ ...S.muted, margin: 0 }}>同じWi-Fiに接続されているか確認。「プリンターを追加」からシリアルナンバーで手動登録を試す。</div>
-    </div>
-    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ color: "#f97316", fontWeight: "700", marginBottom: "0.5rem" }}>印刷ボタンが押せない</div>
-      <div style={{ ...S.muted, margin: 0 }}>プリンターがオフラインの状態。電源とネットワーク接続を確認。</div>
-    </div>
-    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ color: "#f97316", fontWeight: "700", marginBottom: "0.5rem" }}>AMSのパージ量が多い</div>
-      <div style={{ ...S.muted, margin: 0 }}>「フラッシュ最適化」をONにして色の切り替え順序を最適化する。</div>
-    </div>
-  </div>
-</section>
+## 基本的な使い方（5ステップ）
 
-<section id="summary" style={S.section}>
-  <h2 style={S.h2}>まとめ</h2>
-  <div style={S.card}>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      機種を登録してフィラメントを選ぶだけで印刷品質の大半が自動で決まります。まず「STLを読み込んでそのままスライス→印刷」を数回繰り返し、設定を変えながら違いを体感するのが最短の上達ルートです。
-    </div>
-  </div>
-</section>
+1. **プリンターとフィラメントを選ぶ**
+   左パネル上部で使用する機種（A1 Mini・A1・P1S等）とフィラメント素材を選択。選択した組み合わせに最適な温度・速度設定が自動で適用されます。
+2. **STLファイルを読み込む**
+   3Dビューにファイルをドラッグ＆ドロップ。対応形式は .stl .3mf .obj .step など。
+3. **向きとサイズを調整する**
+   移動・回転（底面が広く平らになる向きが基本）・スケール変更。「ベッドへ配置」ボタンでプレートにぴったり接地した状態に自動調整されます。
+4. **サポートを設定する（必要な場合）**
+   左パネルの「サポート」スイッチをONにすると45度以上のオーバーハング部分にサポートが自動生成されます。「ツリー（自動）」がおすすめです。
+5. **スライスして印刷を送信する**
+   「スライス」ボタンを押すとGコードが生成され、印刷時間とフィラメント使用量が表示されます。Wi-Fi送信またはSDカード書き出しで印刷開始。
+
+## 主要な設定項目
+
+| 設定 | 内容 | 目安 |
+|---|---|---|
+| 積層高 | 印刷の精細さ | 0.2mm（標準）/ 0.1mm（精細）/ 0.3mm（高速） |
+| 印刷速度 | Standard / Sport / Ludicrous | 最初はStandardで |
+| インフィル密度 | 内部の充填率 | 15%（一般）/ 40%（強度重視） |
+| ノズル温度 | PLA 220℃、PETG 240℃ | 素材選択で自動入力 |
+| ベッド温度 | PLA 55℃、PETG 80℃ | 素材選択で自動入力 |
+
+## AMS連携の設定方法
+
+AMS・AMS Liteを接続している場合、右パネルに各スロットのフィラメントが表示されます。
+
+① 各AMSスロットにフィラメントをセット
+
+② 右パネルでモデルの各パーツに色を割り当て
+
+③ スライス実行 → 印刷送信
+
+<Tip>
+パージ量が多い場合は「フラッシュ最適化」設定で削減できます。
+</Tip>
+
+## 便利な機能
+
+**カメラ監視**
+P1S・X1C等のカメラ搭載機種は印刷中の映像をリアルタイム確認できます。
+
+**印刷スケジュール**
+指定時間に印刷開始するタイマー機能があります。
+
+**Bambu Cloud**
+スライスデータを保存してスマホアプリから印刷指示を出せます。
+
+## よくあるトラブルと対処
+
+**プリンターが認識されない**
+同じWi-Fiに接続されているか確認。「プリンターを追加」からシリアルナンバーで手動登録を試す。
+
+**印刷ボタンが押せない**
+プリンターがオフラインの状態。電源とネットワーク接続を確認。
+
+**AMSのパージ量が多い**
+「フラッシュ最適化」をONにして色の切り替え順序を最適化する。
+
+## まとめ
+
+機種を登録してフィラメントを選ぶだけで印刷品質の大半が自動で決まります。まず「STLを読み込んでそのままスライス→印刷」を数回繰り返し、設定を変えながら違いを体感するのが最短の上達ルートです。

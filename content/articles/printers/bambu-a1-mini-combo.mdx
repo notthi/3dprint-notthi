@@ -28,193 +28,69 @@ related:
     badge: 全機種
     badgeColor: '#06b6d4'
 ---
-export const S = {
-  card:    { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  tip:     { backgroundColor: "#0c1a2e", border: "1px solid #06b6d4", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  h2:      { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
-  p:       { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
-  muted:   { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
-  section: { marginBottom: "2.5rem" },
-  th:      { textAlign: "left", backgroundColor: "#1e293b", color: "#94a3b8", fontSize: "0.8rem", padding: "0.6rem 0.75rem", borderBottom: "1px solid #334155" },
-  td:      { padding: "0.6rem 0.75rem", color: "#cbd5e1", fontSize: "0.875rem", borderBottom: "1px solid #1e293b" },
-};
+<Lead>
+**A1 miniとComboの違いはシンプルで、AMS Liteが付属するかどうかだけです。** 本体のスペック（印刷速度・ビルドサイズ・品質・キャリブレーション）はまったく同じです。
 
-<div style={S.card}>
-  <div style={S.p}>
-    <strong style={{ color: "#f1f5f9" }}>A1 miniとComboの違いはシンプルで、AMS Liteが付属するかどうかだけです。</strong> 本体のスペック（印刷速度・ビルドサイズ・品質・キャリブレーション）はまったく同じです。
-  </div>
-  <div style={{ ...S.p, marginBottom: 0 }}>
-    「将来的にAMS Liteを使うつもりがある」なら最初からComboを選ぶ方が合理的です。
-  </div>
-</div>
+「将来的にAMS Liteを使うつもりがある」なら最初からComboを選ぶ方が合理的です。
+</Lead>
 
-<section id="difference" style={S.section}>
-  <h2 style={S.h2}>A1 miniとA1 mini Comboの違い</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}></th>
-          <th style={S.th}>A1 mini</th>
-          <th style={{ ...S.th, color: "#06b6d4" }}>A1 mini Combo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>本体スペック</td>
-          <td style={S.td}>同じ</td>
-          <td style={S.td}>同じ</td>
-        </tr>
-        <tr>
-          <td style={S.td}>AMS Lite</td>
-          <td style={{ ...S.td, color: "#ef4444" }}>なし</td>
-          <td style={{ ...S.td, color: "#22c55e" }}>あり（4スプール）</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>参考価格</td>
-          <td style={S.td}>約50,000円</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>約75,000円</td>
-        </tr>
-        <tr>
-          <td style={S.td}>対応色数</td>
-          <td style={S.td}>1色</td>
-          <td style={{ ...S.td, color: "#06b6d4" }}>最大4色（AMS Lite×4台で16色）</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>後からAMS Lite追加</td>
-          <td style={S.td}>可能（約25,000円）</td>
-          <td style={S.td}>不要</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+## A1 miniとA1 mini Comboの違い
 
-<section id="ams-lite" style={S.section}>
-  <h2 style={S.h2}>AMS Liteとは？</h2>
-  <div style={S.p}>
-    複数のフィラメントスプールを自動で切り替えながら印刷できるシステムです。
-  </div>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>できること</th>
-          <th style={S.th}>詳細</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={{ ...S.td, color: "#06b6d4" }}>多色自動切り替え</td>
-          <td style={S.td}>1回の印刷で最大4色（4台連結で16色）を自動切り替え</td>
-        </tr>
-        <tr>
-          <td style={{ ...S.td, color: "#06b6d4" }}>ロゴ・文字の別色印刷</td>
-          <td style={S.td}>ロゴや文字を本体と別の色で印刷できる</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={{ ...S.td, color: "#06b6d4" }}>サポート材の別素材化</td>
-          <td style={S.td}>サポート材をPVAで印刷して水洗い除去が可能</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+|  | A1 mini | A1 mini Combo |
+|---|---|---|
+| 本体スペック | 同じ | 同じ |
+| AMS Lite | なし | あり（4スプール） |
+| 参考価格 | 約50,000円 | 約75,000円 |
+| 対応色数 | 1色 | 最大4色（AMS Lite×4台で16色） |
+| 後からAMS Lite追加 | 可能（約25,000円） | 不要 |
 
-<section id="choose-combo" style={S.section}>
-  <h2 style={S.h2}>Combo版を選ぶべき人</h2>
-  <div style={S.tip}>
-    <div style={{ color: "#06b6d4", fontWeight: "700", marginBottom: "0.5rem" }}>✅ Comboがおすすめな場合</div>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      カラーフィギュア・キャラクターグッズを作りたい / ロゴ入り・文字入りパーツを印刷したい / サポート材をPVAで印刷して後処理を楽にしたい / 後からAMS Liteを買い足す手間を省きたい
-    </div>
-  </div>
-</section>
+## AMS Liteとは？
 
-<section id="choose-solo" style={S.section}>
-  <h2 style={S.h2}>通常版（A1 mini単体）を選ぶべき人</h2>
-  <div style={S.tip}>
-    <div style={{ color: "#22c55e", fontWeight: "700", marginBottom: "0.5rem" }}>✅ 通常版でいい場合</div>
-    <div style={{ ...S.p, marginBottom: 0 }}>
-      日用品・実用パーツ・試作品が中心 / まず3Dプリンターの基本を覚えてからAMSを検討したい / 初期コストを抑えたい / 多色印刷には当面挑戦する予定がない
-    </div>
-  </div>
-</section>
+複数のフィラメントスプールを自動で切り替えながら印刷できるシステムです。
 
-<section id="price" style={S.section}>
-  <h2 style={S.h2}>価格差の損得を計算する</h2>
-  <div style={S.card}>
-    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
-      A1 mini本体：<strong style={{ color: "#f1f5f9" }}>約50,000円</strong>
-    </div>
-    <div style={{ ...S.p, marginBottom: "0.5rem" }}>
-      + AMS Lite単品：<strong style={{ color: "#f1f5f9" }}>約25,000円</strong>
-    </div>
-    <div style={{ borderTop: "1px solid #334155", paddingTop: "0.75rem", marginTop: "0.25rem" }}>
-      <div style={{ ...S.p, marginBottom: "0.5rem" }}>
-        合計：<strong style={{ color: "#f59e0b" }}>約75,000円</strong>
-      </div>
-      <div style={{ ...S.p, marginBottom: "0.5rem" }}>
-        A1 mini Comboの価格：<strong style={{ color: "#06b6d4" }}>約75,000円</strong>
-      </div>
-    </div>
-    <div style={{ color: "#06b6d4", fontWeight: "700", marginTop: "0.75rem" }}>
-      → 合計額はほぼ同じ。「いつかAMSを使いたい」と思っているなら最初からComboを選ぶ方が合理的です。
-    </div>
-  </div>
-</section>
+| できること | 詳細 |
+|---|---|
+| 多色自動切り替え | 1回の印刷で最大4色（4台連結で16色）を自動切り替え |
+| ロゴ・文字の別色印刷 | ロゴや文字を本体と別の色で印刷できる |
+| サポート材の別素材化 | サポート材をPVAで印刷して水洗い除去が可能 |
 
-<section id="multicolor" style={S.section}>
-  <h2 style={S.h2}>多色印刷で知っておくこと</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>注意点</th>
-          <th style={S.th}>詳細</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={{ ...S.td, color: "#f59e0b" }}>パージブロック（廃材）が出る</td>
-          <td style={S.td}>色を切り替えるたびに残留フィラメントを排出。Bambu Studioの「フラッシュ最適化」で削減可能</td>
-        </tr>
-        <tr>
-          <td style={{ ...S.td, color: "#f59e0b" }}>印刷時間が増える</td>
-          <td style={S.td}>色切り替えのたびに一時停止。複雑な多色モデルでは単色の2〜3倍かかることも</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+## Combo版を選ぶべき人
 
-<section id="summary" style={S.section}>
-  <h2 style={S.h2}>まとめ</h2>
-  <div style={{ overflowX: "auto" }}>
-    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.875rem" }}>
-      <thead>
-        <tr>
-          <th style={S.th}>状況</th>
-          <th style={S.th}>おすすめ</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>単色がメイン・コスト重視</td>
-          <td style={{ ...S.td, color: "#22c55e", fontWeight: "700" }}>A1 mini（単体）</td>
-        </tr>
-        <tr>
-          <td style={S.td}>将来的にAMSを使う予定</td>
-          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>A1 mini Combo</td>
-        </tr>
-        <tr style={{ backgroundColor: "#0f172a" }}>
-          <td style={S.td}>最初から多色印刷がしたい</td>
-          <td style={{ ...S.td, color: "#06b6d4", fontWeight: "700" }}>A1 mini Combo</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div style={{ ...S.p, marginTop: "1rem" }}>
-    <strong style={{ color: "#06b6d4" }}>迷っているならCombo版</strong>を選んでおく方が後悔が少ないです。後からAMS Liteを追加するのと価格差がほぼないため、「いつかやってみたい」という気持ちがあるならComboを選ぶのが合理的です。
-  </div>
-</section>
+<Tip title="✅ Comboがおすすめな場合">
+カラーフィギュア・キャラクターグッズを作りたい / ロゴ入り・文字入りパーツを印刷したい / サポート材をPVAで印刷して後処理を楽にしたい / 後からAMS Liteを買い足す手間を省きたい
+</Tip>
+
+## 通常版（A1 mini単体）を選ぶべき人
+
+<Tip title="✅ 通常版でいい場合">
+日用品・実用パーツ・試作品が中心 / まず3Dプリンターの基本を覚えてからAMSを検討したい / 初期コストを抑えたい / 多色印刷には当面挑戦する予定がない
+</Tip>
+
+## 価格差の損得を計算する
+
+A1 mini本体：**約50,000円**
+
++ AMS Lite単品：**約25,000円**
+
+合計：**約75,000円**
+
+A1 mini Comboの価格：**約75,000円**
+
+**→ 合計額はほぼ同じ。「いつかAMSを使いたい」と思っているなら最初からComboを選ぶ方が合理的です。**
+
+## 多色印刷で知っておくこと
+
+| 注意点 | 詳細 |
+|---|---|
+| パージブロック（廃材）が出る | 色を切り替えるたびに残留フィラメントを排出。Bambu Studioの「フラッシュ最適化」で削減可能 |
+| 印刷時間が増える | 色切り替えのたびに一時停止。複雑な多色モデルでは単色の2〜3倍かかることも |
+
+## まとめ
+
+| 状況 | おすすめ |
+|---|---|
+| 単色がメイン・コスト重視 | A1 mini（単体） |
+| 将来的にAMSを使う予定 | A1 mini Combo |
+| 最初から多色印刷がしたい | A1 mini Combo |
+
+**迷っているならCombo版**を選んでおく方が後悔が少ないです。後からAMS Liteを追加するのと価格差がほぼないため、「いつかやってみたい」という気持ちがあるならComboを選ぶのが合理的です。

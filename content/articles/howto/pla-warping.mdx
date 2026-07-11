@@ -29,223 +29,110 @@ related:
     badge: PLA
     badgeColor: '#06b6d4'
 ---
-export const S = {
-  card: { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  h2: { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
-  p: { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
-  muted: { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
-  section: { marginBottom: "2.5rem" },
-  tip: { backgroundColor: "rgba(6,182,212,0.06)", border: "1px solid rgba(6,182,212,0.2)", borderRadius: "0.75rem", padding: "1.25rem", marginBottom: "1rem" },
-  warn: { backgroundColor: "rgba(245,158,11,0.06)", border: "1px solid rgba(245,158,11,0.2)", borderRadius: "0.75rem", padding: "1.25rem", marginBottom: "1rem" },
-  disclaimer: { color: "#475569", fontSize: "0.75rem", borderTop: "1px solid #1e293b", paddingTop: "1.25rem", lineHeight: "1.6" },
-};
+<Lead>
+PLAで印刷中、端が浮き上がってベッドから剥がれてしまう「**反り（ワーピング）**」は、3Dプリンター初心者がよく直面するトラブルのひとつです。
+PLAは比較的反りにくい素材ですが、設定や環境次第では頻発します。
 
-{/* ── イントロカード ── */}
-<div style={S.card}>
-  <div style={S.p}>
-    PLAで印刷中、端が浮き上がってベッドから剥がれてしまう「<strong style={{ color: "#f1f5f9" }}>反り（ワーピング）</strong>」は、3Dプリンター初心者がよく直面するトラブルのひとつです。
-    PLAは比較的反りにくい素材ですが、設定や環境次第では頻発します。
-  </div>
-  <div style={{ ...S.p, marginBottom: 0 }}>
-    この記事では反りの<strong style={{ color: "#f1f5f9" }}>原因の特定方法</strong>から、すぐ試せる<strong style={{ color: "#f1f5f9" }}>5つの対策</strong>を順番に解説します。
-    より広いトラブル対策は「<a href="/howto/trouble" style={{ color: "#06b6d4", textDecoration: "underline", textUnderlineOffset: "3px" }}>トラブル解決ガイド</a>」もあわせてご覧ください。
-  </div>
-</div>
+この記事では反りの**原因の特定方法**から、すぐ試せる**5つの対策**を順番に解説します。
+より広いトラブル対策は「[トラブル解決ガイド](/howto/trouble)」もあわせてご覧ください。
+</Lead>
 
-{/* ── 原因セクション ── */}
-<section id="causes" style={S.section}>
-  <h2 style={S.h2}>PLAが反る原因</h2>
-  <div style={S.p}>
-    反りはフィラメントが冷える過程で<strong style={{ color: "#f1f5f9" }}>収縮</strong>するときに起きます。印刷物の底面がベッドより早く冷えると端が持ち上がり、そのまま剥がれます。
-  </div>
-  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1rem" }}>
-    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ color: "#f59e0b", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.75rem" }}>主な原因</div>
-      <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-        {[
-          "ヒートベッド温度が低い・OFF",
-          "ベッド面の汚れ・密着不足",
-          "フィラメントが湿気を含んでいる",
-          "冷却ファンが初層から全開",
-          "部屋が寒い・窓からの冷気",
-        ].map((t) => (
-          <li key={t} style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• {t}</li>
-        ))}
-      </ul>
-    </div>
-    <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.75rem" }}>反りやすい形状</div>
-      <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-        {[
-          "底面積が広いモデル",
-          "薄くて長い（板状）形状",
-          "尖った角が多い形状",
-          "高さのある細長いモデル",
-        ].map((t) => (
-          <li key={t} style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• {t}</li>
-        ))}
-      </ul>
-    </div>
-  </div>
-  <div style={S.muted}>
-    複数の原因が重なっていることが多いため、下記の対策を上から順番に試すのが効率的です。
-  </div>
-</section>
+## PLAが反る原因
 
-{/* ── 対策1 ── */}
-<section id="bed" style={S.section}>
-  <h2 style={S.h2}>対策1：ヒートベッドの温度と表面密着</h2>
-  <div style={S.card}>
-    <div style={S.p}>
-      最も効果が大きい対策です。PLAの推奨ベッド温度は<strong style={{ color: "#f1f5f9" }}>50〜65℃</strong>。ベッドをしっかり温めることで、印刷物の底面が緩やかに冷えるため反りにくくなります。
-    </div>
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem", marginBottom: "1rem" }}>
-      {[
-        { label: "推奨ベッド温度", val: "55〜65℃（機種によって最適値が異なる）" },
-        { label: "ノズルとベッドの距離", val: "適切なレベリング必須（用紙1枚分が目安）" },
-        { label: "ベッド清掃", val: "IPA（無水エタノール）で手の脂を除去してから印刷" },
-      ].map((item) => (
-        <div key={item.label} style={{ display: "flex", gap: "1rem", backgroundColor: "#0f172a", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem", alignItems: "center" }}>
-          <span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "140px" }}>{item.label}</span>
-          <span style={S.muted}>{item.val}</span>
-        </div>
-      ))}
-    </div>
-    <div style={S.tip}>
-      <div style={{ ...S.muted, marginBottom: 0 }}>
-        <strong style={{ color: "#06b6d4" }}>ポイント</strong>：ガラスベッドはPEI・テクスチャシートより密着力が弱めです。ガラスを使っている場合は接着剤との併用（対策2）を推奨します。
-      </div>
-    </div>
-  </div>
-</section>
+反りはフィラメントが冷える過程で**収縮**するときに起きます。印刷物の底面がベッドより早く冷えると端が持ち上がり、そのまま剥がれます。
 
-{/* ── 対策2 ── */}
-<section id="adhesive" style={S.section}>
-  <h2 style={S.h2}>対策2：接着剤・テープで密着力を上げる</h2>
-  <div style={S.card}>
-    <div style={S.p}>
-      ベッド温度だけで足りない場合は、接着補助剤を使います。コストと効果のバランスが良い順に紹介します。
-    </div>
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-      {[
-        { rank: "1", name: "スティックのり（PVAのり）", detail: "100均で入手可。薄く均一に塗って乾かすだけ。剥がすときは水拭きでOK。最もコスパが良い。" },
-        { rank: "2", name: "ヘアスプレー（水性）", detail: "ベッドに薄く吹いて乾かす。ガラスベッドとの相性が特に良い。" },
-        { rank: "3", name: "3Mブルーテープ（マスキングテープ）", detail: "PLA専用ではないが密着力が高い。テクスチャが出るため仕上がりの見た目に注意。" },
-        { rank: "4", name: "Magigoo・Dimafix等の専用糊", detail: "高温で粘着、冷えると剥がれやすい。大型・量産向け。価格は高め。" },
-      ].map((item) => (
-        <div key={item.rank} style={{ display: "flex", gap: "1rem", backgroundColor: "#0f172a", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.875rem 1.25rem" }}>
-          <span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.9rem", flexShrink: 0, minWidth: "24px" }}>{item.rank}</span>
-          <div>
-            <div style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.875rem", marginBottom: "0.25rem" }}>{item.name}</div>
-            <div style={{ ...S.muted, marginBottom: 0 }}>{item.detail}</div>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+### 主な原因
 
-{/* ── 対策3 ── */}
-<section id="slicer" style={S.section}>
-  <h2 style={S.h2}>対策3：スライサー設定でベッド密着を強化</h2>
-  <div style={S.card}>
-    <div style={S.p}>
-      スライサー側の設定でも大きく改善できます。特に<strong style={{ color: "#f1f5f9" }}>ブリム</strong>は手軽で効果抜群です。
-    </div>
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem" }}>
-      {[
-        { label: "ブリム（Brim）", val: "幅5〜10mm・ライン数8〜15本を追加。端を重しで押さえる効果。仕上げに切り取る必要あり。" },
-        { label: "ラフト（Raft）", val: "底面全体に土台を敷く。反りが激しい場合の最終手段。取り外しに手間がかかる。" },
-        { label: "1層目の速度", val: "通常の30〜50%に落とすとベッドへの密着が改善する。" },
-        { label: "1層目の高さ", val: "少し厚め（0.3mm前後）にすると接触面積が増えて安定する。" },
-        { label: "ドラフトシールド", val: "モデルの周囲に風よけの壁を印刷。外部の冷気をブロックする。" },
-      ].map((item) => (
-        <div key={item.label} style={{ backgroundColor: "#0f172a", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem" }}>
-          <div style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", marginBottom: "0.25rem" }}>{item.label}</div>
-          <div style={{ ...S.muted, marginBottom: 0 }}>{item.val}</div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+- ヒートベッド温度が低い・OFF
+- ベッド面の汚れ・密着不足
+- フィラメントが湿気を含んでいる
+- 冷却ファンが初層から全開
+- 部屋が寒い・窓からの冷気
 
-{/* ── 対策4 ── */}
-<section id="cooling" style={S.section}>
-  <h2 style={S.h2}>対策4：冷却ファンを最初の数層だけ絞る</h2>
-  <div style={S.card}>
-    <div style={S.p}>
-      PLAは冷却が速いほど品質が上がりますが、<strong style={{ color: "#f1f5f9" }}>最初の3〜5層だけは冷却を抑える</strong>ことで反りを大幅に減らせます。ベッドと接する層が急冷されると収縮が強くなるためです。
-    </div>
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem" }}>
-      {[
-        { label: "1〜3層目のファン", val: "0〜30%（またはOFF）" },
-        { label: "4〜5層目のファン", val: "50〜70%に徐々に上げる" },
-        { label: "6層目以降", val: "100%（通常の冷却に戻す）" },
-      ].map((item) => (
-        <div key={item.label} style={{ display: "flex", gap: "1rem", backgroundColor: "#0f172a", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem", alignItems: "center" }}>
-          <span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "140px" }}>{item.label}</span>
-          <span style={S.muted}>{item.val}</span>
-        </div>
-      ))}
-    </div>
-    <div style={{ ...S.warn, marginTop: "1rem" }}>
-      <div style={{ ...S.muted, marginBottom: 0 }}>
-        <strong style={{ color: "#f59e0b" }}>注意</strong>：Bambu Lab系の機種はファン制御が自動化されているため、この設定が効かない場合があります。スライサーの「スタートファン速度」オプションを確認してください。
-      </div>
-    </div>
-  </div>
-</section>
+### 反りやすい形状
 
-{/* ── 対策5 ── */}
-<section id="environment" style={S.section}>
-  <h2 style={S.h2}>対策5：環境温度と気流を管理する</h2>
-  <div style={S.card}>
-    <div style={S.p}>
-      室温が10℃以下の環境、または窓・エアコンの風が直接当たる場所では、対策1〜4を全部試しても反りが止まらないことがあります。<strong style={{ color: "#f1f5f9" }}>印刷中のプリンター周辺の気流</strong>が大きな原因です。
-    </div>
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem" }}>
-      {[
-        { label: "エンクロージャー（囲い）", val: "段ボールや布で三方を囲うだけでも効果大。専用エンクロージャーは内部温度が安定する。" },
-        { label: "設置場所の見直し", val: "エアコン・扇風機・窓から離す。床置きは冷気が溜まるため台に乗せる。" },
-        { label: "室温の目安", val: "20℃以上を維持できるとPLAは安定しやすい。" },
-      ].map((item) => (
-        <div key={item.label} style={{ backgroundColor: "#0f172a", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem" }}>
-          <div style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", marginBottom: "0.25rem" }}>{item.label}</div>
-          <div style={{ ...S.muted, marginBottom: 0 }}>{item.val}</div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+- 底面積が広いモデル
+- 薄くて長い（板状）形状
+- 尖った角が多い形状
+- 高さのある細長いモデル
 
-{/* ── まとめ・チェックリスト ── */}
-<section id="summary" style={S.section}>
-  <h2 style={S.h2}>印刷前チェックリスト・まとめ</h2>
-  <div style={S.card}>
-    <div style={S.p}>
-      反りが出たら、このチェックリストを上から順に確認してください。ほとんどのケースは対策1〜3で解決します。
-    </div>
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-      {[
-        "ベッド温度は55〜65℃に設定されているか",
-        "ベッド面をIPAで清掃したか",
-        "レベリング（ノズル〜ベッド距離）は適切か",
-        "スティックのりや接着補助剤を塗ったか",
-        "スライサーでブリムを追加したか",
-        "1層目の速度を落としているか",
-        "1〜3層目の冷却ファンを絞っているか",
-        "プリンター周辺に冷気・気流がないか",
-      ].map((item, i) => (
-        <div key={i} style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start", backgroundColor: "#0f172a", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.625rem 1rem" }}>
-          <span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0 }}>□</span>
-          <span style={{ color: "#cbd5e1", fontSize: "0.85rem" }}>{item}</span>
-        </div>
-      ))}
-    </div>
-    <div style={{ ...S.p, marginTop: "1.5rem" }}>
-      それでも解決しない場合は、フィラメントの湿気が原因のことがあります。フィラメントを60℃で6〜8時間乾燥させてから再試行してください。
-      PLAの特性については「<a href="/filaments/pla" style={{ color: "#06b6d4", textDecoration: "underline", textUnderlineOffset: "3px" }}>PLAフィラメントの特徴・使い方</a>」で詳しく解説しています。
-    </div>
-  </div>
-</section>
+複数の原因が重なっていることが多いため、下記の対策を上から順番に試すのが効率的です。
 
+## 対策1：ヒートベッドの温度と表面密着
+
+最も効果が大きい対策です。PLAの推奨ベッド温度は**50〜65℃**。ベッドをしっかり温めることで、印刷物の底面が緩やかに冷えるため反りにくくなります。
+
+<SpecList items={[
+  { label: "推奨ベッド温度", value: "55〜65℃（機種によって最適値が異なる）" },
+  { label: "ノズルとベッドの距離", value: "適切なレベリング必須（用紙1枚分が目安）" },
+  { label: "ベッド清掃", value: "IPA（無水エタノール）で手の脂を除去してから印刷" },
+]} />
+
+<Tip>
+**ポイント**：ガラスベッドはPEI・テクスチャシートより密着力が弱めです。ガラスを使っている場合は接着剤との併用（対策2）を推奨します。
+</Tip>
+
+## 対策2：接着剤・テープで密着力を上げる
+
+ベッド温度だけで足りない場合は、接着補助剤を使います。コストと効果のバランスが良い順に紹介します。
+
+<Steps items={[
+  { title: "スティックのり（PVAのり）", body: "100均で入手可。薄く均一に塗って乾かすだけ。剥がすときは水拭きでOK。最もコスパが良い。" },
+  { title: "ヘアスプレー（水性）", body: "ベッドに薄く吹いて乾かす。ガラスベッドとの相性が特に良い。" },
+  { title: "3Mブルーテープ（マスキングテープ）", body: "PLA専用ではないが密着力が高い。テクスチャが出るため仕上がりの見た目に注意。" },
+  { title: "Magigoo・Dimafix等の専用糊", body: "高温で粘着、冷えると剥がれやすい。大型・量産向け。価格は高め。" },
+]} />
+
+## 対策3：スライサー設定でベッド密着を強化
+
+スライサー側の設定でも大きく改善できます。特に**ブリム**は手軽で効果抜群です。
+
+<SpecList items={[
+  { label: "ブリム（Brim）", value: "幅5〜10mm・ライン数8〜15本を追加。端を重しで押さえる効果。仕上げに切り取る必要あり。" },
+  { label: "ラフト（Raft）", value: "底面全体に土台を敷く。反りが激しい場合の最終手段。取り外しに手間がかかる。" },
+  { label: "1層目の速度", value: "通常の30〜50%に落とすとベッドへの密着が改善する。" },
+  { label: "1層目の高さ", value: "少し厚め（0.3mm前後）にすると接触面積が増えて安定する。" },
+  { label: "ドラフトシールド", value: "モデルの周囲に風よけの壁を印刷。外部の冷気をブロックする。" },
+]} />
+
+## 対策4：冷却ファンを最初の数層だけ絞る
+
+PLAは冷却が速いほど品質が上がりますが、**最初の3〜5層だけは冷却を抑える**ことで反りを大幅に減らせます。ベッドと接する層が急冷されると収縮が強くなるためです。
+
+<SpecList items={[
+  { label: "1〜3層目のファン", value: "0〜30%（またはOFF）" },
+  { label: "4〜5層目のファン", value: "50〜70%に徐々に上げる" },
+  { label: "6層目以降", value: "100%（通常の冷却に戻す）" },
+]} />
+
+<Warn>
+**注意**：Bambu Lab系の機種はファン制御が自動化されているため、この設定が効かない場合があります。スライサーの「スタートファン速度」オプションを確認してください。
+</Warn>
+
+## 対策5：環境温度と気流を管理する
+
+室温が10℃以下の環境、または窓・エアコンの風が直接当たる場所では、対策1〜4を全部試しても反りが止まらないことがあります。**印刷中のプリンター周辺の気流**が大きな原因です。
+
+<SpecList items={[
+  { label: "エンクロージャー（囲い）", value: "段ボールや布で三方を囲うだけでも効果大。専用エンクロージャーは内部温度が安定する。" },
+  { label: "設置場所の見直し", value: "エアコン・扇風機・窓から離す。床置きは冷気が溜まるため台に乗せる。" },
+  { label: "室温の目安", value: "20℃以上を維持できるとPLAは安定しやすい。" },
+]} />
+
+## 印刷前チェックリスト・まとめ
+
+反りが出たら、このチェックリストを上から順に確認してください。ほとんどのケースは対策1〜3で解決します。
+
+<CheckList variant="check" items={[
+  "ベッド温度は55〜65℃に設定されているか",
+  "ベッド面をIPAで清掃したか",
+  "レベリング（ノズル〜ベッド距離）は適切か",
+  "スティックのりや接着補助剤を塗ったか",
+  "スライサーでブリムを追加したか",
+  "1層目の速度を落としているか",
+  "1〜3層目の冷却ファンを絞っているか",
+  "プリンター周辺に冷気・気流がないか",
+]} />
+
+それでも解決しない場合は、フィラメントの湿気が原因のことがあります。フィラメントを60℃で6〜8時間乾燥させてから再試行してください。
+PLAの特性については「[PLAフィラメントの特徴・使い方](/filaments/pla)」で詳しく解説しています。
