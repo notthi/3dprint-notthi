@@ -10,7 +10,7 @@ function fetchURL(url) {
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
         // HTTPリダイレクト
-        if ((res.statusCode === 301 || res.statusCode === 302) && res.headers.location) {
+        if ([301, 302, 303, 307, 308].includes(res.statusCode) && res.headers.location) {
           return fetchURL(res.headers.location).then(resolve).catch(reject);
         }
         // HTMLリダイレクト（GoogleはHTML内にhrefを含めることがある）
@@ -42,8 +42,11 @@ function parseCSVLine(line) {
   return result;
 }
 
-async function main() {
-  console.log('📥 Googleスプレッドシートから商品データを取得中...');
+// スプレッドシートにない商品の置き場所（手で追加した商品）。
+// スプレッドシートに同じidがあれば、スプレッドシートの値で上書きする。
+const BASE_FILE = 'src/data/products.base.json';
+
+async function fetchSheetProducts() {
   const csv = await fetchURL(CSV_URL);
   const lines = csv.trim().split('\n');
   const headers = parseCSVLine(lines[0]).map(h => h.trim().replace(/^"|"$/g, ''));
@@ -54,13 +57,36 @@ async function main() {
     const values = parseCSVLine(lines[i]);
     const product = {};
     headers.forEach((h, j) => {
-      product[h] = (values[j] || '').trim().replace(/^"|"$/g, '');
+      const v = (values[j] || '').trim().replace(/^"|"$/g, '');
+      if (v) product[h] = v;
     });
     if (product.id) products[product.id] = product;
   }
+  return products;
+}
+
+async function main() {
+  const base = JSON.parse(fs.readFileSync(BASE_FILE, 'utf-8'));
+
+  console.log('📥 Googleスプレッドシートから商品データを取得中...');
+  let sheet = {};
+  try {
+    sheet = await fetchSheetProducts();
+  } catch (err) {
+    console.warn('⚠️ スプレッドシートを取得できませんでした。' + BASE_FILE + ' だけで作ります: ' + err.message);
+  }
+
+  if (Object.keys(sheet).length === 0) {
+    console.warn('⚠️ スプレッドシートから商品が1件も取れませんでした。' + BASE_FILE + ' だけで作ります');
+  }
+
+  const products = { ...base };
+  for (const [id, p] of Object.entries(sheet)) {
+    products[id] = { ...(base[id] || {}), ...p };
+  }
 
   const output = `// このファイルはスクリプトで自動生成されます（npm run build 時）
-// 商品の追加・編集はGoogleスプレッドシートから行ってください
+// 商品の追加・編集はGoogleスプレッドシート、スプレッドシートにない商品は src/data/products.base.json で行ってください
 
 export type Product = {
   id?: string;
@@ -77,7 +103,7 @@ export const products: Record<string, Product> = ${JSON.stringify(products, null
 `;
 
   fs.writeFileSync('src/data/products.ts', output, 'utf-8');
-  console.log('✅ products.ts を更新しました（' + Object.keys(products).length + '商品）');
+  console.log('✅ products.ts を更新しました（' + Object.keys(products).length + '商品：スプレッドシート ' + Object.keys(sheet).length + '・base ' + Object.keys(base).length + '）');
 }
 
 main().catch(err => {
