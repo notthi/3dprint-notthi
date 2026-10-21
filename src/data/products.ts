@@ -1,5 +1,5 @@
 // このファイルはスクリプトで自動生成されます（npm run build 時）
-// 商品の追加・編集はGoogleスプレッドシートから行ってください
+// 商品の追加・編集はGoogleスプレッドシート、スプレッドシートにない商品は src/data/products.base.json で行ってください
 
 export type Product = {
   id?: string;
