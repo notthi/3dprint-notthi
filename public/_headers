@@ -3,6 +3,6 @@
 /:cat/:slug/opengraph-image-:id
   Content-Type: image/png
 
-# 確認用の workers.dev のアドレスは検索に載せない（本番は 3dprint.notthi.com）
-https://3dprint-notthi.notthi3.workers.dev/*
+# 確認用の workers.dev のアドレス（ブランチごとの確認用URLも）は検索に載せない（本番は 3dprint.notthi.com）
+https://:host.notthi3.workers.dev/*
   X-Robots-Tag: noindex
