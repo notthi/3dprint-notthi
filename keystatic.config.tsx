@@ -3,7 +3,7 @@
  *
  * 起動: npm run dev → http://localhost:3000/keystatic
  * 保存: content/articles/{カテゴリ}/{スラッグ}.mdx にファイル書き込み（ローカルモード）
- * 公開: /admin の公開ボタン（git commit & push → Vercel自動デプロイ）
+ * 公開: /admin の公開ボタン（git commit & push → Cloudflareが自動で公開）
  */
 import { config, fields, collection, singleton } from "@keystatic/core";
 import { wrapper, block } from "@keystatic/core/content-components";

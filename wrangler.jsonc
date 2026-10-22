@@ -11,7 +11,7 @@
   },
   "workers_dev": true,
   // main 以外のブランチは Workers Builds が `wrangler preview` で確認用URLを作る。この項目がないと止まる
-  "previews": {}
-  // 本番の切り替え時に追加する：
-  // "routes": [{ "pattern": "3dprint.notthi.com", "custom_domain": true }]
+  "previews": {},
+  // 2026-10-22 本番を Vercel から切り替え（Vercel向けのCNAMEを消してから付けた。DNSのレコードはCloudflareが管理）
+  "routes": [{ "pattern": "3dprint.notthi.com", "custom_domain": true }]
 }

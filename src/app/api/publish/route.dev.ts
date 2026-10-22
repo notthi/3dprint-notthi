@@ -6,7 +6,7 @@ const run = promisify(execFile);
 
 /**
  * 公開API — Keystaticで保存した記事をgit commit & pushする（ローカル専用）
- * push後はVercelが自動デプロイする。
+ * push後はCloudflare（Workers Builds）が自動で公開する。
  */
 export async function POST() {
   if (process.env.NODE_ENV === "production") {
@@ -33,7 +33,7 @@ export async function POST() {
 
     return NextResponse.json({
       ok: true,
-      message: `${files.length} ファイルを公開しました（${branch.trim()} へpush済み・Vercelがデプロイを開始します）`,
+      message: `${files.length} ファイルを公開しました（${branch.trim()} へpush済み・Cloudflareが公開を始めます）`,
       files,
     });
   } catch (e) {

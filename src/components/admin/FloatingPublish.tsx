@@ -7,7 +7,7 @@ export default function FloatingPublish() {
   const [msg, setMsg] = useState<string | null>(null);
 
   async function publish() {
-    if (!confirm("編集内容を本番サイトに公開しますか？\n（git push → Vercelが自動デプロイ・反映まで2〜3分）")) return;
+    if (!confirm("編集内容を本番サイトに公開しますか？\n（git push → Cloudflareが自動で公開・反映まで2〜3分）")) return;
     setBusy(true);
     setMsg(null);
     try {
