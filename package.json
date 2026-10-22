@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prebuild": "node scripts/fetch-products.js",
-    "new-article": "node scripts/new-article.js"
+    "prebuild": "node scripts/check-content.js",
+    "new-article": "node scripts/new-article.js",
+    "check": "node scripts/check-content.js"
   },
   "dependencies": {
     "@keystatic/core": "^0.5.51",
