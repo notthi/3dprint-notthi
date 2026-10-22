@@ -3,7 +3,7 @@
  * 公開前チェック（npm run build の前に自動で走る。単独では npm run check）
  *
  * 1つでも問題があれば終了コード1でビルドを止める。
- * Vercelは失敗したビルドを公開しないので、本番は前の正しい状態のまま残る。
+ * Cloudflare（Workers Builds）は失敗したビルドを公開しないので、本番は前の正しい状態のまま残る。
  *
  * 見ているもの：
  *   - 商品マスタ（src/data/products.json）：IDの重複・空のID・空の商品名
