@@ -1,0 +1,15 @@
+{
+  // 3dprint.notthi.com（2026-10-22 Vercel から移行）
+  // npm run build で out/ に全ページを書き出し、npx wrangler deploy で公開する。
+  "name": "3dprint-notthi",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "out",
+    // /howto/fishing-lure → out/howto/fishing-lure.html（今と同じ、末尾スラッシュなしのURL）
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "workers_dev": true
+  // 本番の切り替え時に追加する：
+  // "routes": [{ "pattern": "3dprint.notthi.com", "custom_domain": true }]
+}

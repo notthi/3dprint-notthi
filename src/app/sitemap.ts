@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { articles } from "@/lib/articles";
 
+export const dynamic = "force-static";
+
 const baseUrl = "https://3dprint.notthi.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
