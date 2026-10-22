@@ -15,7 +15,7 @@
     - グリッドはインラインstyleで記述（Tailwind不使用）
 
   コンポーネント:
-    - <ProductCard productId="xxx" /> → src/data/products.ts のIDを指定
+    - <ProductCard productId="xxx" /> → 商品マスタ（src/data/products.json・Keystaticの「商品マスタ」）のIDを指定
     - <RankingItem rank={1} name="..." description="..." price="..."
         pros={[...]} cons={[...]} badge="..." /> → ランキング記事で使用
   ============================================================
@@ -111,7 +111,7 @@ export const S = {
 </section>
 
 {/* ── セクション4：おすすめ製品（ProductCard） ───────────────
-  productId は src/data/products.ts のキーを指定。
+  productId は商品マスタ（src/data/products.json）のIDを指定。存在しないIDはビルド前チェックで止まる。
   利用可能なID例:
     bambu-pla-basic / esun-pla-plus / overture-pla
     bambu-a1-mini / bambu-a1 / bambu-p1s / ender3-v3-se

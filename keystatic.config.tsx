@@ -5,7 +5,7 @@
  * 保存: content/articles/{カテゴリ}/{スラッグ}.mdx にファイル書き込み（ローカルモード）
  * 公開: /admin の公開ボタン（git commit & push → Vercel自動デプロイ）
  */
-import { config, fields, collection } from "@keystatic/core";
+import { config, fields, collection, singleton } from "@keystatic/core";
 import { wrapper, block } from "@keystatic/core/content-components";
 
 /* ── 記事本文で使えるブロック定義（エディタの挿入メニューに出る） ── */
@@ -117,7 +117,7 @@ const articleComponents = {
     label: "商品ランキングカード",
     schema: {
       rank: fields.integer({ label: "順位", defaultValue: 1 }),
-      productId: fields.text({ label: "商品ID（src/lib/products.ts のid）" }),
+      productId: fields.text({ label: "商品ID（「商品マスタ」のID）" }),
       badge: fields.text({ label: "バッジ（省略可）" }),
       pros: fields.array(fields.text({ label: "項目" }), {
         label: "メリット",
@@ -179,6 +179,43 @@ function articleCollection(category: "printers" | "filaments" | "howto", label: 
   });
 }
 
+
+/* ── 商品マスタ（src/data/products.json）。記事の商品カード・ランキングが参照する ── */
+const productsSingleton = singleton({
+  label: "商品マスタ",
+  path: "src/data/products",
+  format: { data: "json" },
+  schema: {
+    items: fields.array(
+      fields.object({
+        id: fields.text({
+          label: "ID（英小文字・数字・ハイフン。記事の productId に書く）",
+          validation: { length: { min: 1 } },
+        }),
+        name: fields.text({ label: "商品名", validation: { length: { min: 1 } } }),
+        asin: fields.text({ label: "ASIN（Amazonの商品番号。あれば商品ページへ直接リンク）" }),
+        price: fields.text({ label: "価格の目安（例：約3,200円（1kg））" }),
+        description: fields.text({ label: "ひとこと説明", multiline: true }),
+        keyword: fields.text({ label: "検索キーワード（楽天・Yahoo!・メルカリ用）" }),
+        image: fields.text({ label: "画像URL" }),
+        links: fields.object(
+          {
+            amazon: fields.text({ label: "Amazon（直接指定する場合だけ）" }),
+            rakuten: fields.text({ label: "楽天（直接指定する場合だけ）" }),
+            yahoo: fields.text({ label: "Yahoo!（直接指定する場合だけ）" }),
+            mercari: fields.text({ label: "メルカリ（直接指定する場合だけ）" }),
+          },
+          { label: "リンクの直接指定（空欄なら自動）" }
+        ),
+      }),
+      {
+        label: "商品",
+        itemLabel: (p) => `${p.fields.name.value || "（名前なし）"}｜${p.fields.id.value}`,
+      }
+    ),
+  },
+});
+
 export default config({
   storage: { kind: "local" },
   ui: {
@@ -188,5 +225,8 @@ export default config({
     printers: articleCollection("printers", "プリンター記事"),
     filaments: articleCollection("filaments", "フィラメント記事"),
     howto: articleCollection("howto", "使い方記事"),
+  },
+  singletons: {
+    products: productsSingleton,
   },
 });
