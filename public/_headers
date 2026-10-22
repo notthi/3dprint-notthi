@@ -1,0 +1,8 @@
+# Cloudflare Workers 静的アセット用（2026-10-22）
+# 記事ごとのSNS用画像は拡張子なしのファイルに書き出されるので、PNGだと明示する
+/:cat/:slug/opengraph-image-:id
+  Content-Type: image/png
+
+# 確認用の workers.dev のアドレスは検索に載せない（本番は 3dprint.notthi.com）
+https://3dprint-notthi.notthi3.workers.dev/*
+  X-Robots-Tag: noindex
