@@ -29,8 +29,11 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 公開（Cloudflare Workers）
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2026-10-22 に Vercel から移行。全ページを `out/` に静的に書き出し、Cloudflare Workers の静的アセットで配信する（設定は `wrangler.jsonc`）。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- GitHub と Cloudflare の Workers Builds がつながっている。`main` にマージすると本番に出る。ほかのブランチは、ビルドごとに確認用のURLが出る
+- 手元から出すときは `npm run deploy`（ビルド→`wrangler deploy`）
+- ビルドの前に `scripts/check-content.js` が走る。商品IDの欠け・内部リンク切れ・title/description漏れがあればビルドが止まり、本番は前の状態のまま残る
+- Keystatic・`/admin`・公開ボタンのAPI は `*.dev.tsx` / `*.dev.ts`。`npm run dev` のときだけ使える
