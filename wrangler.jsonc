@@ -9,7 +9,9 @@
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   },
-  "workers_dev": true
+  "workers_dev": true,
+  // main 以外のブランチは Workers Builds が `wrangler preview` で確認用URLを作る。この項目がないと止まる
+  "previews": {}
   // 本番の切り替え時に追加する：
   // "routes": [{ "pattern": "3dprint.notthi.com", "custom_domain": true }]
 }
