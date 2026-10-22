@@ -97,5 +97,10 @@ if (REPORT) {
   if (!existsSync(REPORT_PROJ)) { console.error("lifework-dashboard が見つからないので報告できません"); process.exit(ok ? 0 : 1); }
   const r = spawnSync("/opt/homebrew/bin/node", ["scripts/report-run.mjs", JOB, ok ? "1" : "0", started, summary, problems.join("\n")], { cwd: REPORT_PROJ, encoding: "utf8", timeout: 120000 });
   console.log("ダッシュボード: " + ((r.stdout || r.stderr || "").trim() || `終了コード ${r.status}`));
+  // 問題があったときだけ、Macの通知でも知らせる
+  if (!ok && process.platform === "darwin") {
+    const msg = `${problems.length}件の問題：${problems[0]}`.replace(/["\\]/g, "'").slice(0, 200);
+    spawnSync("osascript", ["-e", `display notification "${msg}" with title "サイト見回り：${new URL(BASE).hostname}" sound name "Basso"`]);
+  }
 }
 process.exit(ok ? 0 : 1);
