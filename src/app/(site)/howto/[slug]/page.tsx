@@ -28,6 +28,7 @@ export default async function Page(props: { params: Promise<{ slug: string }> })
       breadcrumb={buildBreadcrumb(meta)}
       title={meta.title}
       updatedAt={meta.updatedAt}
+      handsOn={meta.handsOn}
       tags={meta.tags}
       toc={meta.toc}
       related={buildRelated(meta.related, meta.category, meta.href)}

@@ -5,19 +5,19 @@ import CategoryCard from "@/components/CategoryCard";
 export const metadata: Metadata = {
   title: "3Dプリントラボ | おすすめ機種・フィラメント・使い方を徹底解説",
   description:
-    "3Dプリンターの選び方からフィラメントの比較、印刷テクニックまで初心者にわかりやすく解説。2024年最新のおすすめ機種ランキングも掲載。",
+    "3Dプリンターの選び方からフィラメントの比較、印刷テクニックまで初心者にわかりやすく解説。おすすめ機種の比較も掲載。",
   openGraph: {
     type: "website",
     locale: "ja_JP",
     siteName: "3Dプリントラボ",
     url: "https://3dprint.notthi.com/",
     title: "3Dプリントラボ | おすすめ機種・フィラメント・使い方を徹底解説",
-    description: "3Dプリンターの選び方からフィラメントの比較、印刷テクニックまで初心者にわかりやすく解説。2024年最新のおすすめ機種ランキングも掲載。",
+    description: "3Dプリンターの選び方からフィラメントの比較、印刷テクニックまで初心者にわかりやすく解説。おすすめ機種の比較も掲載。",
   },
   twitter: {
     card: "summary_large_image",
     title: "3Dプリントラボ | おすすめ機種・フィラメント・使い方を徹底解説",
-    description: "3Dプリンターの選び方からフィラメントの比較、印刷テクニックまで初心者にわかりやすく解説。2024年最新のおすすめ機種ランキングも掲載。",
+    description: "3Dプリンターの選び方からフィラメントの比較、印刷テクニックまで初心者にわかりやすく解説。おすすめ機種の比較も掲載。",
   },
   alternates: {
     canonical: "https://3dprint.notthi.com/",
@@ -131,7 +131,7 @@ export default function HomePage() {
               marginBottom: "1.5rem",
             }}
           >
-            ✦ 2024年最新情報対応
+            ✦ 3Dプリンター歴8年の筆者が運営
           </div>
 
           <h1

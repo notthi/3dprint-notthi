@@ -2,6 +2,18 @@
 import Link from "next/link";
 import { Disclaimer } from "@/components/blocks";
 
+// 書いた人（10/24）。使ってきた機種は notthi.com の体験談まとめと同じ
+function AuthorBox() {
+  return (
+    <div style={{ marginTop: "2.5rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem 1.375rem", display: "grid", gap: "0.375rem" }}>
+      <p style={{ color: "#06b6d4", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.1em" }}>書いた人</p>
+      <p style={{ color: "#f1f5f9", fontWeight: 700 }}>のってぃ（Cubic未来デザイン研究所）</p>
+      <p style={{ color: "#94a3b8", fontSize: "0.85rem", lineHeight: 1.7 }}>製造業の機械系エンジニア。家庭用3Dプリンターは2018年から8年。使ってきた機種は、組み立て式のCore i3 → ANYCUBIC MEGA-S → Bambu Lab P1S（AMS付き）。使っていない機種は、そのことを記事の最初に書いています。</p>
+      <a href="https://notthi.com/3d-printer-notes/" style={{ color: "#06b6d4", fontSize: "0.85rem", fontWeight: 600 }}>8年間の体験談（作ったもの・失敗と直し方）を読む →</a>
+    </div>
+  );
+}
+
 type BreadcrumbItem = { label: string; href?: string };
 type TocItem = { id: string; label: string };
 type RelatedArticle = { href: string; title: string; badge?: string; badgeColor?: string };
@@ -10,6 +22,7 @@ type ArticleLayoutProps = {
   breadcrumb: BreadcrumbItem[];
   title: string;
   updatedAt?: string;
+  handsOn?: boolean;
   tags?: string[];
   toc?: TocItem[];
   related?: RelatedArticle[];
@@ -20,6 +33,7 @@ export default function ArticleLayout({
   breadcrumb,
   title,
   updatedAt,
+  handsOn,
   tags = [],
   toc = [],
   related = [],
@@ -69,6 +83,18 @@ export default function ArticleLayout({
       {/* Body */}
       <div style={{ maxWidth: "52rem", margin: "0 auto", padding: "2.5rem 1.5rem" }}>
 
+        {/* 広告の表示（景品表示法のステマ規制：記事の最初に）。10/24 */}
+        <p style={{ fontSize: "0.75rem", color: "#94a3b8", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.5rem 0.875rem", marginBottom: "1rem" }}>
+          ※この記事には広告（アフィリエイトリンク）が含まれます
+        </p>
+        {/* 筆者が使っていない機種は、そのことを最初に正直に書く（10/24 本人「使ってないので、修正しましょう」） */}
+        {handsOn === false && (
+          <div style={{ backgroundColor: "#1e293b", border: "1px solid #f59e0b66", borderLeft: "4px solid #f59e0b", borderRadius: "0.5rem", padding: "0.875rem 1rem", marginBottom: "1.5rem", fontSize: "0.85rem", color: "#cbd5e1", lineHeight: 1.7 }}>
+            <b style={{ color: "#fbbf24" }}>この機種は、筆者は使っていません。</b>
+            公式の仕様と、公開されている評判をもとに整理した解説です（実機レビューではありません）。筆者が使っているのは Bambu Lab P1S（AMS付き）です。
+          </div>
+        )}
+
         {/* Inline TOC Box */}
         {toc.length > 0 && (
           <div style={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
@@ -98,6 +124,7 @@ export default function ArticleLayout({
         {/* Main Content */}
         <article className="article-body">
           {children}
+          <AuthorBox />
           <Disclaimer />
         </article>
 
