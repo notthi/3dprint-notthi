@@ -37,8 +37,8 @@ export async function generateOgImage({ title, badge, badgeColor, category }: Og
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "72px 88px 56px 88px",
-          background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
-          color: "#f1f5f9",
+          background: "linear-gradient(135deg, #f2ece2 0%, #fffcf7 100%)",
+          color: "#1e2a30",
           fontFamily: "NotoSansJP",
           borderLeft: `18px solid ${badgeColor}`,
         }}
@@ -48,7 +48,7 @@ export async function generateOgImage({ title, badge, badgeColor, category }: Og
             style={{
               display: "flex",
               backgroundColor: badgeColor,
-              color: "#0f172a",
+              color: "#f2ece2",
               padding: "12px 32px",
               borderRadius: "999px",
               fontSize: "34px",
@@ -58,7 +58,7 @@ export async function generateOgImage({ title, badge, badgeColor, category }: Og
           >
             {badge}
           </div>
-          <div style={{ display: "flex", color: "#94a3b8", fontSize: "30px" }}>
+          <div style={{ display: "flex", color: "#5c6469", fontSize: "30px" }}>
             {categoryLabel}
           </div>
         </div>
@@ -69,7 +69,7 @@ export async function generateOgImage({ title, badge, badgeColor, category }: Og
             fontSize: "68px",
             lineHeight: 1.3,
             fontWeight: 700,
-            color: "#f1f5f9",
+            color: "#1e2a30",
             WebkitLineClamp: 4,
             WebkitBoxOrient: "vertical",
             overflow: "hidden",
@@ -83,21 +83,21 @@ export async function generateOgImage({ title, badge, badgeColor, category }: Og
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            borderTop: "2px solid #334155",
+            borderTop: "2px solid #e4dccd",
             paddingTop: "28px",
           }}
         >
           <div
             style={{
               display: "flex",
-              color: "#06b6d4",
+              color: "#a0402e",
               fontSize: "34px",
               fontWeight: 700,
             }}
           >
             {SITE_NAME}
           </div>
-          <div style={{ display: "flex", color: "#64748b", fontSize: "28px" }}>
+          <div style={{ display: "flex", color: "#6b7378", fontSize: "28px" }}>
             {SITE_DOMAIN}
           </div>
         </div>

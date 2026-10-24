@@ -25,8 +25,8 @@ export default function PublishButton() {
         onClick={publish}
         disabled={busy}
         style={{
-          backgroundColor: busy ? "#334155" : "#10b981",
-          color: "#0f172a",
+          backgroundColor: busy ? "#e4dccd" : "#2f7d4f",
+          color: "#f2ece2",
           fontWeight: 700,
           fontSize: "0.9rem",
           padding: "0.625rem 1.5rem",
@@ -37,7 +37,7 @@ export default function PublishButton() {
       >
         {busy ? "公開中…" : "🚀 公開（commit & push）"}
       </button>
-      {result && <span style={{ color: "#94a3b8", fontSize: "0.8rem" }}>{result}</span>}
+      {result && <span style={{ color: "#5c6469", fontSize: "0.8rem" }}>{result}</span>}
     </div>
   );
 }

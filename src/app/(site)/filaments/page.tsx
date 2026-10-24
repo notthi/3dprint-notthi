@@ -32,22 +32,22 @@ export default function FilamentsPage() {
       {/* Page Hero */}
       <section
         style={{
-          background: "linear-gradient(135deg, #0f172a 0%, #1e1a2e 100%)",
-          borderBottom: "1px solid #334155",
+          background: "linear-gradient(135deg, #f2ece2 0%, #1e1a2e 100%)",
+          borderBottom: "1px solid #e4dccd",
           padding: "3rem 1.5rem",
         }}
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
-          <div style={{ color: "#64748b", fontSize: "0.8rem", marginBottom: "1rem" }}>
-            <Link href="/" style={{ color: "#64748b", textDecoration: "none" }}>ホーム</Link>
+          <div style={{ color: "#6b7378", fontSize: "0.8rem", marginBottom: "1rem" }}>
+            <Link href="/" style={{ color: "#6b7378", textDecoration: "none" }}>ホーム</Link>
             <span style={{ margin: "0 0.5rem" }}>›</span>
-            <span style={{ color: "#8b5cf6" }}>フィラメント</span>
+            <span style={{ color: "#4a76a0" }}>フィラメント</span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.75rem" }}>
             <span style={{ fontSize: "2rem" }}>🧵</span>
-            <h1 style={{ fontSize: "2rem", fontWeight: "800", color: "#f1f5f9" }}>フィラメント</h1>
+            <h1 style={{ fontSize: "2rem", fontWeight: "800", color: "#1e2a30" }}>フィラメント</h1>
           </div>
-          <p style={{ color: "#94a3b8", fontSize: "1rem", lineHeight: "1.6" }}>
+          <p style={{ color: "#5c6469", fontSize: "1rem", lineHeight: "1.6" }}>
             PLA・PETG・TPUなど素材別の特性と選び方。用途に合った最適なフィラメントが見つかります。
           </p>
         </div>

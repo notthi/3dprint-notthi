@@ -23,8 +23,8 @@ export default function CategoryCard({
   return (
     <div
       style={{
-        backgroundColor: "#1e293b",
-        border: "1px solid #334155",
+        backgroundColor: "#fffcf7",
+        border: "1px solid #e4dccd",
         borderRadius: "1rem",
         padding: "1.75rem",
         transition: "border-color 0.2s, transform 0.2s, box-shadow 0.2s",
@@ -37,16 +37,16 @@ export default function CategoryCard({
       }}
       onMouseLeave={(e) => {
         const el = e.currentTarget as HTMLElement;
-        el.style.borderColor = "#334155";
+        el.style.borderColor = "#e4dccd";
         el.style.transform = "translateY(0)";
         el.style.boxShadow = "none";
       }}
     >
       <div style={{ fontSize: "2.5rem", marginBottom: "0.75rem" }}>{icon}</div>
-      <h3 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#f1f5f9", marginBottom: "0.5rem" }}>
+      <h3 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#1e2a30", marginBottom: "0.5rem" }}>
         {title}
       </h3>
-      <p style={{ color: "#94a3b8", fontSize: "0.9rem", marginBottom: "1.25rem", lineHeight: "1.6" }}>
+      <p style={{ color: "#5c6469", fontSize: "0.9rem", marginBottom: "1.25rem", lineHeight: "1.6" }}>
         {description}
       </p>
 
@@ -56,9 +56,9 @@ export default function CategoryCard({
           <li key={link.href}>
             <Link
               href={link.href}
-              style={{ color: "#64748b", fontSize: "0.875rem", textDecoration: "none" }}
+              style={{ color: "#6b7378", fontSize: "0.875rem", textDecoration: "none" }}
               onMouseEnter={(e) => ((e.target as HTMLElement).style.color = accent)}
-              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#64748b")}
+              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#6b7378")}
             >
               ▸ {link.label}
             </Link>

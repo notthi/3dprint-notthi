@@ -18,14 +18,14 @@ export default function ArticleCard({
   title,
   desc,
   tags,
-  hoverBorderColor = "#06b6d4",
+  hoverBorderColor = "#a0402e",
 }: ArticleCardProps) {
   return (
     <Link href={href} style={{ textDecoration: "none", display: "block" }}>
       <div
         style={{
-          backgroundColor: "#1e293b",
-          border: "1px solid #334155",
+          backgroundColor: "#fffcf7",
+          border: "1px solid #e4dccd",
           borderRadius: "1rem",
           padding: "1.75rem",
           transition: "border-color 0.2s, transform 0.2s",
@@ -38,7 +38,7 @@ export default function ArticleCard({
         }}
         onMouseLeave={(e) => {
           const el = e.currentTarget as HTMLElement;
-          el.style.borderColor = "#334155";
+          el.style.borderColor = "#e4dccd";
           el.style.transform = "translateX(0)";
         }}
       >
@@ -63,8 +63,8 @@ export default function ArticleCard({
                 <span
                   key={tag}
                   style={{
-                    backgroundColor: "#334155",
-                    color: "#94a3b8",
+                    backgroundColor: "#e4dccd",
+                    color: "#5c6469",
                     borderRadius: "9999px",
                     padding: "0.2rem 0.625rem",
                     fontSize: "0.7rem",
@@ -80,7 +80,7 @@ export default function ArticleCard({
               style={{
                 fontSize: "1.125rem",
                 fontWeight: "700",
-                color: "#f1f5f9",
+                color: "#1e2a30",
                 marginBottom: "0.5rem",
                 lineHeight: "1.4",
               }}
@@ -89,13 +89,13 @@ export default function ArticleCard({
             </h2>
 
             {/* Description */}
-            <p style={{ color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.6" }}>
+            <p style={{ color: "#5c6469", fontSize: "0.875rem", lineHeight: "1.6" }}>
               {desc}
             </p>
           </div>
 
           {/* Arrow */}
-          <span style={{ color: "#475569", fontSize: "1.25rem", flexShrink: 0, marginTop: "0.25rem" }}>›</span>
+          <span style={{ color: "#8a8f93", fontSize: "1.25rem", flexShrink: 0, marginTop: "0.25rem" }}>›</span>
         </div>
       </div>
     </Link>

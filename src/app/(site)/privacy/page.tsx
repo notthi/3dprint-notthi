@@ -50,21 +50,21 @@ export default function PrivacyPage() {
       {/* Hero */}
       <section
         style={{
-          background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
-          borderBottom: "1px solid #334155",
+          background: "linear-gradient(135deg, #f2ece2 0%, #fffcf7 100%)",
+          borderBottom: "1px solid #e4dccd",
           padding: "3rem 1.5rem",
         }}
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
-          <div style={{ color: "#64748b", fontSize: "0.8rem", marginBottom: "1rem" }}>
-            <Link href="/" style={{ color: "#64748b", textDecoration: "none" }}>ホーム</Link>
+          <div style={{ color: "#6b7378", fontSize: "0.8rem", marginBottom: "1rem" }}>
+            <Link href="/" style={{ color: "#6b7378", textDecoration: "none" }}>ホーム</Link>
             <span style={{ margin: "0 0.5rem" }}>›</span>
-            <span style={{ color: "#06b6d4" }}>プライバシーポリシー</span>
+            <span style={{ color: "#a0402e" }}>プライバシーポリシー</span>
           </div>
-          <h1 style={{ fontSize: "2rem", fontWeight: "800", color: "#f1f5f9" }}>
+          <h1 style={{ fontSize: "2rem", fontWeight: "800", color: "#1e2a30" }}>
             プライバシーポリシー
           </h1>
-          <p style={{ color: "#64748b", fontSize: "0.85rem", marginTop: "0.5rem" }}>
+          <p style={{ color: "#6b7378", fontSize: "0.85rem", marginTop: "0.5rem" }}>
             最終更新日：{dateStr}
           </p>
         </div>
@@ -75,13 +75,13 @@ export default function PrivacyPage() {
         {/* Intro */}
         <p
           style={{
-            color: "#94a3b8",
+            color: "#5c6469",
             lineHeight: "1.85",
             marginBottom: "2.5rem",
             padding: "1.25rem 1.5rem",
-            backgroundColor: "#1e293b",
+            backgroundColor: "#fffcf7",
             borderRadius: "0.75rem",
-            borderLeft: "4px solid #06b6d4",
+            borderLeft: "4px solid #a0402e",
           }}
         >
           3Dプリントラボ（以下「当サイト」）は、ユーザーのプライバシーを尊重し、
@@ -94,8 +94,8 @@ export default function PrivacyPage() {
             <div
               key={section.title}
               style={{
-                backgroundColor: "#1e293b",
-                border: "1px solid #334155",
+                backgroundColor: "#fffcf7",
+                border: "1px solid #e4dccd",
                 borderRadius: "1rem",
                 padding: "1.75rem",
               }}
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
                 style={{
                   fontSize: "1rem",
                   fontWeight: "700",
-                  color: "#f1f5f9",
+                  color: "#1e2a30",
                   marginBottom: "0.875rem",
                   display: "flex",
                   alignItems: "center",
@@ -118,10 +118,10 @@ export default function PrivacyPage() {
                     justifyContent: "center",
                     width: "24px",
                     height: "24px",
-                    backgroundColor: "rgba(6,182,212,0.15)",
-                    border: "1px solid rgba(6,182,212,0.3)",
+                    backgroundColor: "rgba(160,64,46,0.15)",
+                    border: "1px solid rgba(160,64,46,0.3)",
                     borderRadius: "50%",
-                    color: "#06b6d4",
+                    color: "#a0402e",
                     fontSize: "0.7rem",
                     fontWeight: "700",
                     flexShrink: 0,
@@ -131,7 +131,7 @@ export default function PrivacyPage() {
                 </span>
                 {section.title}
               </h2>
-              <p style={{ color: "#94a3b8", lineHeight: "1.85", fontSize: "0.9rem" }}>
+              <p style={{ color: "#5c6469", lineHeight: "1.85", fontSize: "0.9rem" }}>
                 {section.content}
               </p>
             </div>
@@ -143,13 +143,13 @@ export default function PrivacyPage() {
           style={{
             marginTop: "2.5rem",
             padding: "1.5rem",
-            backgroundColor: "#1e293b",
-            border: "1px solid #334155",
+            backgroundColor: "#fffcf7",
+            border: "1px solid #e4dccd",
             borderRadius: "1rem",
             textAlign: "center",
           }}
         >
-          <p style={{ color: "#94a3b8", fontSize: "0.875rem", marginBottom: "1rem" }}>
+          <p style={{ color: "#5c6469", fontSize: "0.875rem", marginBottom: "1rem" }}>
             プライバシーポリシーに関するお問い合わせは下記よりご連絡ください。
           </p>
           <a
@@ -158,8 +158,8 @@ export default function PrivacyPage() {
             rel="noopener noreferrer"
             style={{
               display: "inline-block",
-              border: "1px solid #06b6d4",
-              color: "#06b6d4",
+              border: "1px solid #a0402e",
+              color: "#a0402e",
               fontWeight: "600",
               padding: "0.625rem 1.5rem",
               borderRadius: "0.5rem",

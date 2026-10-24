@@ -13,18 +13,18 @@ export default function AboutPage() {
       {/* Hero */}
       <section
         style={{
-          background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
-          borderBottom: "1px solid #334155",
+          background: "linear-gradient(135deg, #f2ece2 0%, #fffcf7 100%)",
+          borderBottom: "1px solid #e4dccd",
           padding: "3rem 1.5rem",
         }}
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
-          <div style={{ color: "#64748b", fontSize: "0.8rem", marginBottom: "1rem" }}>
-            <Link href="/" style={{ color: "#64748b", textDecoration: "none" }}>ホーム</Link>
+          <div style={{ color: "#6b7378", fontSize: "0.8rem", marginBottom: "1rem" }}>
+            <Link href="/" style={{ color: "#6b7378", textDecoration: "none" }}>ホーム</Link>
             <span style={{ margin: "0 0.5rem" }}>›</span>
-            <span style={{ color: "#06b6d4" }}>このサイトについて</span>
+            <span style={{ color: "#a0402e" }}>このサイトについて</span>
           </div>
-          <h1 style={{ fontSize: "2rem", fontWeight: "800", color: "#f1f5f9" }}>
+          <h1 style={{ fontSize: "2rem", fontWeight: "800", color: "#1e2a30" }}>
             このサイトについて
           </h1>
         </div>
@@ -42,8 +42,8 @@ export default function AboutPage() {
           {/* サイトの目的 */}
           <div
             style={{
-              backgroundColor: "#1e293b",
-              border: "1px solid #334155",
+              backgroundColor: "#fffcf7",
+              border: "1px solid #e4dccd",
               borderRadius: "1rem",
               padding: "2rem",
             }}
@@ -52,19 +52,19 @@ export default function AboutPage() {
               style={{
                 fontSize: "1.2rem",
                 fontWeight: "700",
-                color: "#f1f5f9",
-                borderLeft: "4px solid #06b6d4",
+                color: "#1e2a30",
+                borderLeft: "4px solid #a0402e",
                 paddingLeft: "0.75rem",
                 marginBottom: "1.25rem",
               }}
             >
               サイトの目的
             </h2>
-            <p style={{ color: "#94a3b8", lineHeight: "1.85", marginBottom: "1rem" }}>
+            <p style={{ color: "#5c6469", lineHeight: "1.85", marginBottom: "1rem" }}>
               「3Dプリントラボ」は、3Dプリンター・フィラメントの選び方から使い方まで、
               初心者にもわかりやすく解説することを目的としたガイドサイトです。
             </p>
-            <p style={{ color: "#94a3b8", lineHeight: "1.85" }}>
+            <p style={{ color: "#5c6469", lineHeight: "1.85" }}>
               スペック比較や購入ガイドに加え、運営者が実際に使用している
               Bambu Lab P1S ComboおよびAnycubic Mega-Sの実機レビューも掲載しています。
               読者の皆さんが自分に合った1台・フィラメントを選べるよう、
@@ -75,8 +75,8 @@ export default function AboutPage() {
           {/* 運営者情報 */}
           <div
             style={{
-              backgroundColor: "#1e293b",
-              border: "1px solid #334155",
+              backgroundColor: "#fffcf7",
+              border: "1px solid #e4dccd",
               borderRadius: "1rem",
               padding: "2rem",
             }}
@@ -85,8 +85,8 @@ export default function AboutPage() {
               style={{
                 fontSize: "1.2rem",
                 fontWeight: "700",
-                color: "#f1f5f9",
-                borderLeft: "4px solid #06b6d4",
+                color: "#1e2a30",
+                borderLeft: "4px solid #a0402e",
                 paddingLeft: "0.75rem",
                 marginBottom: "1.25rem",
               }}
@@ -102,16 +102,16 @@ export default function AboutPage() {
                 ["メインブログ", "Cubic未来デザイン研究所（notthi.com）"],
               ].map(([label, value]) => (
                 <>
-                  <span key={`label-${label}`} style={{ color: "#64748b", fontSize: "0.875rem", fontWeight: "600", paddingTop: "0.1rem", whiteSpace: "nowrap" }}>
+                  <span key={`label-${label}`} style={{ color: "#6b7378", fontSize: "0.875rem", fontWeight: "600", paddingTop: "0.1rem", whiteSpace: "nowrap" }}>
                     {label}
                   </span>
-                  <span key={`value-${label}`} style={{ color: "#cbd5e1", fontSize: "0.875rem", lineHeight: "1.6" }}>
+                  <span key={`value-${label}`} style={{ color: "#2e3a40", fontSize: "0.875rem", lineHeight: "1.6" }}>
                     {value}
                   </span>
                 </>
               ))}
             </div>
-            <p style={{ color: "#64748b", fontSize: "0.8rem", marginTop: "1.25rem", lineHeight: "1.6" }}>
+            <p style={{ color: "#6b7378", fontSize: "0.8rem", marginTop: "1.25rem", lineHeight: "1.6" }}>
               3Dプリンターは趣味の造形・釣り用ルアー・ドローンパーツの自作など、
               日常的に活用しています。実体験をベースにした情報発信を心がけています。
             </p>
@@ -120,8 +120,8 @@ export default function AboutPage() {
           {/* 掲載情報について */}
           <div
             style={{
-              backgroundColor: "#1e293b",
-              border: "1px solid #334155",
+              backgroundColor: "#fffcf7",
+              border: "1px solid #e4dccd",
               borderRadius: "1rem",
               padding: "2rem",
             }}
@@ -130,19 +130,19 @@ export default function AboutPage() {
               style={{
                 fontSize: "1.2rem",
                 fontWeight: "700",
-                color: "#f1f5f9",
-                borderLeft: "4px solid #06b6d4",
+                color: "#1e2a30",
+                borderLeft: "4px solid #a0402e",
                 paddingLeft: "0.75rem",
                 marginBottom: "1.25rem",
               }}
             >
               掲載情報について
             </h2>
-            <p style={{ color: "#94a3b8", lineHeight: "1.85", marginBottom: "1rem" }}>
+            <p style={{ color: "#5c6469", lineHeight: "1.85", marginBottom: "1rem" }}>
               当サイトの情報は執筆時点のものです。商品の価格・仕様・在庫状況は
               予告なく変更される場合があります。購入前に各販売サイトにて最新情報をご確認ください。
             </p>
-            <p style={{ color: "#94a3b8", lineHeight: "1.85" }}>
+            <p style={{ color: "#5c6469", lineHeight: "1.85" }}>
               実機レビュー以外の記事（スペック比較・まとめ記事など）は、
               各メーカー公式情報・販売サイトの情報をもとに作成しています。
               実際の使用感とは異なる場合があることをご了承ください。
@@ -152,8 +152,8 @@ export default function AboutPage() {
           {/* アフィリエイトについて */}
           <div
             style={{
-              backgroundColor: "rgba(6,182,212,0.06)",
-              border: "1px solid rgba(6,182,212,0.25)",
+              backgroundColor: "rgba(160,64,46,0.06)",
+              border: "1px solid rgba(160,64,46,0.25)",
               borderRadius: "1rem",
               padding: "2rem",
             }}
@@ -162,15 +162,15 @@ export default function AboutPage() {
               style={{
                 fontSize: "1.2rem",
                 fontWeight: "700",
-                color: "#f1f5f9",
-                borderLeft: "4px solid #06b6d4",
+                color: "#1e2a30",
+                borderLeft: "4px solid #a0402e",
                 paddingLeft: "0.75rem",
                 marginBottom: "1.25rem",
               }}
             >
               アフィリエイト・広告について
             </h2>
-            <p style={{ color: "#94a3b8", lineHeight: "1.85", marginBottom: "1rem" }}>
+            <p style={{ color: "#5c6469", lineHeight: "1.85", marginBottom: "1rem" }}>
               当サイトは以下のアフィリエイトプログラムに参加しており、
               商品リンクを経由してご購入いただいた場合に紹介料を受け取ることがあります。
             </p>
@@ -181,13 +181,13 @@ export default function AboutPage() {
                 "ValueCommerce（Yahoo!ショッピング）",
                 "メルカリアンバサダープログラム",
               ].map((item) => (
-                <li key={item} style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "#94a3b8", fontSize: "0.875rem" }}>
-                  <span style={{ color: "#06b6d4", fontWeight: "700" }}>✓</span>
+                <li key={item} style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "#5c6469", fontSize: "0.875rem" }}>
+                  <span style={{ color: "#a0402e", fontWeight: "700" }}>✓</span>
                   {item}
                 </li>
               ))}
             </ul>
-            <p style={{ color: "#94a3b8", lineHeight: "1.85", fontSize: "0.875rem" }}>
+            <p style={{ color: "#5c6469", lineHeight: "1.85", fontSize: "0.875rem" }}>
               紹介料の発生は読者の皆さんの購入金額に影響しません。
               アフィリエイト収益はサイト運営・コンテンツ制作に充てています。
               商品の評価はアフィリエイト契約の有無に関わらず、公正に行っています。
@@ -197,8 +197,8 @@ export default function AboutPage() {
           {/* お問い合わせ */}
           <div
             style={{
-              backgroundColor: "#1e293b",
-              border: "1px solid #334155",
+              backgroundColor: "#fffcf7",
+              border: "1px solid #e4dccd",
               borderRadius: "1rem",
               padding: "2rem",
               textAlign: "center",
@@ -208,13 +208,13 @@ export default function AboutPage() {
               style={{
                 fontSize: "1.2rem",
                 fontWeight: "700",
-                color: "#f1f5f9",
+                color: "#1e2a30",
                 marginBottom: "0.75rem",
               }}
             >
               お問い合わせ
             </h2>
-            <p style={{ color: "#94a3b8", lineHeight: "1.85", marginBottom: "1.25rem" }}>
+            <p style={{ color: "#5c6469", lineHeight: "1.85", marginBottom: "1.25rem" }}>
               サイトに関するご意見・ご質問はメインブログのお問い合わせフォームよりご連絡ください。
             </p>
             <a
@@ -223,8 +223,8 @@ export default function AboutPage() {
               rel="noopener noreferrer"
               style={{
                 display: "inline-block",
-                border: "1px solid #06b6d4",
-                color: "#06b6d4",
+                border: "1px solid #a0402e",
+                color: "#a0402e",
                 fontWeight: "600",
                 padding: "0.625rem 1.5rem",
                 borderRadius: "0.5rem",

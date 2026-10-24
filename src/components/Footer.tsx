@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LogoMark from "./LogoMark";
 
 const footerLinks = {
   プリンター: [
@@ -28,8 +29,8 @@ export default function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: "#0f172a",
-        borderTop: "1px solid #334155",
+        backgroundColor: "#f2ece2",
+        borderTop: "1px solid #e4dccd",
         marginTop: "4rem",
       }}
     >
@@ -37,27 +38,10 @@ export default function Footer() {
         {/* Logo + Description */}
         <div style={{ marginBottom: "2.5rem" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
-            <div
-              style={{
-                width: "36px",
-                height: "36px",
-                backgroundColor: "#06b6d4",
-                borderRadius: "8px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#0f172a",
-                fontWeight: "800",
-                fontSize: "13px",
-              }}
-            >
-              3DP
-            </div>
-            <span style={{ fontWeight: "700", color: "#f1f5f9", fontSize: "1.1rem" }}>
-              3Dプリントラボ
-            </span>
+            <LogoMark className="lab-mark" />
+            <span className="lab-name"><b>3Dプリントラボ</b><small>by Cubic未来デザイン研究所</small></span>
           </div>
-          <p style={{ color: "#64748b", fontSize: "0.875rem", lineHeight: "1.6", maxWidth: "480px" }}>
+          <p style={{ color: "#6b7378", fontSize: "0.875rem", lineHeight: "1.6", maxWidth: "480px" }}>
             3Dプリンター・フィラメントの選び方から使い方まで、初心者にもわかりやすく解説するガイドサイトです。
           </p>
         </div>
@@ -75,7 +59,7 @@ export default function Footer() {
             <div key={category}>
               <h4
                 style={{
-                  color: "#06b6d4",
+                  color: "#a0402e",
                   fontWeight: "600",
                   fontSize: "0.8rem",
                   textTransform: "uppercase",
@@ -100,12 +84,12 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div style={{ borderTop: "1px solid #1e293b", paddingTop: "1.5rem" }}>
-          <p style={{ color: "#475569", fontSize: "0.75rem", lineHeight: "1.6", marginBottom: "0.75rem" }}>
+        <div style={{ borderTop: "1px solid #fffcf7", paddingTop: "1.5rem" }}>
+          <p style={{ color: "#8a8f93", fontSize: "0.75rem", lineHeight: "1.6", marginBottom: "0.75rem" }}>
             当サイトはAmazonアソシエイト・楽天アフィリエイト・ValueCommerce（Yahoo!ショッピング）・メルカリアンバサダーに参加しており、紹介料を受け取る場合があります。
             商品の価格・在庫状況は各販売サイトをご確認ください。
           </p>
-          <p style={{ color: "#334155", fontSize: "0.75rem" }}>
+          <p style={{ color: "#e4dccd", fontSize: "0.75rem" }}>
             © {new Date().getFullYear()} 3Dプリントラボ. All rights reserved.
           </p>
         </div>

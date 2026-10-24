@@ -19,8 +19,8 @@ type RankingItemProps = {
 };
 
 const rankColors: { [key: number]: { bg: string; color: string; label: string } } = {
-  1: { bg: "#F59E0B", color: "#000", label: "🥇" },
-  2: { bg: "#94A3B8", color: "#000", label: "🥈" },
+  1: { bg: "#c98a1b", color: "#000", label: "🥇" },
+  2: { bg: "#5c6469", color: "#000", label: "🥈" },
   3: { bg: "#B45309", color: "#fff", label: "🥉" },
 };
 
@@ -53,7 +53,7 @@ export default function RankingItem({
   const yahooHref   = yahooSearchUrl(keyword);
   const mercariHref = mercariSearchUrl(keyword);
 
-  const rankInfo = rankColors[rank] ?? { bg: "#334155", color: "#94a3b8", label: String(rank) };
+  const rankInfo = rankColors[rank] ?? { bg: "#e4dccd", color: "#5c6469", label: String(rank) };
 
   const shopButtons = [
     { label: "Amazon", href: amazonHref,  bg: "#FF9900", color: "#000" },
@@ -66,8 +66,8 @@ export default function RankingItem({
     <div
       id={`rank-${rank}`}
       style={{
-        backgroundColor: "#1e293b",
-        border: rank <= 3 ? "1px solid #334155" : "1px solid #1e293b",
+        backgroundColor: "#fffcf7",
+        border: rank <= 3 ? "1px solid #e4dccd" : "1px solid #fffcf7",
         borderRadius: "1rem",
         padding: "1.5rem",
         marginBottom: "1.5rem",
@@ -88,11 +88,11 @@ export default function RankingItem({
 
         <div style={{ flex: 1 }}>
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
-            <h3 style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "1.05rem" }}>{name}</h3>
+            <h3 style={{ color: "#1e2a30", fontWeight: "700", fontSize: "1.05rem" }}>{name}</h3>
             {badge && (
               <span style={{
-                backgroundColor: "rgba(6,182,212,0.15)", color: "#06b6d4",
-                border: "1px solid rgba(6,182,212,0.3)", borderRadius: "9999px",
+                backgroundColor: "rgba(160,64,46,0.15)", color: "#a0402e",
+                border: "1px solid rgba(160,64,46,0.3)", borderRadius: "9999px",
                 padding: "0.1rem 0.6rem", fontSize: "0.7rem", fontWeight: "600",
               }}>{badge}</span>
             )}
@@ -109,25 +109,25 @@ export default function RankingItem({
             </div>
           )}
 
-          <p style={{ color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7", margin: "0.5rem 0 1rem" }}>
+          <p style={{ color: "#5c6469", fontSize: "0.875rem", lineHeight: "1.7", margin: "0.5rem 0 1rem" }}>
             {description}
           </p>
 
           {/* メリット・デメリット */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem", marginBottom: "1rem" }}>
             <div>
-              <p style={{ color: "#10b981", fontSize: "0.75rem", fontWeight: "700", marginBottom: "0.4rem" }}>✓ メリット</p>
+              <p style={{ color: "#2f7d4f", fontSize: "0.75rem", fontWeight: "700", marginBottom: "0.4rem" }}>✓ メリット</p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                 {pros.map((p, i) => (
-                  <li key={i} style={{ color: "#cbd5e1", fontSize: "0.8rem", marginBottom: "0.25rem" }}>• {p}</li>
+                  <li key={i} style={{ color: "#2e3a40", fontSize: "0.8rem", marginBottom: "0.25rem" }}>• {p}</li>
                 ))}
               </ul>
             </div>
             <div>
-              <p style={{ color: "#ef4444", fontSize: "0.75rem", fontWeight: "700", marginBottom: "0.4rem" }}>✗ デメリット</p>
+              <p style={{ color: "#c2412d", fontSize: "0.75rem", fontWeight: "700", marginBottom: "0.4rem" }}>✗ デメリット</p>
               <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                 {cons.map((c, i) => (
-                  <li key={i} style={{ color: "#cbd5e1", fontSize: "0.8rem", marginBottom: "0.25rem" }}>• {c}</li>
+                  <li key={i} style={{ color: "#2e3a40", fontSize: "0.8rem", marginBottom: "0.25rem" }}>• {c}</li>
                 ))}
               </ul>
             </div>
@@ -135,8 +135,8 @@ export default function RankingItem({
 
           {/* 価格 + 購入ボタン */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "0.75rem" }}>
-            <p style={{ color: "#f1f5f9", fontWeight: "700", fontSize: "0.95rem" }}>
-              参考価格：<span style={{ color: "#06b6d4" }}>{price}</span>
+            <p style={{ color: "#1e2a30", fontWeight: "700", fontSize: "0.95rem" }}>
+              参考価格：<span style={{ color: "#a0402e" }}>{price}</span>
             </p>
             <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
               {shopButtons.map((btn) => (
