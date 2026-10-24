@@ -9,9 +9,9 @@
     4. src/app/{カテゴリ}/{スラッグ}/page.tsx を作成（thin wrapper）
 
   スタイル仕様:
-    - ダークテーマ: 背景 #0f172a / カード #1e293b / テキスト #f1f5f9
-    - アクセントカラー: シアン #06b6d4
-    - 本文テキスト: #cbd5e1 / ミュート: #94a3b8
+    - ダークテーマ: 背景 #f2ece2 / カード #fffcf7 / テキスト #1e2a30
+    - アクセントカラー: シアン #a0402e
+    - 本文テキスト: #2e3a40 / ミュート: #5c6469
     - グリッドはインラインstyleで記述（Tailwind不使用）
 
   コンポーネント:
@@ -29,12 +29,12 @@
   ────────────────────────────────────────────────────────────
 */}
 export const S = {
-  card: { backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
-  h2: { fontSize: "1.2rem", fontWeight: "700", color: "#f1f5f9", borderLeft: "4px solid #06b6d4", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
-  p: { color: "#cbd5e1", lineHeight: "1.85", marginBottom: "0.875rem" },
-  muted: { color: "#94a3b8", fontSize: "0.875rem", lineHeight: "1.7" },
+  card: { backgroundColor: "#fffcf7", border: "1px solid #e4dccd", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" },
+  h2: { fontSize: "1.2rem", fontWeight: "700", color: "#1e2a30", borderLeft: "4px solid #a0402e", paddingLeft: "0.75rem", marginBottom: "1.25rem" },
+  p: { color: "#2e3a40", lineHeight: "1.85", marginBottom: "0.875rem" },
+  muted: { color: "#5c6469", fontSize: "0.875rem", lineHeight: "1.7" },
   section: { marginBottom: "2.5rem" },
-  disclaimer: { color: "#475569", fontSize: "0.75rem", borderTop: "1px solid #1e293b", paddingTop: "1.25rem", lineHeight: "1.6" },
+  disclaimer: { color: "#8a8f93", fontSize: "0.75rem", borderTop: "1px solid #fffcf7", paddingTop: "1.25rem", lineHeight: "1.6" },
 };
 
 {/* ── イントロカード ─────────────────────────────────────────
@@ -42,12 +42,12 @@ export const S = {
   ────────────────────────────────────────────────────────── */}
 <div style={S.card}>
   <div style={S.p}>
-    <strong style={{ color: "#f1f5f9" }}>〜〜〜（キーワード）</strong>は〜〜〜です。
+    <strong style={{ color: "#1e2a30" }}>〜〜〜（キーワード）</strong>は〜〜〜です。
     〜〜〜のため、〜〜〜な方に人気があります。
   </div>
   <div style={{ ...S.p, marginBottom: 0 }}>
     この記事では〜〜〜について〜〜〜と〜〜〜を解説します。
-    関連する「<a href="/howto/beginners" style={{ color: "#06b6d4", textDecoration: "underline", textUnderlineOffset: "3px" }}>初心者ガイド</a>」もあわせてご覧ください。
+    関連する「<a href="/howto/beginners" style={{ color: "#a0402e", textDecoration: "underline", textUnderlineOffset: "3px" }}>初心者ガイド</a>」もあわせてご覧ください。
   </div>
 </div>
 
@@ -58,7 +58,7 @@ export const S = {
   <h2 style={S.h2}>〜〜〜とは</h2>
   <div style={S.card}>
     <div style={S.p}>
-      〜〜〜は<strong style={{ color: "#f1f5f9" }}>〜〜〜</strong>です。
+      〜〜〜は<strong style={{ color: "#1e2a30" }}>〜〜〜</strong>です。
       〜〜〜のため、〜〜〜の場面でよく使われます。
     </div>
     <div style={{ ...S.p, marginBottom: 0 }}>
@@ -73,19 +73,19 @@ export const S = {
 <section id="pros-cons" style={S.section}>
   <h2 style={S.h2}>メリット・デメリット</h2>
   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-    <div style={{ backgroundColor: "rgba(16,185,129,0.06)", border: "1px solid rgba(16,185,129,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ color: "#10b981", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.75rem" }}>✓ メリット</div>
+    <div style={{ backgroundColor: "rgba(47,125,79,0.06)", border: "1px solid rgba(47,125,79,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <div style={{ color: "#2f7d4f", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.75rem" }}>✓ メリット</div>
       <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-        <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 〜〜〜</li>
-        <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 〜〜〜</li>
-        <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 〜〜〜</li>
+        <li style={{ color: "#2e3a40", fontSize: "0.8rem" }}>• 〜〜〜</li>
+        <li style={{ color: "#2e3a40", fontSize: "0.8rem" }}>• 〜〜〜</li>
+        <li style={{ color: "#2e3a40", fontSize: "0.8rem" }}>• 〜〜〜</li>
       </ul>
     </div>
     <div style={{ backgroundColor: "rgba(239,68,68,0.06)", border: "1px solid rgba(239,68,68,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
-      <div style={{ color: "#ef4444", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.75rem" }}>✗ デメリット</div>
+      <div style={{ color: "#c2412d", fontWeight: "700", fontSize: "0.85rem", marginBottom: "0.75rem" }}>✗ デメリット</div>
       <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-        <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 〜〜〜</li>
-        <li style={{ color: "#cbd5e1", fontSize: "0.8rem" }}>• 〜〜〜</li>
+        <li style={{ color: "#2e3a40", fontSize: "0.8rem" }}>• 〜〜〜</li>
+        <li style={{ color: "#2e3a40", fontSize: "0.8rem" }}>• 〜〜〜</li>
       </ul>
     </div>
   </div>
@@ -102,8 +102,8 @@ export const S = {
       { label: "〜〜〜", val: "〜〜〜" },
       { label: "〜〜〜", val: "〜〜〜" },
     ].map((item) => (
-      <div key={item.label} style={{ display: "flex", gap: "1rem", backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: "0.5rem", padding: "0.75rem 1.25rem", alignItems: "center" }}>
-        <span style={{ color: "#06b6d4", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "120px" }}>{item.label}</span>
+      <div key={item.label} style={{ display: "flex", gap: "1rem", backgroundColor: "#fffcf7", border: "1px solid #e4dccd", borderRadius: "0.5rem", padding: "0.75rem 1.25rem", alignItems: "center" }}>
+        <span style={{ color: "#a0402e", fontWeight: "700", fontSize: "0.8rem", flexShrink: 0, minWidth: "120px" }}>{item.label}</span>
         <span style={S.muted}>{item.val}</span>
       </div>
     ))}
@@ -123,11 +123,11 @@ export const S = {
   <ProductCard productId="esun-pla-plus" />
 
   {/* CTA ブロック（別記事へ誘導） */}
-  <div style={{ backgroundColor: "rgba(6,182,212,0.06)", border: "1px solid rgba(6,182,212,0.2)", borderRadius: "0.75rem", padding: "1.5rem" }}>
+  <div style={{ backgroundColor: "rgba(160,64,46,0.06)", border: "1px solid rgba(160,64,46,0.2)", borderRadius: "0.75rem", padding: "1.5rem" }}>
     <div style={S.p}>
       詳しい比較・購入リンクは以下のランキング記事をご覧ください。
     </div>
-    <a href="/filaments/recommend" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", backgroundColor: "#06b6d4", color: "#0f172a", fontWeight: "700", fontSize: "0.875rem", padding: "0.625rem 1.25rem", borderRadius: "0.5rem", textDecoration: "none" }}>
+    <a href="/filaments/recommend" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", backgroundColor: "#a0402e", color: "#f2ece2", fontWeight: "700", fontSize: "0.875rem", padding: "0.625rem 1.25rem", borderRadius: "0.5rem", textDecoration: "none" }}>
       → 詳細ランキングを見る
     </a>
   </div>
@@ -171,9 +171,9 @@ export const rankings = [
   <div style={{ overflowX: "auto" }}>
     <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.8rem" }}>
       <thead>
-        <tr style={{ borderBottom: "2px solid #334155" }}>
+        <tr style={{ borderBottom: "2px solid #e4dccd" }}>
           {["項目", "A", "B", "C"].map((h) => (
-            <th key={h} style={{ color: "#06b6d4", fontWeight: "700", padding: "0.625rem 0.75rem", textAlign: "left" }}>{h}</th>
+            <th key={h} style={{ color: "#a0402e", fontWeight: "700", padding: "0.625rem 0.75rem", textAlign: "left" }}>{h}</th>
           ))}
         </tr>
       </thead>
@@ -182,9 +182,9 @@ export const rankings = [
           ["行1", "値A", "値B", "値C"],
           ["行2", "値A", "値B", "値C"],
         ].map((row, i) => (
-          <tr key={i} style={{ borderBottom: "1px solid #1e293b", backgroundColor: i % 2 === 0 ? "#1e293b" : "transparent" }}>
+          <tr key={i} style={{ borderBottom: "1px solid #fffcf7", backgroundColor: i % 2 === 0 ? "#fffcf7" : "transparent" }}>
             {row.map((cell, j) => (
-              <td key={j} style={{ color: j === 0 ? "#94a3b8" : "#cbd5e1", padding: "0.625rem 0.75rem" }}>{cell}</td>
+              <td key={j} style={{ color: j === 0 ? "#5c6469" : "#2e3a40", padding: "0.625rem 0.75rem" }}>{cell}</td>
             ))}
           </tr>
         ))}
@@ -200,11 +200,11 @@ export const rankings = [
   <h2 style={S.h2}>まとめ</h2>
   <div style={S.card}>
     <div style={S.p}>
-      〜〜〜については<strong style={{ color: "#f1f5f9" }}>〜〜〜</strong>が最もおすすめです。
-      〜〜〜な場合は<strong style={{ color: "#f1f5f9" }}>〜〜〜</strong>を選ぶと良いでしょう。
+      〜〜〜については<strong style={{ color: "#1e2a30" }}>〜〜〜</strong>が最もおすすめです。
+      〜〜〜な場合は<strong style={{ color: "#1e2a30" }}>〜〜〜</strong>を選ぶと良いでしょう。
     </div>
     <div style={{ ...S.p, marginBottom: 0 }}>
-      機種選びは「<a href="/printers/recommend" style={{ color: "#06b6d4", textDecoration: "underline", textUnderlineOffset: "3px" }}>おすすめプリンターランキング</a>」も参考にしてください。
+      機種選びは「<a href="/printers/recommend" style={{ color: "#a0402e", textDecoration: "underline", textUnderlineOffset: "3px" }}>おすすめプリンターランキング</a>」も参考にしてください。
     </div>
   </div>
 </section>

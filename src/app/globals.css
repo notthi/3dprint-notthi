@@ -2,14 +2,14 @@
 
 @layer base {
   :root {
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --bg-card: #1e293b;
-    --accent: #06b6d4;
-    --accent-hover: #0891b2;
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --border-color: #334155;
+    --bg-primary: #f2ece2;
+    --bg-secondary: #fffcf7;
+    --bg-card: #fffcf7;
+    --accent: #a0402e;
+    --accent-hover: #86331f;
+    --text-primary: #1e2a30;
+    --text-secondary: #5c6469;
+    --border-color: #e4dccd;
   }
 
   html {
@@ -26,8 +26,8 @@
 @layer components {
   /* === 共通ダークカード === */
   .dark-card {
-    background-color: #1e293b;
-    border: 1px solid #334155;
+    background-color: #fffcf7;
+    border: 1px solid #e4dccd;
     border-radius: 1rem;
     padding: 1.75rem;
     transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -43,8 +43,8 @@
 
   /* カテゴリーカード（縦方向ホバー） */
   .category-card {
-    background-color: #1e293b;
-    border: 1px solid #334155;
+    background-color: #fffcf7;
+    border: 1px solid #e4dccd;
     border-radius: 1rem;
     padding: 1.75rem;
     transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -55,22 +55,22 @@
   .category-card:hover {
     border-color: var(--accent);
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(6, 182, 212, 0.15);
+    box-shadow: 0 12px 32px rgba(160,64,46, 0.15);
   }
 
   /* フィラメントカード（紫アクセント） */
   .dark-card-purple:hover {
-    border-color: #8b5cf6;
+    border-color: #4a76a0;
   }
 
   /* ノウハウカード（緑アクセント） */
   .dark-card-green:hover {
-    border-color: #10b981;
+    border-color: #2f7d4f;
   }
 
   /* === ナビリンク === */
   .nav-link {
-    color: #94a3b8;
+    color: #5c6469;
     text-decoration: none;
     font-size: 0.875rem;
     transition: color 0.2s;
@@ -81,7 +81,7 @@
 
   /* === フッターリンク === */
   .footer-link {
-    color: #94a3b8;
+    color: #5c6469;
     text-decoration: none;
     font-size: 0.875rem;
     transition: color 0.2s;
@@ -93,7 +93,7 @@
   /* === CTAボタン === */
   .btn-primary {
     background-color: var(--accent);
-    color: #0f172a;
+    color: #f2ece2;
     font-weight: 700;
     padding: 0.875rem 2rem;
     border-radius: 0.625rem;
@@ -108,8 +108,8 @@
   }
 
   .btn-secondary {
-    border: 1px solid #334155;
-    color: #cbd5e1;
+    border: 1px solid #e4dccd;
+    color: #2e3a40;
     font-weight: 600;
     padding: 0.875rem 2rem;
     border-radius: 0.625rem;
@@ -120,8 +120,8 @@
     transition: border-color 0.2s, color 0.2s;
   }
   .btn-secondary:hover {
-    border-color: #475569;
-    color: #f1f5f9;
+    border-color: #8a8f93;
+    color: #1e2a30;
   }
 
   /* === 記事ページ（白背景） === */
@@ -131,20 +131,20 @@
     border-left: 4px solid var(--accent);
     padding-left: 0.75rem;
     margin: 2rem 0 1rem;
-    color: #0f172a;
+    color: #f2ece2;
   }
 
   .prose h3 {
     font-size: 1.1rem;
     font-weight: 700;
     margin: 1.5rem 0 0.75rem;
-    color: #1e293b;
+    color: #fffcf7;
   }
 
   .prose p {
     line-height: 1.8;
     margin-bottom: 1rem;
-    color: #374151;
+    color: #e4dccd;
   }
 
   .prose ul {
@@ -155,7 +155,7 @@
 
   .prose li {
     margin-bottom: 0.5rem;
-    color: #374151;
+    color: #e4dccd;
     line-height: 1.7;
   }
 
@@ -167,16 +167,16 @@
   }
 
   .prose th {
-    background-color: #f1f5f9;
+    background-color: #1e2a30;
     padding: 0.75rem;
     text-align: left;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #1e2a30;
     font-weight: 600;
   }
 
   .prose td {
     padding: 0.75rem;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #1e2a30;
   }
 
   /* === テキストクランプ === */
@@ -200,13 +200,13 @@
    ビジュアルエディタ移行後は記事側にインラインstyleを書かない。
    ============================================================ */
 .article-body {
-  color: #cbd5e1;
+  color: #2e3a40;
 }
 .article-body h2 {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #f1f5f9;
-  border-left: 4px solid #06b6d4;
+  color: #1e2a30;
+  border-left: 4px solid #a0402e;
   padding-left: 0.75rem;
   margin: 2.5rem 0 1.25rem;
   scroll-margin-top: 5rem;
@@ -214,20 +214,20 @@
 .article-body h3 {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #1e2a30;
   margin: 1.75rem 0 0.875rem;
   scroll-margin-top: 5rem;
 }
 .article-body p {
-  color: #cbd5e1;
+  color: #2e3a40;
   line-height: 1.85;
   margin-bottom: 0.875rem;
 }
 .article-body strong {
-  color: #f1f5f9;
+  color: #1e2a30;
 }
 .article-body a {
-  color: #06b6d4;
+  color: #a0402e;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -240,19 +240,19 @@
   gap: 0.4rem;
 }
 .article-body li {
-  color: #cbd5e1;
+  color: #2e3a40;
   font-size: 0.9rem;
   line-height: 1.7;
 }
 .article-body blockquote {
-  border-left: 3px solid #334155;
+  border-left: 3px solid #e4dccd;
   padding-left: 1rem;
-  color: #94a3b8;
+  color: #5c6469;
   margin: 0 0 1.25rem;
 }
 .article-body hr {
   border: none;
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid #fffcf7;
   margin: 2rem 0;
 }
 /* GFMテーブル */
@@ -266,29 +266,29 @@
 }
 .article-body th {
   text-align: left;
-  color: #06b6d4;
+  color: #a0402e;
   font-weight: 700;
   font-size: 0.8rem;
   padding: 0.6rem 0.75rem;
-  border-bottom: 2px solid #334155;
+  border-bottom: 2px solid #e4dccd;
   white-space: nowrap;
 }
 .article-body td {
-  color: #cbd5e1;
+  color: #2e3a40;
   padding: 0.6rem 0.75rem;
-  border-bottom: 1px solid #1e293b;
+  border-bottom: 1px solid #fffcf7;
 }
 .article-body td:first-child {
-  color: #94a3b8;
+  color: #5c6469;
   font-weight: 600;
 }
 .article-body tbody tr:nth-child(odd) {
-  background-color: #1e293b;
+  background-color: #fffcf7;
 }
 /* ブロック共通 */
 .article-body .blk-card {
-  background-color: #1e293b;
-  border: 1px solid #334155;
+  background-color: #fffcf7;
+  border: 1px solid #e4dccd;
   border-radius: 0.75rem;
   padding: 1.5rem;
   margin-bottom: 2rem;
@@ -307,3 +307,25 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ───────── Cubic 系のデザインに（10/24 本人「3dprintのデザインもCubic系にそろえて」）─────────
+   notthi.com と同じ：生成りの方眼・紺の文字・朱のアクセント・明朝の見出し・白い角丸カード＋やわらかい影・丸いボタン */
+:root { --serif-jp: "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Yu Mincho", "YuMincho", "Noto Serif JP", "Noto Serif CJK JP", serif; --soft: 0 1px 2px rgba(30, 42, 48, .05), 0 10px 30px rgba(30, 42, 48, .07); }
+body {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic UI", "YuGothic", "Meiryo", system-ui, sans-serif;
+  background-image: linear-gradient(rgba(30, 42, 48, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 42, 48, .035) 1px, transparent 1px);
+  background-size: 24px 24px; line-height: 1.85; -webkit-font-smoothing: antialiased;
+}
+h1, h2 { font-family: var(--serif-jp) !important; font-weight: 700 !important; letter-spacing: .01em !important; text-wrap: balance; }
+header { background-color: rgba(250, 247, 241, .9) !important; }
+.lab-mark { width: 30px; height: 30px; flex: none; }
+.lab-name { display: flex; flex-direction: column; line-height: 1.1; }
+.lab-name b { font-family: var(--serif-jp); font-weight: 800; font-size: 1.05rem; color: #1e2a30; }
+.lab-name small { font-size: .62rem; font-weight: 700; color: #a0402e; letter-spacing: .06em; margin-top: 2px; }
+.dark-card, .category-card { box-shadow: var(--soft); border-color: rgba(30, 42, 48, .08) !important; border-radius: 16px; }
+.dark-card:hover, .category-card:hover { box-shadow: 0 2px 4px rgba(30, 42, 48, .06), 0 16px 40px rgba(30, 42, 48, .1); }
+article a, .article-body a { text-underline-offset: 3px; }
+.btn-primary, .btn-secondary { border-radius: 99px !important; }
+.btn-primary { box-shadow: 0 6px 16px rgba(160, 64, 46, .22); }
+.article-body .blk-card { border-radius: 16px; box-shadow: var(--soft); border-color: rgba(30, 42, 48, .08); }
+.article-body h2 { font-family: var(--serif-jp); }

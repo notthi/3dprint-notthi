@@ -24,7 +24,7 @@ export default function FloatingPublish() {
   return (
     <div style={{ position: "fixed", right: "20px", bottom: "20px", zIndex: 99999, display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "8px" }}>
       {msg && (
-        <div style={{ maxWidth: "320px", backgroundColor: "#1e293b", color: "#cbd5e1", border: "1px solid #334155", borderRadius: "8px", padding: "10px 14px", fontSize: "12px", lineHeight: 1.6, boxShadow: "0 4px 16px rgba(0,0,0,0.4)" }}>
+        <div style={{ maxWidth: "320px", backgroundColor: "#fffcf7", color: "#2e3a40", border: "1px solid #e4dccd", borderRadius: "8px", padding: "10px 14px", fontSize: "12px", lineHeight: 1.6, boxShadow: "0 4px 16px rgba(0,0,0,0.4)" }}>
           {msg}
         </div>
       )}
@@ -32,8 +32,8 @@ export default function FloatingPublish() {
         onClick={publish}
         disabled={busy}
         style={{
-          backgroundColor: busy ? "#334155" : "#10b981",
-          color: "#0f172a",
+          backgroundColor: busy ? "#e4dccd" : "#2f7d4f",
+          color: "#f2ece2",
           fontWeight: 700,
           fontSize: "14px",
           padding: "12px 20px",

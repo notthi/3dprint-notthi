@@ -155,7 +155,7 @@ function articleCollection(category: "printers" | "filaments" | "howto", label: 
         multiline: true,
       }),
       badge: fields.text({ label: "バッジ（一覧カードに表示）" }),
-      badgeColor: fields.text({ label: "バッジ色", defaultValue: "#06b6d4" }),
+      badgeColor: fields.text({ label: "バッジ色", defaultValue: "#a0402e" }),
       breadcrumbLabel: fields.text({ label: "パンくずラベル（短め）" }),
       updatedAt: fields.text({ label: "更新日（例：2026年6月）" }),
       // 10/24：使っていない機種の記事はオフにする → 記事の最初に「筆者は使っていません」と出る（ArticleLayout）
@@ -169,7 +169,7 @@ function articleCollection(category: "printers" | "filaments" | "howto", label: 
           href: fields.text({ label: "URL（例：/printers/recommend）" }),
           title: fields.text({ label: "タイトル" }),
           badge: fields.text({ label: "バッジ" }),
-          badgeColor: fields.text({ label: "バッジ色", defaultValue: "#06b6d4" }),
+          badgeColor: fields.text({ label: "バッジ色", defaultValue: "#a0402e" }),
         }),
         { label: "関連記事", itemLabel: (p) => p.fields.title.value }
       ),

@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import LogoMark from "./LogoMark";
 import { useState } from "react";
 
 const navLinks = [
@@ -15,8 +16,8 @@ export default function Header() {
   return (
     <header
       style={{
-        backgroundColor: "#0f172a",
-        borderBottom: "1px solid #334155",
+        backgroundColor: "#f2ece2",
+        borderBottom: "1px solid #e4dccd",
         position: "sticky",
         top: 0,
         zIndex: 50,
@@ -27,34 +28,8 @@ export default function Header() {
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "64px" }}>
           {/* Logo */}
           <Link href="/" style={{ display: "flex", alignItems: "center", gap: "0.5rem", textDecoration: "none" }}>
-            <div
-              style={{
-                width: "36px",
-                height: "36px",
-                backgroundColor: "#06b6d4",
-                borderRadius: "8px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#0f172a",
-                fontWeight: "800",
-                fontSize: "13px",
-                letterSpacing: "-0.5px",
-                flexShrink: 0,
-              }}
-            >
-              3DP
-            </div>
-            <span
-              style={{
-                fontWeight: "700",
-                color: "#f1f5f9",
-                fontSize: "1.1rem",
-                letterSpacing: "-0.3px",
-              }}
-            >
-              3Dプリントラボ
-            </span>
+            <LogoMark className="lab-mark" />
+            <span className="lab-name"><b>3Dプリントラボ</b><small>by Cubic未来デザイン研究所</small></span>
           </Link>
 
           {/* Desktop Nav */}
@@ -65,7 +40,7 @@ export default function Header() {
                 href={link.href}
                 style={{
                   padding: "0.5rem 1rem",
-                  color: "#cbd5e1",
+                  color: "#2e3a40",
                   textDecoration: "none",
                   borderRadius: "0.5rem",
                   fontSize: "0.875rem",
@@ -73,11 +48,11 @@ export default function Header() {
                   transition: "color 0.2s, background-color 0.2s",
                 }}
                 onMouseEnter={(e) => {
-                  (e.target as HTMLElement).style.color = "#06b6d4";
-                  (e.target as HTMLElement).style.backgroundColor = "#1e293b";
+                  (e.target as HTMLElement).style.color = "#a0402e";
+                  (e.target as HTMLElement).style.backgroundColor = "#fffcf7";
                 }}
                 onMouseLeave={(e) => {
-                  (e.target as HTMLElement).style.color = "#cbd5e1";
+                  (e.target as HTMLElement).style.color = "#2e3a40";
                   (e.target as HTMLElement).style.backgroundColor = "transparent";
                 }}
               >
@@ -91,7 +66,7 @@ export default function Header() {
             onClick={() => setMobileOpen(!mobileOpen)}
             style={{
               padding: "0.5rem",
-              color: "#cbd5e1",
+              color: "#2e3a40",
               backgroundColor: "transparent",
               border: "none",
               borderRadius: "0.5rem",
@@ -113,7 +88,7 @@ export default function Header() {
 
         {/* Mobile Nav */}
         {mobileOpen && (
-          <div style={{ borderTop: "1px solid #334155", paddingBottom: "0.75rem" }}>
+          <div style={{ borderTop: "1px solid #e4dccd", paddingBottom: "0.75rem" }}>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -122,7 +97,7 @@ export default function Header() {
                 style={{
                   display: "block",
                   padding: "0.75rem 1rem",
-                  color: "#cbd5e1",
+                  color: "#2e3a40",
                   textDecoration: "none",
                   borderRadius: "0.5rem",
                   transition: "color 0.2s",

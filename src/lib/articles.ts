@@ -82,7 +82,7 @@ function loadArticle(category: ArticleCategory, file: string): ArticleEntry {
   const slug = file.replace(/\.mdx$/, "");
   const raw = readFileSync(join(CONTENT_DIR, category, file), "utf8");
   const { data, content } = matter(raw);
-  const badgeColor = (data.badgeColor as string) ?? "#06b6d4";
+  const badgeColor = (data.badgeColor as string) ?? "#a0402e";
   return {
     category,
     slug,

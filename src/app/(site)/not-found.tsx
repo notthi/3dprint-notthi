@@ -22,7 +22,7 @@ export default function NotFound() {
         alignItems: "center",
         justifyContent: "center",
         padding: "3rem 1.5rem",
-        backgroundColor: "#0f172a",
+        backgroundColor: "#f2ece2",
         textAlign: "center",
       }}
     >
@@ -32,7 +32,7 @@ export default function NotFound() {
           fontSize: "clamp(6rem, 20vw, 10rem)",
           fontWeight: "900",
           lineHeight: "1",
-          background: "linear-gradient(135deg, #06b6d4, #3b82f6)",
+          background: "linear-gradient(135deg, #a0402e, #3b82f6)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           backgroundClip: "text",
@@ -48,7 +48,7 @@ export default function NotFound() {
         style={{
           fontSize: "clamp(1.2rem, 3vw, 1.6rem)",
           fontWeight: "700",
-          color: "#f1f5f9",
+          color: "#1e2a30",
           marginBottom: "0.75rem",
         }}
       >
@@ -58,7 +58,7 @@ export default function NotFound() {
       {/* Subtitle */}
       <p
         style={{
-          color: "#64748b",
+          color: "#6b7378",
           fontSize: "0.9rem",
           lineHeight: "1.7",
           marginBottom: "2.5rem",
@@ -83,9 +83,9 @@ export default function NotFound() {
             key={link.href}
             href={link.href}
             style={{
-              backgroundColor: i === 0 ? "#06b6d4" : "#1e293b",
-              color: i === 0 ? "#0f172a" : "#cbd5e1",
-              border: i === 0 ? "none" : "1px solid #334155",
+              backgroundColor: i === 0 ? "#a0402e" : "#fffcf7",
+              color: i === 0 ? "#f2ece2" : "#2e3a40",
+              border: i === 0 ? "none" : "1px solid #e4dccd",
               fontWeight: "700",
               fontSize: "0.875rem",
               padding: "0.625rem 1.375rem",

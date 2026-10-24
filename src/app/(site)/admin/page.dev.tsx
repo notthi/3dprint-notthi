@@ -36,15 +36,15 @@ const categoryLabel: Record<string, string> = {
 };
 
 const categoryColor: Record<string, string> = {
-  filaments: "#f59e0b",
-  printers:  "#06b6d4",
-  howto:     "#10b981",
+  filaments: "#c98a1b",
+  printers:  "#a0402e",
+  howto:     "#2f7d4f",
 };
 
 const statusStyle: Record<string, { bg: string; color: string; border: string; label: string }> = {
-  draft:  { bg: "rgba(245,158,11,0.1)",  color: "#f59e0b", border: "rgba(245,158,11,0.3)",  label: "下書き" },
-  review: { bg: "rgba(139,92,246,0.1)",  color: "#8b5cf6", border: "rgba(139,92,246,0.3)",  label: "レビュー中" },
-  ready:  { bg: "rgba(16,185,129,0.1)",  color: "#10b981", border: "rgba(16,185,129,0.3)",  label: "公開準備完了" },
+  draft:  { bg: "rgba(245,158,11,0.1)",  color: "#c98a1b", border: "rgba(245,158,11,0.3)",  label: "下書き" },
+  review: { bg: "rgba(74,118,160,0.1)",  color: "#4a76a0", border: "rgba(74,118,160,0.3)",  label: "レビュー中" },
+  ready:  { bg: "rgba(47,125,79,0.1)",  color: "#2f7d4f", border: "rgba(47,125,79,0.3)",  label: "公開準備完了" },
 };
 
 export default async function AdminPage() {
@@ -58,31 +58,31 @@ export default async function AdminPage() {
   };
 
   return (
-    <main style={{ backgroundColor: "#0f172a", minHeight: "100vh", padding: "2rem 1.5rem" }}>
+    <main style={{ backgroundColor: "#f2ece2", minHeight: "100vh", padding: "2rem 1.5rem" }}>
       <div style={{ maxWidth: "64rem", margin: "0 auto" }}>
 
         {/* ヘッダー */}
         <div style={{ marginBottom: "2rem" }}>
-          <p style={{ color: "#64748b", fontSize: "0.8rem", marginBottom: "0.5rem" }}>
-            <Link href="/" style={{ color: "#64748b", textDecoration: "none" }}>ホーム</Link>
+          <p style={{ color: "#6b7378", fontSize: "0.8rem", marginBottom: "0.5rem" }}>
+            <Link href="/" style={{ color: "#6b7378", textDecoration: "none" }}>ホーム</Link>
             <span style={{ margin: "0 0.5rem" }}>›</span>
-            <span style={{ color: "#06b6d4" }}>記事管理</span>
+            <span style={{ color: "#a0402e" }}>記事管理</span>
           </p>
-          <h1 style={{ fontSize: "1.75rem", fontWeight: "800", color: "#f1f5f9", marginBottom: "0.25rem" }}>
+          <h1 style={{ fontSize: "1.75rem", fontWeight: "800", color: "#1e2a30", marginBottom: "0.25rem" }}>
             記事管理ダッシュボード
           </h1>
-          <p style={{ color: "#475569", fontSize: "0.8rem" }}>noindex — 検索エンジンにインデックスされません</p>
+          <p style={{ color: "#8a8f93", fontSize: "0.8rem" }}>noindex — 検索エンジンにインデックスされません</p>
         </div>
 
         {/* 編集・公開アクション（ローカル環境で使用） */}
         <div style={{
           display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap",
-          backgroundColor: "#1e293b", border: "1px solid #334155",
+          backgroundColor: "#fffcf7", border: "1px solid #e4dccd",
           borderRadius: "0.75rem", padding: "1.25rem", marginBottom: "2.5rem",
         }}>
           <a href="/keystatic" style={{
             display: "inline-flex", alignItems: "center", gap: "0.5rem",
-            backgroundColor: "#06b6d4", color: "#0f172a", fontWeight: 700,
+            backgroundColor: "#a0402e", color: "#f2ece2", fontWeight: 700,
             fontSize: "0.9rem", padding: "0.625rem 1.5rem", borderRadius: "0.5rem",
             textDecoration: "none",
           }}>
@@ -94,18 +94,18 @@ export default async function AdminPage() {
         {/* サマリーカード */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem", marginBottom: "2.5rem" }}>
           {[
-            { label: "公開済み記事",   value: articles.length, color: "#10b981" },
-            { label: "下書き",         value: drafts.length,   color: "#f59e0b" },
-            { label: "公開準備完了",   value: drafts.filter((d) => d.status === "ready").length, color: "#8b5cf6" },
+            { label: "公開済み記事",   value: articles.length, color: "#2f7d4f" },
+            { label: "下書き",         value: drafts.length,   color: "#c98a1b" },
+            { label: "公開準備完了",   value: drafts.filter((d) => d.status === "ready").length, color: "#4a76a0" },
           ].map((item) => (
             <div key={item.label} style={{
-              backgroundColor: "#1e293b", border: "1px solid #334155",
+              backgroundColor: "#fffcf7", border: "1px solid #e4dccd",
               borderRadius: "0.75rem", padding: "1.25rem", textAlign: "center",
             }}>
               <p style={{ fontSize: "2rem", fontWeight: "800", color: item.color, margin: "0 0 0.25rem" }}>
                 {item.value}
               </p>
-              <p style={{ color: "#94a3b8", fontSize: "0.8rem", margin: 0 }}>{item.label}</p>
+              <p style={{ color: "#5c6469", fontSize: "0.8rem", margin: 0 }}>{item.label}</p>
             </div>
           ))}
         </div>
@@ -114,8 +114,8 @@ export default async function AdminPage() {
         {drafts.length > 0 && (
           <section style={{ marginBottom: "2.5rem" }}>
             <h2 style={{
-              fontSize: "1rem", fontWeight: "700", color: "#f59e0b",
-              borderLeft: "4px solid #f59e0b", paddingLeft: "0.75rem", marginBottom: "1rem",
+              fontSize: "1rem", fontWeight: "700", color: "#c98a1b",
+              borderLeft: "4px solid #c98a1b", paddingLeft: "0.75rem", marginBottom: "1rem",
             }}>
               下書き・準備中（{drafts.length}件）
             </h2>
@@ -126,7 +126,7 @@ export default async function AdminPage() {
                 return (
                   <div key={draft.href} style={{
                     display: "flex", alignItems: "center", gap: "1rem",
-                    backgroundColor: "#1e293b",
+                    backgroundColor: "#fffcf7",
                     border: `1px solid ${ss.border}`,
                     borderRadius: "0.625rem", padding: "0.75rem 1.25rem",
                   }}>
@@ -136,16 +136,16 @@ export default async function AdminPage() {
                       fontSize: "0.7rem", fontWeight: "700", flexShrink: 0,
                     }}>{ss.label}</span>
                     <span style={{
-                      backgroundColor: "rgba(6,182,212,0.08)", color: categoryColor[draft.category],
+                      backgroundColor: "rgba(160,64,46,0.08)", color: categoryColor[draft.category],
                       borderRadius: "9999px", padding: "0.1rem 0.6rem",
                       fontSize: "0.7rem", fontWeight: "600", flexShrink: 0,
                     }}>{categoryLabel[draft.category]}</span>
-                    <span style={{ color: "#f1f5f9", fontSize: "0.875rem", flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                    <span style={{ color: "#1e2a30", fontSize: "0.875rem", flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                       {draft.title}
                     </span>
-                    <span style={{ color: "#475569", fontSize: "0.75rem", flexShrink: 0 }}>{draft.updatedAt}</span>
+                    <span style={{ color: "#8a8f93", fontSize: "0.75rem", flexShrink: 0 }}>{draft.updatedAt}</span>
                     {isRegistered && (
-                      <Link href={draft.href} style={{ color: "#06b6d4", fontSize: "0.75rem", flexShrink: 0, textDecoration: "none", fontWeight: "600" }}>
+                      <Link href={draft.href} style={{ color: "#a0402e", fontSize: "0.75rem", flexShrink: 0, textDecoration: "none", fontWeight: "600" }}>
                         開く →
                       </Link>
                     )}
@@ -171,27 +171,27 @@ export default async function AdminPage() {
               {items.map((article) => (
                 <div key={article.href} style={{
                   display: "flex", alignItems: "center", gap: "1rem",
-                  backgroundColor: "#1e293b", border: "1px solid #334155",
+                  backgroundColor: "#fffcf7", border: "1px solid #e4dccd",
                   borderRadius: "0.625rem", padding: "0.75rem 1.25rem",
                 }}>
                   <span style={{
-                    backgroundColor: "rgba(16,185,129,0.15)", color: "#10b981",
-                    border: "1px solid rgba(16,185,129,0.3)",
+                    backgroundColor: "rgba(47,125,79,0.15)", color: "#2f7d4f",
+                    border: "1px solid rgba(47,125,79,0.3)",
                     borderRadius: "9999px", padding: "0.1rem 0.6rem",
                     fontSize: "0.7rem", fontWeight: "700", flexShrink: 0,
                   }}>公開済み</span>
                   <span style={{
-                    backgroundColor: "rgba(6,182,212,0.1)", color: "#06b6d4",
-                    border: "1px solid rgba(6,182,212,0.25)",
+                    backgroundColor: "rgba(160,64,46,0.1)", color: "#a0402e",
+                    border: "1px solid rgba(160,64,46,0.25)",
                     borderRadius: "9999px", padding: "0.1rem 0.6rem",
                     fontSize: "0.7rem", fontWeight: "600", flexShrink: 0,
                   }}>{article.badge}</span>
-                  <span style={{ color: "#f1f5f9", fontSize: "0.875rem", flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                  <span style={{ color: "#1e2a30", fontSize: "0.875rem", flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                     {article.title}
                   </span>
-                  <span style={{ color: "#475569", fontSize: "0.75rem", flexShrink: 0 }}>{article.updatedAt}</span>
+                  <span style={{ color: "#8a8f93", fontSize: "0.75rem", flexShrink: 0 }}>{article.updatedAt}</span>
                   <Link href={article.href} style={{
-                    color: "#06b6d4", fontSize: "0.75rem", flexShrink: 0,
+                    color: "#a0402e", fontSize: "0.75rem", flexShrink: 0,
                     textDecoration: "none", fontWeight: "600",
                   }}>開く →</Link>
                 </div>
@@ -203,8 +203,8 @@ export default async function AdminPage() {
         {/* 次に書く記事候補 */}
         <section>
           <h2 style={{
-            fontSize: "1rem", fontWeight: "700", color: "#8b5cf6",
-            borderLeft: "4px solid #8b5cf6", paddingLeft: "0.75rem", marginBottom: "1rem",
+            fontSize: "1rem", fontWeight: "700", color: "#4a76a0",
+            borderLeft: "4px solid #4a76a0", paddingLeft: "0.75rem", marginBottom: "1rem",
           }}>
             次に書く記事候補
           </h2>
@@ -219,17 +219,17 @@ export default async function AdminPage() {
             ].map((item) => (
               <div key={item.href} style={{
                 display: "flex", alignItems: "center", gap: "1rem",
-                backgroundColor: "#1e293b", border: "1px solid #1e293b",
+                backgroundColor: "#fffcf7", border: "1px solid #fffcf7",
                 borderRadius: "0.625rem", padding: "0.75rem 1.25rem",
               }}>
                 <span style={{
-                  backgroundColor: "rgba(139,92,246,0.1)", color: "#8b5cf6",
-                  border: "1px solid rgba(139,92,246,0.3)",
+                  backgroundColor: "rgba(74,118,160,0.1)", color: "#4a76a0",
+                  border: "1px solid rgba(74,118,160,0.3)",
                   borderRadius: "9999px", padding: "0.1rem 0.6rem",
                   fontSize: "0.7rem", fontWeight: "700", flexShrink: 0,
                 }}>{item.priority}</span>
-                <span style={{ color: "#94a3b8", fontSize: "0.875rem", flex: 1 }}>{item.title}</span>
-                <span style={{ color: "#334155", fontSize: "0.75rem", fontFamily: "monospace" }}>{item.href}</span>
+                <span style={{ color: "#5c6469", fontSize: "0.875rem", flex: 1 }}>{item.title}</span>
+                <span style={{ color: "#e4dccd", fontSize: "0.75rem", fontFamily: "monospace" }}>{item.href}</span>
               </div>
             ))}
           </div>

@@ -8,16 +8,16 @@
 import type { ReactNode } from "react";
 
 const C = {
-  bgCard: "#1e293b",
-  border: "#334155",
-  text: "#cbd5e1",
-  strong: "#f1f5f9",
-  muted: "#94a3b8",
-  faint: "#64748b",
-  cyan: "#06b6d4",
-  green: "#10b981",
-  red: "#ef4444",
-  amber: "#f59e0b",
+  bgCard: "#fffcf7",
+  border: "#e4dccd",
+  text: "#2e3a40",
+  strong: "#1e2a30",
+  muted: "#5c6469",
+  faint: "#6b7378",
+  cyan: "#a0402e",
+  green: "#2f7d4f",
+  red: "#c2412d",
+  amber: "#c98a1b",
 };
 
 /* ── Lead：記事冒頭の要約カード ─────────────────────────── */
@@ -28,7 +28,7 @@ export function Lead({ children }: { children: ReactNode }) {
 /* ── Tip / Warn：補足・注意ボックス ─────────────────────── */
 export function Tip({ title, children }: { title?: string; children: ReactNode }) {
   return (
-    <div className="blk-lead" style={{ backgroundColor: "#0c1a2e", border: `1px solid ${C.cyan}`, borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" }}>
+    <div className="blk-lead" style={{ backgroundColor: "#efe7da", border: `1px solid ${C.cyan}`, borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" }}>
       {title && <p style={{ color: C.cyan, fontWeight: 700, fontSize: "0.9rem", marginBottom: "0.5rem" }}>💡 {title}</p>}
       {children}
     </div>
@@ -58,7 +58,7 @@ export function ProsCons({
 }) {
   return (
     <div className="blk-proscons">
-      <div style={{ backgroundColor: "rgba(16,185,129,0.06)", border: "1px solid rgba(16,185,129,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
+      <div style={{ backgroundColor: "rgba(47,125,79,0.06)", border: "1px solid rgba(47,125,79,0.2)", borderRadius: "0.75rem", padding: "1.25rem" }}>
         <p style={{ color: C.green, fontWeight: 700, fontSize: "0.85rem", marginBottom: "0.75rem" }}>✓ {prosTitle}</p>
         <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.4rem" }}>
           {pros.map((t, i) => (
@@ -98,7 +98,7 @@ export function Steps({ items = [] }: { items?: { title: string; body?: string }
     <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginBottom: "2rem" }}>
       {items.map((item, i) => (
         <div key={i} style={{ display: "flex", gap: "1rem", backgroundColor: C.bgCard, border: `1px solid ${C.border}`, borderRadius: "0.75rem", padding: "1.25rem", alignItems: "flex-start" }}>
-          <span style={{ width: "32px", height: "32px", borderRadius: "50%", backgroundColor: "rgba(6,182,212,0.15)", color: C.cyan, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: "0.9rem", flexShrink: 0 }}>
+          <span style={{ width: "32px", height: "32px", borderRadius: "50%", backgroundColor: "rgba(160,64,46,0.15)", color: C.cyan, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: "0.9rem", flexShrink: 0 }}>
             {i + 1}
           </span>
           <div>
@@ -144,9 +144,9 @@ export function PriceList({ items = [] }: { items?: { label: string; price: stri
 /* ── CTA：ボタン付き誘導ブロック ────────────────────────── */
 export function CTA({ href, label, children }: { href: string; label: string; children?: ReactNode }) {
   return (
-    <div className="blk-lead" style={{ backgroundColor: "rgba(6,182,212,0.06)", border: "1px solid rgba(6,182,212,0.2)", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" }}>
+    <div className="blk-lead" style={{ backgroundColor: "rgba(160,64,46,0.06)", border: "1px solid rgba(160,64,46,0.2)", borderRadius: "0.75rem", padding: "1.5rem", marginBottom: "2rem" }}>
       {children}
-      <a href={href} style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", backgroundColor: C.cyan, color: "#0f172a", fontWeight: 700, fontSize: "0.875rem", padding: "0.625rem 1.25rem", borderRadius: "0.5rem", textDecoration: "none", marginTop: children ? "0.5rem" : 0 }}>
+      <a href={href} style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", backgroundColor: C.cyan, color: "#f2ece2", fontWeight: 700, fontSize: "0.875rem", padding: "0.625rem 1.25rem", borderRadius: "0.5rem", textDecoration: "none", marginTop: children ? "0.5rem" : 0 }}>
         → {label}
       </a>
     </div>
@@ -170,7 +170,7 @@ export function FAQ({ items = [] }: { items?: { q: string; a: string }[] }) {
 /* ── Disclaimer：アフィリエイト免責（ArticleLayoutが常設表示） ── */
 export function Disclaimer() {
   return (
-    <p style={{ color: "#475569", fontSize: "0.75rem", borderTop: `1px solid ${C.bgCard}`, paddingTop: "1.25rem", marginTop: "2.5rem", lineHeight: 1.6 }}>
+    <p style={{ color: "#8a8f93", fontSize: "0.75rem", borderTop: `1px solid ${C.bgCard}`, paddingTop: "1.25rem", marginTop: "2.5rem", lineHeight: 1.6 }}>
       当サイトはAmazonアソシエイト・楽天アフィリエイト・ValueCommerce・メルカリアンバサダーに参加しています。記事内のリンクから商品を購入すると、売上の一部が当サイトに還元される場合があります。価格は記事執筆時点のものです。
     </p>
   );

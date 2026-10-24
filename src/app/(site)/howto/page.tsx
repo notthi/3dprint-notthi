@@ -32,22 +32,22 @@ export default function HowtoPage() {
       {/* Page Hero */}
       <section
         style={{
-          background: "linear-gradient(135deg, #0f172a 0%, #0d1f17 100%)",
-          borderBottom: "1px solid #334155",
+          background: "linear-gradient(135deg, #f2ece2 0%, #0d1f17 100%)",
+          borderBottom: "1px solid #e4dccd",
           padding: "3rem 1.5rem",
         }}
       >
         <div style={{ maxWidth: "72rem", margin: "0 auto" }}>
-          <div style={{ color: "#64748b", fontSize: "0.8rem", marginBottom: "1rem" }}>
-            <Link href="/" style={{ color: "#64748b", textDecoration: "none" }}>ホーム</Link>
+          <div style={{ color: "#6b7378", fontSize: "0.8rem", marginBottom: "1rem" }}>
+            <Link href="/" style={{ color: "#6b7378", textDecoration: "none" }}>ホーム</Link>
             <span style={{ margin: "0 0.5rem" }}>›</span>
-            <span style={{ color: "#10b981" }}>使い方・ノウハウ</span>
+            <span style={{ color: "#2f7d4f" }}>使い方・ノウハウ</span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.75rem" }}>
             <span style={{ fontSize: "2rem" }}>📖</span>
-            <h1 style={{ fontSize: "2rem", fontWeight: "800", color: "#f1f5f9" }}>使い方・ノウハウ</h1>
+            <h1 style={{ fontSize: "2rem", fontWeight: "800", color: "#1e2a30" }}>使い方・ノウハウ</h1>
           </div>
-          <p style={{ color: "#94a3b8", fontSize: "1rem", lineHeight: "1.6" }}>
+          <p style={{ color: "#5c6469", fontSize: "1rem", lineHeight: "1.6" }}>
             セットアップから印刷テクニック、トラブル解決まで。実践的なノウハウをまとめています。
           </p>
         </div>
