@@ -38,6 +38,8 @@ export type ArticleMeta = {
   updatedAt: string;
   tags: string[];
   related: RelatedArticle[];
+  /** false＝筆者が使っていない機種の記事（仕様と評判で整理）。10/24 実機レビューの書き方を正直に直した */
+  handsOn?: boolean;
 };
 
 export type ArticleEntry = ArticleMeta & {
@@ -92,6 +94,7 @@ function loadArticle(category: ArticleCategory, file: string): ArticleEntry {
     updatedAt: (data.updatedAt as string) ?? "",
     tags: (data.tags as string[]) ?? [],
     related: (data.related as RelatedArticle[]) ?? [],
+    handsOn: data.handsOn === false ? false : undefined,
     href: `/${category}/${slug}`,
     hoverBorderColor: badgeColor,
     toc: extractToc(content),

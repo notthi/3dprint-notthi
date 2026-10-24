@@ -158,6 +158,8 @@ function articleCollection(category: "printers" | "filaments" | "howto", label: 
       badgeColor: fields.text({ label: "バッジ色", defaultValue: "#06b6d4" }),
       breadcrumbLabel: fields.text({ label: "パンくずラベル（短め）" }),
       updatedAt: fields.text({ label: "更新日（例：2026年6月）" }),
+      // 10/24：使っていない機種の記事はオフにする → 記事の最初に「筆者は使っていません」と出る（ArticleLayout）
+      handsOn: fields.checkbox({ label: "筆者が使っている機種の記事（使っていない機種ならオフ）", defaultValue: true }),
       tags: fields.array(fields.text({ label: "タグ" }), {
         label: "タグ",
         itemLabel: (p) => p.value,
